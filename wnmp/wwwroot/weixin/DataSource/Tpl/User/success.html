@@ -1,0 +1,51 @@
+<{include file='Comon/header.html'}>
+<link rel="stylesheet" type="text/css" href="/static/css/time.css">
+<title>报名成功</title>
+<style type="text/css">
+.weui_cells{margin-top: 0;}
+.userinfo_head{padding-bottom: 0;margin-bottom: 0;background: none;padding: 0;}
+    input::-webkit-input-placeholder{font-size: 1.1rem;color: #C9C9C9;} 
+.msg_desc{font-size: 1rem;margin: 1.285714285714286rem 0;}
+.msg_desc>i{width: 21rem;height: 8.57142857142857rem;background: blue}
+.weui_msg{padding: 0!important}
+
+.msg{padding: 0;}
+/*.weui_icon_success:before{color: #FF2244;}*/
+.weui_msg .weui_icon_area{margin-bottom: 0.7142857142857143rem;}
+.success_title{font-size: 1.428571428571429rem;color: #04BE02;}
+.weui_msg_desc{font-size: 1rem;color: #888888;}
+.weui_btn_warn{background: #04BE02;}
+.weui_msg .weui_opr_area{margin-bottom: 1.785714285714286rem;}
+.weui_msg{padding-top: 2.571428571428571rem;}
+</style>
+<div class="msg msg_pad">
+<div class="weui_msg">
+    <!-- <div class="weui_icon_area"><i class="weui_icon_success weui_icon_msg"></i></div>
+    <div class="success_title">报名成功</div> -->
+    <div class="weui_cells msg userinfo_head" style="text-align: center;">
+        <p class="msg_desc icon_s"><i style="background: url(/static/images/success_page.png) no-repeat left center;background-size: 100%;"></i></p>
+    </div>
+    <p style="text-align: center;color: #888888;font-size: 1.142857142857143rem;margin:0;">感谢您的报名! 您可以 :</p>
+    <div class="weui_opr_area">
+        <p class="weui_btn_area">
+            <a href="/User" class="weui_btn weui_btn_primary" style="color: #FFFFFF;font-size: 1.285714285714286rem;">去我的赛事查看</a>
+        </p>
+    </div>
+    <div class="weui_text_area">
+		<!--///////////////原来文案//////////////////////////////////////////////////////-->
+        <!--<p class="weui_msg_desc" style="text-align: left;"><{if $price.m_ptype=="国内"}>感谢您的报名！我们已经向您的注册邮箱发送了确认邮件，亲查收。赛事后续信息也将通过该邮箱发送给您，请务必确保能收到邮件。<{else}>感谢您的报名！我们已经向您的注册邮箱发送了确认邮件，请查收。后续马拉松确认函和赛事手册都将通过该邮箱发送给您，请务必确保能收到邮件。也请加客服微信：zxhylv，告知“姓名＋比赛名称”，方便我们拉您进赛事群交流。如果有任何问题，请致电：400-842-195。<{/if}></p>-->
+        <div class="weui_msg_desc" style="text-align: left;padding: 0 1.285714285714286rem;line-height: 1.928571428571429rem;font-size: 1.142857142857143rem;">
+        	<p>如果您已经关注了我们的微信公众号，赛事相关的后续信 息将通过微信公众号发给您，如果还未关注，强烈建议您关注。</p>
+        	<!--<p>1、您可以在微信中搜索公众微信号“知行和逸旅行”</p>
+        	<p>2、您可以通过微信号:zxhy-tour 找到我们</p>-->
+        	<div style="width: 100%;"><div style="overflow: hidden;width: 15.71428571428571rem;margin: 0.7142857142857143rem auto 0;"><img style="width: 15.71428571428571rem;height: auto;float: left;" src="/static/images/qrcode.png"/></div></div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="/static/weui/js/weui.js"></script>
+<script type="text/javascript" src="/static/js/iscroll.js?v=1.2"></script>
+<script type="text/javascript" src="/static/js/date.js?v=1.2"></script>
+<script type="text/javascript" src="/static/js/function.js?v=1.2"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+<{include file='Login/header.html'}>
+<link href="static/css/style.css" rel="stylesheet" type="text/css" />
+<div id="dh" >
+	<a href="./?s=IosGame&a=index"><button><<返回游戏列表</button></a>
+</div>
+<table id="game_list" class="list">		
+	<tr>
+		<td>游戏ID</td>
+		<td>排序id</td>
+		<td>游戏ICO</td>
+		<td>游戏名字</td>
+		<td>游戏URL</td>
+		<td>链接状态及操作</td>
+	</tr>
+<{if $list==null}>
+	<tr>
+		<td colspan="6">
+			当前游戏列表为空！</a>
+		</td>
+	</tr>
+<{else}>
+	<{foreach from=$list item=v }>
+	<tr>
+		<td><{$v.game_id}></td>
+		<td><{$v.orderid}></td>
+		<td><a href="<{$v.game_url}>"><img src="<{$v.img_url}>" alt=""></a></td>
+		<td><{$v.title}></td>
+		<td class="url"><{$v.game_url}></td>
+		<td><{if $v.sign==1}>最新<{else if $v.sign==2}>精品<{else if $v.sign==3}>屌丝男<{else if $v.sign==4}>白富美<{else}>普通<{/if}><br>
+		<a href="./?s=IosGame&a=recover&id=<{$v.game_id}>" class="recover">还原</a><!-- 　|　<a href="./?s=IosGame&a=edit_game&id=<{$v.game_id}>">编辑</a>　｜　<a href="<{$v.game_url}>">试玩</a> --></td>
+	</tr>
+	<{/foreach}>
+<{/if}>
+</table>
+<div id="page"><{$page}></div>
+<{include file='Login/footer.html'}>
+<style>
+	.list{
+		text-align: center;
+		border:3px solid #EFEFEF; 
+		width: 100%;
+	}
+	.list td{padding:10px;/* border:3px solid #EFEFEF; */}
+	.list img{
+		height: 70px;
+		width: 70px;
+	}
+	.list .url{width: 300px;}
+	#dh{height: 40px;width: 100%;}
+	#dh button{width: 100px;height: 40px;float: left;line-height: 40px;}
+	#page{height: 40px;line-height: 40px;margin-left: 40px;font-size: 16px;}
+	#page a ,#page span{margin-left: 5px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".recover").click(function(){
+		if(!confirm("确认还原？")){
+			return false;
+		};
+	});
+})
+</script>

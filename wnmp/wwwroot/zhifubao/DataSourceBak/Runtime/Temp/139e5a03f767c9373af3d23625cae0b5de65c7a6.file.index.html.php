@@ -1,0 +1,416 @@
+<?php /* Smarty version Smarty-3.1.6, created on 2016-08-24 15:11:30
+         compiled from "../DataSource/Tpl\Search\index.html" */ ?>
+<?php /*%%SmartyHeaderCode:27206574518871c0a19-32713406%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '139e5a03f767c9373af3d23625cae0b5de65c7a6' => 
+    array (
+      0 => '../DataSource/Tpl\\Search\\index.html',
+      1 => 1472006791,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '27206574518871c0a19-32713406',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_57451887340f0',
+  'variables' => 
+  array (
+    'domestic' => 0,
+    'abroad' => 0,
+    'list' => 0,
+    'i' => 0,
+    'now' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_57451887340f0')) {function content_57451887340f0($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('Comon/header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<title>跑步赛事搜索</title>
+<style>
+.filter_section{border-bottom:1px solid #efeef3;padding:0.78428rem 0;color:#888888;background: #FFF;position: relative;font-size: 1rem;}
+.filter_section>.flex_1{border-right:1px solid #efeef3;overflow: hidden;}
+.filter_section>.flex_1:last-child{border:none;}
+.filter_section>.flex_1>div{position: relative;}
+.filter_section>.flex_1>div>p{text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    word-wrap: break-word;
+    word-break: break-all;overflow: hidden;}
+.filter_section>.flex_1>div>span>i{position: relative;display: inline-block;width: 1.0714rem;height: 4px;overflow: hidden;margin-top: 0.7142857142857143rem;}
+.filter_section>.flex_1>div>span>i:after{content: " ";display: inline-block;-webkit-transform: rotate(135deg);-moz-transform: rotate(135deg);-ms-transform: rotate(135deg);-o-transform: rotate(135deg);transform: rotate(135deg);height: 0.3571428571428571rem;width: 0.3571428571428571rem;background:#CCCCCC;position: absolute;top: 50%;left: 6px;margin-top: -4px;}
+.filter_section> .curr_filter{color:#FB6165;}
+.filter_section> .curr_filter>div>span>i:after{-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);-o-transform: rotate(-45deg);transform: rotate(-45deg);margin-top: -1px;background: #FB6165;}
+
+.filter_section>.flex_1 .drop-down{display:none;width: 100%;position: absolute;top:3.2142rem;background: red;z-index: 2;left:0;background: rgba(0,0,0,.5);color:#888888;}
+.filter_section> .curr_filter .drop-down{display: block;}
+.filter_section .filter_cell .drop-down .drop_content{background: #FFF;padding:0 0 0.571rem 1.78571rem;}
+.filter_section .filter_cell .drop-down .option_cell{height: 2.714rem;line-height: 2.71428rem;border-bottom: 1px solid #efeef3;}
+/*.filter_section .filter_cell .drop-down .option_cell:last-child{border:none;}*/
+/*支付宝  
+.filter_section .filter_cell .drop-down .option_curr{color:#FB6165;border-color:rgba(251,97,101,0.6);background: url(/static/images/select_logo.png) no-repeat 0 0;background-size: ;}*/
+.filter_section .filter_cell .drop-down .drop_content_2{background: #FFF;height: 240px;-webkit-box-align: flex-start;-webkit-align-items: flex-start;-ms-flex-align: flex-start;align-items: flex-start;}
+.filter_section .filter_cell .drop-down .drop_content_2 .sub_1{width: 80px;background: #efeef3;text-align: center;height: 100%;}
+.filter_section .filter_cell .drop-down .drop_content_2 .sub_1 p{height: 2.71428rem;line-height: 2.71428rem;}
+.search_result{background: #FFF;}
+/*///////////////////////////////////////////////////支付宝
+.filter_section .filter_cell .drop-down .drop_content_2 .sub_1 p.curr{color:#09BB07;background: #FFF;}*/
+.filter_section .filter_cell .drop-down .drop_content_2 .sub_2{padding-left:15px;height: 100%;overflow-y:scroll; }
+.filter_section .filter_cell .drop-down .drop_content_2 .sub_2>.sub_list{display: none;}
+.filter_section .filter_cell .drop-down .drop_content_2 .sub_2>.sub_list.curr{display: block;}
+.search_result .none_result{height: 120px;}
+.search_result .none_result ul{width: 70%;}
+.search_result .none_result ul li{float: left;width: 10%;}
+.search_result .none_result ul .none_result_hunt{width: 90%;}
+.none_result .center_cell .icon{width: 18px;height: 18px;background-image: url(/static/images/icons.png);background-size:173.5px 202px;display: inline-block;background-position:-80px 0;margin-top: 5px;}
+
+.empty{width: 60%;margin: 1.285714285714286rem auto;}
+.empty .emptyImg{width: 50%;margin: 0 auto 0.5714285714285714rem;}
+.empty .emptyImg>img{width: 100%;}
+.empty>p{text-align: center;font-size: 1rem;color: #888888;}
+/*////////////////////////////////新加样式///////////////////////////////*/
+.empty a{color: #556F94;}
+.weui_search_text span{display: inline-block;}
+/*.drop-down:before{content: ''; width: 100%;height: 1px;background: #000000;};*/
+/*.drop-down:before{content: ''; width: 100%;height: 1px;background: #EFEEF3;float:left; position: relative;top: 15px;}*/
+.empty p{overflow: hidden;}
+.empty p span{float: left;margin-left: 16%;}
+.weui_media_bd .weui_media_desc_1{padding-bottom: 0.3rem;padding-top: 0.3rem;}
+.weui_media_desc_padding{ overflow: hidden;}
+.weui_media_desc_padding span{display: inline-block;height: 0.9285rem;width: 1px;background: rgba(166,166,166,0.5);float:inherit; margin: 0 0.285rem;vertical-align: -0.1428rem;}
+/*///////////////////////////////////////////////////////支付宝样式/////////////////////////////////////////////////////*/
+#search_bar{background: #F5F5F9;line-height: 2.142857142857143rem;}
+.weui_search_bar{padding: 0.5714285714285714rem 0.7142857142857143rem;}
+.weui_search_text{line-height: 2rem;}
+#search_text span{display: inline-block;font-size: 1.071428571428571rem;}
+.weui_icon_search:before{font-size: 1rem;}
+#search_cancel{color: #00AAEE;font-size: 1.071428571428571rem;line-height: 2.357142857142857rem;}
+.weui_search_inner input::-webkit-input-placeholder{font-size: 1.071428571428571rem;line-height: 22px;}
+.weui_search_inner .weui_search_input{line-height: normal;padding: 0;font-size: 1.071428571428571rem;padding:0.3214285714285714rem 0.4285714285714286rem;}
+.weui_search_inner .weui_icon_search{top: 0.1428571428571429rem;line-height: 2rem;left: 0.7142857142857143rem;}
+.weui_search_inner{padding: 0 1.714285714285714rem;}
+.search_default .search_default_title_bar .title .change_hot{color: #00AAEE;}
+.search_default .search_default_title_bar{margin-top: 1.071428571428571rem;}
+.search_default_hot .search_default_hot_p_color p{color: #FB6165;}
+.filter_section .filter_cell .drop-down .option_curr{color:#FB6165;border-color:rgba(251,97,101,0.6);background: url(/static/images/select_logo.png) no-repeat 93% 50%;background-size: 1.071428571428571rem;}
+.filter_section .filter_cell .drop-down .drop_content_2 .sub_1 p.curr{color:#FB6165;background: #FFF;}
+.filter_section>.flex_1>div>.select_center{margin-right:0.4285714285714286rem;}
+.selected_bar p{text-align: center;}
+.filter_section>.flex_1>div>span{display: inline-flex;margin: 0 auto;}
+.filter_section>.flex_1>div>span>p{overflow: hidden;max-width: 5.357142857142857rem;text-overflow: ellipsis;white-space: nowrap;}
+.weui_icon_clear:before{font-size: 1rem;line-height: 2.571428571428571rem;}
+#search_text .weui_icon_search{margin-right: 0px;}
+body{height: auto;}
+</style>
+<div class="wrap" style="background: #F5F5F9;">
+    <div class="weui_search_bar" id="search_bar">
+        <form class="weui_search_outer">
+            <div class="weui_search_inner">
+                <i class="weui_icon_search"></i>
+                <input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required="">
+                <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+            </div>
+            <label for="search_input" class="weui_search_text" id="search_text">
+                <i class="weui_icon_search"></i>
+                <span>搜索全球跑步赛事</span>
+            </label>
+        </form>
+        <a href="/Index/index" class="weui_search_cancel" id="search_cancel">取消</a>
+    </div>
+    <div class="filter_section flexBox" id="filter_section">
+        <div class="flex_1 filter_cell">
+            <div class="flexBox selected_bar"><span><p class=" search_order_bar">推荐排序</p><i class="select_center"></i></span></div>
+            <div class="drop-down">
+                <div class="drop_content">
+                    <p class="option_cell option_curr" search-type="time">推荐排序</p>
+                    <p class="option_cell" search-type="timeorder">时间由近到远</p>
+                    <!-- <p class="option_cell" search-type="">距离由近到远</p> -->
+                </div> 
+            </div>
+        </div>
+        <div class="flex_1 filter_cell">
+            <div class="flexBox selected_bar"><span><p class=" search_class_bar">全部分类</p><i></i></span></div>
+            <div class="drop-down">
+                <div class="drop_content">
+                    <p class="option_cell option_curr" search-type="mtype">全部分类</p>
+                    <p class="option_cell" search-type="mtype">全程</p>
+                    <p class="option_cell" search-type="mtype">半程</p>
+                    <p class="option_cell" search-type="mtype">乐跑</p>
+                    <p class="option_cell" search-type="mtype">越野跑</p>
+                </div> 
+            </div>
+        </div>
+        <div class="flex_1 filter_cell">
+            <div class="flexBox selected_bar"><span><p class="search_area_bar">全部地区</p><i></i></span></div>
+            <div class="drop-down">
+                <div class="drop_content_2 flexBox">
+                    <div class="sub_1">
+                    	<p class="sub_type" lableFor="sub_2_3">全部地区</p>
+                        <p class="sub_type" lableFor="sub_2_2">国内</p>
+                        <p class=" sub_type" lableFor="sub_2_1">海外</p>                      
+                    </div>
+                    <div class="sub_2 flex_1">
+                    	 <div class="curr sub_2_3 sub_list">
+                        </div>
+                        <div class="sub_2_2 sub_list">
+                            <?php echo $_smarty_tpl->tpl_vars['domestic']->value;?>
+
+                        </div>
+                        <div class="sub_2_1 sub_list">
+                            <?php echo $_smarty_tpl->tpl_vars['abroad']->value;?>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex_1 filter_cell">
+            <div class="flexBox selected_bar"><span><p class=" search_state_bar">全部状态</p><i></i></span></div>
+            <div class="drop-down">
+                <div class="drop_content">
+                	<p class="option_cell option_curr" search-type="time">全部状态</p>
+                	<p class="option_cell " search-type="time">正在报名</p>
+                    <p class="option_cell " search-type="time">即将开始</p>
+                    <!-- <p class="option_cell" search-type="time">即将开始</p> -->
+                    <p class="option_cell" search-type="time">报名结束</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search_result matchBox">
+        <?php if ($_smarty_tpl->tpl_vars['list']->value){?>
+        <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->key => $_smarty_tpl->tpl_vars['i']->value){
+$_smarty_tpl->tpl_vars['i']->_loop = true;
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['i']->key;
+?> 
+        <?php if ($_smarty_tpl->tpl_vars['i']->value['m_entermode']=="remote"){?>
+         <a href="<?php echo $_smarty_tpl->tpl_vars['i']->value['m_enterurl'];?>
+" class="weui_media_box weui_media_appmsg">
+        <?php }else{ ?>
+        <a href="/Matchinfo?m_id=<?php echo $_smarty_tpl->tpl_vars['i']->value['id'];?>
+" class="weui_media_box weui_media_appmsg">
+        <?php }?>
+            <div class="weui_media_hd">
+                <img class="weui_media_appmsg_thumb" src="<?php echo $_smarty_tpl->tpl_vars['i']->value['m_img'];?>
+" alt="">
+            </div>
+            <div class="weui_media_bd">
+                <h4 class="weui_media_title flex"><span class="S_overhiden"><?php echo $_smarty_tpl->tpl_vars['i']->value['m_name'];?>
+</span>
+                 <?php if ($_smarty_tpl->tpl_vars['i']->value['m_GameTime']<=$_smarty_tpl->tpl_vars['now']->value||$_smarty_tpl->tpl_vars['i']->value['m_untilTime']<$_smarty_tpl->tpl_vars['now']->value){?>
+                <span class="match_tips">名额已满</span>
+                <?php }elseif($_smarty_tpl->tpl_vars['i']->value['m_placesleft']<=20){?>
+                <span class="match_tips match_tips_warm">名额紧张</span>
+                <?php }?></h4>
+                <p class="weui_media_desc weui_media_desc_1 line2 weui_media_title_position"><?php echo $_smarty_tpl->tpl_vars['i']->value['m_des'];?>
+</p>
+                <p class="weui_media_desc weui_media_desc_padding"><?php echo substr($_smarty_tpl->tpl_vars['i']->value['m_GameTime'],0,10);?>
+ <?php echo str_replace("|","<span></span>",$_smarty_tpl->tpl_vars['i']->value['m_Mtypes']);?>
+</p>
+            </div>
+        </a>
+        <?php } ?>
+        <?php }else{ ?>
+<!--         <div class="none_result centerBox">
+            <ul class="center_cell flexBox2">
+                <li><i class="icon"></i></li>
+                <li class="none_result_hunt flex_1">抱歉，没有找到该赛事！您可以<a href="">提交想跑的赛事></a></li>
+            </ul>
+        </div> -->
+        <div class="center_cell empty">
+            <div class="emptyImg"><img src="/static/images/empty.png" alt=""></div>
+            <p><span>抱歉，没有找到该赛事！</span>
+            	<!--<span>您可以<a href="/User/feedback"style="color: #00AAEE;">提交想跑的赛事></a></span>-->
+            </p>
+        </div>
+        <?php }?>
+        <!-- 
+        <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+            <div class="weui_media_hd">
+                <img class="weui_media_appmsg_thumb" src="http://www.kalenji.com.cn/sites/kalenjicn/files/category/image/athtletism_shoes_men_new_picto_1.jpg" alt="">
+            </div>
+            <div class="weui_media_bd">
+                <h4 class="weui_media_title">标题一</h4>
+                <p class="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                 <p class="weui_media_desc">2016-9-17 全程|半程</p>
+            </div>
+        </a> -->
+    </div>
+    <?php echo $_smarty_tpl->getSubTemplate ('Comon/hotList.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('type'=>'vertical'), 0);?>
+
+    	<div class="bottom">服务由知行和逸提供</div>
+</div>
+<script src="/static/js/zepto.js"></script>
+<script src="/static/weui/js/weui.js"></script>
+<script type="text/javascript">
+weui.search_bar.init();
+var filter = function(){
+	//////////////////////////////////////////////////
+//	console.log(1111111111)
+//  $(".drop-down").css({
+//      "height":($('.wrap').height()-77)+"px",
+//  }).on("touchstart",function(e){
+//  	console.log(11);
+//      if(!/option_cell/g.test(e.target.className))
+//      return false;
+//  }).find(".option_cell").on("click",function(){
+//      var $this = $(this);
+//      $this.siblings().removeClass("option_curr");
+//      $this.parents(".filter_cell").removeClass("curr_filter").find(".selected_bar p").html($(this).html());
+//      $this.addClass("option_curr");
+//      search();
+//      console.log(55555)
+//  });
+//  $(".selected_bar").tap(function(){
+////		$('.option_cell').off('click');
+//      var _this = $(this).parent();
+//      if(_this.hasClass("curr_filter")){
+//          _this.removeClass("curr_filter");
+//      }else{
+//          $(".filter_cell").removeClass("curr_filter");
+//          _this.addClass("curr_filter");
+//      }
+//  });
+    /////////////////////////////
+    /////////////////////////////////////修改后////////////////////////////////
+    $(".drop-down").css({
+        "height":($('.wrap').height()-77)+"px",
+    }).on("touchstart",function(e){
+        if(!/option_cell/g.test(e.target.className))
+        return false;
+        $('.option_cell').click(function () {
+        	console.log($(this).html());
+        	selected_bool=true;
+        	$('body').css('overflow','visible');
+        	$('.wrap').css('height','100%');
+    		$('.wrap').css('overflow','visible');
+        var $this = $(this);
+        $this.siblings().removeClass("option_curr");
+        $this.parents(".filter_cell").removeClass("curr_filter").find(".selected_bar p").html($(this).html());
+        $this.addClass("option_curr");
+        search();
+        if($(this).html()=='全部城市'){
+        	$this.parents(".filter_cell").removeClass("curr_filter").find(".selected_bar p").html('国内');
+        	}else if($(this).html()=='全部国家'){
+        		$this.parents(".filter_cell").removeClass("curr_filter").find(".selected_bar p").html('海外');
+        	}
+        })
+    })
+    var selected_bool=true;
+    $(".selected_bar").click(function(){
+    	if(selected_bool){
+    		selected_bool=false;
+	    	var a=$('body').height();
+	    	$('body').css('overflow','hidden');
+	    	$('.wrap').css('height',a+'px');
+	    	$('.wrap').css('overflow','hidden');
+    	}else{
+    		selected_bool=true;
+    		$('body').css('overflow','visible');
+        	$('.wrap').css('height','100%');
+    		$('.wrap').css('overflow','visible');
+    	}
+		$('.option_cell').off('click');
+        var _this = $(this).parent();
+        if(_this.hasClass("curr_filter")){
+            _this.removeClass("curr_filter");
+        }else{
+            $(".filter_cell").removeClass("curr_filter");
+            _this.addClass("curr_filter");
+        }
+    });
+
+    $(".sub_type").tap(function(){
+        $(".sub_type").removeClass("curr");
+        $(".sub_list").removeClass("curr");
+        $("."+$(this).addClass("curr").attr("lableFor")).addClass("curr");
+        $('.search_area_bar').html($(this).html());
+    });
+}();
+$(document).ready(function () {
+	var ws='ws';
+	var type=get(ws);
+	if (type=='海外') {
+		$('title').html('海外赛事');
+		$('.sub_1 p:nth-child(2)').removeClass('curr');
+		$('.sub_1 p:nth-child(3)').addClass('curr');
+		$('.sub_2_2').removeClass('curr');
+		$('.sub_2_1').addClass('curr');
+		$('.search_area_bar').html('海外');
+	}else if(type=='国内'){
+		$('title').html('国内赛事');
+		$('.sub_1 p:nth-child(3)').removeClass('curr');
+		$('.sub_1 p:nth-child(2)').addClass('curr');
+		$('.sub_2_1').removeClass('curr');
+		$('.sub_2_2').addClass('curr');
+		$('.search_area_bar').html('国内');
+	}
+})
+$(document).ready(function () {
+	var ws='ws';
+	var type=get(ws);
+	console.log(type);
+	if (type!='海外'&&type!='国内') {
+		$('.weui_search_bar').addClass('.weui_search_focusing');
+//		$('.weui_search_cancel').css('display','block');
+		$('#search_input').focus();
+		$('#search_input').val(type);
+	}
+})
+/////////////////////热门推荐随机出现///////////////////////////////////
+var now = "<?php echo $_smarty_tpl->tpl_vars['now']->value;?>
+";
+$(document).ready(function () {
+	$('.hot_matchs a').remove();
+	$.ajax({
+		type:"get",
+		url:"/ajax/hotlist",
+		data:{length:'200'},
+		sync:true,
+		dataType:"json",
+		success:function (obj) {
+		var Obj=obj.data;
+		var Length=Obj.length;
+		// 定义存放生成随机数的数组 
+		var array=new Array(); 
+		// 循环N次生成随机数 
+		for(var i = 0 ;i<Length; i++){  
+		    if(array.length<5){ 
+		          generateRandom(Length); 
+		    }else{ 
+		      break; 
+		   } 
+		} 
+		function generateRandom(count){ 
+		     var rand = parseInt(Math.random()*count); 
+		     for(var i = 0 ; i < array.length; i++){ 
+		          if(array[i] == rand){ 
+		               return false; 
+		          }      
+		     } 
+		     array.push(rand); 
+		} ;
+			for (var i=0;i<array.length;i++) {
+				var minge='';
+				if(Obj[array[i]].m_state!=0 || Obj[array[i]].m_GameTime <=now || Obj[array[i]].m_releaseTime >now || Obj[array[i]].m_untilTime<now || Obj[array[i]].m_offineTime <now){
+					var minge='<span class="match_tips match_tips_pay1">名额已满</span>';
+				}else if(Obj[array[i]].m_placesleft<=20){
+					var minge='<span class="match_tips match_tips_warm match_tips_pay2">名额紧张</span>';
+				}
+				var Time=Obj[array[i]].m_GameTime.substring(0,10);
+				var types=Obj[array[i]].m_Mtypes.replace(/\|/g,'<span></span>');
+				var str='<a href="/Matchinfo?m_id='+Obj[array[i]].id+'" class="weui_media_box weui_media_appmsg"><div class="weui_media_hd"><img class="weui_media_appmsg_thumb" src='+Obj[array[i]].m_img+' alt=""></div><div class="weui_media_bd"><h4 class="weui_media_title flex"><span class="S_overhiden">'+Obj[array[i]].m_name+'</span>'+minge+'</h4><p class="weui_media_desc weui_media_desc_1 line2 weui_media_title_position">'+Obj[array[i]].m_des+'</p><p class="weui_media_desc weui_media_desc_padding">'+Time+'  '+types+'</p></div></a>';
+				$('.hot_matchs').append(str);
+			}
+		}
+	});
+});
+</script>
+</body>
+</html><?php }} ?>

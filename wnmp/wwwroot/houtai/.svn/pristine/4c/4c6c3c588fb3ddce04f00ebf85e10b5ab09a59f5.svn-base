@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="Author" content="" />
+  	<meta name="Keywords" content="" />
+  	<meta name="Description" content="" />
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  	<link rel="stylesheet" type="text/css" href="./css/lottery.css">  
+  	<title>活动</title>
+</head>
+<body>
+<div id="wrap">
+	<div id="title"><img src="./images/banner.png" alt=""></div>
+	<div id="tip1"><img src="./images/tip1.png" alt=""></div>
+	<div id="qrcode"><img src="./images/qrcode.png" alt=""><p id="code_stats">已关注</p></div>
+	<p>知行合逸旅行</p>
+	<div id="tip2"><img src="./images/tip2.png" alt=""></div>
+	<div id="yao"><img src="./images/yao.png" alt=""></div>
+	<div id="yao1"><img src="./images/yao1.png" alt=""></div>
+	<div id="guizhe">
+		<img src="./images/guizhe.png">
+		<div>
+			<p>1、长按二维码，关注知行合逸公众号</p>
+			<p>2、在抽奖页面动手摇一摇</p>
+			<p>3、中奖用户需填写个人信息即可领取无锡马拉松名额</p>
+			<p>4、未中奖用户可以将自己的抽奖分享到朋友圈，以方便自己的亲朋好友来抽取名额</p>
+			<p id="hunt"><span>注意：</span>幸运抽中名额的朋友，务必点击"<span>领取</span>"按钮填写信息，如不慎关闭页面，名额也会自动流失哦。</p>
+		</div>
+	</div>
+</div>
+<div id="mask"></div>
+<script type="text/javascript" src="./js/lottery.js"></script> 
+</body>
+</html>

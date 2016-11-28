@@ -1,0 +1,163 @@
+<{include file='Comon/header.html'}>
+<div id="section2" class=" section">
+	<div class="section_center">
+		<div id="section2_word_box">
+            <div style="width: 680px;margin:0 auto;text-align: left;">
+                <h1>2016中国东极·抚远黑瞎子岛 新年日出马拉松赛</h1>
+                <h2>这里是中国的最东极；</h2>
+                <h2>这里没有举世关注的目光，但这里有中国每天的第一缕阳光；</h2>
+                <h2>这里没有繁华喧闹的大都市，但这里有不可侵犯的国界线；</h2>
+                <h2>这里没有西服革履的成功人士，但这里有一往无前的追光勇者；</h2>
+                <h2>2016新年第一天，</h2>
+                <h2>中国东极，抚远黑瞎子岛，</h2>
+                <h2>等你来。</h2>
+                <h2>黑瞎子岛新年日出马拉松 (Black Bear Island New Year Sunrise Marathon)</h2>
+            </div>
+                <!--<h2>中国每天第一缕阳光从中国的东极————黑龙江抚远县的黑瞎子岛升起。</h2>
+                <h2>抚远县人民政府将在2016年新年元旦举办一场独特的马拉松赛事————2016中国东极·抚远</h2>
+                <h2>黑瞎子岛日出马拉松 (Black Bear Island New Year Sunrise Marathon)</h2>-->
+		</div>
+		<div id="s2_map_box">
+			<div class="s2_map_list">
+				<p class="s2_map_list_p">
+					全程马拉松<!--<a href="">more</a>-->
+				</p>
+				<div class="s2_map_img">
+					<img src="/static/images/qcmls.jpg" alt="">
+				</div>
+			</div>
+			<div class="s2_map_list map_listie8">
+				<p class="s2_map_list_p">
+					半程马拉松<!--<a href="">more</a>-->
+				</p>
+				<div class="s2_map_img">
+					<img src="/static/images/bcmls.jpg" alt="">
+				</div>
+			</div>
+			<div class="s2_map_list">
+				<p class="s2_map_list_p">
+					迷你马拉松<!--<a href="">more</a>-->
+				</p>
+				<div class="s2_map_img">
+					<img src="/static/images/mnmls.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="section3" class="sectionpage section">
+	<div class="vertical_center section_center">
+		<div id="s3_center_box">
+			<h1>2016中国东极·抚远黑瞎子岛 新年日出马拉松赛特色</h1>
+			<h2>☆ 一次中国版图最东端的马拉松；</h2>
+			<h2>☆ 每天中国的第一缕阳光从这里升起。2016年元旦05:58分，新年日出之时，鸣枪起跑；</h2>
+			<h2>☆ 迎着新年的第一缕阳光，和太阳一同起跑！follow me！follow sun！</h2>
+			<h2>☆ 穿梭在冰天雪地，奔跑在林海雪原，这是中国最cool的马拉松，也是中国纬度最高的马拉松;</h2>
+			<h2>☆ 沿途欣赏中国最独特的地理坐标：中俄界河——黑龙江，中国最东端——通江乡，中国最年经的国土————黑瞎子岛，中国最东国界线——乌苏里江国界界碑，中国最东端的哨所——东方第一哨;</h2>
+			<h2>☆ 最后的4公里，运动员们将奔跑在千里冰封的乌苏里江面上;</h2>
+			<h2>☆ 最强补给站。补给站将有独特美食提供给运动员，大马哈鱼籽酱配面包;</h2>
+			<h2>☆ 比赛的终点，最后的终极。这里是三条国界线的汇合点；这里是中国两条北方大河，黑龙江和乌苏里江的汇合处;这里是中国每天的起点，也是中国道路最东端的终点。</h2>
+			<h2>☆ 现已开启全面报名，报名从2015年11月1日起至12月30日止。</h2>
+		</div>
+	</div>
+</div>
+<div id="section4" class="section">
+	<div id="s4_center" class="section_center">
+		<div id="s4_center_title">
+			<ul>
+				<li><img src="/static/images/waveline.png" alt=""></li>
+				<li>热点新闻</li>
+				<li><img src="/static/images/waveline.png" alt=""></li>
+			</ul>
+		</div>
+		<div id="s4_news_box">
+			<{foreach from = $news name="news" item="i" key="k"}>
+					<{if $k==0}>
+					<div id="s4_news_left" class="s4_news_list">
+					<{/if}>
+					<{if $k==3}>
+					</div>
+					<div id="s4_news_right" class="s4_news_list">
+					<{/if}>
+					<{if $i.url_type=="location"}>
+						<a href="/Index/news?id=<{$i.id}>">
+					<{else}>
+						<a href="<{$i.url}>" target="_bank">
+					<{/if}>
+							<div class="index_news_box">
+								<div class="index_news_img img_box">
+									<img src="<{$i.img}>" alt="">
+								</div>
+								<div class="index_news_info">
+									<p class="index_news_title"><{$i.news_title}></p>
+									<p class="index_news_des"><{$i.des}></p>
+								</div>
+							</div>
+						</a>
+			<{/foreach}>
+					</div>
+		</div>
+	</div>
+</div>
+
+<div id="section5" class="sectionpage section">
+	<div id="s5_center" class="vertical_center section_center">
+		<div id="s5_athlete_box" class="s5_center_list">
+			<p>明星跑者</p>
+			<div id="s5_athlete_list_box" class="s5_list_box">
+				<ul>
+					<li class="img_box">
+						<img class="vertical_center" src="/static/images/athlete01.jpg" alt="">
+						<p>董　军</p>
+					</li>
+					<li class="img_box">
+						<img class="vertical_center" src="/static/images/athlete02.jpg" alt="">
+						<p>王　静</p>
+					</li>
+					<li class="img_box">
+						<img class="vertical_center" src="/static/images/athlete03.jpg" alt="">
+						<p>毛大庆</p>
+					</li>
+					<li class="img_box">
+						<img class="vertical_center" src="/static/images/athlete04.jpg" alt="">
+						<p>王家超</p>
+					</li>
+					<li class="img_box">
+						<img class="vertical_center" src="/static/images/athlete05.jpg" alt="">
+						<p>苏子灵</p>
+					</li>
+					<!-- <li>
+						<img class="vertical_center" src="/static/images/athlete06.png" alt="">
+						<p>CHARLIE WAITE</p>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<!-- <div id="s5_sponsor_box" class="s5_center_list">
+			<p>特别赞助商</p>
+			<div id="s5_sponsor_list_box" class="s5_list_box">
+				<ul>
+					<li>
+						<img class="vertical_center" src="/static/images/nike.png" alt="">
+					</li>
+					<li>
+						<img class="vertical_center" src="/static/images/addidas.png" alt="">
+					</li>
+					<li>
+						<img class="vertical_center" src="/static/images/puma.png" alt="">
+					</li>
+					<li>
+						<img class="vertical_center" src="/static/images/racbok.png" alt="">
+					</li>
+					<li>
+						<img class="vertical_center" src="/static/images/speedo.png" alt="">
+					</li>
+					<li>
+						<img class="vertical_center" src="/static/images/jaked.png" alt="">
+					</li>
+				</ul>
+			</div>
+		</div> -->
+	</div>
+</div>
+<{include file='Comon/footer.html'}>

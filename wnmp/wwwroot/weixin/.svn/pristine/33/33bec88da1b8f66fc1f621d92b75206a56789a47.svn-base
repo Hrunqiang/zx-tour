@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="Author" content="" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="./css/style.css?v=1.24">
+<title>传靓照赢名额</title>
+<style type="text/css">
+#formBox{width: 80%;position: absolute;bottom:-7%;left:50%;-webkit-transform: translate3d(-50%,-50%,0);-moz-transform: translate3d(-50%,-50%,0);-ms-transform: translate3d(-50%,-50%,0);-o-transform: translate3d(-50%,-50%,0);transform: translate3d(-50%,-50%,0);z-index: 10;}
+#formBox div{margin-bottom: 1rem; 
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 3rem;
+    background: rgba(252,224,49,.8);
+}
+#formBox div p{height: 3rem;display: inline-block;line-height: 3rem;}
+#formBox div input{
+	height: 100%;
+	border:none;
+	background: none;
+	-webkit-appearance: none;
+	-webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;}
+#formBox p a{width: 24%;display: inline-block;margin: 3.285714285714286rem auto;}
+#formBox p a:nth-child(2){margin-left:14%;margin-right: 13%;}
+#upload_btn{margin-right: 10%;}
+#formBox p img{
+	width: 100%;
+}
+._alert{width: 18.035714285714286rem;/*position: absolute;left: 50%;top: 50%;*/color: #FFFFFF;/*position: absolute;-webkit-transform: translate3d(-50%,-50%,0);-moz-transform: translate3d(-50%,-50%,0);-ms-transform: translate3d(-50%,-50%,0);-o-transform: translate3d(-50%,-50%,0);transform: translate3d(-50%,-50%,0);*/}
+._alert_inner{font-size: 1rem; width: 18.035714285714286rem;position: absolute;left: 50%;top: 50%;color: #FFFFFF;position: absolute;-webkit-transform: translate3d(-50%,-50%,0);-moz-transform: translate3d(-50%,-50%,0);-ms-transform: translate3d(-50%,-50%,0);-o-transform: translate3d(-50%,-50%,0);transform: translate3d(-50%,-50%,0);}
+._alert_out{width: 100%;height: 100%;background-color: rgba(0,0,0,0.8);z-index: 1000;position: absolute;font-size: 1rem;/*display: none;*/top: 0;}
+#close{position: absolute;right: -2.285714285714286rem;top: 0;width: 28px;height: 28px;background: rgba(0,0,0,0.4);line-height: 28px;text-align: center;}
+._p{display: inline-block;/*position: absolute;*/width: 100%;margin-top: 10px;overflow: hidden;}
+._p a{width: 30%;display: inline-block;margin-left: 0.5714285714285714px;}
+._p a:nth-child(2){float: right;margin-left: 0px;margin-right: 0.5714285714285714rem;}
+.p_text{font-weight: bold;color: pink;}
+</style>
+</head>
+<body>
+<div id="body">
+	<div style="width: 18rem;margin: 1.557142857142857rem auto;"><img src="./images/bg_1_1.png" alt="" /></div>
+	<div style="width: 15rem;margin: 0 auto;"><img src="./images/bg_1_2.png"/></div>
+	<div id="formBox">
+		<!--<form action="/HdPic/auth" method="post" id="auth_form">-->
+			<!--<div><p>输入手机号：</p><input type="number" name="phone" /></div>-->
+			<!--<div><input type="button" id="getcode"  value="点击获取验证码" data="1"/></div>-->
+			<!--<div><p>输入验证码：</p><input type="text" name="code" /></div>-->
+			<p><a class="alert" href="partake.html" id="upload_btn"><img src="./images/attend_.png"></a><a class="alert" href="list.html"><img src="./images/vote_.png"></a><a id="attend" href="#"><img src="./images/rule_1.png"/></a></p>
+			<!--<div class="_alert"></div>-->
+			
+		<!--</form>-->
+	</div>
+	<!--<div class="alert_view"></div>-->
+	<!--<div id="_alert" class="_alert_out">
+		<div class="_alert_inner">
+			<div class="_alert">
+			<div id="close">X</div>
+			<p>1、上传一张本人长距离跑步前后对比照片（请将两张对比照片拼成一张）并留言告诉我们这场比赛给你的感受（100字以内）</p>
+			<p>2、截至活动结束，获赞票数最多的跑友将获得2016年UTMB纪念T恤一件 </p>
+			<p><img src="./images/tx.jpg"/></p>
+			<p>3、请保证您留下的手机号码准确无误以便我们及时联系中奖的你 </p>
+			<p>4、每人只能上传一次照片，请务必正确选择</p>
+			<p>5、本次活动截止时间2016年8月19日下午18：00</p>
+		</div>
+		<p class="_p"><a class="alert" href="#"><img src="./images/attend.png"/></a><a class="alert" href="#"><img src="./images/vote1.png"/></a></p>
+		</div>
+	</div>	-->
+</div>
+<script type="text/javascript" src="/static/js/zepto.js"></script> 
+<script src="./js/main.js?v=1.42"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="./js/weixin.js?v=v1.76"></script>
+<script type="text/javascript">
+	var _formbox=document.getElementById('formBox');
+	var _attend=document.getElementById('attend');
+	var _alert=document.getElementById('_alert');
+	var close=document.getElementById('close');
+	$('#attend').click(function () {
+		var p='<p>1、上传一张本人跑步美照！并留言告诉我们跑步带给你的美好感受（100字以内，注意，仅限女生参加哦！）</p><p class="p_text"> 2、截至活动结束，获赞票数最多前三位跑友将获得2016重庆国际女子半程马拉松免费名额一个</p><p>3、请保证您留下的手机号码准确无误以便我们及时联系中奖的你</p><p>4、本次活动截止时间2016年9月2日下午18：00</p>';
+		var str='<p class="_p"><a class="alert" href="partake.html"><img src="./images/attend_.png"/></a><a class="alert" href="list.html"><img src="./images/vote_.png"/></a></p>';
+		_Alert(p,str);
+		$('#close').click(function () {
+		$('._alert_out').remove();
+		})
+	})
+//	$('.alert').click(function () {
+//		var d='<p style="text-align:center;">本次活动已结束，感谢您的参与！</br>关注知行合逸参与更多跑步活动，赢取赛事相关纪念品！</p>'
+//		var str='<p><img src="./images/share.jpg"/></p>'
+//		_Alert(str,d);
+//		$('#close').click(function () {
+//		$('._alert_out').remove();
+//		})
+//	})
+//	_attend.addEventListener('touchstart',function () {
+//		_alert.style.display='block';
+//	})
+//	close.addEventListener('touchstart',function () {
+//		console.log(1111);
+//		_alert.style.display='none';
+//	})
+	function sy(){
+	var Html=document.getElementsByTagName('html');
+	var w=document.documentElement.clientWidth;
+	var scale=w/375;
+	if (scale>=2) {
+		scale=2;
+	} 
+	Html[0].style.fontSize=14*scale+'px';
+	console.log(scale);
+}
+window.onload=function () {
+	sy();
+}
+$('.alert').bind('click',function () {
+	
+})
+var htm='';
+function _Alert(text,img) {
+	htm='<div id="_alert" class="_alert_out"><div class="_alert_inner"><div class="_alert"><div id="close">X</div>'+text+'</div>'+img+'</div></div>'
+	$('#body').append(htm);
+console.log(htm);
+}
+//$(document).ready(sy)
+//$(window).resize(sy)
+</script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+[ 2016-11-09T11:33:14+08:00 ] /userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002896s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004154s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001110s ]
+ERR: 无法加载模块:Userinfo
+
+[ 2016-11-09T11:33:20+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001003s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001101s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+
+[ 2016-11-09T11:33:20+08:00 ] /Account/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000583s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\AccountAction.class.php 第 47 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001437s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001506s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.135034s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.135094s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.012978s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001059s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001002s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000858s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016098s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001514s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001599s ]
+
+[ 2016-11-09T11:33:23+08:00 ] /Account/test?token=cea3af7b0d562dc67f9018bc33783171
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000999s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001089s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' C:\wnmp\wwwroot\nuomi\DataSource\Common\common.php 第 61 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.352347s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( phone='13522354197' ) LIMIT 1   [ RunTime:0.051124s ]
+NOTIC: [8] Undefined variable: ac C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\NuomiUsersModel.class.php 第 25 行.
+
+[ 2016-11-09T11:33:24+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001227s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001295s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001470s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001034s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.019662s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.006116s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.014206s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014330s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 296 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 297 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 298 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 299 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 543 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.277734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.277782s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001305s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000824s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000655s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003815s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000915s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000965s ]
+
+[ 2016-11-09T11:34:07+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002219s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003318s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001029s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001025s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.039102s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.067053s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001488s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001577s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 119 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 120 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 121 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 122 行.
+NOTIC: [8] Undefined index: broad_country C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 133 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 543 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.290685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.290740s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001185s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000842s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000600s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000943s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003700s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000865s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2016-11-09T11:40:03+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002076s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002871s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001593s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001392s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.016682s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.008227s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001314s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001374s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 119 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 120 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 121 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 122 行.
+NOTIC: [8] Undefined index: broad_country C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 134 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 544 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.293891s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.293937s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001141s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001056s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000820s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000788s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003951s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001133s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001200s ]
+
+[ 2016-11-09T11:42:00+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001706s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001850s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000619s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.007985s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.000636s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000709s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000773s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 119 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 120 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 121 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 122 行.
+NOTIC: [8] Undefined index: broad_country C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 134 行.
+NOTIC: [8] Undefined index: blood_type C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\52183c10c030deba17cd13c5c511db0c5d28fbcd.file.userinfo.html.php 第 544 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.298455s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.298499s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000718s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000436s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000306s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002008s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000522s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2016-11-09T18:59:16+08:00 ] /h5/11/?test=hhy&openid=1wqeww2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002222s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002292s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001216s ]
+ERR: 无法加载模块:H5
+

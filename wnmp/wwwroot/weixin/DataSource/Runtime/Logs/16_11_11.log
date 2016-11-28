@@ -1,0 +1,153 @@
+[ 2016-11-11T10:47:53+08:00 ] /Discount11/auth?test=hhy&openid=sdfsdfdsf&time=20:12:00&date=2016-11-11
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.005235s ]
+INFO: [ route_check ] --END-- [ RunTime:0.007907s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.003266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003346s ]
+
+[ 2016-11-11T10:47:53+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.133%3A8091%2Fh5%2F11%2F%3Ftest%3Dhhy%26openid%3Dsdfsdfdsf
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002932s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003037s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-11-11T10:48:47+08:00 ] /Discount11/auth?test=hhy&openid=sdfsdfdsf&time=20:12:00&date=2016-11-11
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001412s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001535s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001129s ]
+
+[ 2016-11-11T10:48:47+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.133%3A8091%2Fh5%2F11%2F%3Ftest%3Dhhy%26openid%3Dsdfsdfdsf
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001092s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001192s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001538s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-11-11T10:48:53+08:00 ] /Discount11/auth?test=hhy&openid=sdfsdfdsf&time=20:12:00&date=2016-11-11
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001467s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001557s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001487s ]
+
+[ 2016-11-11T10:48:53+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.133%3A8091%2Fh5%2F11%2F%3Ftest%3Dhhy%26openid%3Dsdfsdfdsf
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001181s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001263s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000873s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-11-11T10:49:12+08:00 ] /Discount11/auth?test=hhy&openid=sdfsdfdsf&time=20:12:00&date=2016-11-11
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.020177s ]
+INFO: [ route_check ] --END-- [ RunTime:0.020354s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002748s ]
+
+[ 2016-11-11T10:49:12+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.133%3A8091%2Fh5%2F11%2F%3Ftest%3Dhhy%26openid%3Dsdfsdfdsf
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001070s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001199s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000751s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-11-11T10:49:53+08:00 ] /Discount11/auth?test=hhy&openid=sdfsdfdsf&time=20:12:00&date=2016-11-11
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002828s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002943s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002160s ]
+
+[ 2016-11-11T10:49:53+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.133%3A8091%2Fh5%2F11%2F%3Ftest%3Dhhy%26openid%3Dsdfsdfdsf
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000730s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000798s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000926s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-11-11T10:50:04+08:00 ] /Discount11/auth?test=hhy&openid=sdfsdfdsf&time=20:12:00&date=2016-11-11
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003317s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003470s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001762s ]
+
+[ 2016-11-11T10:50:04+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.133%3A8091%2Fh5%2F11%2F%3Ftest%3Dhhy%26openid%3Dsdfsdfdsf
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003486s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003642s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002346s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-11-11T10:50:21+08:00 ] /Discount11/auth?test=hhy&openid=sdfsdfdsf&time=20:12:00&date=2016-11-11
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001170s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001177s ]
+
+[ 2016-11-11T10:50:21+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.133%3A8091%2Fh5%2F11%2F%3Ftest%3Dhhy%26openid%3Dsdfsdfdsf
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000610s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000996s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-11-11T10:50:31+08:00 ] /Discount11/auth?test=hhy&openid=sdfsdfdsf&time=20:12:00&date=2016-11-11
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001781s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001874s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001367s ]
+
+[ 2016-11-11T10:50:31+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.133%3A8091%2Fh5%2F11%2F%3Ftest%3Dhhy%26openid%3Dsdfsdfdsf
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002420s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002533s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000880s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-11-11T13:19:57+08:00 ] /Discount11/auth?test=hhy&openid=sdfsdfdsf&time=20:12:00&date=2016-11-11
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.015653s ]
+INFO: [ route_check ] --END-- [ RunTime:0.017966s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001532s ]
+
+[ 2016-11-11T13:19:57+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.133%3A8091%2Fh5%2F11%2F%3Ftest%3Dhhy%26openid%3Dsdfsdfdsf
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000848s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000937s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+

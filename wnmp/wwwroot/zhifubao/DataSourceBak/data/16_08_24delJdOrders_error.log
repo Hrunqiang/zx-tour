@@ -1,0 +1,4 @@
+[ 2016-08-24T15:13:57+08:00 ] delJdOrders_error: 2016-08-24 15:13:57 127.0.0.1	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='140160824151356044333' )
+
+[ 2016-08-24T15:15:52+08:00 ] delJdOrders_error: 2016-08-24 15:15:52 127.0.0.1	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='156160824151551044558' )
+

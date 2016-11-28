@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="Author" content="" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="./css/style.css?v=1.24">
+<title>传靓照赢名额</title>
+<style type="text/css">
+#formBox{width: 80%;position: absolute;bottom:-3px;left:50%;-webkit-transform: translate3d(-50%,-50%,0);-moz-transform: translate3d(-50%,-50%,0);-ms-transform: translate3d(-50%,-50%,0);-o-transform: translate3d(-50%,-50%,0);transform: translate3d(-50%,-50%,0);}
+#formBox div{margin-bottom: 1rem; 
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 3rem;
+    background: rgba(252,224,49,.8);
+    line-height: 3rem;
+}
+#formBox div p{height: 4rem;display: inline-block;font-size: 1.2rem;}
+#formBox div input{
+	font-size: 1rem;
+	height: 100%;
+	border:none;
+	background: none;
+	-webkit-appearance: none;
+	-webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;}
+#formBox p a{width: 45%;display: block;margin: 0 auto;}
+#upload_btn{margin-right: 10%;}
+#formBox p img{
+	width: 100%;
+}
+#formBox div:nth-child(2){
+	width: 48%;
+	font-size: 1.2rem;
+	float: left;
+}
+#formBox div:nth-child(3){
+	float: right;
+	width: 48%;
+	/*margin-left: 0.7142857142857143rem;*/
+}
+#formBox div:nth-child(3) input{width: 20px;}
+#getcode{font-size: 1.2rem;}
+#formBox div:nth-child(3) input::-webkit-input-placeholder{font-size: 1rem;}
+.ba_1_2{width: 15rem;margin: 3.028571428571429rem auto 0;}
+</style>
+</head>
+<body>
+<div id="body">
+	<div class="ba_1_2"><img src="./images/bg_1_2.png"/></div>
+	<div id="formBox">
+		<form action="/HdChongMa/auth" method="post" id="auth_form">
+			<div><p>输入手机号：</p><input type="number" name="phone" /></div>
+			<div><input style="text-align: left;padding: 0px;font-size: 1.2rem;" type="button" id="getcode"  value="点击获取验证码" data="1"/></div>
+			<div><input type="text" name="code" placeholder="输入验证码" /></div>
+			<p><a href="#" id="upload_btn"><img src="./images/sub.png"></a>
+				<!--<a href="list.html"><img src="./images/vote.png"></a>-->
+			</p>
+		</form>
+	</div>
+</div>
+<script type="text/javascript" src="/static/js/zepto.js"></script> 
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="./js/weixin.js?v=v1.76"></script>
+<script type="text/javascript">
+var time = 60;
+function phoneCheck(phone){
+	return /^1[\d]{10}$/.test(phone);
+}
+$("#getcode").click(function(){
+	var _this = $(this),
+	codeStats = _this.attr("data"),
+	phone = $('input[name=phone]').val();	
+	if(codeStats!=1) return false;
+	if(!phoneCheck(phone)){
+		alert("请输入正确的手机号！");
+		return false;
+	}	
+	_this.attr("data",0).val(time+"S后重新获取");
+	$.ajax({	
+		cache: false,
+		url:"/HdChongMa/verify?phone="+phone,
+		type: "POST",
+		dataType: "json",
+		timeout:'30000',
+		data: "",
+		success:function(data){
+			if(data.error!=0) alert(data.msg);
+		},
+		error:function(){
+			alert("发送失败！");
+		}
+	});
+	clearTimeout(codeTiming);
+	var codeTiming = setInterval(function(){
+		time--;
+		if(time <=0 ) {
+			clearTimeout(codeTiming);
+			_this.attr("data",1).val("获取验证码");
+			time = 60;
+		}else{
+			_this.val(time+"S后重新获取");
+		}	
+	},1000);
+});
+$("#upload_btn").click(function(){
+	var phone = $('input[name=phone]').val();	
+	var code = $('input[name=code]').val();
+	if(phone && code && phoneCheck(phone)){
+		$("#auth_form").submit();
+	}else{
+		alert("请输入手机号和验证码");
+	}
+	return false;
+});
+</script>
+</body>
+</html>

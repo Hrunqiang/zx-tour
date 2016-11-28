@@ -1,0 +1,102 @@
+ <{include file='Login/header.html'}>
+
+
+<div class="wrap">
+    <div class="container">
+        <div id="main">          
+            <div class="con">       	
+                  <div class="table">
+                  	<div class="th">
+                    	<div class="form">
+                            IOS推送    
+                           <!--  <input type="button" value="push" id="push_btn">   -->
+
+                                   
+                        </div>
+
+                    </div>
+                    <form action="?s=Classes&a=mypush" method='post' id="form_data">
+<!--                     <div id ="push" style="font-size: 18px">
+    用户token:<input type="text" name="t_"><br>
+    
+</div> -->
+                        <input type="hidden" name="app" value="<{$app}>">
+                   
+                    项目名：<select id="app" style="width:100px;height: 20px;">
+                        <{$option}>
+                    </select>  <br><br>
+                    服务器：<select id="test" style="width:100px;height: 20px;" name="test">
+                         <option value="0">线上服务器</option>
+                        <!--  <option value="1">测试服务器</option> -->
+                    </select>  <br>  <br>
+                    内　容：<textarea name="msg" style="width:50%; height:50px;" id='msg'></textarea><br>  
+                    <br>
+                    <input type="button" value="推送给所有" id="push_btn_all" >  
+<!--                     <table class="admin-tb" id="datatable">
+<thead>
+    <tr>
+        <th><input type="checkbox" id="sall"><label for="sall">全选</label></th>
+        <th>项目</th>
+        <th>id</th>
+        <th>反馈Token</th>
+        <th>APP版本
+            <select id="version" style="width:100px;height: 20px;">
+                <{$versions}>
+            </select>
+        </th> 
+        <th>手机版本</th>                   
+        <th>最后push时间</th>
+    </tr>
+                    </thead>
+                     <{foreach from=$list item=v }>
+                        <tr>
+                        <td><input type="checkbox" name="token_check[]" value="<{$v.t}>" title="<{$v.t}>"></td>
+                            <td><{$v.app}></td>
+                            <td><{$v.id}></td>
+                            <td><{$v.t}></td>
+                            <td><{$v.v}></td>
+                            <td><{$v.p}></t>
+                            <td><{$v.lastpush}></td>
+                        </tr>
+                    <{/foreach}>
+</table> -->
+                    </form>
+                </div>
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+<script type = "text/javascript">
+/*$('#sall').click(function(){
+	var state	= $(this).attr('checked');
+	var form	= $(this).parents('form');
+	if(state){
+		form.find('input[type=checkbox][name^=token_check]').attr('checked',true);
+	}else{
+		form.find('input[type=checkbox][name^=token_check]').attr('checked',false);
+	}
+});*/
+$("#app").change(function(){
+	window.location.href = "./?s=Classes&a=push&app="+$(this).val();
+});
+/*$("#version").change(function(){
+    window.location.href = "./?s=Classes&a=push&app="+$("#app").val()+"&v="+$(this).val();
+});*/
+/*$('#push_btn').click(function(){  
+    var form = document.getElementById('form_data');
+    var data = new FormData(form);
+    data.append("test","3232");
+    form.submit();
+    var xhr = new XMLHttpRequest();
+            xhr.open("post", "./?s=Classes&a=mypush", true);
+            xhr.send(data);
+});*/
+var ispushing = false;
+$('#push_btn_all').click(function(){
+    if(!ispushing){
+        ispushing = true;
+       window.location.href = "./?s=Classes&a=pushall&app="+$("#app").val()+"&v="+$("#version").val()+"&msg="+$("#msg").val(); 
+    }
+});
+</script>
+</div>
+<{include file='Login/footer.html'}>

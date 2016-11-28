@@ -1,0 +1,8 @@
+<{include file='Comon/header.html'}>
+<div id="register_box" class="general_page section">
+	<div class="section_center">
+		<div class="general_page_left"><{$msg}></div>
+		<{include file='Comon/right.html'}>
+	</div>
+</div>
+<{include file='Comon/footer.html'}>

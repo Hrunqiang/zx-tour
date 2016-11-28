@@ -1,0 +1,43 @@
+<div id="index_nav_box">
+	<div class="nav section_center">
+		<div id="nav_logo" class="fl"><a href="/Index/index"><img src="/static/images/logo1.png"></a></div>
+		<ul class="nav-item fl">
+			<li>
+				<a href="">赛事信息</a>
+				<ul>
+					<li><a href="/Matchinfo/plan">赛事规则</a></li>
+					<li><a href="/Matchinfo/line">比赛线路</a></li>
+					<li><a href="/Matchinfo/equipment">装备建议</a></li>
+					<li><a href="/Matchinfo/traffic">交通住宿</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">赛事报名</a>
+				<ul class="w150">
+					<li><a href="/enroll/index">立即报名</a></li>
+					<li><a href="/EnrollInfo/">报名查询</a></li>
+					<li><a href="/OnlineEnroll/">线上马拉松报名</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/Account/reset">成绩查询</a>
+				<ul>
+					<li><a href="/Score/index">完赛证书</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">比赛照片</a>
+				<ul class="w140">
+					<li><a href="/MatchPicture">官方照片</a></li>
+					<li><a href="/MatchPicture/playerpic">选手照片领取</a></li>
+				</ul>
+			</li>
+			<!-- <li>
+				<a href="">赞助商</a>
+				<ul class="w120">
+					<li><a href="/Sponsor/introduction">赞助商介绍</a></li>
+				</ul>
+			</li> -->
+		</ul>
+	</div>
+</div>

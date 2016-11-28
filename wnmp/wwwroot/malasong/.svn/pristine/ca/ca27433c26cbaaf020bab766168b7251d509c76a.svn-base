@@ -1,0 +1,19 @@
+<?php
+class GoodsModel extends Model{
+	protected  $trueTableName	= "mls_goods";
+	protected $connection = 'DB_CONFIG1_zx';
+	protected $cacheTime	= 1800;//缓存时间
+	public function getmatchs(){
+		return $this->cache(true,$this->cacheTime)->where("goodspid=0")->select();
+	}
+	
+	public function getmatchsname(){
+		return $this->cache(true,$this->cacheTime)->field("goodscls")->where("goodspid=0")->select();
+	}
+	
+	public function getmatchlist(){
+		$sql = "select * from {$this->trueTableName} where goodspid = 0";
+		return $this->query($sql);
+	}
+	
+}

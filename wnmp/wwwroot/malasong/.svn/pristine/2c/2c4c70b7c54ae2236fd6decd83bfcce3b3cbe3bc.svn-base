@@ -1,0 +1,74 @@
+<{include file='Login/header.html'}>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">
+                
+                  <div class="table">
+                    <div class="th">
+<!--                        <div class="form">
+                        <div class="fl">
+                            <select name="cid" id="s_cid" onchange="var v=this.value;window.location.href='/?s=Classes&a=content&ac=list&cid='+v">
+                            <option value=0>全部分类</option>
+                            <{$select}>
+                            </select>&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="window.location.href='/?s=Classes&a=content&ac=add&cid='+document.getElementById('s_cid').value" value="添加内容"/> 　　　当前共有<span id= "count_num"></span>条数据
+                        </div>
+                       
+                        </div> -->
+                    </div>
+                    <table class="admin-tb" id="datatable">
+                    <thead>
+                        <tr>
+                            <th>报名订单号</th>
+                            <th style="text-align:center;">姓名</th>
+                            <th style="text-align:center;">支付金额
+                               <!--  <select id="usr_choose" name="usr_choose">
+                                    <option value="">全</option>
+                                    <option value="weixin" <{if $type =='weixin'}>selected<{/if}>>微信用户</option>
+                                    <option value="direct" <{if $type =='direct'}>selected<{/if}>>注册用户</option>
+                                </select> -->
+                             </th>
+                             <th style="text-align:center;">订单状态</th>
+                             <th style="text-align:center;">成绩</th>
+                             <th style="text-align:center;">创建时间</th>
+                             <th style="text-align:center;">最后更新时间</th>
+                             <th style="text-align:center;">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="class_item">
+                    <{if $list}>
+                    <{foreach from=$list name=n item=i}>
+                        <td style="width:45px"><{$i.orderid}></td>
+                        <td style="text-align:center;"><{$i.xingming}></td>   
+                        <td style="text-align:center;">￥<{$i.orderprice}></td>
+                        <td style="text-align:center;">
+                        <{if $i.paystats==6}>
+                        成绩上传完成
+                        <{elseif $i.paystats==1}>
+                        支付完成
+                        <{else}>
+                        <{$i.paystats}>
+                        <{/if}>
+                        </td>
+                        <td style="text-align:center;" ><{$i.chengji}></td>
+                        <td style="text-align:center;" ><{$i.ctime}></td>
+                        <td style="text-align:center;" ><{$i.utime}></td>
+                        <td style="text-align:center;"><{if $i.paystats==6}><a href="./?s=OnlineEnroll&a=info&orderid=<{$i.orderid}>">查看成绩详情</a><{/if}></td>
+                        </tr>
+                    <{/foreach}>
+                    <{/if}>
+                    </tbody>
+                    </table>
+                    <div class="th">
+                    </div>
+                </div>
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script type="text/javascript">
+
+</script>
+<{include file='Login/footer.html'}>

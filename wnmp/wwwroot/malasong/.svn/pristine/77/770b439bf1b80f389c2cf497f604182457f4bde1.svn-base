@@ -1,0 +1,94 @@
+<?php
+/**
+ * 计划任务
+ * @author kittert
+ *
+ */
+class CrontabAction extends Action{
+	Public function _initialize(){
+		if(MODE_NAME!='cli'){
+			die('error path');
+		}
+		ini_set ( "max_execution_time", "0" );
+		ini_set ( 'memory_limit', '512M' );
+	}
+
+    public function insertNumberToQueue($prefix,$min,$max){
+        if(empty($prefix) || empty($max)) return false;
+        $min = intval($min);
+        $max = intval($max);
+
+        $RM = new RedisModel();
+        $QueueName = $prefix."_HXZ_NUMBER";
+        $ckKey = $RM->EXISTS($QueueName);
+        if($ckKey){
+            echo "queueName exists:".$QueueName." please retry after del this keyName\r\n";
+            return false;
+//            $ders = $RM->DEL($QueueName);
+//            if(!$ders){
+//                echo "del key error:".$QueueName."\r\n";
+//                return ;
+//            }
+        }
+        echo "START $QueueName\r\n";
+        for($i=$min;$i<=$max;$i++){
+            $value = sprintf($prefix.'%04s', $i);
+            echo $value."\r\n";
+            $rs = $RM->LPUSH($QueueName,$value);
+            if(!$rs){
+                echo "add name: $QueueName value:$i queue error rs:".json_encode($rs)."\r\n";
+            }
+        }
+    }
+    public function creatNumbers(){
+//        全程马拉松赛参赛号码派发区间 ： F0501-F2501
+//
+//        半程马拉松赛参赛号码派发区间 ： H2502-H3502
+//
+//        迷你马拉松赛参赛号码派发区间 ： M3503-
+//        QueueName  type=F||H||M
+//        $QueuName = $type."_HXZ_NUMBER";
+//        生成全马号码
+        $this->insertNumberToQueue("F",501,2501);
+        $this->insertNumberToQueue("H",2502,3502);
+        $this->insertNumberToQueue("M",3503,10000);
+
+    }
+
+	public function sendSms(){
+		$mobile = trim($_REQUEST['num']);
+		$msg	= trim($_REQUEST['msg']);
+		$M = new SendSmsModel();
+		$rs = $M->send($msg, $mobile);
+		echo json_encode($rs);
+	}
+	
+	public function exe_pay(){
+		$QM = new QueueModel();
+		while ( true ) {
+			$data = $QM->getQueue();
+			if(!$data){
+				echo date("Y-m-d H:i:s")."\tnone data\trs:".json_encode($data)."\r\n";
+				sleep(1);
+				continue;
+			}else{
+				if($data['retry'] <= 30 && $data['rtime'] <= time()){
+					$str	= '$result='.$data['s'].'::'.$data['a'].'($data["d"]);';
+					if(!$result){
+						$data['retry'] ++;
+						$data['rtime'] = time() + (600 * $data['retry']);
+						$QM->addQueue($data['s'], $data['a'], $data["d"],$data['retry'],$data['rtime']);
+					}else{
+						continue;
+					}
+				}else{
+					@mwtlog("retry_more_times",json_encode($data),true);
+					echo date("Y-m-d H:i:s")."\tretry\trs:".json_encode($data)."\r\n";
+					sleep(1);
+					continue;
+				}
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,1583 @@
+[ 2016-08-30T16:44:43+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001187s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 24 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.014152s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.011339s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.009806s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 41 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.008134s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 45 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000678s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000972s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001042s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 62 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 62 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.028578s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028636s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001002s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000678s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000557s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000712s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003103s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000781s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000836s ]
+
+[ 2016-08-30T16:44:48+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001247s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001343s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002136s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.004066s ]
+SQL: SELECT * FROM `cities_copy` [ RunTime:0.002972s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php on line 57 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 106 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.003813s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002065s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.001240s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001024s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001080s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017354s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017470s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001678s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000723s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000419s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000713s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003844s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000737s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000805s ]
+
+[ 2016-08-30T16:44:50+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000963s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001065s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002111s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.001147s ]
+
+[ 2016-08-30T16:45:09+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000886s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000975s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+
+[ 2016-08-30T16:45:46+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000714s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000796s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002005s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000767s ]
+
+[ 2016-08-30T16:45:47+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000567s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002159s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000866s ]
+
+[ 2016-08-30T16:45:48+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000677s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000794s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002157s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001034s ]
+
+[ 2016-08-30T16:45:49+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000600s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004394s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001780s ]
+
+[ 2016-08-30T16:45:50+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000826s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000912s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001770s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000735s ]
+
+[ 2016-08-30T16:45:51+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000654s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002031s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000852s ]
+
+[ 2016-08-30T16:45:52+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000652s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002140s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000761s ]
+
+[ 2016-08-30T16:45:53+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000623s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001758s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000757s ]
+
+[ 2016-08-30T16:45:54+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000563s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001856s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000754s ]
+
+[ 2016-08-30T16:45:55+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000559s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.007537s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001638s ]
+
+[ 2016-08-30T16:45:56+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001157s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001232s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001781s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000795s ]
+
+[ 2016-08-30T16:45:57+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000573s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002481s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000735s ]
+
+[ 2016-08-30T16:45:58+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000610s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001732s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001017s ]
+
+[ 2016-08-30T16:45:59+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000594s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001658s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001194s ]
+
+[ 2016-08-30T16:46:00+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000639s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.006962s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.002105s ]
+
+[ 2016-08-30T16:48:19+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001159s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001248s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001277s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001986s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.001871s ]
+SQL: SELECT * FROM `cities_copy` [ RunTime:0.000899s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php on line 57 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 106 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.002030s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001691s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.000972s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.003540s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003601s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020130s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020188s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001399s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000759s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000488s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000755s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003562s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000772s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000829s ]
+
+[ 2016-08-30T16:48:21+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000934s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001043s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002568s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.002466s ]
+
+[ 2016-08-30T16:48:40+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000607s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+
+[ 2016-08-30T16:49:15+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001612s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001747s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001552s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002095s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.001571s ]
+SQL: SELECT * FROM `cities_copy` [ RunTime:0.000832s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php on line 57 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 106 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.013094s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001788s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.000873s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000629s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000692s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.161447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.161501s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001192s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000373s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000224s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002398s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000559s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000619s ]
+
+[ 2016-08-30T16:49:16+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000746s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000840s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002574s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.001249s ]
+
+[ 2016-08-30T16:49:33+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001586s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001889s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001113s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002592s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.002383s ]
+SQL: SELECT * FROM `cities_copy` [ RunTime:0.002480s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php on line 57 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 106 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.004147s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005146s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.001238s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000745s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000807s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.151050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.151134s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001970s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000763s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000375s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000928s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004285s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000907s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001016s ]
+
+[ 2016-08-30T16:49:34+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000910s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001059s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002053s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.001532s ]
+
+[ 2016-08-30T16:49:34+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000536s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+
+[ 2016-08-30T16:49:35+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000559s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001718s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.001557s ]
+SQL: SELECT * FROM `cities_copy` [ RunTime:0.000846s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php on line 57 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 106 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.002924s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001917s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.001160s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000956s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001045s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.010369s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010448s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000988s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000336s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000187s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000386s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002033s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000844s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000944s ]
+
+[ 2016-08-30T16:49:37+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001089s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001197s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001141s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002038s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.000951s ]
+
+[ 2016-08-30T16:49:39+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000795s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000890s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001966s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000854s ]
+
+[ 2016-08-30T16:49:44+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000702s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000956s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002455s ]
+SQL:  select * from zx_tb_matchs where (m_city='北京' or m_country='北京') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001888s ]
+
+[ 2016-08-30T16:49:45+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000928s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001833s ]
+SQL:  select * from zx_tb_matchs where (m_city='北京' or m_country='北京') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001226s ]
+
+[ 2016-08-30T16:49:56+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000521s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+
+[ 2016-08-30T16:51:05+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000557s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002311s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.001908s ]
+SQL: SELECT * FROM `cities_copy` [ RunTime:0.001459s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php on line 57 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 106 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.002894s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001809s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.000747s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000349s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000398s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.010540s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010608s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001065s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000419s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000218s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000437s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002309s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000507s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000564s ]
+
+[ 2016-08-30T16:51:06+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001046s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001180s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003110s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.001587s ]
+
+[ 2016-08-30T16:51:08+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000905s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001002s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001855s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.002867s ]
+
+[ 2016-08-30T16:51:12+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000524s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.009732s ]
+SQL:  select * from zx_tb_matchs where (m_city='北京' or m_country='北京') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.002353s ]
+
+[ 2016-08-30T16:51:13+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000556s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001950s ]
+SQL:  select * from zx_tb_matchs where (m_city='北京' or m_country='北京') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001445s ]
+
+[ 2016-08-30T16:51:16+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000988s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001109s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001868s ]
+SQL:  select * from zx_tb_matchs where (m_city='重庆' or m_country='重庆') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001203s ]
+
+[ 2016-08-30T16:51:17+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001159s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001245s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003182s ]
+SQL:  select * from zx_tb_matchs where (m_city='重庆' or m_country='重庆') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.016190s ]
+
+[ 2016-08-30T16:51:18+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001457s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001551s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002038s ]
+SQL:  select * from zx_tb_matchs where (m_city='重庆' or m_country='重庆') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000733s ]
+
+[ 2016-08-30T16:51:21+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000548s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001712s ]
+SQL:  select * from zx_tb_matchs where (m_city='北京' or m_country='北京') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000754s ]
+
+[ 2016-08-30T16:51:22+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000592s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002305s ]
+SQL:  select * from zx_tb_matchs where (m_city='北京' or m_country='北京') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000884s ]
+
+[ 2016-08-30T16:51:23+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000541s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001921s ]
+SQL:  select * from zx_tb_matchs where (m_city='北京' or m_country='北京') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001322s ]
+
+[ 2016-08-30T16:51:24+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000894s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000995s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001958s ]
+SQL:  select * from zx_tb_matchs where (m_city='北京' or m_country='北京') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001014s ]
+
+[ 2016-08-30T16:51:25+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000528s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001756s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001470s ]
+
+[ 2016-08-30T16:51:26+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000531s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001796s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000888s ]
+
+[ 2016-08-30T16:51:27+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000560s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003123s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001097s ]
+
+[ 2016-08-30T16:51:28+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000715s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000796s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001942s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000709s ]
+
+[ 2016-08-30T16:51:29+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000766s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002279s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000887s ]
+
+[ 2016-08-30T16:51:30+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000690s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+
+[ 2016-08-30T16:52:51+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001424s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001531s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000776s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001912s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.002264s ]
+SQL: SELECT * FROM `cities_copy` [ RunTime:0.004791s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php on line 57 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 106 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001816s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001639s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.000713s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000475s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000524s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.140213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140265s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001197s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000406s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000230s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002432s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000533s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2016-08-30T16:52:52+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000645s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003078s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.001664s ]
+
+[ 2016-08-30T16:52:54+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000605s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001948s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000813s ]
+
+[ 2016-08-30T16:52:56+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000637s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001635s ]
+SQL:  select * from zx_tb_matchs where (m_city='上海' or m_country='上海') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000690s ]
+
+[ 2016-08-30T16:52:57+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000551s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002025s ]
+SQL:  select * from zx_tb_matchs where (m_city='上海' or m_country='上海') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000807s ]
+
+[ 2016-08-30T16:53:30+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000548s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+
+[ 2016-08-30T16:53:47+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000536s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001802s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.001530s ]
+SQL: SELECT * FROM `cities_copy` [ RunTime:0.000836s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php on line 57 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 106 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001876s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001721s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.000731s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000535s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000591s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.131417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.131521s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001200s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000392s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000569s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000508s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002823s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000505s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2016-08-30T16:53:48+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000984s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001087s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002637s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.001504s ]
+
+[ 2016-08-30T16:53:50+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001166s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001512s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001608s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003469s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.002403s ]
+
+[ 2016-08-30T16:53:52+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001037s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001161s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001787s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000768s ]
+
+[ 2016-08-30T16:53:53+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000867s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000969s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000736s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001858s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000787s ]
+
+[ 2016-08-30T16:54:05+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000615s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000683s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+
+[ 2016-08-30T16:54:29+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000726s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000826s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001671s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.001558s ]
+SQL: SELECT * FROM `cities_copy` [ RunTime:0.000861s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php on line 57 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 106 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.002878s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003307s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.001013s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000484s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000535s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.133037s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.133090s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.002261s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000781s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000279s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003983s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000711s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000784s ]
+
+[ 2016-08-30T16:54:30+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001291s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001414s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001393s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002970s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.002119s ]
+
+[ 2016-08-30T16:54:32+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000677s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000666s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003257s ]
+SQL:  select * from zx_tb_matchs where (m_city='北京' or m_country='北京') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000785s ]
+
+[ 2016-08-30T16:54:34+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001145s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001261s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000972s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001680s ]
+SQL:  select * from zx_tb_matchs where (m_city='上海' or m_country='上海') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000713s ]
+
+[ 2016-08-30T16:54:37+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000958s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001072s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002433s ]
+SQL:  select * from zx_tb_matchs where (m_city='重庆' or m_country='重庆') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000684s ]
+
+[ 2016-08-30T16:54:40+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000553s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002370s ]
+SQL:  select * from zx_tb_matchs where (m_city='石家庄市' or m_country='石家庄市') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001168s ]
+
+[ 2016-08-30T16:54:43+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000541s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001834s ]
+SQL:  select * from zx_tb_matchs where (m_city='唐山市' or m_country='唐山市') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000795s ]
+
+[ 2016-08-30T16:54:47+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001207s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002856s ]
+SQL:  select * from zx_tb_matchs where (m_city='上海' or m_country='上海') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001887s ]
+
+[ 2016-08-30T16:54:47+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000738s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+
+[ 2016-08-30T16:55:08+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000518s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001936s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.001753s ]
+SQL: SELECT * FROM `cities_copy` [ RunTime:0.000869s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php on line 57 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 106 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.002411s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001817s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.000704s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000462s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000509s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 180 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.132302s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.132355s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001398s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000646s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000393s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003256s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000555s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000608s ]
+
+[ 2016-08-30T16:55:10+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000600s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002674s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.001616s ]
+
+[ 2016-08-30T16:55:12+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000637s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002031s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.000788s ]
+
+[ 2016-08-30T16:55:14+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000566s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.006716s ]
+SQL:  select * from zx_tb_matchs where (m_city='天津' or m_country='天津') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001501s ]
+
+[ 2016-08-30T16:55:17+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002906s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002978s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003052s ]
+SQL:  select * from zx_tb_matchs where (m_city='北京' or m_country='北京') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001515s ]
+
+[ 2016-08-30T16:55:21+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000873s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000961s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001794s ]
+SQL:  select * from zx_tb_matchs where (m_city='北京' or m_country='北京') and  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.002069s ]
+
+[ 2016-08-30T16:55:34+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000787s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000870s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+

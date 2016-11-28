@@ -1,0 +1,70 @@
+<{include file='Login/header.html'}>
+<div class="wrap">
+            <div class="con box-green">
+                <div class="box-header">
+                    <h4>机器人配声音</h4>
+                </div>
+                <form action="" method="post" enctype="multipart/form-data">
+                <div class="box-content">
+                    <table class="table-font">
+                        <tr>
+                            <td>
+                               	机器人
+                            </td>
+                            <td>
+                               <select name="uid" id="uid">
+                               <{foreach from=$robots item=i key=k name=n}>
+                               	<option value="<{$i.id}>"><{$i.nickname|default:$i.username}></option>
+                               <{/foreach}>
+                               </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               	声音(amr)
+                            </td>
+                            <td>
+                               <input name="file" type="file" value="选择文件">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               	<input type="submit" value=" 提 交 ">
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                </form>
+            </div><!--/ con-->
+            <style>
+            	.nt_left{float:left;width:200px;border-bottom:1px solid #cccccc;height:22px;padding-top:8px;}
+				.ntt{background-color: #bbbbbb;}
+            </style>
+            <div style="width:1000px;padding-top:10px;">
+            	<div class="nt_left ntt">用户名</div>
+            	<div class="nt_left ntt">性别</div>
+            	<div class="nt_left ntt">文件名</div>
+            	<div class="nt_left ntt">修改时间</div>
+            	<div class="nt_left ntt">删除</div>
+            <{foreach from=$datas item=i key=k name=n}>
+            <{if $i.filename}>
+            	<div class="nt_left"><{$i.nickname|default:$i.username}>&nbsp;</div>
+            	<div class="nt_left"><{if $i.sex==1}>男<{else if}>女<{/if}>&nbsp;</div>
+            	<div class="nt_left"><{$i.filename}>&nbsp;</div>
+            	<div class="nt_left"><{$i.ctime}>&nbsp;</div>
+            	<div class="nt_left"><a href="./?s=NtRobot&a=del&id=<{$i.id}>" class="dels">删除</a></div>
+            <{/if}>
+            <{/foreach}>
+            	<div style="clear:both;"></div>
+            </div>
+    </div><!--/ wrap-->
+    <script>
+    $(function(){
+    	$('.dels').click(function(){
+    		return confirm("删除无法恢复,是否删除?");
+    	});
+    });
+    </script>
+<{include file='Login/footer.html'}>

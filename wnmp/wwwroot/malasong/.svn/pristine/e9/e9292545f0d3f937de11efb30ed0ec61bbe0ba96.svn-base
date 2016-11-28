@@ -1,0 +1,60 @@
+<?php
+/**
+ * 比赛图片
+ * @author hhy
+ * ctime 2015-10-27
+ */
+class MatchinfoAction extends Action {
+	
+	Public function _initialize(){
+		//B('AuthCheck');
+	}
+	
+    public function plan(){
+    	$npa = array(
+    			"tab"=>"赛事信息",
+    			"mtab"=>"赛事规划",
+    	);
+    	$this->assign ( "npa", $npa );
+        $this->display();
+    }
+    
+    public function equipment(){
+    	$npa = array(
+    			"tab"=>"赛事信息",
+    			"mtab"=>"装备建议",
+    	);
+    	$this->assign ( "npa", $npa );
+    	$this->display();
+    }
+    
+    public function line(){
+    	$npa = array(
+    			"tab"=>"赛事信息",
+    			"mtab"=>"比赛线路",
+    	);
+    	$this->assign ( "npa", $npa );
+    	$this->display();
+    }
+    
+    public function traffic(){
+    	$npa = array(
+    			"tab"=>"赛事信息",
+    			"mtab"=>"交通住宿",
+    	);
+    	$this->assign ( "npa", $npa );
+    	$this->display();
+    }
+    
+    /**
+     * 团体赛事
+     */
+    public function team(){
+    	$npa = array(
+    			"tab"=>"赛事信息",
+    			"mtab"=>"团体赛须知",
+    	);
+    	$this->assign ( "npa", $npa );
+    	$this->display();
+    }
+}

@@ -1,0 +1,1536 @@
+[ 2016-10-12T11:33:37+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001883s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_ptype='国内' and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.011012s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.002185s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.000952s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 46 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000616s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000847s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000902s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020640s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020696s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.002062s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001670s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001616s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006669s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001192s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001344s ]
+
+[ 2016-10-12T11:33:41+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004526s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_ptype='国内' and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.002526s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.003726s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.001382s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 46 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001611s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001163s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001261s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018870s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018948s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001078s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000642s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000444s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000714s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003080s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000821s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2016-10-12T11:33:47+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001042s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001110s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+
+[ 2016-10-12T11:33:47+08:00 ] /Account/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000682s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+NOTIC: [8] Undefined index: type D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AccountAction.class.php 第 39 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000605s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000707s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.044927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044994s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000383s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000321s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000235s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001441s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000510s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000564s ]
+
+[ 2016-10-12T11:33:57+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004365s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_ptype='国内' and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.002759s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.003497s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.001168s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 46 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001522s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001369s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001584s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.021710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021864s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000734s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000381s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000462s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000618s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002375s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000581s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000645s ]
+
+[ 2016-10-12T11:34:01+08:00 ] /ajax/hotlist?page=2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000976s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001095s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+NOTIC: [8] Undefined index: length D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 37 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003529s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_ptype='国内' and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 5,5  [ RunTime:0.001850s ]
+
+[ 2016-10-12T11:34:05+08:00 ] /ajax/hotlist?page=3
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001352s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001488s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+NOTIC: [8] Undefined index: length D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 37 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005703s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_ptype='国内' and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 10,5  [ RunTime:0.002357s ]
+
+[ 2016-10-12T11:34:07+08:00 ] /Matchinfo?m_id=275&platform=zx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000658s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005717s ]
+SQL: select * from zx_tb_matchs where id = 275 [ RunTime:0.002791s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.005066s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.003882s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3000 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000910s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3006 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000846s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.001806s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=275 )  [ RunTime:0.005058s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\MatchinfoAction.class.php 第 139 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001984s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.001049s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001480s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000472s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000541s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 38 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 38 行.
+NOTIC: [8] Undefined index: remind D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 508 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 508 行.
+NOTIC: [8] Undefined index: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 521 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 521 行.
+NOTIC: [8] Undefined index: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 528 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 528 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013298s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001231s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000449s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000223s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000573s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002654s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000455s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000509s ]
+
+[ 2016-10-12T11:34:07+08:00 ] /Account/imgverify?width=150&height=45
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001982s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002089s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+
+[ 2016-10-12T11:34:09+08:00 ] /Matchinfo/getcourse?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000857s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004804s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000803s ]
+
+[ 2016-10-12T11:34:10+08:00 ] /Matchinfo/getcourse?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000854s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000945s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.003965s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001229s ]
+
+[ 2016-10-12T11:34:11+08:00 ] /Enroll?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000723s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000843s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001091s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004636s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001142s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.003854s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001146s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002701s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3000 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000863s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3006 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000839s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000753s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 3 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000883s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 4 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000911s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001170s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001290s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.208483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.208595s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000652s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000321s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000223s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001703s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000538s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2016-10-12T11:35:27+08:00 ] /Matchinfo/getcourse?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000694s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004145s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001105s ]
+
+[ 2016-10-12T11:35:29+08:00 ] /Matchinfo/getcourse?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000880s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.001631s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000456s ]
+
+[ 2016-10-12T11:35:35+08:00 ] /Enroll?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000544s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000435s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005306s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001539s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004847s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001045s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002365s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3000 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000476s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3006 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000483s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000560s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 3 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000643s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 4 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000557s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000765s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000832s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014144s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000743s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000419s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000271s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002112s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000680s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2016-10-12T11:36:01+08:00 ] /Enroll/step2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000877s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000971s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000634s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002378s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.000554s ]
+
+[ 2016-10-12T11:36:01+08:00 ] /Account/login?type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000981s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001099s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001223s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000421s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000504s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.007787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007852s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000247s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000269s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000181s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001102s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000396s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000436s ]
+
+[ 2016-10-12T11:38:08+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004444s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_ptype='国内' and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.002530s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.004789s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.001338s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 46 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001517s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001384s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001525s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020692s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000835s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000475s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000298s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002318s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000704s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000777s ]
+
+[ 2016-10-12T11:38:10+08:00 ] /ajax/hotlist?page=2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000637s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+NOTIC: [8] Undefined index: length D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 37 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.006031s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_ptype='国内' and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 5,5  [ RunTime:0.002466s ]
+
+[ 2016-10-12T11:38:12+08:00 ] /Matchinfo?m_id=275&platform=zx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000704s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004593s ]
+SQL: select * from zx_tb_matchs where id = 275 [ RunTime:0.000996s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.005361s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002610s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3000 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000923s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3006 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000840s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000790s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.002582s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=275 )  [ RunTime:0.000731s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\MatchinfoAction.class.php 第 139 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002776s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.001186s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001625s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000519s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000597s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 38 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 38 行.
+NOTIC: [8] Undefined index: remind D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 508 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 508 行.
+NOTIC: [8] Undefined index: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 521 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 521 行.
+NOTIC: [8] Undefined index: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 528 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 528 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011656s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011714s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001211s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000518s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000237s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002659s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000664s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2016-10-12T11:38:12+08:00 ] /Account/imgverify?width=150&height=45
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000866s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000958s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+
+[ 2016-10-12T11:38:13+08:00 ] /Matchinfo/getcourse?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001115s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001213s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004216s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.002342s ]
+
+[ 2016-10-12T11:38:14+08:00 ] /Matchinfo/getcourse?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000874s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000972s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004638s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001110s ]
+
+[ 2016-10-12T11:38:20+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001447s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001603s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000942s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004910s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.017220s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.003678s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php on line 45 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_matchcity' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,20  [ RunTime:0.001365s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php on line 74 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 109 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\MatchInfoModel.class.php 第 115 行.
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.009418s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004454s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.001083s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000477s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000531s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013533s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.002031s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000519s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000211s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000965s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003942s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000664s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000741s ]
+
+[ 2016-10-12T11:38:22+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000542s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004546s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_ptype='国内' and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.001232s ]
+
+[ 2016-10-12T11:38:29+08:00 ] /Matchinfo?m_id=275&platform=zx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000587s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004647s ]
+SQL: select * from zx_tb_matchs where id = 275 [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.003874s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002810s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3000 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000852s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3006 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000922s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000986s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.003266s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=275 )  [ RunTime:0.001274s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\MatchinfoAction.class.php 第 139 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004280s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.002184s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.002830s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000541s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000623s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 38 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 38 行.
+NOTIC: [8] Undefined index: remind D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 508 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 508 行.
+NOTIC: [8] Undefined index: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 521 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 521 行.
+NOTIC: [8] Undefined index: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 528 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 528 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.012235s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012293s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001480s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000623s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000248s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000609s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003167s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000666s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000740s ]
+
+[ 2016-10-12T11:38:29+08:00 ] /Account/imgverify?width=150&height=45
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000867s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+
+[ 2016-10-12T11:38:30+08:00 ] /Matchinfo/getcourse?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000663s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.003874s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.002757s ]
+
+[ 2016-10-12T11:38:31+08:00 ] /Matchinfo/getcourse?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001128s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001257s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002361s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000669s ]
+
+[ 2016-10-12T11:38:33+08:00 ] /Enroll?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000830s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000951s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003650s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.000880s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.003175s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001017s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002436s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3000 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000716s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3006 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000662s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000644s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 3 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000762s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 4 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000727s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000925s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001018s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017424s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017557s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001109s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000764s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000836s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000778s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003767s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000999s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001093s ]
+
+[ 2016-10-12T11:38:52+08:00 ] /Enroll/step2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000570s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004435s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001161s ]
+
+[ 2016-10-12T11:38:52+08:00 ] /Account/login?type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000552s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000364s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000430s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.035983s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036040s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000385s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000284s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000210s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001317s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000542s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2016-10-12T11:38:54+08:00 ] /Account/test?token=dfc8e01183ea2f7d8693fa4ff56a3c8d
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000922s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001026s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Common\common.php 第 61 行.
+NOTIC: [8] Undefined index: error D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AccountAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.003552s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( phone='13522354197' ) LIMIT 1   [ RunTime:0.002651s ]
+NOTIC: [8] Undefined variable: ac D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\NuomiUsersModel.class.php 第 25 行.
+
+[ 2016-10-12T11:38:56+08:00 ] /Enroll/createorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000912s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000989s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000650s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005247s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001281s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003972s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = '44' and matchid='275' and ( paystats=5 ) ) LIMIT 1   [ RunTime:0.002264s ]
+SQL: INSERT INTO `zx_tb_orders` (`uid`,`matchid`,`orderid`,`platform`,`user_remarks`,`utime`,`ctime`,`pay_deadline`) VALUES (44,275,'275161012113854044944','nuomi','有特殊需求请留言','2016-10-12 11:38:54','2016-10-12 11:38:54','2016-10-12 12:08:55') [ RunTime:0.000865s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004286s ]
+SQL: SELECT `m_placesleft` FROM `zx_tb_matchs` WHERE ( id=275 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: UPDATE `zx_tb_matchs` SET `m_placesleft`=m_placesleft-1 WHERE ( id=275 ) [ RunTime:0.001405s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.002222s ]
+SQL: SELECT * FROM `zx_tb_orderinfo` WHERE ( orderid=275161012113854044944 )  [ RunTime:0.004441s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002735s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\OrdersInfoModel.class.php 第 48 行.
+SQL: DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='275161012113854044944' ) [ RunTime:0.000847s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Common\common.php 第 61 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002794s ]
+NOTIC: [8] Undefined index: course D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php 第 106 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW() ) LIMIT 1   [ RunTime:0.000379s ]
+SQL: INSERT INTO `zx_tb_orderinfo` (`uid`,`orderid`,`goodsid`,`goodsprice`,`goods_pay_sprice`,`count`,`utime`,`ctime`,`type`) VALUES (44,'275161012113854044944',3007,0,0,1,'2016-10-12 11:38:54','2016-10-12 11:38:54','套餐') [ RunTime:0.014784s ]
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 11:38:55' where id=3007  [ RunTime:0.003553s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3006 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000276s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 11:38:55' where id=3006  [ RunTime:0.003384s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3000 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 11:38:55' where id=3000  [ RunTime:0.003373s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: attach D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php 第 106 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: UPDATE `zx_tb_orders` SET `payprice`=0,`orderprice`=0,`paystats`=5,`utime`='2016-10-12 11:38:55' WHERE ( uid=44 and orderid='275161012113854044944' ) [ RunTime:0.003886s ]
+ERR: Redis server went away
+
+[ 2016-10-12T11:39:41+08:00 ] /Enroll/createorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001042s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001127s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001106s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000900s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004682s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001128s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004961s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = '44' and matchid='275' and ( paystats=5 ) ) LIMIT 1   [ RunTime:0.000958s ]
+SQL: UPDATE `zx_tb_orders` SET `platform`='nuomi',`user_remarks`='有特殊需求请留言',`utime`='2016-10-12 11:39:40',`pay_deadline`='2016-10-12 12:09:41' WHERE ( orderid='275161012113854044944' ) [ RunTime:0.000566s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.003320s ]
+SQL: SELECT * FROM `zx_tb_orderinfo` WHERE ( orderid=275161012113854044944 )  [ RunTime:0.002263s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.001908s ]
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 ) LIMIT 1   [ RunTime:0.000313s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+1,g_utime='2016-10-12 11:39:41' where id=3007  [ RunTime:0.000252s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3006 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+1,g_utime='2016-10-12 11:39:41' where id=3006  [ RunTime:0.000241s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3000 ) LIMIT 1   [ RunTime:0.000281s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+1,g_utime='2016-10-12 11:39:41' where id=3000  [ RunTime:0.000234s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='275161012113854044944' ) [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002068s ]
+NOTIC: [8] Undefined index: course D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php 第 106 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW() ) LIMIT 1   [ RunTime:0.000366s ]
+SQL: INSERT INTO `zx_tb_orderinfo` (`uid`,`orderid`,`goodsid`,`goodsprice`,`goods_pay_sprice`,`count`,`utime`,`ctime`,`type`) VALUES (44,'275161012113854044944',3007,0,0,1,'2016-10-12 11:39:40','2016-10-12 11:39:40','套餐') [ RunTime:0.007127s ]
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000336s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 11:39:41' where id=3007  [ RunTime:0.003640s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3006 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000550s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 11:39:41' where id=3006  [ RunTime:0.003639s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3000 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000335s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 11:39:41' where id=3000  [ RunTime:0.003574s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: attach D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php 第 106 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: UPDATE `zx_tb_orders` SET `payprice`=0,`orderprice`=0,`paystats`=5,`utime`='2016-10-12 11:39:41' WHERE ( uid=44 and orderid='275161012113854044944' ) [ RunTime:0.004047s ]
+
+[ 2016-10-12T11:39:42+08:00 ] /Enroll/userdata?orderid=275161012113854044944
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000755s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000591s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004288s ]
+NOTIC: [2] Missing argument 2 for UserOrdersModel::getorderinfo(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php on line 448 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\UserOrdersModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: where D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\UserOrdersModel.class.php 第 71 行.
+SQL: SELECT o.orderid,o.payprice,o.pay_deadline,o.paystats,o.matchid,m.m_name,m.m_ptype,o.matchid,o.couponid FROM zx_tb_orders o LEFT JOIN zx_tb_matchs  m ON o.matchid = m.id WHERE o.orderid= '275161012113854044944'   [ RunTime:0.000431s ]
+
+[ 2016-10-12T11:39:44+08:00 ] /PayResult/payorder?orderid=275161012113854044944
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001124s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001224s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+NOTIC: [8] Undefined index: couponid D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\PayResultAction.class.php 第 32 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003813s ]
+SQL: SELECT o.orderid,o.payprice,o.pay_deadline,o.paystats,o.matchid,m.m_name,m.m_ptype,o.matchid,o.couponid FROM zx_tb_orders o LEFT JOIN zx_tb_matchs  m ON o.matchid = m.id WHERE o.orderid= '275161012113854044944'  and  o.pay_deadline > NOW()   [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.003695s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161012113854044944' [ RunTime:0.001680s ]
+SQL: UPDATE `zx_tb_orders` SET `orderid`='275161012113854044944',`payprice`=0,`pay_deadline`='2016-10-12 12:09:41',`paystats`=5,`matchid`=275 WHERE ( orderid='275161012113854044944' ) [ RunTime:0.007286s ]
+NOTIC: [8] Undefined variable: coupon D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\PayResultAction.class.php 第 109 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002026s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002210s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 140 行.
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 141 行.
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 176 行.
+NOTIC: [8] Undefined index: jsApiParameters D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 325 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 325 行.
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 340 行.
+NOTIC: [8] Undefined index: m_img D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 398 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018136s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018215s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000796s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000567s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000449s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000632s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002614s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000740s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000799s ]
+
+[ 2016-10-12T11:40:32+08:00 ] /Enroll/step2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000823s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004819s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001093s ]
+
+[ 2016-10-12T11:40:33+08:00 ] /Enroll/createorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001608s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001728s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000574s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004707s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001194s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.005218s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = '44' and matchid='275' and ( paystats=5 ) ) LIMIT 1   [ RunTime:0.001016s ]
+SQL: UPDATE `zx_tb_orders` SET `platform`='nuomi',`user_remarks`='有特殊需求请留言',`utime`='2016-10-12 11:40:32',`pay_deadline`='2016-10-12 12:10:33' WHERE ( orderid='275161012113854044944' ) [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.003388s ]
+SQL: SELECT * FROM `zx_tb_orderinfo` WHERE ( orderid=275161012113854044944 )  [ RunTime:0.004544s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.003974s ]
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 ) LIMIT 1   [ RunTime:0.000840s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+1,g_utime='2016-10-12 11:40:33' where id=3007  [ RunTime:0.000464s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3006 ) LIMIT 1   [ RunTime:0.000589s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+1,g_utime='2016-10-12 11:40:33' where id=3006  [ RunTime:0.000469s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3000 ) LIMIT 1   [ RunTime:0.000599s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+1,g_utime='2016-10-12 11:40:33' where id=3000  [ RunTime:0.000393s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='275161012113854044944' ) [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002385s ]
+NOTIC: [8] Undefined index: course D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php 第 106 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW() ) LIMIT 1   [ RunTime:0.000357s ]
+SQL: INSERT INTO `zx_tb_orderinfo` (`uid`,`orderid`,`goodsid`,`goodsprice`,`goods_pay_sprice`,`count`,`utime`,`ctime`,`type`) VALUES (44,'275161012113854044944',3007,0,0,1,'2016-10-12 11:40:32','2016-10-12 11:40:32','套餐') [ RunTime:0.003569s ]
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000338s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 11:40:33' where id=3007  [ RunTime:0.003548s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3006 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000348s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 11:40:33' where id=3006  [ RunTime:0.003442s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3000 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000352s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 11:40:33' where id=3000  [ RunTime:0.003641s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: attach D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php 第 106 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: UPDATE `zx_tb_orders` SET `payprice`=0,`orderprice`=0,`paystats`=5,`utime`='2016-10-12 11:40:33' WHERE ( uid=44 and orderid='275161012113854044944' ) [ RunTime:0.003622s ]
+
+[ 2016-10-12T11:40:34+08:00 ] /Enroll/userdata?orderid=275161012113854044944
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000810s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000934s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000680s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.001935s ]
+NOTIC: [2] Missing argument 2 for UserOrdersModel::getorderinfo(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php on line 448 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\UserOrdersModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: where D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\UserOrdersModel.class.php 第 71 行.
+SQL: SELECT o.orderid,o.payprice,o.pay_deadline,o.paystats,o.matchid,m.m_name,m.m_ptype,o.matchid,o.couponid FROM zx_tb_orders o LEFT JOIN zx_tb_matchs  m ON o.matchid = m.id WHERE o.orderid= '275161012113854044944'   [ RunTime:0.000377s ]
+
+[ 2016-10-12T11:40:35+08:00 ] /PayResult/payorder?orderid=275161012113854044944
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000680s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+NOTIC: [8] Undefined index: couponid D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\PayResultAction.class.php 第 32 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004011s ]
+SQL: SELECT o.orderid,o.payprice,o.pay_deadline,o.paystats,o.matchid,m.m_name,m.m_ptype,o.matchid,o.couponid FROM zx_tb_orders o LEFT JOIN zx_tb_matchs  m ON o.matchid = m.id WHERE o.orderid= '275161012113854044944'  and  o.pay_deadline > NOW()   [ RunTime:0.000973s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.003838s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161012113854044944' [ RunTime:0.000757s ]
+SQL: UPDATE `zx_tb_orders` SET `orderid`='275161012113854044944',`payprice`=0,`pay_deadline`='2016-10-12 12:10:33',`paystats`=5,`matchid`=275 WHERE ( orderid='275161012113854044944' ) [ RunTime:0.007244s ]
+NOTIC: [8] Undefined variable: coupon D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\PayResultAction.class.php 第 109 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002192s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002373s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 140 行.
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 141 行.
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 176 行.
+NOTIC: [8] Undefined index: jsApiParameters D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 325 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 325 行.
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 340 行.
+NOTIC: [8] Undefined index: m_img D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 398 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016926s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017009s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000903s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000649s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000499s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000724s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002966s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000904s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000973s ]
+
+[ 2016-10-12T11:40:57+08:00 ] /Enroll/step2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000734s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004435s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001089s ]
+
+[ 2016-10-12T11:40:58+08:00 ] /Enroll/createorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001226s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001400s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000579s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002762s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001386s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.002559s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = '44' and matchid='275' and ( paystats=5 ) ) LIMIT 1   [ RunTime:0.000528s ]
+SQL: UPDATE `zx_tb_orders` SET `platform`='nuomi',`user_remarks`='有特殊需求请留言',`utime`='2016-10-12 11:40:57',`pay_deadline`='2016-10-12 12:10:58' WHERE ( orderid='275161012113854044944' ) [ RunTime:0.000243s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.001624s ]
+SQL: SELECT * FROM `zx_tb_orderinfo` WHERE ( orderid=275161012113854044944 )  [ RunTime:0.001881s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002777s ]
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 ) LIMIT 1   [ RunTime:0.000213s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+1,g_utime='2016-10-12 11:40:58' where id=3007  [ RunTime:0.000158s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3006 ) LIMIT 1   [ RunTime:0.000162s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+1,g_utime='2016-10-12 11:40:58' where id=3006  [ RunTime:0.000122s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3000 ) LIMIT 1   [ RunTime:0.000158s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+1,g_utime='2016-10-12 11:40:58' where id=3000  [ RunTime:0.000115s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='275161012113854044944' ) [ RunTime:0.000169s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.003938s ]
+NOTIC: [8] Undefined index: course D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php 第 106 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW() ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: INSERT INTO `zx_tb_orderinfo` (`uid`,`orderid`,`goodsid`,`goodsprice`,`goods_pay_sprice`,`count`,`utime`,`ctime`,`type`) VALUES (44,'275161012113854044944',3007,0,0,1,'2016-10-12 11:40:57','2016-10-12 11:40:57','套餐') [ RunTime:0.006516s ]
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.001127s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 11:40:58' where id=3007  [ RunTime:0.006166s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3006 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.001515s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 11:40:58' where id=3006  [ RunTime:0.003938s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3000 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000278s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 11:40:58' where id=3000  [ RunTime:0.004459s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: attach D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php 第 106 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: UPDATE `zx_tb_orders` SET `payprice`=0,`orderprice`=0,`paystats`=5,`utime`='2016-10-12 11:40:58' WHERE ( uid=44 and orderid='275161012113854044944' ) [ RunTime:0.003443s ]
+
+[ 2016-10-12T11:40:59+08:00 ] /Enroll/userdata?orderid=275161012113854044944
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001300s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001406s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000915s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.001496s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004044s ]
+NOTIC: [2] Missing argument 2 for UserOrdersModel::getorderinfo(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php on line 448 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\UserOrdersModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: where D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\UserOrdersModel.class.php 第 71 行.
+SQL: SELECT o.orderid,o.payprice,o.pay_deadline,o.paystats,o.matchid,m.m_name,m.m_ptype,o.matchid,o.couponid FROM zx_tb_orders o LEFT JOIN zx_tb_matchs  m ON o.matchid = m.id WHERE o.orderid= '275161012113854044944'   [ RunTime:0.002099s ]
+
+[ 2016-10-12T11:41:00+08:00 ] /PayResult/payorder?orderid=275161012113854044944
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000984s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001071s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000829s ]
+NOTIC: [8] Undefined index: couponid D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\PayResultAction.class.php 第 32 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.005001s ]
+SQL: SELECT o.orderid,o.payprice,o.pay_deadline,o.paystats,o.matchid,m.m_name,m.m_ptype,o.matchid,o.couponid FROM zx_tb_orders o LEFT JOIN zx_tb_matchs  m ON o.matchid = m.id WHERE o.orderid= '275161012113854044944'  and  o.pay_deadline > NOW()   [ RunTime:0.001378s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.003450s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161012113854044944' [ RunTime:0.001804s ]
+SQL: UPDATE `zx_tb_orders` SET `orderid`='275161012113854044944',`payprice`=0,`pay_deadline`='2016-10-12 12:10:58',`paystats`=5,`matchid`=275 WHERE ( orderid='275161012113854044944' ) [ RunTime:0.014419s ]
+NOTIC: [8] Undefined variable: coupon D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\PayResultAction.class.php 第 109 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001194s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001370s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 140 行.
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 141 行.
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 176 行.
+NOTIC: [8] Undefined index: jsApiParameters D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 325 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 325 行.
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 340 行.
+NOTIC: [8] Undefined index: m_img D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 398 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015852s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015927s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000963s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000697s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000544s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000932s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003344s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001092s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001175s ]
+
+[ 2016-10-12T11:42:14+08:00 ] /Enroll?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000648s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004845s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001142s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004014s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001331s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002611s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3000 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001261s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3006 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000856s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000752s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 3 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000838s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 4 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000854s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001516s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001636s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.018253s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018370s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000681s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000434s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000322s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002057s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000580s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000630s ]
+
+[ 2016-10-12T12:03:27+08:00 ] /Enroll?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001340s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001424s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001132s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004665s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001412s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004522s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001635s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002596s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3000 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000849s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3006 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000845s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001280s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 3 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000831s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 4 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000848s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001522s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001642s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.215379s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.215489s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000655s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000337s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000230s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001743s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000467s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000511s ]
+
+[ 2016-10-12T14:44:59+08:00 ] /Enroll?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001227s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001331s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002304s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005378s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001097s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.005494s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001038s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002859s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3000 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001159s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3006 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001114s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000917s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 3 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000929s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 4 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001081s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001850s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001978s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.219464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.219604s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000921s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000625s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000526s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000670s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002904s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000770s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000820s ]
+
+[ 2016-10-12T14:45:03+08:00 ] /Enroll?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001061s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001205s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004585s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001092s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.003827s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.003026s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3000 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000981s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3006 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000823s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000763s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 3 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000880s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 4 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000972s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001098s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001189s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.013767s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013861s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000752s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000413s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000267s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002079s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000607s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000675s ]
+
+[ 2016-10-12T14:45:06+08:00 ] /Enroll/step2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000556s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004452s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001132s ]
+
+[ 2016-10-12T14:45:07+08:00 ] /Enroll/createorder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000567s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000730s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004840s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001072s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.005318s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = '44' and matchid='275' and ( paystats=5 ) ) LIMIT 1   [ RunTime:0.000982s ]
+SQL: UPDATE `zx_tb_orders` SET `platform`='nuomi',`user_remarks`='有特殊需求请留言',`utime`='2016-10-12 14:45:06',`pay_deadline`='2016-10-12 15:15:07' WHERE ( orderid='275161012113854044944' ) [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.002134s ]
+SQL: SELECT * FROM `zx_tb_orderinfo` WHERE ( orderid=275161012113854044944 )  [ RunTime:0.002610s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002344s ]
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 ) LIMIT 1   [ RunTime:0.000357s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+1,g_utime='2016-10-12 14:45:07' where id=3007  [ RunTime:0.000440s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3006 ) LIMIT 1   [ RunTime:0.000482s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+1,g_utime='2016-10-12 14:45:07' where id=3006  [ RunTime:0.000405s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3000 ) LIMIT 1   [ RunTime:0.000364s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+1,g_utime='2016-10-12 14:45:07' where id=3000  [ RunTime:0.000300s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='275161012113854044944' ) [ RunTime:0.000477s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002292s ]
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3004 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW() ) LIMIT 1   [ RunTime:0.000402s ]
+SQL: INSERT INTO `zx_tb_orderinfo` (`uid`,`orderid`,`goodsid`,`goodsprice`,`goods_pay_sprice`,`count`,`utime`,`ctime`,`type`) VALUES (44,'275161012113854044944',3004,100,100,1,'2016-10-12 14:45:06','2016-10-12 14:45:06','赛程') [ RunTime:0.004166s ]
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3004 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000425s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 14:45:07' where id=3004  [ RunTime:0.003922s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=2999 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000385s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 14:45:07' where id=2999  [ RunTime:0.003548s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW() ) LIMIT 1   [ RunTime:0.000427s ]
+SQL: INSERT INTO `zx_tb_orderinfo` (`uid`,`orderid`,`goodsid`,`goodsprice`,`goods_pay_sprice`,`count`,`utime`,`ctime`,`type`) VALUES (44,'275161012113854044944',3007,0,0,1,'2016-10-12 14:45:06','2016-10-12 14:45:06','套餐') [ RunTime:0.009968s ]
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3007 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 14:45:07' where id=3007  [ RunTime:0.006117s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3006 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 14:45:07' where id=3006  [ RunTime:0.003407s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: SELECT * FROM `zx_tb_goods` WHERE ( id=3000 and g_stockleft>=1 ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: update `zx_tb_goods` set g_stockleft = g_stockleft+-1,g_utime='2016-10-12 14:45:07' where id=3000  [ RunTime:0.003576s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+NOTIC: [8] Undefined index: attach D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php 第 106 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 80 行.
+SQL: UPDATE `zx_tb_orders` SET `payprice`=100,`orderprice`=100,`paystats`=5,`utime`='2016-10-12 14:45:07' WHERE ( uid=44 and orderid='275161012113854044944' ) [ RunTime:0.003614s ]
+
+[ 2016-10-12T14:45:08+08:00 ] /Enroll/userdata?orderid=275161012113854044944
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001497s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001568s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000397s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003826s ]
+NOTIC: [2] Missing argument 2 for UserOrdersModel::getorderinfo(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\EnrollAction.class.php on line 448 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\UserOrdersModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: where D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\UserOrdersModel.class.php 第 71 行.
+SQL: SELECT o.orderid,o.payprice,o.pay_deadline,o.paystats,o.matchid,m.m_name,m.m_ptype,o.matchid,o.couponid FROM zx_tb_orders o LEFT JOIN zx_tb_matchs  m ON o.matchid = m.id WHERE o.orderid= '275161012113854044944'   [ RunTime:0.000870s ]
+
+[ 2016-10-12T14:45:09+08:00 ] /PayResult/payorder?orderid=275161012113854044944
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001240s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001373s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+NOTIC: [8] Undefined index: couponid D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\PayResultAction.class.php 第 32 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.005363s ]
+SQL: SELECT o.orderid,o.payprice,o.pay_deadline,o.paystats,o.matchid,m.m_name,m.m_ptype,o.matchid,o.couponid FROM zx_tb_orders o LEFT JOIN zx_tb_matchs  m ON o.matchid = m.id WHERE o.orderid= '275161012113854044944'  and  o.pay_deadline > NOW()   [ RunTime:0.000909s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.003652s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161012113854044944' [ RunTime:0.000986s ]
+SQL: UPDATE `zx_tb_orders` SET `orderid`='275161012113854044944',`payprice`=100,`pay_deadline`='2016-10-12 15:15:07',`paystats`=5,`matchid`=275 WHERE ( orderid='275161012113854044944' ) [ RunTime:0.007832s ]
+NOTIC: [8] Undefined variable: coupon D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\PayResultAction.class.php 第 109 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000572s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000654s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 140 行.
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 141 行.
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 176 行.
+NOTIC: [8] Undefined index: jsApiParameters D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 325 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 325 行.
+NOTIC: [8] Undefined index: discount D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 340 行.
+NOTIC: [8] Undefined index: m_img D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\a7a11a18324a94d43b860104df3222194878ff1f.file.payorder.html.php 第 398 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.012693s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012753s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000667s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000423s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000290s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002069s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000582s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2016-10-12T14:46:38+08:00 ] /Enroll?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000737s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.006052s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001225s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004073s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001894s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.003050s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3000 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000958s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3006 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001460s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001152s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 3 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001041s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 4 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000591s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000581s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000639s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.009782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009875s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000723s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000445s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000273s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000542s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002151s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000491s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000547s ]
+
+[ 2016-10-12T14:46:49+08:00 ] /Enroll?m_id=275
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001128s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001258s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004594s ]
+SQL: select * from zx_tb_matchs where id = 275 and m_untilTime > NOW() and m_releaseTime <= NOW() and m_offineTime >NOW() and m_state=0 and m_placesleft >0  [ RunTime:0.001101s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.003808s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000939s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002713s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3000 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000880s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3006 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000829s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 275 and g_pid =3007 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000739s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 3 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000867s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 4 and g_mid = 275 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001211s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001088s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001208s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.022757s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022874s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000624s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000336s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000217s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001732s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000485s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000546s ]
+

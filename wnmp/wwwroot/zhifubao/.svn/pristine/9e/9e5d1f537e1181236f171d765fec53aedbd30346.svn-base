@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>知行合逸约跑42195</title>
+<script type="text/javascript" src="/static/js/zepto.min.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+</head>
+<style>
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,p,form,dt,dd,input,textarea,th,td,fieldset,legend,dl,dt,dd,figure{margin:0;padding:0;}
+fieldset,img{border:0 none}
+ul,ol,li{list-style:none}
+table{border-spacing:0}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+*:focus{outline:none}
+q:before,q:after{content:""}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+body,input,select,button,textarea{font:16px/1.5 Arial,Helvetica,sans-serif;}
+*,*:after,*:before{-webkit-user-select:none;-webkit-touch-callout:none;-ms-user-select: none;-webkit-tap-highlight-color:rgba(255,255,255,0);}
+html,body{background-color:transparent;color:#404040;-webkit-user-select: none;}
+table{border-collapse:collapse;border-spacing:0;}
+input,textarea{ border:1px solid #b8b7b3;-webkit-user-select:auto;}
+em{font-style:normal;font-weight:normal}
+sub, sup {font-size:75%;line-height:0;position:relative;vertical-align: baseline}
+sup {top: -0.5em}
+sub {bottom: -0.25em}
+img{vertical-align:top;max-width:100%;}
+a{text-decoration:none; color:#22615D}
+a:hover{color:#22615D}
+html,body{width:100%;}
+
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.clearbox:after,.tab-title:after{content:"";display:block;clear:both;height:0;line-height:0;overflow:hidden;font-size:0;}
+.clearbox.tab-title{zoom:1;}
+.fixbottom,.fixtop{position:fixed;left:0;bottom:0;width:100%;height:82px;background:rgba(0,0,0,.6);z-index:2}
+.fixbottom .containWrap,.fixtop .containWrap{position:absolute;left:0;top:0;width:100%;height:100%;bottom:0;}
+.fixtop{top:0;bottom:auto;}
+.m15{margin-top:15px;}
+.m25{margin-top:25px;}
+.space_5{padding:5px 0 0 0;}
+.space_10{padding:10px 0 0 0;}
+.space_15{padding:15px 0 0 0;}
+.space_20{padding:20px 0 0 0;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+
+
+body{position:relative;}
+body:after{content:'';position:fixed;z-index:-1;left:0px;top:0px;width:100%;height:100%;background:url(/h5/run/images/game_img_default1.jpg) no-repeat center top;background-size:cover;}
+
+
+/*header{width:100%;height:40px;position:relative;}
+header .header_bg1{height:25px;background:#a0b53c;border-bottom:1px solid #7b9017;}
+header .header_bg2{height:15px;background:url(../../images/running/rank_header.png) no-repeat center 0;background-size:105px;margin-top:-1px;}
+header h3{width:100%;height:50px;font:16px/40px "微软雅黑";color:#fff;text-align:center;position:absolute;}*/
+
+.act_rule{padding:10px;font:12px/26px "微软雅黑";color:#333;text-indent:2em;}
+
+
+/*奖品*/
+.gift_list{padding:10px 0 5px;}
+.gift_list li{float:left;font:12px/30px "微软雅黑";color:#333;width:30%;text-align:center;margin:0 1.5%;margin-bottom:5px;}
+.gift_list li .imgbox{width:60px;height:60px;border-radius:5px;background:#fff;margin:0 auto;border:2px solid #1396ca;padding:4px;}
+.gift_list li .imgbox img{width:60px;height:60px;border-radius:5px;}
+.gift_list li h5{height:30px;font:bold 12px/30px "微软雅黑";color:#333;overflow:hidden;}
+.gift_list li h5 em{color:#b00;font-weight:bold;}
+.gift_list li span{color:#333;}
+
+.rank_list{font:14px/30px "微软雅黑";color:#fff;}
+.rank_list dl{margin:10px 0 5px;}
+.rank_list dt{padding:5px 10px;height:30px;border-radius:5px;background:rgba(160,180,60,0.6);margin:10px 10px 5px;text-align:center;}
+/*.rank_list dd{padding:10px;border-radius:5px;background:rgba(160,180,60,0.6);margin:0 10px;text-align:center;}
+.rank_list dd li{height:40px;line-height:40px;border-top:1px solid rgba(255,255,255,0.3);}*/
+.rank_list dd li:first-child{border:0;}
+.rank_list span{float:left;width:35%;height:40px;overflow:hidden;}
+.rank_list dt span:first-child{width:30%;}
+.rank_list dd li span:first-child{width:30%;}
+
+footer{font:12px/20px "微软雅黑";text-align:center;margin-top:10px;}
+footer a{color:#404040;margin:0 5px;}
+
+.float_btns{color:#fff;height:50px;width:100%;padding:0px 5px;box-sizing:border-box;font:14px/50px "微软雅黑";background:#a0b53c;border-top:1px solid #7b9017;box-shadow:0px -2px 5px rgba(0,0,0,0.2); text-align:right;position:fixed;bottom:0;left:0;z-index:1110;}
+.float_btns .btn_invit{position:absolute;left:50%;top:0;margin:9px 0 0 -90px;z-index:1111;display:block;width:70px;height:32px;background:#6f2e00;border-radius:3px;text-align:center;font:bold 15px/32px "微软雅黑";color:#fff;}
+.float_btns .btn_play{position:absolute;left:50%;top:0;margin:9px 0 0 -10px;z-index:1111;display:block;width:70px;height:32px;background:#6f2e00;border-radius:3px;text-align:center;font:bold 15px/32px "微软雅黑";color:#fff;}
+
+.share{display:none;width:100%;height:100%;background:rgba(0,0,0,0.8);position:fixed;top:0;left:0;z-index:2000;}
+.share img.fr{width:150px;margin:10px;}
+.share .source{font:12px/20px Arial,"宋体";text-align:center;color:#787878;width:100%;height:40px;position:fixed;bottom:10px;left:0;z-index:2001;}
+.share .source span{display:block;}
+.share .source a{margin:0 5px;color:#787878;}
+.share .notice{font-size:12px;margin-top:30px;}
+
+.default_prompt{width:100%;height:100%;position:absolute;left:0;top:0;z-index:2555;}
+.default_prompt .bg{width:100%;height:100%;background:#000;position:fixed;left:0;top:0;z-index:2999;opacity:0.6;}
+.default_prompt .cont{width:90%;padding:15px 0;background:#fff;border-radius:3px;position:absolute;left:0;top:30px;margin:0 5% 30px;z-index:3000;box-shadow:3px 3px 3px rgba(0,0,0,0.3);}
+.default_prompt .notice{font:12px/26px Arial,"宋体";color:#666;margin:0 10px 10px;text-align:center;}
+.default_prompt dl{margin:15px;}
+.default_prompt dt{border:2px dashed #6f2e00;border-radius:5px;padding:10px;background:#fff6ef;color:#6f2e00;margin:10px 0;}
+.default_prompt dt li{float:left;width:50%;height:60px;font:14px/60px "微软雅黑";text-align:center;}
+.default_prompt dt li img{height:60px;width:60px;}
+.default_prompt dd{font:12px/36px Arial,"宋体";color:#333;}
+.default_prompt dd input[type="text"]{border:1px solid #ccc;padding: 0px 5px;height:30px;font:12px/30px Arial,"宋体";width:100%;border-radius:3px;box-sizing:border-box;}
+.default_prompt .btns{text-align:center;}
+.default_prompt .btn{display:block;width:100px;height:34px;background:#ffd001;border-radius:3px;text-align:center;font:bold 15px/34px "微软雅黑";color:#6f2e00;margin:10px auto;}
+.default_prompt .btns a{display:inline-block;width:88px;height:34px;background:#710000;border-radius:3px;text-align:center;font:14px/34px "微软雅黑";color:#fff;margin:10px;}
+
+
+/*排行榜*/
+header{width:100%;height:40px;position:relative;background:#00a9ff;text-align: center;}
+header .header_bg{width:100%;position:absolute;top:-4px !important;left:0px !important;z-index: 99;}
+header .header_bg div{width:200px;height:36px;line-height:30px;background:url(/h5/run/images/h_title_img.png) center;background-size:200px 36px;margin:0 auto;color:#fff;font:16px/40px "微软雅黑";}
+
+
+.rank_list dt{padding:5px 10px;height:30px;border-radius:5px;background:rgba(0,0,0,0.3);margin:10px 10px 5px;text-align:center;}
+.rank_list dd{padding:10px;border-radius:5px;background:rgba(0,0,0,0.3);margin:0 10px;text-align:center;}
+.float_btns{color:#fff;height:50px;width:100%;padding:0px 5px;font:14px/50px "微软雅黑";background:rgba(0,0,0,0.3);border-top:1px solid #7b9017;text-align:right;position:fixed;bottom:0;left:0;z-index:1110;}
+.float_btns .btn_invit{position:absolute;left:50%;top:0;margin:9px 0 0 -90px;z-index:1111;display:block;width:70px;height:32px;background:url(/h5/run/images/btn_invit_button.png) center top;background-size:70px 32px;text-align:center;font:bold 14px/32px "微软雅黑";color:#fff;}
+.float_btns .btn_play{position:absolute;left:50%;top:0;margin:9px 0 0 -10px;z-index:1111;display:block;width:70px;height:32px;background:url(/h5/run/images/btn_invit_button.png) center top;background-size:70px 32px;text-align:center;font:bold 14px/32px "微软雅黑";color:#fff;}
+.gift_list li span{color:#fff;text-shadow: #000 1px 1px 1px;}
+
+.g-countdown {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	opacity: 0;
+	margin-left: -80px;
+	font-size: 49px;
+	color: #ffee71;
+	font-weight: 700;
+	text-shadow: #113344 2px 2px 4px;
+	width: 160px;
+	text-align: center
+}
+
+/*踏板按钮*/
+.g-pace a {
+	display: block;
+	height: 100%;
+	background: #ffba15 url(../../images/running/track.png) no-repeat center;background-size: 50px 50px;
+	border: 2px solid #fff;
+	border-radius: 3px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	/*text-shadow:#fff 5px 5px;*/
+}
+
+
+#g-voiceover {
+	text-align: center;
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	top: 110px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: 700;
+	text-shadow: #113344 1px 1px 2px;
+}
+
+/*点击踏板开始*/
+.g-ready {
+	position: fixed;
+	top: 10%;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	padding-top: 50px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 30px;
+	color: #fff;
+	text-align: center;
+	text-shadow: #113344 2px 2px 4px;
+}
+
+/*分数*/
+.g-points {
+	background: #0093d3;
+	position: absolute;
+	bottom: 15%;
+	right: 3%;
+	min-width: 25%;
+	padding: 5px 10px;
+	color: #fff;
+	font-size: 27px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 10px;
+	height: 44px;
+	box-sizing: border-box
+}
+.g-points:after {
+	display: block;
+	content: '';
+	position: absolute;
+	bottom: -11px;
+	border: 6px solid #0093d3;
+	right: 0;
+	border-left: transparent 6px solid;
+	border-bottom: transparent 6px solid
+}
+
+
+
+
+/*左右踏板颜色*/
+.g-pace dd a {
+	background-color: #0093d3;
+	-moz-transform: scaleX(-1) skew(3deg,0deg);
+	-webkit-transform: scaleX(-1) skew(3deg,0deg);
+	-o-transform: scaleX(-1) skew(3deg,0deg);
+	transform: scaleX(-1) skew(3deg,0deg);
+
+}
+
+/*大按钮*/
+.i-button{
+	display: none;
+	-webkit-appearance: none;
+	margin: 0 2px;
+	width: 146px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: 700;
+	background:  url(../../images/running/blue_button.png) no-repeat center;background-size: 146px 50px;
+	color: #fff;
+	border: 0;
+	text-shadow: #0b6b9c 0px 2px 2px;
+}
+/*游戏规则*/
+.i-rule {
+	position: absolute;
+	/*top: 10px;*/
+	right: 10px;
+	border: 0 !important;
+	color: #fff;
+	padding: 0 !important;
+	
+	text-align:center;
+	border-radius: 5px;
+	font-size: 12px;
+	margin-top:5px;
+	background:url(../../images/running/i-rule_button.png) no-repeat center;background-size: 80px 32px;
+	width:80px;
+	height:32px;
+	line-height:32px;
+	text-shadow: #0b6b9c 0px 2px 2px;
+}
+/*排行榜*/
+.i-rank {
+	position: absolute;
+	/*top: 10px;*/
+	left: 10px;
+	border: 0 !important;
+	color: #fff;
+	padding: 0 !important;
+
+	
+	text-align:center;
+	border-radius: 5px;
+	font-size: 12px;
+	margin-top:5px;
+	background:url(../../images/running/i-rule_button.png) no-repeat center;background-size: 80px 32px;
+	width:80px;
+	height:32px;
+	line-height:32px;
+	text-shadow: #0b6b9c 0px 2px 2px;
+}
+.alertBox{width:100%;height:100%;display:none;}
+.alertBox .cont{background:#fff;border-radius:5px;width:90%;margin:-225px 5% 0;padding:20px;box-sizing:border-box;position:absolute;top:50%;left:0;z-index:2010;}
+.alertBox .cont h4{color:#0093D3;margin-bottom:5px;text-align:center;padding:10px 0;width:80%;margin:0 auto 10px;border-radius: 10px;-webkit-border-radius: 10px;}
+.alertBox .cont pre{text-align:left;color:#666;font:14px/30px "微软雅黑","黑体";width:100%;box-sizing:border-box;height:270px;overflow:auto;}
+.alertBox .cont div{text-align:left;color:#666;font:14px/30px "微软雅黑","黑体";width:100%;box-sizing:border-box;}
+.alertBox .bg{background:rgba(0,0,0,0.75);width:100%;height:100%;position:fixed;top:0;left:0;z-index:2000;}
+.alertBox{height:auto;}
+.alertBox h5{font-weight: bold;font-size: 14px!important;}
+</style>
+<body>
+	<!-- 活动规则 结束 -->
+	<!-- 奖品列表 开始 -->
+	<header>
+		<div class='header_bg'>
+				<div>奖品</div>
+			</div>
+	</header>
+	<div class="gift_list">
+		<ul>
+			<li>
+				<p class="imgbox">
+            	 		<a><img src="/h5/run/images/price0.jpg"></a>
+				</p>
+				<span>2016年波马限量款跑鞋</span>
+			</li>
+            
+			<li>
+				<p class="imgbox">
+            	 		<a ><img src="/h5/run/images/price1.jpg"></a>
+				</p>
+				<span>马拉松赛事纪念tee（随机）</span>
+			</li>
+			 <li>
+				<p class="imgbox">
+            	 		<a><img src="/h5/run/images/price3.jpg"></a>
+				</p>
+				<span>满减码</span>
+			</li>
+            
+		</ul>
+		<div class="clearbox"></div>
+		<ul>
+           
+            
+			<li>
+				<p class="imgbox">
+            	 		<a ><img src="/h5/run/images/price4.jpg"></a>
+				</p>
+				<span>折扣码</span>
+			</li>
+            
+			<li>
+				<p class="imgbox">
+            	 		<a><img src="/h5/run/images/price5.jpg"></a>
+				</p>
+				<span>优惠码</span>
+			</li>
+		
+
+		</ul>
+		<div class="clearbox"></div>
+	</div>
+	<!-- 奖品列表 结束 -->
+	<!-- 排行榜 开始 -->
+	<header>
+		<div class='header_bg'>
+				<div>排行榜</div>
+			</div>
+	</header>
+	<div class="rank_list">
+		<dl>
+			<dt>
+				<span>名次</span>
+				<span>姓名</span>
+				<span>累计米数</span>
+			</dt>
+			<dd>
+                <ul id="ranklist">
+                    <{foreach from=$list item=i key=key}>
+                    	<li><span><{$key+1}></span><span><{$i.username}></span><span><{$i.bestScore}></span></li>
+                    <{/foreach}>
+                </ul>
+				<div class="get_more">努力加载中...</div>
+			</dd>
+		</dl>
+		<div class="space_5"></div>
+	</div>
+	<!-- 排行榜 结束 -->
+<div style="left:0;bottom:52px;z-index:5;width:100%;height:30px;text-align:center;font:16px/30px '黑体';color:#fff;padding:10px 0;">
+<p style="display:inline-block;box-shadow:0 1px 2px rgba(0,0,0,1) inset;border-bottom:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.3);padding:0 10px;border-radius:3px;margin:0px;font:16px/30px '黑体';color:#fff;"><a style="color:#fff;margin:0 5px;text-decoration:underline;" href="http://www.h5lbt.com"></a></p>
+</div>
+<div style="height: 55px;">&nbsp; </div>
+	<div class="space_20"></div>
+	<div class="space_20"></div>
+	<div class="space_20"></div>
+	<!-- 底部浮动 开始 -->
+	<div class="float_btns">
+		<span class="fl">名次: <em><{$mc}></em></span>
+		<a class="btn_invit" onclick="$('#share').show();">邀好友</a>
+		<a class="btn_play" href="javascript:joinGame();">奔跑吧</a>
+		<span>最远米数:<em><{$max}></em></span>
+	</div>
+	<div id="create_box" class="alertBox" style="display:none;">
+            <div class="cont">
+                <h4>创建跑道</h4>
+                <div>
+                    <img src="/static/images/qrcode.png" alt="" style="width:100%">
+                    <p style="font-size:12px;">
+                    1、长按识别二维码，关注知行合逸公众号（已关注的用户长按识别二维码可直接进入公众号）</p>
+                    <p>2、输入“42195”，点击弹出链接，即可创建属于你的跑道哦！</p>
+                </div>
+            </div>
+            <div class="bg"></div>
+        </div>
+	<!-- 底部浮动 结束 -->
+	<!-- 分享&邀请 开始 -->
+
+
+
+
+	<!-- 分享&邀请 结束 -->
+    
+    <div class="default_prompt" style="display:none;z-index:100000;" id="exchange_box">
+        <div class="cont" style="margin-top:0px;">
+            <div class="notice">
+                邮寄信息一但填写不能修改！<br>
+                请再确认邮寄信息正确无误
+            </div>
+            <div class="btns">
+                <a id="cancelBtn">取 消</a>
+                <a id="sureBtn">确 定</a>
+            </div>
+        </div>
+        <div class="bg"></div>
+    </div>
+	<input type="hidden" id="aid" value="60"/>
+	<input type="hidden" id="wechatid" value=""/>
+    
+
+    <!-- 分享 -->
+    <style>
+        .share_box{
+            display:none;
+            position:fixed;top:0;left:0;z-index:10;
+            width:100%;height:100%;overflow-y:scroll;
+            padding:10px;
+            line-height:30px;
+            background:rgba(0,0,0,.5);color:#fff;
+            box-sizing:border-box;
+            z-index:99999999999;
+        }
+        .share_box img{
+            float:right;
+            height:40px;
+        }
+        .share_box .copy_right{
+            position:fixed;left:0;bottom:15px;z-index:11;
+        }
+        .share_box p{
+            margin-left:70px;
+            font-size:20px;
+        }
+
+    </style>
+    <article id="share" class="share_box" onclick="$('#share').hide();">
+        <img src="/h5/run/images/share1.png">
+        <div class="clear"></div>
+        <div class="space_10"></div>
+        <p class="tr">点击右上角<br>发送朋友或分享朋友圈<br>邀请好友来帮忙吧</p>
+    </article>
+</body>
+</html>
+<script src="/h5/run/js/weixin.js?v=v3.79"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	window.totalDist = '<{$info.totalDist}>';
+	window.headimgurl = '<{$usr.headimgurl}>';
+	window.headimgurl = window.headimgurl ?window.headimgurl :"http://weixin.zx-tour.com/h5/run/images/weixin_avatar.jpg";
+	if(!window.totalDist){
+		sharetitle = "快来参加约跑42.195！波马限量跑鞋在召唤你！";
+	}
+    $('.float_btns').click(function(){
+		$('.share').show(100);
+	});
+	$('.share').click(function(){
+		$(this).hide(100);
+	});
+
+	//默认提示框
+	var activity_over = {
+		'exchangeState':<{$price_info.exchangeState}>,        
+        'is_expire' : '<{$price_info.is_expire}>',  //是否中奖
+		'gift_name' : '<{$price_info.gift_name}>',
+		'rank_hunt':'<{$price_info.rank_hunt}>',      
+		'ems': "<{$price_info.ems}>",
+	};
+	function load_prompt(){
+		var isinput = false;
+		var str = '<div class="default_prompt"><div class="cont"><div class="notice">';
+		str += '活动结束啦！<br />感谢您参与知行合逸约跑42195活动！<br />'+activity_over.rank_hunt+'</div><dl><dt style="text-align:center">'+ activity_over.gift_name +'</dt>';
+		if(activity_over.ems == 'false'){
+			str += '<dd style="line-height:16px;">请在淘宝店铺中搜索：跑者装备企业店<br>进店使用</dd><a class="btn">确定</a></div></div><div class="bg"></div></div>';
+		}else{
+			if(activity_over.exchangeState){
+				str += '<a class="btn">已兑奖</a></div></div><div class="bg"></div></div>'; 
+			}else{
+				str +='<dd style="line-height:20px;">请填写以下资料：</dd>';
+				str += '<dd><input type="text" value="11" placeholder="姓名" name="user_name"/></dd>';
+				str += '<dd><input type="text" value="12322221111" placeholder="手机号" name="user_phone"/></dd>';
+				str += '<dd><input type="text" value="addraddr"  placeholder="地址" name="user_address"/></dd>';
+				str += '<dd style="line-height:16px;">请务必在5月3日前完成邮寄信息的填写</dd>';
+				str += '</dl><div class="btns">';
+	            str +=  '<a class="btn" id="done_btn">确 定</a></div></div><div class="bg"></div></div>';
+				isinput = true;
+			}
+		}
+		$('body').append(str);
+		if(isinput == false){
+			$('.default_prompt .btn').click(function(){
+				$(this).parents('.default_prompt').remove();
+			});
+		}
+	}
+	if(activity_over.is_expire == 'true'){
+		load_prompt();
+	}
+	var data = {};
+	$('#done_btn').click(function(){
+		var name = $(this).parent().parent().find('input[name="user_name"]').val();
+		var phone = $(this).parent().parent().find('input[name="user_phone"]').val();
+		var address = $(this).parent().parent().find('input[name="user_address"]').val();
+		if(name != null && name.length == 0){alert("请输入姓名");return;}
+		if(phone != null && phone.length == 0){alert("请输入手机号");return;}
+		if(phone != null && phone.length != 11){alert("请输入11位手机号");return;}
+		if(address != null && address.length == 0){alert("请输入邮寄地址");return;}
+
+		if(phone != null && phone.length != 0){data.user_phone=phone;}
+		if(name != null && name.length != 0){data.user_name=name;}
+		if(address != null && address.length != 0){data.user_address=address;}
+
+        $('#exchange_box').attr("style", "display:block;z-index:100000;");					
+	});
+
+    $('#cancelBtn').click(function(){
+        $('#exchange_box').attr("style", "display:none;");
+    });
+    $('#sureBtn').click(function(){     
+        $('#exchange_box').attr("style", "display:none;");
+        $.ajax({
+			type: "POST",
+			 url : "/WxRuner/addems",
+			 data:data,
+			dataType: "json",
+			  success: function(data){
+			  	if(data.error == "1"){
+			  		$('.default_prompt').remove();
+                    location.reload();
+			  	}else{
+			  		alert(data.msg);
+			  	}
+			  }
+		}); 
+    }); 
+	
+});
+
+var startpage=parseInt('2'),
+count=<{$count}>,
+ajaxload=false,
+winHeight=$(window).height(),
+maxpage=false;
+$(window).scroll(function(){
+	var wst=$(window).scrollTop();
+	var bodyHeight=$(document).height();
+	if(!ajaxload){
+		if(wst+winHeight>bodyHeight-10){
+			ajaxload=true;
+			ajaxtip("努力加载中...");
+			$.ajax({
+			  url: '/WxRuner/ranklist/',
+			  dataType: 'json',
+			  type:'POST',
+			  data:{currentPage:startpage},
+			  success: function(data){
+		  		var bookshtml="";
+		  		startpage = data.startpage;
+    			var list = data.list;
+    			for(var key in list){
+    				count++;
+    				bookshtml+='<li>\
+									<span>'+count+'</span>\
+									<span>'+list[key].username+'</span>\
+									<span>'+list[key].bestScore+'</span>\
+								</li>';
+			  	}
+				$("#ranklist").append(bookshtml);
+				ajaxtip("加载完毕");
+				ajaxload=false;
+			  },
+			  error: function(xhr, type){
+			  	ajaxload=false;
+			    ajaxtip("加载失败，请稍候重试！");
+			  }
+			})
+		}
+	}
+});
+function ajaxtip(txt){
+	$(".get_more").html(txt);
+}
+// function imageView(img){
+//  	wx.previewImage({
+// 	    current: img, 
+// 	    urls: [img,img] 
+// 	});
+// }
+window.actUrl = "/h5/run/";
+
+window.iscreated = "false";
+<{if $info }>
+window.iscreated = "true";
+<{/if}>
+function joinGame(){
+	if(window.iscreated=="false"){
+		$("#create_box").show();
+	}else{
+		window.location.replace(window.actUrl);
+	}
+}
+
+$("#create_box").click(function(){
+	$(this).hide();
+});
+</script>

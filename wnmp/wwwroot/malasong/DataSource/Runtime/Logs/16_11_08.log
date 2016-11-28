@@ -1,0 +1,30 @@
+[ 2016-11-08T14:08:49+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001121s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_news` [ RunTime:0.046150s ]
+ERR: 1146:Table 'zxtour.mls_news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `mls_news`
+SQL: SELECT `id`,`news_title`,`des`,`img`,`url`,`url_type` FROM `mls_news` ORDER BY orderid asc,id desc LIMIT 0,6   [ RunTime:0.001485s ]
+ERR: 1146:Table 'zxtour.mls_news' doesn't exist
+ [ SQL语句 ] : SELECT `id`,`news_title`,`des`,`img`,`url`,`url_type` FROM `mls_news` ORDER BY orderid asc,id desc LIMIT 0,6  
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002705s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002844s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: tilte C:\wnmp\wwwroot\malasong\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\malasong\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 36 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.023183s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023289s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000916s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000807s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000733s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000917s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003507s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001124s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001175s ]
+

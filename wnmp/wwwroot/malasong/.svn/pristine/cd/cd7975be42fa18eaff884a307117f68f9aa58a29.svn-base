@@ -1,0 +1,27 @@
+<div id="index_nav_box">
+	<div class="nav section_center">
+		<div id="nav_logo" class="fl"><a href="/Index/index">Marathon</a></div>
+		<ul class="nav-item fl">
+			<li>
+				<a href="">赛事信息</a>
+				<ul>
+					<li><a href="">赛事规则</a></li>
+					<li><a href="">比赛线路</a></li>
+					<li><a href="">装备建议</a></li>
+					<li><a href="">交通住宿</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">赛事报名</a>
+				<ul class="w220">
+					<li><a href="/enroll/index">立即报名</a></li>
+					<li><a href="">报名查询</a></li>
+					<li><a href="/OnlineEnroll/query">线上马拉松报名</a></li>
+				</ul>
+			</li>
+			<li><a href="/Account/reset">成绩查询</a></li>
+			<li><a href="">比赛照片</a></li>
+			<li><a href="">赞助商</a></li>
+		</ul>
+	</div>
+</div>

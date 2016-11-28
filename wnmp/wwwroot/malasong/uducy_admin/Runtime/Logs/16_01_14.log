@@ -1,0 +1,1076 @@
+[ 2016-01-14T15:22:04+08:00 ] /?s=login&a=login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.014259s ]
+INFO: [ route_check ] --END-- [ RunTime:0.014350s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.003084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003120s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.008785s ]
+INFO: [ view_template ] --END-- [ RunTime:0.008848s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\8d4f5e13bd3eda234fa91e36665717b486cd4564.file.login.html.php 第 135 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\8d4f5e13bd3eda234fa91e36665717b486cd4564.file.login.html.php 第 135 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.120533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.120582s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000608s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000485s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000387s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.012266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013849s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000842s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2016-01-14T15:22:07+08:00 ] /?s=login&a=login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001197s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001303s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000901s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_admin_user` [ RunTime:0.004869s ]
+SQL: SELECT `id`,`password`,`is_admin`,`right_action` FROM `mls_admin_user` WHERE ( `user_name`='haiyan' ) LIMIT 1   [ RunTime:0.021979s ]
+SQL: update mls_admin_user set last_login='2016-01-14 15:22:06',lastip='127.0.0.1' where `id`=11 [ RunTime:0.000622s ]
+ERR: 1146:Table 'dh_at321.mls_admin_user' doesn't exist
+ [ SQL语句 ] : update mls_admin_user set last_login='2016-01-14 15:22:06',lastip='127.0.0.1' where `id`=11
+
+[ 2016-01-14T15:22:07+08:00 ] /?s=index&a=index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000667s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.006096s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000659s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000708s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.016267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016327s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000482s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000378s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000502s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000437s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001925s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000554s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2016-01-14T15:22:07+08:00 ] /?s=index&a=header
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000560s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000461s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000415s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000449s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017306s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000690s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000536s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000270s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000338s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001957s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000445s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-01-14T15:22:07+08:00 ] /?s=index&a=menu&showWelcome=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000702s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000532s ]
+NOTIC: [8] Undefined variable: output D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 29 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000439s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000471s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\fc992ec0d820ab300b1bbfc78e0c2bc48b74b653.file.menu.html.php 第 31 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\fc992ec0d820ab300b1bbfc78e0c2bc48b74b653.file.menu.html.php 第 31 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.034598s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034635s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000423s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000268s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000203s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001319s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000439s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2016-01-14T15:22:09+08:00 ] /?s=index&a=welcome
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000850s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000934s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000701s ]
+SQL: SHOW COLUMNS FROM `tbl_admin_user` [ RunTime:0.001699s ]
+SQL: SELECT VERSION() AS dbversion [ RunTime:0.000232s ]
+NOTIC: [2] Illegal string offset 'dbversion' D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 72 行.
+SQL: SHOW TABLE STATUS [ RunTime:0.000557s ]
+NOTIC: [2] filesize(): stat failed for ../uducy_admin/Runtime/logs/admin_log.php D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 86 行.
+NOTIC: [2] filesize(): stat failed for ../uducy_admin/Runtime/logs/php_error.log D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 90 行.
+NOTIC: [2] filesize(): stat failed for ../uducy_admin/Runtime/logs/mysql_error.php D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 94 行.
+NOTIC: [8] Undefined variable: serverip D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 99 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_admin_user` [ RunTime:0.004031s ]
+SQL: SELECT count(id) as c FROM `mls_admin_user` LIMIT 1   [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `tbl_admin_sys` [ RunTime:0.003413s ]
+ERR: 0:Table 'dh_at321.tbl_admin_sys' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tbl_admin_sys`
+SQL: SELECT ctime as x,`mem`,`cpu`,`load` FROM `tbl_admin_sys` WHERE ( ctime>=1452496929 )  [ RunTime:0.000583s ]
+ERR: 0:Table 'dh_at321.tbl_admin_sys' doesn't exist
+ [ SQL语句 ] : SELECT ctime as x,`mem`,`cpu`,`load` FROM `tbl_admin_sys` WHERE ( ctime>=1452496929 ) 
+NOTIC: [2] Invalid argument supplied for foreach() D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 61 行.
+NOTIC: [8] Undefined variable: rs D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 66 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001138s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001219s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: site_new D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\98d1046f2f04fb739a188779fb590e6f931a4eb2.file.welcome.html.php 第 52 行.
+NOTIC: [8] Undefined index: advise D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\98d1046f2f04fb739a188779fb590e6f931a4eb2.file.welcome.html.php 第 60 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.073152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073237s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000521s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000372s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000292s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001764s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000594s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2016-01-14T15:22:10+08:00 ] /?s=Enroll
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000685s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000435s ]
+NOTIC: [8] Undefined index: match D:\wnmp\www\malasong\uducy_admin\Lib\Action\EnrollAction.class.php 第 11 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.004046s ]
+SQL: SELECT * FROM `mls_goods` WHERE ( goodspid=0 )  [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.003738s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b 
+ON o.uid = b.id  order by utime desc  [ RunTime:0.001531s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001010s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001088s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.025180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025264s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000696s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000655s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000545s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000823s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002926s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001051s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001129s ]
+
+[ 2016-01-14T15:22:16+08:00 ] /?s=Enroll&a=orderinfo&orderid=601601141519475
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000513s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000389s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.005838s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,o.payinfo,o.beizhu,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b ON o.uid = b.id WHERE o.orderid = 601601141519475 [ RunTime:0.000763s ]
+SQL: SHOW COLUMNS FROM `mls_orderinfo` [ RunTime:0.003948s ]
+SQL: SELECT i.id,i.goodsid,g.goodscls,g.goodsprice ,i.goodsprice AS price,i.count,i.ctime,i.utime FROM mls_orderinfo i LEFT JOIN mls_goods g
+ON i.goodsid = g.id where i.orderid = 601601141519475 [ RunTime:0.001208s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001163s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001255s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.257677s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.257733s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000353s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000240s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000207s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001165s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000379s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000417s ]
+
+[ 2016-01-14T15:23:05+08:00 ] /?s=Enroll
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000561s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000495s ]
+NOTIC: [8] Undefined index: match D:\wnmp\www\malasong\uducy_admin\Lib\Action\EnrollAction.class.php 第 11 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.003879s ]
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.005110s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b 
+ON o.uid = b.id  order by utime desc  [ RunTime:0.000891s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001278s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001367s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016599s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016660s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000280s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000378s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000183s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000263s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001197s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000384s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000419s ]
+
+[ 2016-01-14T15:23:10+08:00 ] /?s=Enroll&a=orderinfo&orderid=621601141522599
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000639s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000456s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.004033s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,o.payinfo,o.beizhu,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b ON o.uid = b.id WHERE o.orderid = 621601141522599 [ RunTime:0.002638s ]
+SQL: SHOW COLUMNS FROM `mls_orderinfo` [ RunTime:0.003816s ]
+SQL: SELECT i.id,i.goodsid,g.goodscls,g.goodsprice ,i.goodsprice AS price,i.count,i.ctime,i.utime FROM mls_orderinfo i LEFT JOIN mls_goods g
+ON i.goodsid = g.id where i.orderid = 621601141522599 [ RunTime:0.001112s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001017s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001093s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.022150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022203s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000225s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000233s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000149s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000256s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000943s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000401s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000433s ]
+
+[ 2016-01-14T15:51:14+08:00 ] /?s=Enroll
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001311s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001418s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001470s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000539s ]
+NOTIC: [8] Undefined index: match D:\wnmp\www\malasong\uducy_admin\Lib\Action\EnrollAction.class.php 第 11 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.005040s ]
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.002891s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b 
+ON o.uid = b.id  order by utime desc  [ RunTime:0.001403s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000729s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000780s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015290s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000673s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000462s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000385s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000531s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002176s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000815s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000867s ]
+
+[ 2016-01-14T15:51:20+08:00 ] /?s=Enroll&a=orderinfo&orderid=621601141522599
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000799s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000467s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.002885s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,o.payinfo,o.beizhu,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b ON o.uid = b.id WHERE o.orderid = 621601141522599 [ RunTime:0.001808s ]
+SQL: SHOW COLUMNS FROM `mls_orderinfo` [ RunTime:0.003817s ]
+SQL: SELECT i.id,i.goodsid,g.goodscls,g.goodsprice ,i.goodsprice AS price,i.count,i.ctime,i.utime FROM mls_orderinfo i LEFT JOIN mls_goods g
+ON i.goodsid = g.id where i.orderid = 621601141522599 [ RunTime:0.001027s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000820s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000876s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013304s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013349s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000380s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000314s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000253s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001407s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000454s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000484s ]
+
+[ 2016-01-14T16:02:01+08:00 ] /?s=Enroll
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001143s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001249s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000823s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000862s ]
+NOTIC: [8] Undefined index: match D:\wnmp\www\malasong\uducy_admin\Lib\Action\EnrollAction.class.php 第 11 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.005105s ]
+SQL: SELECT * FROM `mls_goods` WHERE ( goodspid=0 )  [ RunTime:0.001063s ]
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.005488s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b 
+ON o.uid = b.id  order by utime desc  [ RunTime:0.001053s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001075s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001155s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.021373s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021427s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000318s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000280s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000217s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000733s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001635s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000437s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000471s ]
+
+[ 2016-01-14T16:02:06+08:00 ] /?s=Enroll&a=orderinfo&orderid=641601141553422
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000431s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000305s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.003750s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,o.payinfo,o.beizhu,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b ON o.uid = b.id WHERE o.orderid = 641601141553422 [ RunTime:0.001270s ]
+SQL: SHOW COLUMNS FROM `mls_orderinfo` [ RunTime:0.004772s ]
+SQL: SELECT i.id,i.goodsid,g.goodscls,g.goodsprice ,i.goodsprice AS price,i.count,i.ctime,i.utime FROM mls_orderinfo i LEFT JOIN mls_goods g
+ON i.goodsid = g.id where i.orderid = 641601141553422 [ RunTime:0.000639s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000892s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000961s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017764s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000293s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000270s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000200s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000369s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001216s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000431s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2016-01-14T16:02:11+08:00 ] /?s=Enroll
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000581s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000312s ]
+NOTIC: [8] Undefined index: match D:\wnmp\www\malasong\uducy_admin\Lib\Action\EnrollAction.class.php 第 11 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.001940s ]
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.002087s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b 
+ON o.uid = b.id  order by utime desc  [ RunTime:0.000612s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000489s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000526s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009143s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009180s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000725s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000292s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000200s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000396s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001707s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000516s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2016-01-14T16:02:13+08:00 ] /?s=Enroll&a=orderinfo&orderid=621601141522599
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001218s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001312s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000435s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.004494s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,o.payinfo,o.beizhu,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b ON o.uid = b.id WHERE o.orderid = 621601141522599 [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `mls_orderinfo` [ RunTime:0.003886s ]
+SQL: SELECT i.id,i.goodsid,g.goodscls,g.goodsprice ,i.goodsprice AS price,i.count,i.ctime,i.utime FROM mls_orderinfo i LEFT JOIN mls_goods g
+ON i.goodsid = g.id where i.orderid = 621601141522599 [ RunTime:0.002795s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001416s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001513s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017253s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017309s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000306s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000334s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000229s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001302s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000429s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-01-14T16:02:45+08:00 ] /?s=Enroll
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000605s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000372s ]
+NOTIC: [8] Undefined index: match D:\wnmp\www\malasong\uducy_admin\Lib\Action\EnrollAction.class.php 第 11 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.005686s ]
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.004632s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b 
+ON o.uid = b.id  order by utime desc  [ RunTime:0.001487s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001430s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001524s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.012653s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012711s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000314s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000277s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000216s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001220s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000529s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000565s ]
+
+[ 2016-01-14T16:02:49+08:00 ] /?s=Enroll&a=orderinfo&orderid=641601141553422
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001064s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001171s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.001692s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.003115s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,o.payinfo,o.beizhu,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b ON o.uid = b.id WHERE o.orderid = 641601141553422 [ RunTime:0.000621s ]
+SQL: SHOW COLUMNS FROM `mls_orderinfo` [ RunTime:0.004363s ]
+SQL: SELECT i.id,i.goodsid,g.goodscls,g.goodsprice ,i.goodsprice AS price,i.count,i.ctime,i.utime FROM mls_orderinfo i LEFT JOIN mls_goods g
+ON i.goodsid = g.id where i.orderid = 641601141553422 [ RunTime:0.001003s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000687s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000738s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015065s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000453s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000400s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000322s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000472s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001770s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000625s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000669s ]
+
+[ 2016-01-14T16:04:34+08:00 ] /?s=Enroll
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002090s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002207s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001217s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000968s ]
+NOTIC: [8] Undefined index: match D:\wnmp\www\malasong\uducy_admin\Lib\Action\EnrollAction.class.php 第 11 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.004152s ]
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.004235s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b 
+ON o.uid = b.id  order by utime desc  [ RunTime:0.001590s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001216s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001306s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.022026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022110s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000701s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000650s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000497s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000740s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002782s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001425s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001489s ]
+
+[ 2016-01-14T16:04:39+08:00 ] /?s=Enroll&a=orderinfo&orderid=671601141604303
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000952s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000394s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.004194s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,o.payinfo,o.beizhu,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b ON o.uid = b.id WHERE o.orderid = 671601141604303 [ RunTime:0.001933s ]
+SQL: SHOW COLUMNS FROM `mls_orderinfo` [ RunTime:0.004609s ]
+SQL: SELECT i.id,i.goodsid,g.goodscls,g.goodsprice ,i.goodsprice AS price,i.count,i.ctime,i.utime FROM mls_orderinfo i LEFT JOIN mls_goods g
+ON i.goodsid = g.id where i.orderid = 671601141604303 [ RunTime:0.001296s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.003281s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003391s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017183s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000386s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000343s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000281s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001566s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000517s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000589s ]
+
+[ 2016-01-14T16:04:46+08:00 ] /?s=Enroll
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000548s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000304s ]
+NOTIC: [8] Undefined index: match D:\wnmp\www\malasong\uducy_admin\Lib\Action\EnrollAction.class.php 第 11 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.003764s ]
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.004055s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b 
+ON o.uid = b.id  order by utime desc  [ RunTime:0.000829s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000820s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000884s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.012098s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012147s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000352s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000276s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000201s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001283s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000510s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2016-01-14T16:04:49+08:00 ] /?s=Enroll&a=orderinfo&orderid=661601141604087
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000607s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000391s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.001879s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,o.payinfo,o.beizhu,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b ON o.uid = b.id WHERE o.orderid = 661601141604087 [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `mls_orderinfo` [ RunTime:0.002505s ]
+SQL: SELECT i.id,i.goodsid,g.goodscls,g.goodsprice ,i.goodsprice AS price,i.count,i.ctime,i.utime FROM mls_orderinfo i LEFT JOIN mls_goods g
+ON i.goodsid = g.id where i.orderid = 661601141604087 [ RunTime:0.000452s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000482s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000517s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.008619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008658s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000351s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000281s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000213s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001262s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000415s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000444s ]
+
+[ 2016-01-14T16:04:57+08:00 ] /?s=Enroll
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001039s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001165s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000729s ]
+NOTIC: [8] Undefined index: match D:\wnmp\www\malasong\uducy_admin\Lib\Action\EnrollAction.class.php 第 11 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.007836s ]
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.004919s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b 
+ON o.uid = b.id  order by utime desc  [ RunTime:0.000999s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000942s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001031s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016092s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000309s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000268s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000231s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001246s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000575s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2016-01-14T16:05:00+08:00 ] /?s=Enroll&a=orderinfo&orderid=651601141603445
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000802s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000393s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.002836s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,o.payinfo,o.beizhu,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b ON o.uid = b.id WHERE o.orderid = 651601141603445 [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `mls_orderinfo` [ RunTime:0.002025s ]
+SQL: SELECT i.id,i.goodsid,g.goodscls,g.goodsprice ,i.goodsprice AS price,i.count,i.ctime,i.utime FROM mls_orderinfo i LEFT JOIN mls_goods g
+ON i.goodsid = g.id where i.orderid = 651601141603445 [ RunTime:0.000584s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000442s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000478s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009838s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009876s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000318s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000258s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000198s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001157s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000441s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2016-01-14T16:05:08+08:00 ] /?s=Enroll
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000603s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000394s ]
+NOTIC: [8] Undefined index: match D:\wnmp\www\malasong\uducy_admin\Lib\Action\EnrollAction.class.php 第 11 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.003799s ]
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.002739s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b 
+ON o.uid = b.id  order by utime desc  [ RunTime:0.001006s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000621s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000676s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011412s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000326s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000283s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000199s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000312s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001209s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000497s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000535s ]
+
+[ 2016-01-14T16:05:14+08:00 ] /?s=Enroll&a=orderinfo&orderid=641601141553422
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000608s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000391s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.006460s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,o.payinfo,o.beizhu,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b ON o.uid = b.id WHERE o.orderid = 641601141553422 [ RunTime:0.001200s ]
+SQL: SHOW COLUMNS FROM `mls_orderinfo` [ RunTime:0.005402s ]
+SQL: SELECT i.id,i.goodsid,g.goodscls,g.goodsprice ,i.goodsprice AS price,i.count,i.ctime,i.utime FROM mls_orderinfo i LEFT JOIN mls_goods g
+ON i.goodsid = g.id where i.orderid = 641601141553422 [ RunTime:0.000960s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001029s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001120s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.014218s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014282s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000431s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000385s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000297s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000450s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001679s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000593s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2016-01-14T16:06:45+08:00 ] /?s=Enroll
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000870s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000949s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000619s ]
+NOTIC: [8] Undefined index: match D:\wnmp\www\malasong\uducy_admin\Lib\Action\EnrollAction.class.php 第 11 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.005370s ]
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.004465s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b 
+ON o.uid = b.id  order by utime desc  [ RunTime:0.002035s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001008s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001098s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 59 行.
+NOTIC: [8] Undefined index: gender D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 60 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\6e0c385f2d460bb3a83a2ad5ef695ddb43d88b3e.file.index.html.php 第 67 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.022403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022573s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000723s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000609s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000623s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000728s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002873s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000964s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001038s ]
+
+[ 2016-01-14T16:06:49+08:00 ] /?s=Enroll&a=orderinfo&orderid=681601141606403
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001024s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001133s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000830s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.002280s ]
+SQL: SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,o.payinfo,o.beizhu,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b ON o.uid = b.id WHERE o.orderid = 681601141606403 [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `mls_orderinfo` [ RunTime:0.002409s ]
+SQL: SELECT i.id,i.goodsid,g.goodscls,g.goodsprice ,i.goodsprice AS price,i.count,i.ctime,i.utime FROM mls_orderinfo i LEFT JOIN mls_goods g
+ON i.goodsid = g.id where i.orderid = 681601141606403 [ RunTime:0.000711s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000629s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000682s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013449s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013499s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000393s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000369s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000273s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001672s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000556s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000597s ]
+

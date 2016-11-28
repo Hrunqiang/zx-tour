@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>韩国中央首尔马拉松</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<style type="text/css">
+			*{padding: 0;margin: 0;/*font-family: '微软雅黑';*/}
+			.header_bg{width: 100%;min-width: 1140px;}
+			.box{width: 1140px;margin: 0 auto;background: #FFFFFF;}
+			.header{overflow: hidden;padding: 40px 0 31px 0;width: 1140px;margin: 0 auto;border-bottom: 1px solid #b8b8b8;}
+			.header1{float: left;font-size: 25px;overflow: hidden;line-height: 66px;}
+			.header2{float: right;overflow: hidden;}
+			.header1 img{float: left;height: 66px;}
+			.header1 span{padding-left: 23px;}
+			.header2 a{float: right;color: #000000;font-size: 16px;line-height: 66px;}
+			.header2 .sp1{width: 83px;padding: 3px 0; text-align: center;color: #FFFFFF;background: #d43741;border-radius: 5px;box-shadow: 1px 2px 2px 1px #d3d3d3;margin: 20px 4px 0 19px;line-height: normal;}
+			.header2 .sp2{margin: 0 20px 0 21px;}
+			.header2 .sp3{margin: 0 22px 0 0;}
+			.box1_1{width: 1138px;border: 1px solid #d9d9d9;overflow: hidden;height: 176px;background: #f9f9f9;}
+			._time{float: left;width: 378px;border-right: 1px solid #d9d9d9;height: 100%;}
+			._time ._time_1{font-size: 20.21px;width: 100%;text-align: center;margin-top: 26px;}
+			._time ._time_2{margin-top: 26px;width: 100%;font-size: 16.65px;overflow: hidden;}
+			._time_2 span{float: left;}
+			._time_2 .sp1{font-size: 51.13px;font-family: '黑体';margin-left: 19px;}
+			._time_2 .sp2{margin: 44px 15px 0 0;}
+			._time_2 .sp3{font-size: 51.13px;font-family: '黑体';}
+			._time_2 .sp4{margin-left: 55px;}
+			/*///////////////////////////////////////////头部结束////////////////////////////////*/
+			.box2{margin-top: 128px;background: url(images/bg04.jpg) no-repeat 0px 38px ;}
+			.match_1{width: 244px;height: 62px;line-height: 62px;font-size: 25.67px;color: #FFFFFF;background: #273441;text-align: center;margin: 0 auto;}
+			.picture{margin-top: 72px;height: 654px;}
+			.match_2{width: 1140px;background: url(images/bg06.jpg) no-repeat;}
+			.match_2 ul{overflow: hidden;width: 820px;margin: 0 auto 0;font-size: 20.21px;padding-top: 177px;}
+			.match_2 ul li{width: 410px;float: left;text-align: center;}
+			.match_2 ul li .tab1{margin-top: 25px;margin-bottom: 23px;font-weight: bold;padding: 0 0 0 115px;}
+			.match_2 ul li .tab1_1{padding: 0 0 0 109px;}
+			.match_2 ul li .tab2{margin: 25px 0 23px 0 ;font-weight: bold;padding-left: 115px;}
+			.match_2 ul li .tab2_2{padding: 0 0 0 109px;line-height: 30px;}
+			.match_2 ul li .tab3{margin: 100px 0 24px 0;padding-right: 119px;font-weight: bold;}
+			.match_2 ul li .tab3_3{padding-right: 119px;line-height: 30px;}
+			.match_2_enter{display: block;width: 297px;padding: 7px 0;background: #d43741;font-size: 24px;color: #FFFFFF;text-align: center;margin: 74px auto 0;border-radius: 8px;box-shadow: 1px 2px 5px 2px #d3d3d3;}
+			.route{margin-top: 120px;background: url(images/bg08.jpg) no-repeat 0px 38px;font-size: 15.46px;}
+			.route_titel{width: 244px;height: 62px;line-height: 62px;font-size: 25.67px;color: #FFFFFF;background: #273441;text-align: center;margin: 0 auto;}
+			.route_content{overflow: hidden;width: 802px;margin: 0 auto;padding: 76px 0 57px;}
+			.route_content_1{float: left;height: 501px;width: 353px;border-radius: 10px;background: #cdcdcd;position: relative;}
+			.route_content_1 #route_img{height: 100%;margin: 0 auto;display: inline-block;margin-left: 43.14px;}
+			.route_content_1 #jia{display: none;margin-left: 43.14px;position: absolute;top:50%;left:50%;width: 100px;height: 100px;margin:-50px 0 0 -50px;}
+			.route_content_1:hover #jia{display: inline-block;}
+			.route_content_2{float: right;width: 353px;border-radius: 10px;overflow: hidden;height: 501px;background: #FFFFFF;}
+			.route_content_2_1{width: 100%;text-align: center;font-size: 20.21px;padding: 36px 0;background: #adacac;}
+			.route_content_2_2{background: #FFFFFF;padding: 43px 36px 0 ;line-height: 30px;}
+			.spot_title{width: 244px;height: 62px;line-height: 62px;font-size: 25.67px;color: #FFFFFF;background: #273441;text-align: center;margin: 128px auto 50px;}
+			.spot_smtitle{width: 244px;height: 62px;line-height: 62px;font-size: 29.73px;color: #000000;text-align: center;margin: 0 auto 47px;}
+			.hzuo{width: 1140px;padding-bottom: 99px; background: url(images/bg10.jpg) no-repeat 0 38px;}
+			.hzuo_title{width: 355px;height: 62px;line-height: 62px;font-size: 25.67px;color: #FFFFFF;background: #273441;text-align: center;margin: 129px auto 0;}
+			.hzuo_smtitle{text-align: center;font-size: 22.73px;color: #FFFFFF;margin: 37px 0 0 0;}
+			.hzuo_contant{width: 759px;text-align: center;color: #FFFFFF;font-size: 20.21px;margin: 27px auto 0;line-height: 35px;}
+			.hzuo a{color: #FFFFFF;display: block;margin: 75px auto 0;width: 297px;font-size: 24px;text-align: center;background: #888888;border-radius: 8px;
+			padding: 7px 0;text-align: center;margin: 74px auto 0;border-radius: 8px;
+			}
+			.footer{margin-top: 80px;text-align: center;}
+			.foot_title{font-size: 25.67px;color: #a4a4a4;}
+			.footer_botom{font-size: 20.21px;padding: 25px 0;color: #FFFFFF;background: #adacac;}
+			/*////////////////////////////////////轮播图样式/////////////////////////////////////////////*/
+
+			#picture_view{width: 920px;height: 389px;overflow:hidden;position: relative;margin: 0 auto;box-shadow: 0px -24px 12px rgba(0,0,0,.2);}
+			#picture_continer{width: 10000px;overflow: hidden;height: 389px;}
+			#picture_continer img{float: left;width: 920px;height: 389px;}
+			#lt{position: absolute;top: 170.5px;left: 89px;width: 48px;height: 48px;background: url(images/bg14.png) no-repeat;}
+			#rt{position: absolute;top: 170.5px;right: 89px;width: 48px;height: 48px;background: url(images/bg15.png) no-repeat;}
+			.picture_contant{margin: 0 auto;background: #FFFFFF;width: 920px;height: 401px;box-shadow: 1px 5px 24px rgba(0,0,0,.2);}
+			.picture_contant_1{font-size: 20px;color: #e90101;padding: 53px 38px 10px;}
+			.picture_contant_2{font-size: 14px;padding: 0 38px;line-height: 30px;}
+			/*////////////////////////////////////////头部轮播图//////////////////////////////////////////////*/
+			#header_pic{width: 1140px;height: 299px;overflow: hidden;position: relative;}
+			#header_pic_1{overflow: hidden;width: 10000px;height: 299px;}
+			#header_pic_1 img{float: left;width: 1140px;height: 299px;}
+			#header_pic_ul{overflow: hidden;position: absolute;bottom: 15px;right: 54px;}
+			#header_pic_ul li{float: left;width: 9px;height: 9px;border-radius: 50%;background: rgba(130,124,124,0.4);margin-right: 10px;}
+			
+			.spot_picture{/*overflow: hidden;*/z-index: 50;}
+			.spot_picture:after{ content:"."; display:block; height:0; visibility:hidden; clear:both;}
+			.spot_picture div{float: left;position: relative;width: 223px;height: 166px;z-index: 10;margin: 2px;}
+			.spot_picture img{width: 223px;height: 166px;/*position: absolute;*/
+							-webkit-transition:all 1s;
+                        	-moz-transition:all 1s;
+                        	-o-transition:all 1s;
+                        	transition:all 1s;
+							-webkit-transition: all 1s;
+						}
+			.spot_picture .big,.spot_picture .big img{
+				width: 450px;
+			}
+			.spot_picture .small:hover{z-index: 100;}
+			.spot_picture .small:hover img{
+				-webkit-transform:scale(1.5);
+                -moz-transform:scale(1.5);
+                -ms-transform:scale(1.5);
+                -o-transform:scale(1.5);
+                transform:scale(1.5);
+				}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div class="header_bg">
+				<div class="header">
+						<div class="header1">
+							<img src="images/bg01.jpg" alt="" />
+							<span>韩国中央首尔马拉松官方中文站</span>
+						</div>
+						<div class="header2">
+							<a class="sp1" href="http://weixin.zx-tour.com/Matchinfo?m_id=51">立即报名</a>
+							<a href="###" id="about1">关于</a>
+							<a class="sp2" id="spot1" href="###">周边景点</a>
+							<a href="###" id="route1">赛事路线</a>
+							<a class="sp3" id="match1" href="###">赛事介绍</a>
+						</div>
+					</div>
+				</div>
+		<div class="box">
+			<div class="box1">
+				<div style="position: relative;">
+					<div id="header_pic">
+						<div id="header_pic_1">
+							<img src="images/banner01.jpg" alt="" />
+							<img src="images/banner02.jpg" alt="" />
+							<img src="images/banner03.jpg" alt="" />
+						</div>
+					</div>
+					<ul id="header_pic_ul">
+						<li style="background: rgba(255,255,255,0.8);"></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="box1_1">
+					<div class="_time">
+						<div class="_time_1">开赛倒计时</div>
+						<div class="_time_2">
+							<span class="sp1" id="days">00</span>
+							<span class="sp2">天</span>
+							<span class="sp3" id="hours">00</span>
+							<span class="sp2">时</span>
+							<span class="sp3" id="mins">00</span>
+							<span class="sp2">分</span>
+							<span class="sp3" id="secs">00</span>
+							<span class="sp2">秒</span>
+						</div>
+					</div>
+					<div class="_time">
+						<div class="_time_1">截止报名时间</div>
+						<div class="_time_2">
+							<span class="sp1 sp4">2016</span>
+							<span class="sp2">年</span>
+							<span class="sp3">09</span>
+							<span class="sp2">月</span>
+							<span class="sp3">09</span>
+							<span class="sp2">日</span>
+						</div>
+					</div>
+					<div class="_time" style="border: none;width: 376px;text-align: center;">
+						<div class="_time_1">关注公众号获取更多赛事信息</div>
+							<img style="margin-top: 12px;" src="images/bg03.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="box2">
+				<div class="match_1" id="match">赛事介绍</div>
+				<div class="picture" style="position: relative;">
+					<div id="picture_view">
+						<div id="picture_continer">
+							<img src="images/info01.jpg" alt="" />
+							<img src="images/info02.jpg" alt="" />
+							<img src="images/info03.jpg" alt="" />
+						</div>
+					</div>
+					<p id="lt"></p>
+					<p id="rt"></p>
+					<div class="picture_contant">
+						<div class="picture_contant_1">韩国中央首尔马拉松</div>
+						<div class="picture_contant_2">　　韩国中央首尔马拉松于1999年创立，最初以半程马拉松为主，在每年11月份举办。为了纪念1988年首尔奥运会，赛道起点位于学生体育馆正门（首尔奥运会主体育场蚕室体育场对面），最后再跑回到蚕室体育场作为终点。为了便于更多的跑者参与其中，比赛设有10KM、5KM和趣味跑等项目，首届比赛便招募了超过13000名跑友参与其中，成为韩国最大规模的跑步赛事之一。2000年，韩国首尔中央马拉松吸引了17000名跑友参赛，并且升级成为韩国半程马拉松总决赛。2001年，韩国首尔中央马拉松首度迎来5个国家的10名男子马拉松选手参赛，成为最早引入海外运动员参加的韩国跑步赛事，并且一共吸引了超过27000名参赛选手参赛。2002年，韩国首尔中央马拉松升级为全马比赛，并且在2003年招募了9500名全马选手参赛。2008年，韩国首尔中央马拉松通过认证，成为国际田联银标马拉松赛事。2009年，韩国首尔中央马拉松增设全马轮椅组，并且首次吸引了16名残障运动员参赛。发展到现在，随着竞技水平的提高，韩国中央首尔马拉松的项目设置固定为以全马为主，10KM为辅，并且已经跻身成为韩国乃至亚洲最为知名、规模最大、竞技水平最高的马拉松赛事之一，热烈欢迎来自于世界各地的跑步爱好者前来参赛！</div>
+					</div>
+				</div>
+				<div class="match_2">
+					<ul>
+						<li>
+							<div class="tab1">开赛时间</div>
+							<div class="tab1_1">2016年11月6日 上午8点</div>
+						</li>
+						<li>
+							<div class="tab2">比赛地点</div>
+							<div class="tab2_2">
+								学生体育馆正门（起点）<br />
+								蚕室体育场（终点）
+							</div>
+						</li>
+						<li>
+							<div class="tab3">比赛类型</div>
+							<div class="tab3_3">
+								<span>全马（5小时关门，限1998年11月5日之前出生）</span><br />
+								<span>10KM（1小时30分关门）</span><br />
+							</div>
+						</li>
+						<li>
+							<div class="tab3">赛事规模</div>
+							<div class="tab3_3">
+								<span>全马：20000人</span><br />
+								<span>10KM：5000人</span>
+							</div>
+						</li>
+					</ul>
+					<a class="match_2_enter" href="http://weixin.zx-tour.com/Matchinfo?m_id=51">立即报名</a>
+					<div class="route">
+						<div class="route_titel" id="route">比赛路线</div>
+						<div class="route_content">
+							<a href="images/bg07.jpg" target="_bank">
+							<div class="route_content_1">
+								<img src="images/bg07.jpg" id="route_img"/>
+								<img src="images/jia.png" alt="" id="jia">
+							</div>
+							</a>
+							<div class="route_content_2">
+								<div class="route_content_2_1">韩国中央首尔马拉松全马路线</div>
+								<div class="route_content_2_2">学生体育馆正门→和平门三岔路口→千户十字街（迂回）→吉洞十字街（迂回）→斗村十字街→奥林匹克公园十字街→滩川桥→水西站→细谷洞十字街→始兴十字街（左侧）→丽水大桥十字街（左侧）→滩川水上乐园后方（折返）→丽水大桥十字街（迂回）→始兴十字街（迂回）→细谷洞十字街→水西站→滩川1桥→三田洞十字街→蚕室体育场</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="spot">
+					<div class="spot_title" id="spot">周边景点</div>
+				<!-- 	<div class="spot_smtitle">平壤体育馆</div> -->
+					<div class="spot_picture">
+						<div class="small">
+							<img src="images/1.jpg" alt="" />
+						</div>
+						<div class="small">
+							<img src="images/2.jpg" alt="" />
+						</div>
+						<div class="small">
+							<img src="images/3.jpg" alt="" />
+						</div>
+						<div class="small">
+							<img src="images/4.jpg" alt="" />
+						</div>
+						<div class="small">
+							
+						</div>
+						<div class="small">
+							
+						</div>
+						<div class="small">
+							<img src="images/5.jpg" alt="" />
+						</div>
+						<div class="big">
+							<img src="images/129737405785125972.jpg" alt="" />
+<!-- 						</div>
+						<div> -->
+							
+						</div>
+						<div class="small">
+							<img src="images/6.jpg" alt="" />
+						</div>
+						<div class="small">
+							<img src="images/7.jpg" alt="" />
+						</div>
+						<div class="small">
+							<img src="images/8.jpg" alt="" />
+						</div>
+						<div class="small">
+							<img src="images/9.jpg" alt="" />
+						</div>
+						<div class="small">
+							
+						</div>
+						<div class="small">
+							<img src="images/1.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="hzuo" id="about">
+					<div class="hzuo_title">官方授权合作伙伴</div>
+					<div class="hzuo_smtitle">知行合逸</div>
+					<div class="hzuo_contant">
+						　　知行合逸是韩国中央首尔马拉松中国区官方合作伙伴，我们致力于为中国跑友提供高效便捷的报名渠道和旅行服务。我们的报名费和官网基本一致，您只需填写中文报名表格，即可完成海外马拉松报名。赛前，我们将为参赛选手发放知行合逸中文版独家赛事手册，更加方便您的参赛。
+					</div>
+					<a href="http://zx42195.com/">前往知行合逸官网</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer"style="min-width: 1140px;">
+				<!-- <div class="foot_title">合作伙伴</div> -->
+				<div class="footer_log"></div>
+				<div class="footer_botom">2016韩国中央首尔马拉松</div>
+			</div>
+			</div>
+	</body>
+	<script type="text/javascript">
+		var lt=document.getElementById('lt');
+		var rt=document.getElementById('rt');
+		var pic=document.getElementById('picture_view');
+		var imgs=pic.getElementsByTagName('img');
+		var imgw=imgs[0].offsetWidth;
+		var num=0;
+		var time1=null;
+		pic.scrollLeft=0;
+		lt.onclick=function(){
+//			clearInterval(time1);
+			num--;
+			if(num<0){
+				num=0;
+				pic.scrollLeft=imgw*num;
+			}
+			move();	
+		}
+		rt.onclick=function(){
+			num++;
+			if(num>imgs.length-1){
+				num=imgs.length-1;
+				pic.scrollLeft=imgw*num;		
+			}
+			move()	
+		}
+		function move(){//图片滚动函数
+		clearInterval(time1);
+		var start=pic.scrollLeft;//起始位置
+		var end=imgs[0].offsetWidth*num;//结束位置
+		var step=0;//起始步数
+		var stepmax=30;//最大步数
+		var everystep=(end-start)/30;
+		time1=setInterval(function (){
+			step++;
+			if (step==stepmax) {
+				step=0;
+				clearInterval(time1);
+			};
+			start+=everystep;
+			pic.scrollLeft=start;
+		},15)
+	}
+		//////////////////////////////////头部滚动//////////////////////////////////
+		var header_pic=document.getElementById('header_pic');
+		var header_imgs=header_pic.getElementsByTagName('img');
+		var header_pic_ul=document.getElementById('header_pic_ul');
+		var lis=header_pic_ul.getElementsByTagName('li');
+		var num2=0;
+		var num3=0;
+		var time2=null;
+		////////////////////////////////////////////////////////
+		setInterval(automove,5000);
+		function automove () {
+			clearInterval(time2);
+			num2++;
+			if(num2>2){
+				num2=0;
+			}
+				clearInterval(time2);
+			var start=header_pic.scrollLeft;//起始位置
+			var end=header_imgs[0].offsetWidth*num2;//结束位置
+			var step=0;//起始步数
+			var stepmax=30;//最大步数
+			var everystep=(end-start)/30;
+			time2=setInterval(function (){
+				step++;
+				if (step==stepmax) {
+					step=0;
+					clearInterval(time2);
+				};
+				start+=everystep;
+				header_pic.scrollLeft=start;
+			},15)
+			sty();
+//			num3++;
+		}
+		function  sty() {
+			for (var i=0;i<lis.length;i++) {
+				if(lis[i]==lis[num2]){
+					lis[num2].style.background='rgba(255,255,255,0.8)';
+				}
+				else{
+					lis[i].style.background='';
+				}
+				
+			}
+		} 
+		//////////////////////////////////////////////////////////////////////////////
+		
+		
+		var match=document.getElementById('match');
+		var match1=document.getElementById('match1');
+		var spot=document.getElementById('spot')
+		var spot1=document.getElementById('spot1');
+		var route=document.getElementById('route');
+		var route1=document.getElementById('route1');
+		var about=document.getElementById('about');
+		var about1=document.getElementById('about1');
+//		console.log(match_top);
+		var time4=null;
+		match1.onclick=function(){
+		scroll(match);
+		}
+		spot1.onclick=function () {
+			scroll(spot);
+		}
+		route1.onclick=function () {
+			scroll(route);
+		}
+		about1.onclick=function () {
+			scroll(about);
+		}
+	function  scroll(id) {
+		clearInterval(time4);
+			var match_top=id.offsetTop;
+			var scroll_top=document.body.scrollTop;
+			var distant=match_top-scroll_top;
+			time4=setInterval(function () {
+				document.body.scrollTop+=20;
+				if(document.body.scrollTop>=match_top){
+					document.body.scrollTop=match_top;
+					clearInterval(time4);
+				}
+			},1)
+	}
+
+var m_untilTime = "2016-09-09 08:00:00";
+var days=document.getElementById('days');
+var hours=document.getElementById('hours');
+var mins=document.getElementById('mins');
+var secs=document.getElementById('secs');
+function getDate(strDate){
+    var st = strDate;
+    var a = st.split(" ");
+    var b = a[0].split("-");
+    var c = a[1].split(":");
+    var date = new Date(b[0], b[1]-1, b[2], c[0], c[1], c[2])
+    return date;
+}
+function CountDown(){
+    var Now =  new Date().getTime();
+    var Until =  getDate(m_untilTime).getTime();
+    var countS = Math.floor((Until-Now)/1000);
+    var html = "00:00:00";
+    if(countS>0){
+    	var day = Math.floor(countS/(3600*24));
+        var hour = Math.floor((countS%(3600*24))/3600);
+        var min = Math.floor((countS%3600)/60);
+        var sec = (countS%3600)%60;
+        html = (day<10?"0"+day:day)+":"+(hour<10?"0"+hour:hour)+":"+(min<10?"0"+min:min)+":"+(sec<10?"0"+sec:sec);
+        days.innerHTML = day;
+        hours.innerHTML = hour;
+        mins.innerHTML = min;
+        secs.innerHTML = sec;
+    }
+    console.log(html);
+   // $("#countdown").html(html);
+}
+var CountDownTiming = setInterval(function(){
+    CountDown();
+},1000);
+	</script>
+</html>

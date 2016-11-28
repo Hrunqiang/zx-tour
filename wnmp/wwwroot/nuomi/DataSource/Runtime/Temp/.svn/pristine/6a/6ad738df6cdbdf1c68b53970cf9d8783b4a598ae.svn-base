@@ -1,0 +1,95 @@
+<{include file='Login/header.html'}>
+<style>
+	.send_lps{float:left;border:1px solid #cccccc;padding:3px 10px 3px 10px;margin:5px;display:inline;position: relative;}
+	.send_lps span{color:red;position: absolute;right:0;top:-5px;cursor:pointer;display:none;}
+	.send_box{padding:10px;border:1px solid #999999;width:630px;}
+	.text_content{padding-top:10px;}
+	.text_content textarea{width:650px;height:100px;}
+#mask{display:none;width:100%;height:auto;top:0;left:0;bottom:0;background:#000;position:fixed;filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity:0.5;z-index:9;_position:absolute;_height:900px}
+#text{display:none;width:300px;height:80px;padding-top:50px;top:50%;left:50%;text-align:center;margin:-150px -200px;background-color:#EBF4D8;position: absolute;z-index:10;}
+</style>
+<div id="mask"></div>
+<div id="text"></div>
+<div class="wrap">
+    <div class="container">
+        
+        <div id="main">
+            
+            
+            <div class="con box-green">
+                <form action="<{$sys.subform}>" method="post" enctype="multipart/form-data">                
+                <div class="box-header">
+                    <h4>需要Push用户</h4>
+                </div>
+                <div class="box-content">
+                <div class="send_box">
+                <{foreach from=$users item=i key=k name=n}>
+                	<div class="send_lps" v="<{$i.lingpai}>"><{$i.nickname|default:$i.username}><span>x</span></div>
+                <{/foreach}>
+                <div style="clear:both;"></div>
+                </div>
+                <div class="text_content">
+                <textarea name="content" id="content"></textarea>
+                </div>
+                </div>
+                <div class="box-footer">
+                    <div class="box-footer-inner">
+                    	<input type="button" id="send" value=" 发 送 " />
+                    </div>
+                </div>
+                </form>
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script>
+$(function(){
+	$('.send_lps').hover(function(){$(this).find('span').show();},function(){$(this).find('span').hide();});
+	$('.send_lps span').click(function(){
+		var div	= $(this).parent('div');
+		div.remove();
+	});
+	$('#send').click(function(){
+		var lingpai	= '';
+		$('.send_lps').each(function(){
+			var v= $(this).attr('v');
+			if(v){
+				lingpai	+= v+","; 
+			}
+		});
+		var content	= $('#content').val();
+		if(content=='' || lingpai==''){
+			alert('内容或选择的用户不能为空。');
+			return false;
+		}
+		
+		$('#mask').show();
+		$('#text').html("<h1>发送中...</h1>").show();
+		
+		$.ajax({
+					cache: false,
+					url:'./?s=Push&a=PushContent',
+					type: "POST",
+					dataType: "json",
+//					dataType: "text",
+					timeout:'30000',
+//					async: false,
+					data: {
+						lp:lingpai,
+						con:content
+					},
+					success: function(result){
+						if(true){
+							alert('成功');
+							window.location.href="./?s=UsersManage&a=get_list";
+						}else{
+							alert('失败');
+							$('#mask').hide();
+							$('#text').hide();
+						}
+					}
+				});
+	});
+});
+</script>
+<{include file='Login/footer.html'}>

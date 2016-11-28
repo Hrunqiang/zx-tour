@@ -1,0 +1,30 @@
+[ 2016-11-15T11:25:43+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001964s ]
+
+[ 2016-11-15T11:25:43+08:00 ] /login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002095s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002198s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001927s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002014s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: error C:\wnmp\wwwroot\houtai\uducy_admin\Runtime\Temp\8d4f5e13bd3eda234fa91e36665717b486cd4564.file.login.html.php 第 135 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\houtai\uducy_admin\Runtime\Temp\8d4f5e13bd3eda234fa91e36665717b486cd4564.file.login.html.php 第 135 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.021391s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021448s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000855s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001060s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000770s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000856s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003724s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000928s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000980s ]
+

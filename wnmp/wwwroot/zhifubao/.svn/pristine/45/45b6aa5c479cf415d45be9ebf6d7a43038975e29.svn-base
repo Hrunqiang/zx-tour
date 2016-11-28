@@ -1,0 +1,96 @@
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-02 10:36:46
+         compiled from "../DataSource/Tpl\Coupon\index.html" */ ?>
+<?php /*%%SmartyHeaderCode:1598057a839f03971e4-65099667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'f6bdd7dfffd6914c4f29bb0f0d3acbdf382db816' => 
+    array (
+      0 => '../DataSource/Tpl\\Coupon\\index.html',
+      1 => 1478054179,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1598057a839f03971e4-65099667',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_57a839f05303f',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_57a839f05303f')) {function content_57a839f05303f($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('Comon/header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<title>优惠券</title>
+<style>
+	.coupon_list{height: 8.75000000000000rem;margin-top: 0.71428571428571rem;}
+	.coupon_list_content{height: 5.60714285714286rem;border-bottom: 1px solid rgb(171,171,171);}
+	.coupon_quota{width:10.17857142857143rem;height:4.28571428571429rem;float: left;margin-right: 0.89285714285714rem;margin-top: 0.71428571428571rem;color: white;font-weight: bold;}
+	.coupon_msg{float: left;width: 11.96428571428571rem;}
+	.coupon_all{background: url('/static/images/cov_bg01.png');background-size:10.17857142857143rem 4.28571428571429rem;}
+	.coupon_money{float: left;font-size: 2.42857142857143rem;margin-left: 0.89285714285714rem;margin-top:0.35714285714286rem;font-style: italic;margin-right:0.17857142857143rem}
+	.coupon_name{font-size: 0.78571428571429rem;margin-top: 1.07142857142857rem;}
+	.coupon_special{background: url('/static/images/cov_bg03.png');background-size:10.17857142857143rem 4.28571428571429rem;}
+	.coupon_desc{margin-top:0.89285714285714rem;font-size: 0.89285714285714rem;color: black;height: 2.85714285714286rem;font-weight: bold;}
+	.coupon_id{font-size:0.71428571428571rem;color: rgb(171,171,171);}
+	.coupon_time{font-size: 0.89285714285714rem;color: rgb(171,171,171);float: left;margin-top: 1.07142857142857rem}
+	.coupon_copy{width:3.57142857142857rem;padding: 0;margin: 0 }
+	.collection_btn{text-align: right;}
+	.coupon_allbtn{display: inline-block;width:5.53571428571429rem;height:1.82142857142857rem;margin:0.71428571428571rem 0 0 0.71428571428571rem!important;background: white;border:1px solid rgb(255,116,0)!important;color:rgb(255,116,0)!important;font-size:0.78571428571429rem!important;line-height: 1.82142857142857rem!important}
+	.coupon_splbtn{;width:5.53571428571429rem;height:1.82142857142857rem;margin:0.71428571428571rem 0 0 0.71428571428571rem!important;line-height: 1.82142857142857rem!important;font-size:0.78571428571429rem!important;color: white!important}
+</style>
+<div class="wrap">
+	<div class="weui_cells coupon_list">
+		<div style="padding-left: 0.71428571428571rem;padding-right: 0.71428571428571rem">
+			<div class='coupon_list_content'>
+                <div class="coupon_quota coupon_all">
+                	<p class="coupon_money">10</p>
+                	<div class="coupon_intr">
+                		<p class="coupon_name">新星跑者券</p>
+                		<p>元优惠券</p>
+                	</div>
+                </div>
+                <article class="coupon_msg">
+                    <p class="coupon_desc">可用于知行平台上所有赛事及URG装备购买</p>
+                     <p class="coupon_id">优惠码 <span>OYKKQEYU43DHJXDL</span></p>
+                </article>
+            </div>
+            <div class="collection_btn">
+            	<p class="coupon_time">到期时间: <span>2017-1-11</span></p>
+            	<a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn coupon_allbtn">去看看装备</a>
+            	<a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn coupon_allbtn">去看看赛事</a>
+            </div>
+		</div>
+	</div>
+
+	<div class="weui_cells coupon_list">
+		<div style="padding-left: 0.71428571428571rem;padding-right: 0.71428571428571rem">
+			<div class='coupon_list_content'>
+                <div class="coupon_quota coupon_special">
+                	<p class="coupon_money">999</p>
+                	<div class="coupon_intr">
+                		<p class="coupon_name">赛事专用券</p>
+                		<p>元优惠券</p>
+                	</div>
+                </div>
+                <article class="coupon_msg">
+                    <p class="coupon_desc">烽火长城越野积分挑战赛</p>
+                    <p class="coupon_id">优惠码 <span>OYKKQEYU43DHJXDL</span></p>
+                </article>
+            </div>
+            <div class="collection_btn">
+            	<p class="coupon_time">到期时间: <span>2017-1-11</span></p>
+                <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn coupon_splbtn">去报名</a>
+            </div>
+		</div>
+	</div>
+
+
+<!-- footer -->
+	<div class="footer  weui_msg">
+	    <div class="weui_text_area">
+	        <p class="weui_msg_desc"><a href="tel:4000-842-195">服务资询</a><span id="j_z_f"></span><a href="/User/feedback">意见反馈</a></p>
+	        <p class="weui_msg_desc">本服务由知行合逸提供</p>
+	    </div>
+	</div>
+</div><?php }} ?>

@@ -1,0 +1,45 @@
+*{margin:0;padding:0;}
+html{width: 100%;font-size:62.5%;}
+body{
+	width:100%;
+	font:normal 1.4em/1.6em "Microsoft YaHei",Verdana,Tahoma;
+	background:#ED9FD3 url(../images/bg.jpg) no-repeat;
+	background-size: 100%;
+}
+@media screen and (max-width:480px){
+	#wrap{
+		width:100%;
+		overflow:hidden;
+	}
+}
+@media screen and (min-width:480px){
+	#wrap{
+		width: 480px;
+		height: 881px;
+		overflow:hidden;
+	}
+}
+img{width: 100%;}
+#wrap{
+	margin:0 auto;
+	position:relative;
+}
+#wrap>div{width: 80%;margin:0 auto;}
+#wrap>p{color: #FFF;text-align: center;}
+#qrcode{width: 60%!important;position: relative;}
+#qrcode>img{border-radius: 1rem;}
+#code_stats{width: 100%;position: absolute;bottom:0;left:0;text-align: center;background: #FFC57B;color:#BF1286;border-radius:0 0 1rem 1rem;height: 3rem;line-height: 3rem;font-weight: bold;display: none;}
+#guizhe{background:#ED9FD3;width: 100%!important;padding-bottom: 2rem;}
+#guizhe>img{width: 50%;margin:1rem 25%;}
+#guizhe>div{background: #FFF8B4;padding:2rem;color: #403344;width: 80%!important;margin:0 auto;font-size: 1.5rem;line-height: 2rem;border-radius: 1rem;}
+#guizhe>div>#hunt{font-weight: bold;text-align: center;font-size: 1.2rem;line-height: 1.5rem;margin:1rem auto;}
+#guizhe>div>#hunt>span{color: red;}
+#mask{position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,0.7);top:0;left:0;display: none;}
+#mask>div{width: 80%;position: absolute;left:50%;top:50%;-webkit-transform:translate3d(-50%,-50%,0);}
+#mask>div>span{position: absolute;top:1rem;right:3rem;width: 3rem;height: 3rem;z-index: 9999;}
+#mask>div>span:before,#mask>div>span:after{content:"";background: #FFF;width: 2px;height: 2rem;position: absolute;left:1.5rem;top:0;}
+#mask>div>span:before{-webkit-transform:rotate(45deg);}
+#mask>div>span:after{-webkit-transform:rotate(-45deg);}
+.mask_t{position: absolute;top:2rem;left:10%;width: 80%;}
+#mask_btn{color:#FFF;background: #972DCD;position: absolute;bottom:2rem;width: 60%;left:20%;height: 3rem;line-height: 3rem;text-align: center;}
+.shere_hunt{font-size: 2rem;text-align: center;color:#FFF;}

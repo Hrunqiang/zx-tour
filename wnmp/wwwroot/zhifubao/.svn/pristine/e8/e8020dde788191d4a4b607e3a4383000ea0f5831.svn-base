@@ -1,0 +1,15 @@
+<style>
+.empty{width: 70%;}
+.empty .emptyImg{width: 32%;margin: 0 auto 12px;}
+.empty .emptyImg>img{width: 100%;}
+.empty>p{text-align: center;}
+/*////////////////////////////////////新加样式//////////////////////////////////*/
+.empty p{font-size: 1.142857rem;color: #888888;}
+.empty p a{color: #00AAEE;}
+.bottom{bottom: -18.14285714285714rem}
+</style> 
+<div class="center_cell empty">
+	<div class="emptyImg"><img src="/static/images/empty.png" alt=""></div>
+    <p><{$empty[0]}> <a href="/">,去逛逛</a></p>
+    <div class="bottom">服务由知行和逸提供</div>
+</div>

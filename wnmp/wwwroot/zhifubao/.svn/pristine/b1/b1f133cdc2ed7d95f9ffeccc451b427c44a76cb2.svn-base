@@ -1,0 +1,31 @@
+<style>
+.blur {    
+    -webkit-filter: blur(5px); 
+       -moz-filter: blur(5px);
+        -ms-filter: blur(5px);    
+            filter: blur(5px);
+    -webkit-transform:scale(1.2);
+    		transform:scale(1.2);   
+
+	-webkit-transform-origin:50% 50%;
+		    transform-origin:50% 50%;
+}
+.head{height: 13.321rem;position: relative;color:#FFF;font-weight: bold;/*border-bottom: 3px solid #efeef3;*/overflow: hidden;}
+.head>img{width: 100%!important;}
+.head .headerImgBox{font-size: 1.2142857rem;margin-top: 1.0428rem;}
+.head .headerImg{width: 5.571rem;height: 5.571rem;border-radius: 50%;margin: 0 auto;border: 2px solid #FFF;box-shadow: 2px 2px 2px rgba(0,0,0,0.1);}
+.head .headerImgBox p{text-align: center;padding-top: 0.857rem;text-shadow: 0.142rem 0.142rem 0.142rem rgba(0,0,0,0.2);}
+.head .headerImg>img{width: 100%;border-radius: 50%;}
+.head .center_cell{width: 80%;}
+.head .headWord{margin-left: 30px;}
+</style>
+<div class="head centerBox">
+	<img src="<{if $user.headerimg}><{$user.headerimg}><{else}>/static/images/headbg.jpg<{/if}>" alt="" class="blur center_cell">
+	<div class="center_cell flexBox">
+		<div class="headerImgBox flex_1">
+			<div class="headerImg"><img src="<{if $user.headerimg}><{$user.headerimg}><{else}>/static/images/headerimg.png<{/if}>" alt=""></div>
+			<p><{if $user.nickname}><{$user.nickname}><{else}><{$user.phone}><{/if}></p>
+		</div>
+		<!-- <div class="headWord">在过去一年里我没有知行合逸参加过任何比赛</div> -->
+	</div>
+</div>

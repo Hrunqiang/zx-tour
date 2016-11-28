@@ -1,0 +1,64 @@
+<{include file='Comon/header.html'}>
+<link rel="stylesheet" type="text/css" href="/static/css/Enroll.css">
+<script src="/static/js/function.js"></script>
+<!-- <script src="/static/js/OnlineEnroll.js"></script> -->
+<div id="register_box" class="general_page section">
+	<div class="section_center">
+		<div class="general_page_left enroll step2" orderid="<{$orderid}>">
+			<div class="title">报名赛事</div>
+			<div class="title_des">
+				*注：请准确填写以下报名信息,提交成功后不可修改。
+				<{if $error}><br/><br/><font style="color:red;font-size:16px;font-weight: bold;">****<{$error}>****</font><{/if}>
+			</div>
+			<ul>
+				<li class="txt">参赛选手</li>
+				<li class="line">
+				<{foreach from=$xingming item=i name=n}>
+					<div class="pepo fl" id="<{$i.baomingdanid}>"><{$i.xingming}></div>
+				<{/foreach}>
+					<div class="addPepo fl" style="display:none;">+ 添加参赛选手</div>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li class="txt">报名项目</li>
+				<li class="line">
+				<{foreach from=$bmtype name=n item=i}>
+				<{if $i.goodscls =="半程马拉松[21.0975公里]"}>
+					<div class="fl bmtype">
+						<div class="radio"><label><input type="radio" value="<{$i.id}>" price="<{$i.goodsprice}>" name="bmtype" checked>&nbsp;<{$i.goodscls}></label></div>
+						<div class="radio_price OrangeColor">[ <span class="OrangeColor"><{$i.goodsprice}></span><em class="OrangeColor">RMB</em> ]</div>
+					</div>
+				<{/if}>
+					<!-- <label><input type="radio" value="<{$i.id}>" price="<{$i.goodsprice}>" name="bmtype" >&nbsp;<{$i.goodscls}></label>&nbsp;&nbsp;&nbsp;&nbsp; -->
+				<{/foreach}>
+				<div class="clearfix"></div>
+				</li>
+			</ul>
+
+			<div class="order_price">
+				<ul class="orderInfo btcolor">
+					<li class="cls1 fl">报名费</li>
+					<li class="cls2 fr"><span>RMB</span><em id="bmprice">19.9</em></li>
+					<div class="clearfix"></div>
+				</ul>
+				<ul class="orderInfo btcolor bgcolor">
+					<li class="cls1 fl"></li>
+					<li class="cls2 fr"><span>总价</span><em class="OrangeColor" id="allprice">19.9</em></li>
+					<div class="clearfix"></div>
+				</ul>
+			</div>
+			<form name="alipayment" id="pay_form" action="/PayResult/gotoPay" method="post" target="_blank">
+				<input size="30" name="WIDout_trade_no" value="<{$orderid}>"  type="hidden"/>
+				 <input size="30" name="WIDsubject"  type="hidden" value="黑瞎子岛马拉松报名" />
+				 <input size="30" name="WIDtotal_fee"  type="hidden" value="0.01" id="pay_all_price" />
+				 <input size="30" name="WIDbody" type="hidden" value="黑瞎子岛马拉松在抚远人民广场2016年1月1日（星期五）上午5：58,请牢记!" />
+				 <input size="30" name="WIDshow_url" type="hidden" value="http://pay.zx-tour.com/enroll/"/>
+				<div class="submit"><input  type="submit" id="pay_price" value="立即支付" /></div>
+			</form>
+		</div>
+		<link rel="stylesheet" type="text/css" href="/static/datapicker/css/jquery-ui-1.7.1.custom.css">
+		<script type="text/javascript" src="/static/datapicker/jquery-ui-1.7.1.custom.min.js"></script>
+		<{include file='Comon/right.html'}>
+	</div>
+</div>
+<{include file='Comon/footer.html'}>

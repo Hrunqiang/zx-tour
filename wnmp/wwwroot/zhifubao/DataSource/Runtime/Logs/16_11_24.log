@@ -1,0 +1,1493 @@
+[ 2016-11-24T09:58:53+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003847s ]
+NOTIC: [8] Undefined index: match C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.019175s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_ptype='国内' and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.010394s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.028083s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.002187s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php on line 46 and defined C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000903s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001921s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001985s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.028471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028528s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001437s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000928s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000899s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004578s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001233s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001369s ]
+
+[ 2016-11-24T09:58:55+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001640s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001775s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\UserAction.class.php 第 502 行.
+
+[ 2016-11-24T09:58:55+08:00 ] /Account/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001028s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001119s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 76 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000999s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001080s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: phone_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Undefined index: phone C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 98 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 98 行.
+NOTIC: [8] Undefined index: code_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 103 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 103 行.
+NOTIC: [8] Undefined index: error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015408s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000803s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000556s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000488s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000641s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002700s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001513s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001613s ]
+
+[ 2016-11-24T09:59:01+08:00 ] /Account/verify?phone=18311410712
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000859s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+
+[ 2016-11-24T09:59:10+08:00 ] /Account/login?type=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000627s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.016149s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( phone = '18311410712' ) LIMIT 1   [ RunTime:0.001669s ]
+
+[ 2016-11-24T09:59:10+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000758s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\UserAction.class.php 第 502 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000546s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.003875s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=25530 ) LIMIT 1   [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.015486s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 25530 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-24 09:59:10' ) LIMIT 1   [ RunTime:0.001640s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001183s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001334s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.010349s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010414s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000464s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000364s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000226s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001674s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000822s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000915s ]
+
+[ 2016-11-24T09:59:15+08:00 ] /User/order?page=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000638s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\UserAction.class.php 第 502 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000486s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.007005s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25530 and o.paystats>=0 order by o.ctime desc [ RunTime:0.002121s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.015318s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '16916112116424325530457' [ RunTime:0.001173s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '36816111818174225530896' [ RunTime:0.000760s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '39616111818133925530792' [ RunTime:0.001007s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '35616111818001725530304' [ RunTime:0.000634s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '37316111817545425530361' [ RunTime:0.000436s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '35316111518410125530653' [ RunTime:0.000276s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001117s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001177s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.010127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010204s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000543s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000381s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000230s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000465s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001760s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000510s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2016-11-24T09:59:15+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000862s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000961s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.016607s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25530 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.004380s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '16916112116424325530457' [ RunTime:0.000489s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '36816111818174225530896' [ RunTime:0.000361s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '39616111818133925530792' [ RunTime:0.000357s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '35616111818001725530304' [ RunTime:0.000355s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '37316111817545425530361' [ RunTime:0.000231s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '35316111518410125530653' [ RunTime:0.000190s ]
+
+[ 2016-11-24T09:59:18+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000540s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\UserAction.class.php 第 502 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000489s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.004358s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=25530 ) LIMIT 1   [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003876s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 25530 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-24 09:59:18' ) LIMIT 1   [ RunTime:0.000664s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000475s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000524s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.009604s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009655s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000425s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000298s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000229s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000426s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001490s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000527s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2016-11-24T09:59:19+08:00 ] /User/order?page=2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000636s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\UserAction.class.php 第 502 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000772s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.005259s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25530 and o.paystats>=0 order by o.ctime desc [ RunTime:0.003385s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.016495s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '16916112116424325530457' [ RunTime:0.000427s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '36816111818174225530896' [ RunTime:0.000331s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '39616111818133925530792' [ RunTime:0.000349s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '35616111818001725530304' [ RunTime:0.000324s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '37316111817545425530361' [ RunTime:0.000345s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '35316111518410125530653' [ RunTime:0.000286s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000549s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000620s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.009112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009224s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000941s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000479s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000422s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000699s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002732s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000693s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000771s ]
+
+[ 2016-11-24T09:59:20+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000949s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001040s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.005328s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25530 and o.paystats>=0 order by o.ctime desc [ RunTime:0.001112s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.015372s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '16916112116424325530457' [ RunTime:0.000314s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '36816111818174225530896' [ RunTime:0.000380s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '39616111818133925530792' [ RunTime:0.000403s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '35616111818001725530304' [ RunTime:0.000393s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '37316111817545425530361' [ RunTime:0.000370s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '35316111518410125530653' [ RunTime:0.000298s ]
+
+[ 2016-11-24T09:59:21+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000957s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001032s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\UserAction.class.php 第 502 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000523s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.015663s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=25530 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004278s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 25530 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-24 09:59:21' ) LIMIT 1   [ RunTime:0.000507s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000566s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000615s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.010038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010089s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000386s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000392s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000227s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000343s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001476s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000540s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2016-11-24T10:49:28+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001169s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001231s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\UserAction.class.php 第 502 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001027s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.128927s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=25530 ) LIMIT 1   [ RunTime:0.029548s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.018129s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 25530 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-24 10:49:28' ) LIMIT 1   [ RunTime:0.017070s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001313s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001398s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.016873s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016931s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000912s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000807s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000886s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000843s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003627s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001060s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001130s ]
+
+[ 2016-11-24T10:49:31+08:00 ] /Account/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000884s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000975s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 76 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000641s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000711s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: phone_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Undefined index: phone C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 98 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 98 行.
+NOTIC: [8] Undefined index: code_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 103 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 103 行.
+NOTIC: [8] Undefined index: error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009392s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009451s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000432s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000415s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000698s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002488s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000709s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000779s ]
+
+[ 2016-11-24T10:49:32+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000638s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\UserAction.class.php 第 502 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000566s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.004709s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=25530 ) LIMIT 1   [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.015683s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 25530 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-24 10:49:32' ) LIMIT 1   [ RunTime:0.000759s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000479s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000532s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.010385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010438s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000358s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000298s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000297s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001406s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000525s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2016-11-24T10:49:34+08:00 ] /Run
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000920s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001016s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+NOTIC: [8] Undefined index: match C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\RunAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\RunAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.017822s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' and m_state=0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW() UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' and  m_state=0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW() order by m_city desc [ RunTime:0.098000s ]
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\RunAction.class.php 第 86 行.
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\RunAction.class.php 第 86 行.
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\RunAction.class.php 第 86 行.
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\RunAction.class.php 第 82 行.
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\RunAction.class.php 第 82 行.
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.017767s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\RunAction.class.php on line 66 and defined C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.015510s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\RunAction.class.php on line 70 and defined C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001013s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001099s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001162s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: hotcitys C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\5413ae1b1157f24c387c13c1079eefeb2145fc4a.file.index.html.php 第 504 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\5413ae1b1157f24c387c13c1079eefeb2145fc4a.file.index.html.php 第 504 行.
+NOTIC: [8] Undefined index: list C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\5413ae1b1157f24c387c13c1079eefeb2145fc4a.file.index.html.php 第 507 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\5413ae1b1157f24c387c13c1079eefeb2145fc4a.file.index.html.php 第 507 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016591s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001777s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000934s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000643s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000746s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004372s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000871s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000963s ]
+
+[ 2016-11-24T10:49:35+08:00 ] /Search/screenv2?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000909s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001007s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.018041s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where m_ptype ='国内' and  m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  and m_sign_nuomi=1  order by   m_order desc,m_GameTime asc,id desc   [ RunTime:0.004702s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where m_ptype ='国内' and  m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  and m_sign_nuomi=0 and m_placesleft>0 and m_untilTime>NOW() and m_GameTime>NOW()  order by   m_GameTime asc,m_order desc,id desc   [ RunTime:0.007684s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where m_ptype ='国内' and  m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  and m_sign_nuomi=0 and (m_placesleft<=0 or m_untilTime<=NOW() or m_GameTime<NOW())  order by   m_GameTime desc,m_order desc,id desc   [ RunTime:0.008387s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.016156s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 368 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 368 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.031586s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 373 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 373 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004044s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 356 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 356 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003533s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 436 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 436 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003644s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 311 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 311 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003337s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 344 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 344 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002561s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 290 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 290 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002673s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 413 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 413 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003004s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 337 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 337 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002385s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 408 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 408 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004249s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 324 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 324 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002904s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 411 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 411 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003611s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 369 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 369 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003521s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 401 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 401 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002989s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 376 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 376 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004331s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 362 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 362 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003122s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 427 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 427 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003806s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 432 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 432 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003585s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 424 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 424 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003447s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 361 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 361 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003490s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 414 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 414 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003016s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 406 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 406 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004120s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 426 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 426 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002858s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 409 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 409 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002938s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 399 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 399 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003098s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 438 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 438 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003946s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 435 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 435 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004720s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 404 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 404 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002898s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 312 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 312 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003075s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 412 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 412 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.006777s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 352 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 352 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.008751s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 430 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 430 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.008733s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 437 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 437 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.006433s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 425 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 425 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003261s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 431 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 431 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003549s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 420 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 420 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002818s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 410 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 410 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003536s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 403 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 403 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002915s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 419 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 419 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004304s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 422 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 422 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004610s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 329 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 329 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002718s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 349 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 349 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002477s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 321 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 321 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002532s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 351 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 351 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002850s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 397 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 397 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003572s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 136 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 136 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002736s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 296 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 296 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002840s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 275 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 275 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002300s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 370 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 370 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002569s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 265 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 265 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004544s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 316 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 316 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.005223s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 163 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 163 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002897s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 353 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 353 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003176s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 396 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 396 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.007817s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 301 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 301 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.008423s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 137 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 137 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002522s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 235 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 235 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004576s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 100 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 100 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002777s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 326 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 326 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004272s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 395 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 395 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004226s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 328 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 328 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004550s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 405 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 405 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004461s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 124 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 124 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.008586s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 363 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 363 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.007712s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 251 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 251 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003218s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 129 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 129 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001803s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 310 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 310 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003364s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 276 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 276 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003167s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 238 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 238 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003395s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 224 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 224 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003219s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 372 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 372 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.009929s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 359 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 359 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.005156s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 309 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 309 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002146s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 128 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 128 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001328s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 348 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 348 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003373s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 304 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 304 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003204s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 354 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 354 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002356s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 233 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 233 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002959s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 256 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 256 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002213s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 332 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 332 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002661s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 60 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 60 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.005284s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 308 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 308 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002137s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 407 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 407 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003962s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 335 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 335 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003055s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 145 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 145 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002359s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 218 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 218 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003695s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 345 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 345 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002569s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 303 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 303 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003336s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 286 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 286 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002931s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 272 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 272 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004017s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 259 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 259 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002972s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 338 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 338 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002910s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 293 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 293 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002918s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 347 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 347 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003023s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 346 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 346 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.005572s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 176 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 176 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.007423s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 285 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 285 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002556s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 355 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 355 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003729s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 254 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 254 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002791s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 307 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 307 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002169s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 258 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 258 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002195s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 314 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 314 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002880s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 69 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 69 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002651s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 230 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 230 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003137s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 282 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 282 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002591s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 181 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 181 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002939s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 257 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 257 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002111s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 333 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 333 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002249s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 295 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 295 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002444s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 249 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 249 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002957s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 283 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 283 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003802s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 126 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 126 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001384s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 264 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 264 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002252s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 173 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 173 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001490s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 208 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 208 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002703s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 281 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 281 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002609s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 93 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 93 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002101s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 294 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 294 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002323s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 297 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 297 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002866s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 242 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 242 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002184s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 47 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 47 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001276s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 217 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 217 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001957s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 288 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 288 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002207s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 262 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 262 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003526s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 180 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 180 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002882s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 241 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 241 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002535s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 267 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 267 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002350s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 232 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 232 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002185s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 229 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 229 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001853s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 188 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 188 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002897s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 164 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 164 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001668s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 274 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 274 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002137s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 237 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 237 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002601s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 228 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 228 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001881s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 205 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 205 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002829s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 219 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 219 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002784s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 216 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 216 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003088s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 280 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 280 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002171s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 226 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 226 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002736s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 141 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 141 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001883s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 255 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 255 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001913s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 130 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 130 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001419s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 147 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 147 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002145s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 109 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 109 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002879s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 140 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 140 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001417s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 187 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 187 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002114s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 245 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 245 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002583s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 269 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 269 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002192s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 171 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 171 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001572s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 152 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 152 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002533s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 277 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 277 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002691s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 213 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 213 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001911s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 182 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 182 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002967s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 240 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 240 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001867s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 220 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 220 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002551s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 179 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 179 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001677s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 261 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 261 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002643s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 186 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 186 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001834s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 68 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 68 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001815s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 134 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 134 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002056s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 142 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 142 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001644s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 65 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 65 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002180s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 221 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 221 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002880s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 74 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 74 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002313s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 175 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 175 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002017s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 202 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 202 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002078s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 154 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 154 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001496s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 115 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 115 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001654s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 200 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 200 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001962s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 92 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 92 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001577s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 148 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 148 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002369s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 214 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 214 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003264s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 73 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 73 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001405s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 110 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 110 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002058s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 166 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 166 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001693s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 212 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 212 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001683s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 185 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 185 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001722s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 191 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 191 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001810s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 112 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 112 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001557s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 183 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 183 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002637s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 172 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 172 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001679s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 98 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 98 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001295s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 139 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 139 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001503s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 160 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 160 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001462s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 184 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 184 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001551s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 193 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 193 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001685s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 161 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 161 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001441s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 174 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 174 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001584s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 167 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 167 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003051s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 133 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 133 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001558s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 82 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 82 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001483s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 52 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 52 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001102s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 132 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 132 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.001315s ]
+
+[ 2016-11-24T10:49:36+08:00 ] /Matchinfo?m_id=373&platform=zx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000955s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001062s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.006488s ]
+SQL: select * from zx_tb_matchs where id = 373 [ RunTime:0.001642s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.020600s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order`,`g_stockleft` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 373 and g_pid =0 and g_state = 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002223s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order`,`g_stockleft` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 373 and g_pid =3998 and g_state = 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.012921s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order`,`g_stockleft` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 373 and g_pid =4006 and g_state = 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000628s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order`,`g_stockleft` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 373 and g_pid =4007 and g_state = 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001045s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.015786s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=373 )  [ RunTime:0.000630s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\MatchinfoAction.class.php 第 143 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.028930s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.001842s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.015751s ]
+SQL: SELECT * FROM `zx_tb_collect` WHERE ( `uid`=25530 and `match_id` = 373  ) LIMIT 1   [ RunTime:0.149918s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.013004s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = 25530 and matchid=373 and ( paystats = 1 or paystats = 10 or paystats = 5 ) ) LIMIT 1   [ RunTime:0.002227s ]
+SQL: SHOW COLUMNS FROM `zx_tb_remind` [ RunTime:0.023681s ]
+SQL: SELECT * FROM `zx_tb_remind` WHERE ( `uid`=25530 and `m_id` = 373  ) LIMIT 1   [ RunTime:0.002003s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001106s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001197s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 38 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015405s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015496s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.002092s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000569s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000281s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000589s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003699s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000804s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000889s ]
+
+[ 2016-11-24T10:49:37+08:00 ] /Account/imgverify?width=150&height=45
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000900s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001009s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+ERR: 非法操作:imgverify
+
+[ 2016-11-24T10:49:37+08:00 ] /Matchinfo/getcourse?m_id=373
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000926s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001025s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.015791s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 373 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001250s ]
+
+[ 2016-11-24T10:49:50+08:00 ] /Matchinfo/htactivity
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000532s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+ERR: 非法操作:htactivity
+

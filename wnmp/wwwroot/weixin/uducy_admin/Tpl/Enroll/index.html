@@ -1,0 +1,210 @@
+<{include file='Login/header.html'}>
+<style>
+.searchtxt{width:50px;}
+.searchbtn{width:35px;}
+</style>
+<{if $ac=='list'}>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">
+                  <div class="table">
+                     <div class="th">
+                        <a href="" exportall="all" class="export">导出所有订单</a><span style="float:right;">当前页面一共　<strong><{$count}></strong>　个订单</span>
+                    </div>            
+            	   <form action="<{$Reques_uri}>&ac=export" method="post" id="orderlist_form">
+                    <table class="admin-tb" id="js_data_source">
+                    <tr>
+                        <th><input type="checkbox" id="select_all"/></th>
+                    <{foreach from=$table item=j key=k2}>
+                        <{foreach from=$j.field item=i key=k}>
+                    	<{if $i.islist==true}>
+                    	<th style="text-align:center;<{if $k=='dicttok'}>display:none;<{/if}>">
+                    		<{if $i.type=="select"}>
+                    			<{$i.title}> <br>
+                    			<select name="<{$k}>" class="tselect">
+                    				<option value="">请选择</option>
+                    				<{foreach from=$i.selectdata item=si key=sk}>
+                    				<option value="<{$sk}>" <{if ($get.$k==$sk && $get.$k!="")}> selected <{/if}>><{$si}></option>
+
+                    				<{/foreach}>
+                    			</select>
+                    		<{elseif $i.type=="text"}>
+                    			<!-- <{if $i.ismain===true}><input type="checkbox" id="select_all"/> &nbsp;<{/if}> --><{$i.title}> <br>
+                    			<input type="text" name="<{$k}>" class="searchtxt" value="<{$get.$k}>"/><input type="button" class="searchbtn" value="搜索"/> <br>
+                    		<{elseif $i.type=="textarea"}>
+                    			<{$i.title}><br>
+                    			<input type="text" name="<{$k}>" class="searchtxt" value="<{$get.$k}>"/><input type="button" class="searchbtn" value="搜索"/> <br>
+                    		<{elseif $i.type=="img"}>
+                                <{$i.title}>
+                                <input type="text" name="<{$k}>" class="searchtxt" value="<{$get.$k}>"/><input type="button" class="searchbtn" value="搜索"/>
+                            <{else}>
+                    			<{if $i.ismain===true}><input type="checkbox" id="select_all"/> &nbsp;<{/if}>
+                    			<{$i.title}>
+                    		<{/if}>
+                    	</th>
+                    	<{/if}>
+                     <{/foreach}>
+                    <{/foreach}>
+                    <{foreach from=$list item=li key=lk}>
+                    <tr>
+                        <td><input type="checkbox" name="id[]" value="<{$li.orderid}>"/><{$lk+1}></td>
+                        <{foreach from=$table item=j key=k2}>
+                    		<{foreach from=$j.field item=cfgi key=cfgk}>
+                             <{if $cfgi.islist}>
+                    			<td style="text-align:center;max-width:150px;">
+                    			<{if $cfgi.type=='textarea' || $cfgi.type=='textarea1' }>
+                    				<textarea rows="2" cols="10" style="text-align:left;" id="zhushi_<{$li.orderid}>"><{$li.$cfgk}></textarea>
+                    			<{elseif $cfgi.type=='img'}>
+                    				<img src="<{$li.$cfgk|add_host}>" width="50"/>
+                    			<{elseif $cfgi.type=='flag'}>
+                    				<{$cfgi.flagdata[$li.$cfgk]}>
+                    			<{elseif $cfgi.type=='time'}>
+                    				<{$li.$cfgk|date_format:"%Y-%m-%d %H:%M:%S"}>
+                    			<{elseif $cfgi.type=='select'}>
+                    				<{$cfgi.selectdata[$li.$cfgk]}>
+                    			<{else}>
+                                    <{if $cfgk=="payprice"}>
+                                        ￥<{round($li.payprice-$li.discount,2)}> <br>
+                                        <del><{$li.payprice}></del>
+                                    <{else}>
+                    				<{$li.$cfgk}>
+                                    <{/if}>
+                    			<{/if}>
+                    			</td>
+                                <{/if}>
+                                <{/foreach}>
+                    		<{/foreach}>
+                    </tr>
+                   <{/foreach}>
+                    </table>
+
+                    <div class="th">
+                        <div class="pages">
+                        <{if $page}>
+							<{$page}>             
+                        <{/if}>
+                        </div> 
+                    	<div class="form">
+                    	<input type="button" exportall="id" class="export" value=" 导出 "/><span style="color:red"> &nbsp;&nbsp;*导出当前页面勾选的订单</span>
+                    	<{if $table_cfg.submitBtns}>
+                    		<{foreach from=$table_cfg.submitBtns item=i key=k name=n}>
+                    			&nbsp;&nbsp;<input type="button" onclick="$(this).parents('form').attr('action','<{$i}>').submit();" value=" <{$k}> "/>
+                    		<{/foreach}>
+                    	<{/if}>
+                        <!-- <input type="submit" value=" 删 除 "/>&nbsp; -->
+                        </div>
+                    </div>
+                </div>
+				</form>
+                </div>
+            </div><!--/ con-->
+        </div>    
+    </div><!--/ container-->
+    </div><!--/ wrap-->
+  <{/if}>
+  <script>
+  function change_url(obj){
+	  var v	= $(obj).val();
+	  var n	= $(obj).attr('name');
+	  var requestUrl	= '<{$Reques_uri}>';
+	  var reg	= new RegExp("(\\?|&)?"+n+"=[^&]{0,}");
+	  requestUrl	= requestUrl.replace(reg,'');
+	  requestUrl	= requestUrl+'&'+n+"="+v+"&ac=list";
+	  window.location=requestUrl;
+  }
+  $('#select_all').click(function(){
+	  var able	= $(this).attr('checked');
+	  if(able){
+		  $(this).parents('form').find('input[type=checkbox]').attr('checked',true);
+	  }else{
+		  $(this).parents('form').find('input[type=checkbox]').attr('checked',false);
+	  }
+  });
+  $('.tselect').change(function(){
+	  change_url(this);
+  });
+  $('.searchbtn').click(function(){
+	  var that	= $(this).prev('input');
+	  change_url(that);
+  });
+
+  </script>
+<script>
+var checkTb1 = function(selectType){
+    console.log(selectType)
+    CheckInit("check_field_Box",selectType);
+    console.log(selectType)
+}
+var  list = undefined;
+var CheckInit = function(tabelId,selectType){
+    if(list == undefined){
+        list = $("#" + tabelId).find("input[type='checkbox']");
+    }
+    CheckControl(list,selectType)
+}
+
+var CheckControl = function(childs,selectType,checkHandler){
+    console.log(selectType)
+    for(var i = 0,len = childs.length; i < len; i++){
+        switch(selectType){
+            case 1: //全选
+                childs[i].checked = true;
+                break;
+            case 2: //不选
+                childs[i].checked = false;
+                break;
+            case 3: //反选
+                childs[i].checked = !childs[i].checked;
+                break;
+        }
+    }
+}
+$(".export").click(function(){
+    var exporttype = $(this).attr("exportall"); 
+    var ids = "";
+    if(exporttype=="id"){
+        var idarr   = [];
+        $("input[name^=id]").each(function(){
+            if($(this).attr('checked')){
+                idarr.push("'"+$(this).val()+"'");
+            }
+        });
+        ids = idarr.join(",");
+        if(!ids) return false;
+    }
+    if($("#check_field_Box").length<1){
+        html = '\
+        <div style="position:fixed;top:0;left:0;background:#F2F4F6;margin:100px;max-width:500px;" id="check_field_Box">\
+            <p style="background:#D4DCE7;padding:10px;">请选择你要导出的字段</p>\
+            <div style="padding:10px;">\
+            <form action="/?s=Enroll&a=export" id="field_form" method="POST">\
+            <input type="hidden" value="'+exporttype+'" name="exporttype"/>\
+            <input type="hidden" value="'+ids+'" name="ids"/>\
+            <p>订单相关</p>\
+            <label for="field1"><input type="checkbox" name="field[]" id="field1" value="orderid" checked/>订单号</label>\
+            <label for="field2"><input type="checkbox" name="field[]" id="field2" value="paystats" checked/>订单状态</label>\
+            <label for="field4"><input type="checkbox" name="field[]" id="field4" value="orderprice" checked/>订单价钱</label>\
+            <label for="field32"><input type="checkbox" name="field[]" id="field32" value="discount" checked/>优惠价钱</label>\
+            <label for="field5"><input type="checkbox" name="field[]" id="field5" value="m_name" checked/>报名赛事</label>\
+            <label for="field25"><input type="checkbox" name="field[]" id="field25" value="platform" checked/>下单平台</label>\
+            <label for="field30"><input type="checkbox" name="field[]" id="field30" value="ctime" checked/>下单时间</label>\
+            <label for="field27"><input type="checkbox" name="field[]" id="field27" value="orderinfo" checked/>订单详情</label>\
+            <br>\
+            <p align="center" style="padding:10px 0;"><input type="button" value="全选" onClick="javascript:checkTb1(1);"/>　　<input type="button" value="反选" onClick="javascript:checkTb1(3);" />　　<input type="button" value="全不选" onClick="javascript:checkTb1(2);" />　　<input type="submit" value="导出"/>　　<input type="button" value="取消" id="cancel"/></p>\
+            </form>\
+            </div>\
+        </div>';
+        $(html).appendTo($('body'));
+
+        $("#cancel").click(function () {
+            $("#check_field_Box").remove();
+        });
+    }
+
+    return false;
+}); 
+</script>
+<{include file='Login/footer.html'}>

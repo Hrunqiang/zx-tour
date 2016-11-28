@@ -1,0 +1,113 @@
+<{include file='Login/header.html'}>
+<body id="main_page">
+<script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/static/js/graph/highcharts.js"></script>
+<script type="text/javascript" src="/static/js/graph/exporting.js"></script>
+<script type="text/javascript" src="/static/js/graph/grid.js"></script>
+
+<FORM action="?s=LogChart&a=index&ac=sel" method="POST">
+<div  style="height:30px;padding:10px;">
+   
+       day:<SELECT name='selDay'>
+              <OPTION value="3">3天</OPTION>
+              <OPTION value="4">4天</OPTION>
+              <OPTION value="5">5天</OPTION>
+              <OPTION value="6">6天</OPTION>
+              <OPTION value="7">7天</OPTION>
+           </SELECT>
+       action:<SELECT name='selAction'>
+              <OPTION value='line'>曲线</OPTION>
+              <OPTION value='column'>柱状</OPTION>
+           </SELECT>
+    <INPUT type="submit" value=" 查看 ">
+</div>
+</FORM>
+<div style = "width:100%;">
+<div style="width:97%; margin-left:10px; margin-top:5px;">
+  <div class="content" style="color:#ff0000;height: 370px;width:100%;" id='stat'> </div>
+</div>
+<div id="list"></div>
+<script type="text/javascript">
+var getdata	= <{$data}>;
+$(function () {
+	 $('.content').highcharts({
+	        chart: {
+	        	zoomType: 'x',
+	        	type:'<{$showtype}>',
+	        	//type: 'line',
+	        	//type: 'column',
+	            //type: 'area',
+	        	width:"1108",
+	        	borderWidth:1,
+	        	borderColor:"#cccccc",
+	        	plotBackgroundColor:"#ffffff",
+	        	backgroundColor:"#ffffff",
+	        	plotShadow:false,
+	        	events: {
+	                 load: function() {
+	                	 //for(i in this.series){
+	                		// alert(this.series[i].visible);
+	                	// }
+	                	  /* var seriesPv = this.series[0]; 
+	                	    if (seriesPv.visible) { 
+	                	        seriesPv.hide(); 
+	                	    } else { 
+	                	        seriesPv.show(); 
+	                	    }  */ 
+	                 },
+	                 click: function(){
+	                	// alert('e');
+	                 }
+	        	 }
+	        },
+	        exporting:false,
+	        title: {
+	            text: '<{$title}>'
+	        },
+	        xAxis: {
+	        	gridLineWidth: 1,
+	        	//tickmarkPlacement: 'on',
+	            categories:<{$categories}>,
+	        	//title:{'text':"日期"}
+	        },
+	        yAxis: {
+	        	 title: {
+	 	            text: '访问量'
+	 	        },
+	        	gridLineWidth:1,
+	        	minorGridLineWidth:0,
+	        	min:0,
+	    		minorTickInterval: 'auto'
+	        },
+	        plotOptions:{
+	        	line: {
+	                dataLabels: {
+	                    enabled: true
+	                },
+	                //enableMouseTracking: false
+	            }
+	        	/*column: {
+	                stacking: 'normal',
+	                dataLabels: {
+	                    enabled: true,
+	                    //color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'black'
+	                },
+	                enableMouseTracking: false
+	            }*/
+			},
+	        tooltip: {
+	        	shared: true,
+	        	//valueSuffix: ''
+	        	
+	        	}, 
+	        credits: {
+	            enabled: false
+	        },
+	        series:getdata
+	    });
+});				
+</script>
+</div>
+<div>
+</div>
+<{include file='Login/footer.html'}>

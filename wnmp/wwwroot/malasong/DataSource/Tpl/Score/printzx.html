@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="http://xdoc.aliapp.com/xdoc.js"></script>
+<script type="text/javascript" src="http://xdoc.aliapp.com/baiduTemplate.js"></script>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>黑瞎子岛马拉松证书打印</title>
+    <style>
+        body{padding: 0;margin:0;}
+        .bm{background: url("/static/images/zs/bm.jpg") no-repeat;width:1200px;
+            height: 864px; overflow: hidden;margin: 0 auto;position: relative;}
+        img{position:absolute;top:0;left:0;}
+        .name{position:absolute;top:210px;left:550px;}
+        .number{position:absolute;top:275px;left:560px;}
+        .sex{position:absolute;top:355px;left:560px;}
+        .zcj{position:absolute;top:420px;left:560px;}
+        .jcj{position:absolute;top:480px;left:600px;}
+        .km10{position:absolute;top:535px;left:600px;}
+        .km15{position:absolute;top:575px;left:600px;}
+        .km29{position:absolute;top:610px;left:600px;}
+        .km40{position:absolute;top:640px;left:600px;}
+        .paiming{position:absolute;top:715px;left:620px;}
+    </style>
+</head>
+<body>
+<div class="bm" id="tmpl">
+    <{if ($data.zubie=="半程男" || $data.zubie=="半程女")}>
+    <img src="/static/images/zs/bm.jpg" border="0">
+    <div class="name"><{$data.name}></div>
+    <div class="number"><{$data.number}></div>
+    <div class="sex"><{if $data.zubie=="半程男"}>男<{else if $data.zubie=="全程男"}>男<{else}>女<{/if}></div>
+    <div class="zcj"><{$data.zcj}></div>
+    <div class="jcj"><{$data.jcj}></div>
+    <div class="km10"><{$data.km10}></div>
+    <!--<div class="km13">00:45:57</div>-->
+    <div class="km15"><{$data.km15}></div>
+    <div class="paiming"><{$data.paiming}></div>
+    <{else}>
+    <img src="/static/images/zs/qm.jpg" border="0">
+    <div class="name"><{$data.name}></div>
+    <div class="number"><{$data.number}></div>
+    <div class="sex"><{if $data.zubie=="半程男"}>男<{else if $data.zubie=="全程男"}>男<{else}>女<{/if}></div>
+    <div class="zcj"><{$data.zcj}></div>
+    <div class="jcj"><{$data.jcj}></div>
+    <div class="km10"><{$data.km10}></div>
+    <div class="km15"><{$data.km20}></div>
+    <div class="km29"><{$data.km29}></div>
+    <div class="km40"><{$data.km40}></div>
+    <div class="paiming"><{$data.paiming}></div>
+    <{/if}>
+</div>
+<div class="score_res_print" style="text-align: center">
+    <input class="btn" type="button" value="打印证书" onclick="window.print()">
+</div>
+</body>
+</html>

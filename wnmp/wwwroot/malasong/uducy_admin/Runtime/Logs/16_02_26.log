@@ -1,0 +1,535 @@
+[ 2016-02-26T10:42:14+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009378s ]
+
+[ 2016-02-26T10:42:14+08:00 ] /login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.019112s ]
+INFO: [ route_check ] --END-- [ RunTime:0.019211s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001055s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001120s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\8d4f5e13bd3eda234fa91e36665717b486cd4564.file.login.html.php 第 135 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\8d4f5e13bd3eda234fa91e36665717b486cd4564.file.login.html.php 第 135 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.120547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.120592s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000641s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000423s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000361s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.011222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012767s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000774s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000816s ]
+
+[ 2016-02-26T10:42:18+08:00 ] /?s=login&a=login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000666s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_admin_user` [ RunTime:0.018487s ]
+SQL: SELECT `id`,`password`,`is_admin`,`right_action` FROM `mls_admin_user` WHERE ( `user_name`='haiyan' ) LIMIT 1   [ RunTime:0.008068s ]
+SQL: update mls_admin_user set last_login='2016-02-26 10:42:17',lastip='127.0.0.1' where `id`=11 [ RunTime:0.000596s ]
+ERR: 1146:Table 'dh_at321.mls_admin_user' doesn't exist
+ [ SQL语句 ] : update mls_admin_user set last_login='2016-02-26 10:42:17',lastip='127.0.0.1' where `id`=11
+
+[ 2016-02-26T10:42:18+08:00 ] /?s=index&a=index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000885s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000615s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000685s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000748s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.038948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039011s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000335s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000238s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000220s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001152s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000409s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000437s ]
+
+[ 2016-02-26T10:42:18+08:00 ] /?s=index&a=header
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000488s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000333s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000346s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000381s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.031521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031571s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000306s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000239s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000162s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000261s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001053s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000345s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2016-02-26T10:42:18+08:00 ] /?s=index&a=menu&showWelcome=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000613s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000302s ]
+NOTIC: [8] Undefined variable: output D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 29 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000332s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000359s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\fc992ec0d820ab300b1bbfc78e0c2bc48b74b653.file.menu.html.php 第 31 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\fc992ec0d820ab300b1bbfc78e0c2bc48b74b653.file.menu.html.php 第 31 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.045750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045788s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000350s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000231s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000160s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001109s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000365s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000394s ]
+
+[ 2016-02-26T10:42:20+08:00 ] /?s=index&a=welcome
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000486s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `tbl_admin_user` [ RunTime:0.013302s ]
+SQL: SELECT VERSION() AS dbversion [ RunTime:0.000670s ]
+NOTIC: [2] Illegal string offset 'dbversion' D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 72 行.
+SQL: SHOW TABLE STATUS [ RunTime:0.001150s ]
+NOTIC: [2] filesize(): stat failed for ../uducy_admin/Runtime/logs/admin_log.php D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 86 行.
+NOTIC: [2] filesize(): stat failed for ../uducy_admin/Runtime/logs/php_error.log D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 90 行.
+NOTIC: [2] filesize(): stat failed for ../uducy_admin/Runtime/logs/mysql_error.php D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 94 行.
+NOTIC: [8] Undefined variable: serverip D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 99 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_admin_user` [ RunTime:0.002194s ]
+SQL: SELECT count(id) as c FROM `mls_admin_user` LIMIT 1   [ RunTime:0.000192s ]
+SQL: SHOW COLUMNS FROM `tbl_admin_sys` [ RunTime:0.001464s ]
+ERR: 0:Table 'dh_at321.tbl_admin_sys' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tbl_admin_sys`
+SQL: SELECT ctime as x,`mem`,`cpu`,`load` FROM `tbl_admin_sys` WHERE ( ctime>=1456195340 )  [ RunTime:0.000344s ]
+ERR: 0:Table 'dh_at321.tbl_admin_sys' doesn't exist
+ [ SQL语句 ] : SELECT ctime as x,`mem`,`cpu`,`load` FROM `tbl_admin_sys` WHERE ( ctime>=1456195340 ) 
+NOTIC: [2] Invalid argument supplied for foreach() D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 61 行.
+NOTIC: [8] Undefined variable: rs D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 66 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000453s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000486s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: site_new D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\98d1046f2f04fb739a188779fb590e6f931a4eb2.file.welcome.html.php 第 52 行.
+NOTIC: [8] Undefined index: advise D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\98d1046f2f04fb739a188779fb590e6f931a4eb2.file.welcome.html.php 第 60 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.224629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.224723s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000748s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000553s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000389s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000666s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002557s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000865s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000937s ]
+
+[ 2016-02-26T10:42:22+08:00 ] /?s=Match
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001331s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001632s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000507s ]
+NOTIC: [8] Constant USERNAME already defined D:\wnmp\www\malasong\uducy_admin\Lib\Behavior\AuthCheckBehavior.class.php 第 15 行.
+NOTIC: [8] Constant If_manager already defined D:\wnmp\www\malasong\uducy_admin\Lib\Behavior\AuthCheckBehavior.class.php 第 16 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000175s ]
+NOTIC: [2048] Declaration of CommonModel::add() should be compatible with Model::add($data = '', $options = Array, $replace = false) D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 2 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mcommon` [ RunTime:0.003731s ]
+ERR: 1146:Table 'zxtour.mcommon' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `mcommon`
+NOTIC: [8] Undefined index: ac D:\wnmp\www\malasong\uducy_admin\Lib\Action\CommonAction.class.php 第 100 行.
+NOTIC: [8] Undefined index: field D:\wnmp\www\malasong\uducy_admin\Lib\Action\CommonAction.class.php 第 111 行.
+NOTIC: [8] Constant USERNAME already defined D:\wnmp\www\malasong\uducy_admin\Lib\Behavior\AuthCheckBehavior.class.php 第 15 行.
+NOTIC: [8] Constant If_manager already defined D:\wnmp\www\malasong\uducy_admin\Lib\Behavior\AuthCheckBehavior.class.php 第 16 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000109s ]
+NOTIC: [8] Undefined index: page D:\wnmp\www\malasong\uducy_admin\Lib\Action\CommonAction.class.php 第 115 行.
+SQL: select count(*) as c from mls_goods  where goodspid = 0 and isdel=0  [ RunTime:0.240367s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\uducy_admin\Common\common.php 第 695 行.
+SQL: select goodscls,id,ctime,utime from mls_goods  where goodspid = 0 and isdel=0   order by ctime desc,id desc   limit 0,30 [ RunTime:0.000972s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\uducy_admin\Common\common.php 第 695 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: isattr D:\wnmp\www\malasong\uducy_admin\Lib\Model\CommonModel.class.php 第 27 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000960s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001045s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: cid D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 59 行.
+NOTIC: [8] Undefined index: goodscls D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 95 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 72 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 73 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 91 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 97 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 72 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 73 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 91 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 97 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 72 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 73 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 91 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 97 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: ismain D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 135 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 138 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 141 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 144 行.
+NOTIC: [8] Undefined index: type D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: submitBtns D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\1e0141b3fbcb8c7fb4dc7ccf5e0b15c35bb3a070.file.index.html.php 第 180 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.067747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067800s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000346s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000239s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000160s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001122s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000513s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000564s ]
+
+[ 2016-02-26T10:42:25+08:00 ] /?s=Match&a=info&id=50
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000644s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000450s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.004077s ]
+SQL: SELECT g.id,g.goodscls,i.beizhu FROM mls_goods g LEFT JOIN  mls_matchinfo i ON g.id = i.`match_id` WHERE g.id = 50 [ RunTime:0.226282s ]
+SQL: SELECT * FROM `mls_goods` WHERE ( isdel=0 ) ORDER BY `order` desc,utime desc  [ RunTime:0.004087s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001087s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001274s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.238337s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.238394s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000411s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000260s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000191s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000313s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001260s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000450s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2016-02-26T10:42:29+08:00 ] /?s=Match&a=edit_beizhu&match_id=50&info=aaa222
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000689s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000545s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.004271s ]
+SQL: SELECT * FROM `mls_matchinfo` WHERE ( match_id = 50 ) LIMIT 1   [ RunTime:0.000761s ]
+SQL: update mls_matchinfo set beizhu = 'aaa222' where match_id = 50 [ RunTime:0.286520s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 109 行.
+

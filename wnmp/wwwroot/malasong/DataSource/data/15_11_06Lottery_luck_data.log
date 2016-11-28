@@ -1,0 +1,62 @@
+[ 2015-11-06T16:25:34+08:00 ] Lottery_luck_data: 2015-11-06 16:25:34 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11647"}
+
+[ 2015-11-06T16:25:34+08:00 ] Lottery_luck_data: 2015-11-06 16:25:34 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11648"}
+
+[ 2015-11-06T16:25:35+08:00 ] Lottery_luck_data: 2015-11-06 16:25:35 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11649"}
+
+[ 2015-11-06T16:25:35+08:00 ] Lottery_luck_data: 2015-11-06 16:25:35 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11650"}
+
+[ 2015-11-06T16:25:35+08:00 ] Lottery_luck_data: 2015-11-06 16:25:35 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11651"}
+
+[ 2015-11-06T16:25:36+08:00 ] Lottery_luck_data: 2015-11-06 16:25:36 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11652"}
+
+[ 2015-11-06T16:25:36+08:00 ] Lottery_luck_data: 2015-11-06 16:25:36 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11653"}
+
+[ 2015-11-06T16:25:36+08:00 ] Lottery_luck_data: 2015-11-06 16:25:36 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11654"}
+
+[ 2015-11-06T16:25:37+08:00 ] Lottery_luck_data: 2015-11-06 16:25:37 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11655"}
+
+[ 2015-11-06T16:25:38+08:00 ] Lottery_luck_data: 2015-11-06 16:25:38 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11656"}
+
+[ 2015-11-06T16:25:38+08:00 ] Lottery_luck_data: 2015-11-06 16:25:38 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11657"}
+
+[ 2015-11-06T16:25:39+08:00 ] Lottery_luck_data: 2015-11-06 16:25:39 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11658"}
+
+[ 2015-11-06T16:25:39+08:00 ] Lottery_luck_data: 2015-11-06 16:25:39 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11659"}
+
+[ 2015-11-06T16:25:40+08:00 ] Lottery_luck_data: 2015-11-06 16:25:40 127.0.0.1	msg:ok data:{"error":0,"data":0,"num":0,"code":"11660"}
+
+[ 2015-11-06T16:25:40+08:00 ] Lottery_luck_data: 2015-11-06 16:25:40 127.0.0.1	msg:priceempty,lucknum:0 data:{"error":0,"data":4,"num":3,"code":"11661"}
+
+[ 2015-11-06T16:25:41+08:00 ] Lottery_luck_data: 2015-11-06 16:25:41 127.0.0.1	msg:priceempty,lucknum:0 data:{"error":0,"data":4,"num":3,"code":"11662"}
+
+[ 2015-11-06T16:25:41+08:00 ] Lottery_luck_data: 2015-11-06 16:25:41 127.0.0.1	msg:priceempty,lucknum:0 data:{"error":0,"data":4,"num":3,"code":"11663"}
+
+[ 2015-11-06T16:25:41+08:00 ] Lottery_luck_data: 2015-11-06 16:25:41 127.0.0.1	msg:priceempty,lucknum:0 data:{"error":0,"data":4,"num":3,"code":"11664"}
+
+[ 2015-11-06T16:25:42+08:00 ] Lottery_luck_data: 2015-11-06 16:25:42 127.0.0.1	msg:priceempty,lucknum:0 data:{"error":0,"data":1,"num":3,"code":"11665"}
+
+[ 2015-11-06T16:25:42+08:00 ] Lottery_luck_data: 2015-11-06 16:25:42 127.0.0.1	msg:priceempty,lucknum:0 data:{"error":0,"data":4,"num":3,"code":"11666"}
+
+[ 2015-11-06T16:25:43+08:00 ] Lottery_luck_data: 2015-11-06 16:25:43 127.0.0.1	msg:priceempty,lucknum:0 data:{"error":0,"data":4,"num":3,"code":"11667"}
+
+[ 2015-11-06T16:26:47+08:00 ] Lottery_luck_data: 2015-11-06 16:26:47 127.0.0.1	msg:notworktime data:{"error":0,"data":3,"num":4,"code":5799}
+
+[ 2015-11-06T16:27:14+08:00 ] Lottery_luck_data: 2015-11-06 16:27:14 127.0.0.1	msg:priceempty,lucknum:0 data:{"error":0,"data":1,"num":3,"code":"11668"}
+
+[ 2015-11-06T16:27:51+08:00 ] Lottery_luck_data: 2015-11-06 16:27:51 127.0.0.1	msg:ok data:{"error":0,"data":4,"num":3,"code":"11669"}
+
+[ 2015-11-06T16:27:53+08:00 ] Lottery_luck_data: 2015-11-06 16:27:53 127.0.0.1	msg:ok data:{"error":0,"data":4,"num":3,"code":"11670"}
+
+[ 2015-11-06T16:27:53+08:00 ] Lottery_luck_data: 2015-11-06 16:27:53 127.0.0.1	msg:ok data:{"error":0,"data":1,"num":3,"code":"11671"}
+
+[ 2015-11-06T16:27:54+08:00 ] Lottery_luck_data: 2015-11-06 16:27:54 127.0.0.1	msg:ok data:{"error":0,"data":4,"num":3,"code":"11672"}
+
+[ 2015-11-06T16:27:55+08:00 ] Lottery_luck_data: 2015-11-06 16:27:55 127.0.0.1	msg:ok data:{"error":0,"data":4,"num":3,"code":"11673"}
+
+[ 2015-11-06T16:29:31+08:00 ] Lottery_luck_data: 2015-11-06 16:29:31 127.0.0.1	msg:ok data:{"error":0,"data":1,"num":3,"code":"11674"}
+
+[ 2015-11-06T16:30:09+08:00 ] Lottery_luck_data: 2015-11-06 16:30:09 127.0.0.1	msg:ok data:{"error":0,"data":4,"num":3,"code":"11675"}
+
+[ 2015-11-06T16:30:34+08:00 ] Lottery_luck_data: 2015-11-06 16:30:34 127.0.0.1	msg:ok data:{"error":0,"data":4,"num":3,"code":"11676"}
+

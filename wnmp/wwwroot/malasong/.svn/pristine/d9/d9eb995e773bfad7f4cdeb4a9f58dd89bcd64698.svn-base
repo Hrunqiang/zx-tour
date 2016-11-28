@@ -1,0 +1,44 @@
+<?php
+/*
+ * 报名
+ * */
+class MatchAction extends Action {
+	
+	public function _initialize(){
+		B('AuthCheck');
+	}
+	
+	public function index(){
+		$table_cfg	= array(
+				'field'=>array(
+						'goodscls'	=>array('title'=>'内容','isabm'=>true,'islist'=>true,'type'=>'text','ismain'=>true,),
+						'id'	=>array('title'=>'地址','isabm'=>true,'islist'=>true),					
+						'ctime'=>array('title'=>'创建时间','isabm'=>false,'islist'=>true),
+						'utime'=>array('title'=>'最后更新时间','isabm'=>false,'islist'=>true)
+				),
+				'where'=>'goodspid = 0',
+				'table'	=>'mls_goods',
+				's'		=>'IosFeedbac',
+				'a'		=>'index',
+				'perpage'=>'30',
+				'designMode'=>'false',
+				'tpl'=>'Match:index',
+				// 				'submitBtns'=>array("发送push"=>"./?s=Push&a=Pushusers")
+		);
+		$CommonAction	= new CommonAction();
+		$CommonAction->list_fb($table_cfg);
+	}
+	
+	public function matchinfo(){
+		$orderid = htmlspecialchars(addslashes(trim($_GET['orderid'])));
+		$enrollM = new UserOrdersModel();
+		$info = $enrollM->getorderinfo($orderid);
+		$orderinfoM = new UserOrdersInfoModel;
+		$list = $orderinfoM->getorderinfo($orderid);
+// 		var_dump($list);
+ 		$this->assign("info",$info[0]);
+		$this->assign("list",$list);
+		$this->display();
+	}
+	
+}

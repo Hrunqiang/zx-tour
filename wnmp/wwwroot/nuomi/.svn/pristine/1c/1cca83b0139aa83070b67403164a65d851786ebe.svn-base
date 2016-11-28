@@ -1,0 +1,151 @@
+<{include file='Comon/header.html'}>
+<title>意见反馈</title>
+<style>
+.wrap{overflow: hidden;}
+.feedtitle{padding:1.07142857rem;}
+.feedtype_cells{padding:0.7142857rem 1.0714285rem 1.0714285rem;border-bottom: 1px solid #ECECEC;}
+.feedtype_cell span{border:1px solid #ECECEC;color:#888888;margin-right: 0.7142857rem;padding: 0.2142857rem 0.7142857rem;border-radius: 1.428571428rem;font-size: 1rem;}
+.feedtype_radio{position: absolute;left:-99999px;}
+.feedtype_radio:checked + span{color:#05BE03;border-color:rgba(5,190,3,0.3);}
+.feed_content{padding:0 1.0714285rem  0.7142857rem;}
+.weui_label{width:5em;}
+.weui_textarea{font-size: 1rem;color: #888888;}
+textarea::-webkit-input-placeholder {font-size: 1rem;color: #888888;}
+input::-webkit-input-placeholder{font-size: 1rem;}
+.weui_uploader_hd .weui_uploader_hd_color{font-size: 1rem;color: #888888;}
+.weui_cells_form_margin{margin-top: 0;}
+.weui_uploader_hd_padding{padding-top: 1.114285rem;padding-bottom: 0.24285rem;padding-left: 1.07142857rem;}
+.weui_btn_primary{font-size: 1.2857143rem;}
+.weui_cell_primary input::-webkit-input-placeholder{font-size: 1.0714rem;font-weight: normal;color: #888888;}
+h4 {font-weight: normal;}
+/*///////////////////////////////////////////////////////////////////////////////////////////*/
+._suced{height: 7.75rem;padding: 0.8571428571428571rem 1.071428571428571rem 0 1.071428571428571rem;}
+.weui_cells{margin-top: 0px;}
+._suced_phone{margin-top: 0.7142857142857143rem;}
+._suced_btn{padding: 1.071428571428571rem 0.7142857142857143rem;}
+.tjzf{position: absolute;right: 0px;bottom: 0.7142857142857143rem;color: #888888;font-size: 0.8571428571428571rem;}
+.weui_btn_warn{background: #fca4c2;}
+</style>
+<div class="wrap">
+    <form action="/User/feedback" method="post" id="feedback_form">
+    <div class="weui_cells weui_cells_form _suced">
+        <div style="position: relative;" class="weui_cell_bd weui_cell_primary">
+            <textarea id="textarea" maxlength="500" class="weui_textarea" name="content" placeholder="请输入您的意见（500字以内）" rows="6"></textarea>
+            <div class="tjzf"><span>0</span>/500</div>
+        </div>
+    </div>
+    <div class="weui_cells weui_cells_form _suced_phone">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary" style="margin-top: 0.1428571428571429rem;">
+                <input id="phone" class="weui_input" placeholder="请输入您的邮箱或电话">
+            </div>
+        </div>
+    </div>
+    <div class="weui_cell _suced_btn">
+        <input type="submit"  class="weui_btn weui_btn_warn weui_btn_disabled " value="提交反馈">
+    </div>
+    </form>
+</div><!--end of wrap -->
+<script src="/static/js/jquery.js"></script>
+<script src="/static/weui/js/weui.js"></script>
+<script>
+//<{$error}>
+$(function(){
+//  $("#feedback_form").submit(function(){
+//      var content = $("textarea[name=content]").val();
+//      if(content==""){
+//          alert("请输入找反馈内容！");
+//          return false;
+//      } 
+//  });
+//  var photo = $('#photo');
+//  function isCanvasSupported(){
+//      var elem = document.createElement('canvas');
+//      return !!(elem.getContext && elem.getContext('2d'));
+//  }
+//  photo.change(function(event){
+//      if(!isCanvasSupported){
+//          alert("你的设备不支持图片上传！");
+//          return false;
+//      }
+//      weui.Loading.show("上传中");
+//      compress(event, function(base64Img){
+//          $('<li class="weui_uploader_file" style="background-image:url('+base64Img+');background-color:#fff;"></li><input type="hidden" name="img[]" value="'+base64Img+'" />').appendTo($(".weui_uploader_files"));
+//          weui.Loading.hide();
+//       }); 
+//  });     
+//  function compress(event,callback){
+//      var file = event.currentTarget.files[0];
+//
+//      if(!file){
+//         weui.Loading.hide(); 
+//      }
+//      var type = file.type;
+//      var reader = new FileReader();
+//   
+//      reader.onload = function (e) {
+//          var image = $('<img/>');
+//          image.load(function(){
+//              var square = 160;
+//              var canvas = document.createElement('canvas');
+//              var imageWidth;
+//              var imageHeight;
+//              if (this.width > this.height) {
+//                   imageWidth = Math.round(square * this.width / this.height);
+//                   imageHeight = square;
+//                  offsetX =0;
+//              } else {
+//                  imageHeight = Math.round(square * this.height / this.width);
+//                  imageWidth =square;
+//                  offsetY = 0; 
+//              }  /**/
+//              canvas.width = imageWidth;
+//              canvas.height = imageHeight;
+//   
+//               var context = canvas.getContext('2d');
+//               context.clearRect(0, 0, square, square);
+//             
+//               var offsetX = 0;
+//               var offsetY = 0;
+//   
+//   
+//              context.drawImage(this, offsetX, offsetY, imageWidth, imageHeight);
+//              var data = canvas.toDataURL(type);
+//              
+//              callback(data);
+//          });
+//          image.attr('src', e.target.result);
+//          
+//           // image.prependTo($("#photo_img"));
+//      };
+//    
+//      reader.readAsDataURL(file);
+//  }
+
+/////////////////////////////////////////////////////////////////
+var shouji_reg = /^1[\d]{10}$/;
+var	email_reg =/^([a-zA-Z0-9_-|.])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+$('#textarea').bind('input',function () {
+	str=$('#textarea').val();
+	$('.tjzf span').html(str.length);
+	check();
+	
+})
+$('#phone').bind('input',check);
+ function check() {
+ 	var str=$('#textarea').val();
+ 	var phone=$('#phone').val();
+ 	if(str!=''&&shouji_reg.test(phone)){
+ 		$('.weui_btn').removeClass('weui_btn_disabled');
+		$('.weui_btn').css('background-color','#ff2244')
+ 	}else{
+ 		$('.weui_btn').addClass('weui_btn_disabled');
+		$('.weui_btn').css('background-color','#fca4c2')
+ 	}
+ }
+});
+/////////////////////////////////////////////////////////////////
+
+</script>
+</body>
+</html>

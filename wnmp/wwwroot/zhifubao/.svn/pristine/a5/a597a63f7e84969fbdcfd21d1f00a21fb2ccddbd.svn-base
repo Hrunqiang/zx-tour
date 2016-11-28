@@ -1,0 +1,32 @@
+[ 2016-10-31T10:55:06+08:00 ] delJdOrders_error: 2016-10-31 10:55:06 192.168.1.122	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='309161031105505044187' )
+
+[ 2016-10-31T11:42:57+08:00 ] delJdOrders_error: 2016-10-31 11:42:57 192.168.1.118	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='30816103111425615894230' )
+
+[ 2016-10-31T11:54:06+08:00 ] delJdOrders_error: 2016-10-31 11:54:06 192.168.1.118	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='09916103111540515894440' )
+
+[ 2016-10-31T12:04:08+08:00 ] delJdOrders_error: 2016-10-31 12:04:08 192.168.1.118	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='09916103112040615894579' )
+
+[ 2016-10-31T12:06:51+08:00 ] delJdOrders_error: 2016-10-31 12:06:51 192.168.1.122	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='085161031120649044893' )
+
+[ 2016-10-31T12:06:55+08:00 ] delJdOrders_error: 2016-10-31 12:06:55 192.168.1.118	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='30716103112065415894169' )
+
+[ 2016-10-31T12:08:35+08:00 ] delJdOrders_error: 2016-10-31 12:08:35 192.168.1.118	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='30716103112083415894600' )
+
+[ 2016-10-31T12:11:02+08:00 ] delJdOrders_error: 2016-10-31 12:11:02 192.168.1.118	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='30716103112110115894201' )
+
+[ 2016-10-31T12:45:32+08:00 ] delJdOrders_error: 2016-10-31 12:45:32 192.168.1.118	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='30816103112453115894104' )
+
+[ 2016-10-31T16:00:53+08:00 ] delJdOrders_error: 2016-10-31 16:00:53 192.168.1.118	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='30816103116005215894810' )
+
+[ 2016-10-31T16:04:24+08:00 ] delJdOrders_error: 2016-10-31 16:04:24 192.168.1.150	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='099161031160423055853' )
+
+[ 2016-10-31T16:08:01+08:00 ] delJdOrders_error: 2016-10-31 16:08:01 192.168.1.130	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='30816103116080015895764' )
+
+[ 2016-10-31T16:11:22+08:00 ] delJdOrders_error: 2016-10-31 16:11:22 192.168.1.130	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='09916103116112115895989' )
+
+[ 2016-10-31T16:19:31+08:00 ] delJdOrders_error: 2016-10-31 16:19:31 192.168.1.150	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='085161031161930055624' )
+
+[ 2016-10-31T17:56:59+08:00 ] delJdOrders_error: 2016-10-31 17:56:59 192.168.1.129	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='07916103117565815899391' )
+
+[ 2016-10-31T18:47:38+08:00 ] delJdOrders_error: 2016-10-31 18:47:38 192.168.1.129	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='30716103118473715899814' )
+

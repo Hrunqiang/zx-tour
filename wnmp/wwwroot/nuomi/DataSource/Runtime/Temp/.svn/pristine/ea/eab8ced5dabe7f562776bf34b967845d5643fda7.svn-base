@@ -1,0 +1,35 @@
+<{include file='Login/header.html'}>
+ <div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con">                           
+                <div class="table">
+                    <h2 class="th">memcache队列清空 <span class="head"></span></h2>                
+         <TABLE>
+         <tr>
+             <td width="50%"><{$data.clear}></td>
+             <td><{$data.return}></td>
+         </tr>
+          <tr>
+	          <td>
+	           <FORM action="./?s=Memcququ&a=clearququ" method="Post">
+	               <INPUT type="submit" name="memcclear" value="清空队列">
+	           </FORM>
+	          </td>
+	          <td>
+                  <FORM action="./?s=Memcququ&a=returnququ" method="Post">
+	               <INPUT type="submit" name="memcclear" value="还原队列">
+	           </FORM>
+              </td>
+         </tr>
+         
+      </TABLE>
+                </div>            
+                <div class="table">
+                    <h2 class="th"></h2>                
+                </div>
+            </div><!--/ con-->
+        </div>    
+    </div><!--/ container-->
+</div><!--/ wrap-->
+<{include file='Login/footer.html'}>

@@ -1,0 +1,68 @@
+[ 2016-01-11T10:29:29+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.069168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.228217s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_news` [ RunTime:0.421096s ]
+SQL: SELECT `id`,`news_title`,`des`,`img`,`url`,`url_type` FROM `mls_news` ORDER BY orderid asc,id desc LIMIT 0,6   [ RunTime:0.017817s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.127553s ]
+INFO: [ view_template ] --END-- [ RunTime:0.127627s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: tilte D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 33 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 33 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.683712s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.683766s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.013613s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.002176s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.004340s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.021473s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001650s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001739s ]
+
+[ 2016-01-11T10:29:32+08:00 ] /Account/verify
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.055540s ]
+INFO: [ route_check ] --END-- [ RunTime:0.055632s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+
+[ 2016-01-11T10:29:45+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_news` [ RunTime:0.004103s ]
+SQL: SELECT `id`,`news_title`,`des`,`img`,`url`,`url_type` FROM `mls_news` ORDER BY orderid asc,id desc LIMIT 0,6   [ RunTime:0.001267s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001018s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001102s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: tilte D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 33 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 33 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020467s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020556s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000792s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000593s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000374s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000668s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002633s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000925s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001002s ]
+
+[ 2016-01-11T10:29:45+08:00 ] /Account/verify
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000505s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+

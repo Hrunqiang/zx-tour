@@ -1,0 +1,715 @@
+[ 2016-05-24T15:47:21+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002615s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order asc,id desc limit 0,10  [ RunTime:0.000742s ]
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.002203s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php on line 26 and defined D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid asc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.000785s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php on line 30 and defined D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid asc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000793s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001273s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001371s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ../DataSource/Runtime/Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(../DataSource/Runtime/Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ../DataSource/Runtime/Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(../DataSource/Runtime/Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ../DataSource/Runtime/Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(../DataSource/Runtime/Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ../DataSource/Runtime/Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(../DataSource/Runtime/Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.164203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.164262s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000555s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000324s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000223s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000494s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001770s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000477s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000525s ]
+
+[ 2016-05-24T15:49:18+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003737s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order asc,id desc limit 0,10  [ RunTime:0.001013s ]
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.002831s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php on line 26 and defined D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid asc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.001065s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php on line 30 and defined D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid asc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001122s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000935s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001040s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.086894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086956s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000579s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000315s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000221s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000410s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001651s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000454s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000503s ]
+
+[ 2016-05-24T15:49:26+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004062s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order asc,id desc limit 0,10  [ RunTime:0.000954s ]
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.002880s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php on line 26 and defined D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid asc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.000967s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php on line 30 and defined D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid asc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001059s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000921s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001025s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.083518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083592s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000572s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000304s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000217s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001606s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000442s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2016-05-24T16:16:18+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001272s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004840s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order asc,id desc limit 0,10  [ RunTime:0.001290s ]
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.004908s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php on line 26 and defined D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid asc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.001400s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php on line 30 and defined D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid asc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001391s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.003253s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003406s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.025426s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025506s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001406s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000991s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000822s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000894s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004310s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001036s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001097s ]
+
+[ 2016-05-24T16:25:15+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001823s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order asc,id desc limit 0,10  [ RunTime:0.001183s ]
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.001449s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php on line 26 and defined D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid asc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.002897s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php on line 30 and defined D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid asc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000604s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000812s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000873s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011925s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000763s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000445s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000488s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000645s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002530s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000808s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000891s ]
+
+[ 2016-05-24T16:25:23+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001222s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001427s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003576s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order asc,id desc limit 0,10  [ RunTime:0.001017s ]
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.003249s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php on line 26 and defined D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid asc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.001181s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\IndexAction.class.php on line 30 and defined D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid asc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001321s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001327s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001460s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+NOTIC: [8] Undefined index: name D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 158 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.026014s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026083s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000746s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000500s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000294s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000541s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002242s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000566s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2016-05-24T16:25:26+08:00 ] /Matchinfo?m_id=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001242s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001319s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003637s ]
+SQL: select * from zx_tb_matchs where id = 1 [ RunTime:0.000698s ]
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\MatchinfoAction.class.php 第 21 行.
+NOTIC: [8] Undefined offset: 1 D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\MatchinfoAction.class.php 第 145 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.005019s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000880s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =2 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000819s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =7 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001021s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =9 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000609s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =10 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000568s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =141 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000576s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =149 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000986s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =150 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000591s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =154 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000619s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =73 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001195s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =8 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000824s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =11 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000576s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =12 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000648s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =71 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000628s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =72 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.002601s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=1 )  [ RunTime:0.000581s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002081s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order asc,id desc limit 0,3  [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001727s ]
+SQL: SELECT * FROM `zx_tb_collect` WHERE ( `uid`=11 and `match_id` = 1  ) LIMIT 1   [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.001585s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = 11 and matchid=1 ) LIMIT 1   [ RunTime:0.000327s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000724s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000795s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ../DataSource/Runtime/Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(../DataSource/Runtime/Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: banner D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 36 行.
+NOTIC: [8] Undefined index: type D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 53 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 53 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.232537s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.232588s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000795s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000403s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000256s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002003s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000608s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000665s ]
+
+[ 2016-05-24T16:25:28+08:00 ] /Matchinfo/getTrip?m_id=9
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000929s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001032s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.002005s ]
+SQL: SELECT * FROM `zx_tb_trip` WHERE ( `meal_id` = 9  ) ORDER BY trip_date asc  [ RunTime:0.000971s ]
+
+[ 2016-05-24T16:25:31+08:00 ] /Matchinfo/getTrip?m_id=73
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000539s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.003783s ]
+SQL: SELECT * FROM `zx_tb_trip` WHERE ( `meal_id` = 73  ) ORDER BY trip_date asc  [ RunTime:0.001374s ]
+
+[ 2016-05-24T16:26:27+08:00 ] /Matchinfo?m_id=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000586s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005760s ]
+SQL: select * from zx_tb_matchs where id = 1 [ RunTime:0.001850s ]
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\MatchinfoAction.class.php 第 21 行.
+NOTIC: [8] Undefined offset: 1 D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\MatchinfoAction.class.php 第 145 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002720s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000632s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =2 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000957s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =7 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001077s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =9 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000548s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =10 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000653s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =73 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000389s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =141 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000398s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =149 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000562s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =150 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000459s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =154 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000390s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =8 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000546s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =11 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000623s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =12 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000481s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =71 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001756s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =72 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.001964s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=1 )  [ RunTime:0.000395s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002471s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order asc,id desc limit 0,3  [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001699s ]
+SQL: SELECT * FROM `zx_tb_collect` WHERE ( `uid`=11 and `match_id` = 1  ) LIMIT 1   [ RunTime:0.000275s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.001464s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = 11 and matchid=1 ) LIMIT 1   [ RunTime:0.000296s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000519s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000583s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 36 行.
+NOTIC: [8] Undefined index: type D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 53 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 53 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011230s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000669s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000353s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000238s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000402s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001787s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000508s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2016-05-24T16:26:28+08:00 ] /Matchinfo/getTrip?m_id=9
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001479s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001595s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.001807s ]
+SQL: SELECT * FROM `zx_tb_trip` WHERE ( `meal_id` = 9  ) ORDER BY trip_date asc  [ RunTime:0.002879s ]
+
+[ 2016-05-24T16:26:35+08:00 ] /Matchinfo/getcourse?m_id=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000889s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000993s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.001532s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000473s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =1 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000668s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =4 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000730s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =6 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000788s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =115 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000562s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =117 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000487s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =153 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000353s ]
+
+[ 2016-05-24T16:30:16+08:00 ] /Matchinfo?m_id=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000585s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004012s ]
+SQL: select * from zx_tb_matchs where id = 1 [ RunTime:0.000679s ]
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\MatchinfoAction.class.php 第 21 行.
+NOTIC: [8] Undefined offset: 1 D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\MatchinfoAction.class.php 第 145 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002908s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000839s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =2 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000756s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =7 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000909s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =9 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000521s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =10 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000526s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =73 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000517s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =141 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000529s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =149 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001178s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =150 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000594s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =154 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000561s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =8 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000711s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =11 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000517s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =12 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000529s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =71 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000581s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =72 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000528s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.001989s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=1 )  [ RunTime:0.000236s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002286s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order asc,id desc limit 0,3  [ RunTime:0.000771s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001701s ]
+SQL: SELECT * FROM `zx_tb_collect` WHERE ( `uid`=11 and `match_id` = 1  ) LIMIT 1   [ RunTime:0.000281s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.001444s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = 11 and matchid=1 ) LIMIT 1   [ RunTime:0.000272s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000529s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000600s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 36 行.
+NOTIC: [8] Undefined index: type D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 53 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 53 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011264s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011314s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000744s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000372s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000246s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001899s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000506s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000554s ]
+
+[ 2016-05-24T16:30:17+08:00 ] /Matchinfo/getTrip?m_id=9
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001409s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001686s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001838s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.001447s ]
+SQL: SELECT * FROM `zx_tb_trip` WHERE ( `meal_id` = 9  ) ORDER BY trip_date asc  [ RunTime:0.001475s ]
+
+[ 2016-05-24T16:30:20+08:00 ] /Matchinfo/getcourse?m_id=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001111s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001207s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.003985s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001353s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =1 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001210s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =4 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000759s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =6 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001155s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =115 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000899s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =117 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000812s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =153 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000775s ]
+
+[ 2016-05-24T16:33:23+08:00 ] /Matchinfo?m_id=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000853s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000933s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004657s ]
+SQL: select * from zx_tb_matchs where id = 1 [ RunTime:0.000840s ]
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\MatchinfoAction.class.php 第 21 行.
+NOTIC: [8] Undefined offset: 1 D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\MatchinfoAction.class.php 第 145 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004120s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001210s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =2 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001583s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =7 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000823s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =9 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000452s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =10 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000446s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =73 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000432s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =141 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000473s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =149 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000441s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =150 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000448s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =154 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000441s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =8 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000586s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =11 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000437s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =12 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000601s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =71 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000515s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =72 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.003336s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=1 )  [ RunTime:0.000522s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003027s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order asc,id desc limit 0,3  [ RunTime:0.000632s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.002040s ]
+SQL: SELECT * FROM `zx_tb_collect` WHERE ( `uid`=11 and `match_id` = 1  ) LIMIT 1   [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.002382s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = 11 and matchid=1 ) LIMIT 1   [ RunTime:0.000406s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000525s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000591s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 36 行.
+NOTIC: [8] Undefined index: type D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 53 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 53 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.222598s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.222648s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000770s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000343s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000223s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001857s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000452s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2016-05-24T16:33:24+08:00 ] /Matchinfo/getTrip?m_id=9
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001257s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001403s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.001583s ]
+SQL: SELECT * FROM `zx_tb_trip` WHERE ( `meal_id` = 9  ) ORDER BY trip_date asc  [ RunTime:0.000966s ]
+
+[ 2016-05-24T16:33:29+08:00 ] /Matchinfo/getcourse?m_id=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000731s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002106s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000625s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =1 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000757s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =4 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000483s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =6 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001039s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =115 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000529s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =117 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000408s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 1 and g_pid =153 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001342s ]
+
+[ 2016-05-24T18:49:59+08:00 ] /Matchinfo?m_id=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001252s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001325s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000923s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001824s ]
+SQL: select * from zx_tb_matchs where id = 1 [ RunTime:0.000351s ]
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\MatchinfoAction.class.php 第 21 行.
+NOTIC: [8] Undefined offset: 1 D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Lib\Action\MatchinfoAction.class.php 第 145 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.003217s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000457s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =2 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000398s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =7 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000467s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =9 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000279s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =10 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000440s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =73 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000273s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =141 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000291s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =149 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000279s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =150 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000303s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =154 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000319s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =8 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000378s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =11 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000280s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =12 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000283s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =71 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000311s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 1 and g_pid =72 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000284s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.003898s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=1 )  [ RunTime:0.000737s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002145s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order asc,id desc limit 0,3  [ RunTime:0.000405s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001404s ]
+SQL: SELECT * FROM `zx_tb_collect` WHERE ( `uid`=11 and `match_id` = 1  ) LIMIT 1   [ RunTime:0.000265s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.001682s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = 11 and matchid=1 ) LIMIT 1   [ RunTime:0.000308s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000911s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000979s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 36 行.
+NOTIC: [8] Undefined index: type D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 53 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v2\branches\branche02\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 53 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.315182s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.315229s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001081s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000677s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000755s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.002910s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005838s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001767s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001858s ]
+
+[ 2016-05-24T18:50:00+08:00 ] /Matchinfo/getTrip?m_id=9
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000580s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v2\branches\branche02\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.003591s ]
+SQL: SELECT * FROM `zx_tb_trip` WHERE ( `meal_id` = 9  ) ORDER BY trip_date asc  [ RunTime:0.002210s ]
+

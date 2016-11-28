@@ -1,0 +1,16 @@
+<?php
+class BaomingdanModel extends Model{
+	protected  $trueTableName	= "mls_baomingdan";
+	protected $connection = 'DB_CONFIG1';
+		
+	public function addData($data,$uid) {
+		if(empty($data)) return false;
+		$ck = $this->field("id")->where("zjtype = '{$data['zjtype']}' and zjcode='{{$data['zjcode']}}' and uid=$uid")->find();
+		if($ck && $ck['id']){
+			return $ck['id'];
+		}else{
+			$rs =  $this->add($data);
+			return $rs;
+		}
+	}
+}

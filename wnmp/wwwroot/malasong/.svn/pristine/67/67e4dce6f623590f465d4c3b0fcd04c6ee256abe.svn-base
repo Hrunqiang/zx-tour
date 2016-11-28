@@ -1,0 +1,122 @@
+<?php
+// 本类由系统自动生成，仅供测试用途
+class MailModel{
+	protected $mail_config = array(
+		"CharSet"=>'UTF-8', //设置邮件的字符编码，这很重要，不然中文乱码
+		"SMTPAuth"=> true,             //开启认证
+		"Port"=> 25,
+		"Host"=> "smtp.163.com",
+		//"Username"   =>"sys@gootion.com",
+		"Username"   =>"hhy6126308@163.com",
+		"Password"   =>"newlife721hhy",
+		"AddReplyTomail"=> "hhy6126308@163.com",//回复地址
+		"AddReplyToname" =>"mckee",
+		"From"=> "hhy6126308@163.com",
+		"FromName"   =>"黑瞎子岛马拉松",
+		"Subject"  =>"邮箱验证激活"
+		);
+	
+
+	/**
+	 * 注册验证
+	 * @param unknown_type $mail
+	 * @return boolean
+	 */
+	public function send($email,$authid){
+		if(!$email||!$authid) return false;
+		import("ORG.Mail.phpmailer");
+		header("content-type:text/html;charset=utf-8");
+		ini_set("magic_quotes_runtime",0);
+		try {
+			$mail = new PHPMailer(true);
+			$mail->IsSMTP();
+			$mail->CharSet=$this->mail_config['CharSet']; //设置邮件的字符编码，这很重要，不然中文乱码
+			$mail->SMTPAuth   = $this->mail_config['SMTPAuth'];                  //开启认证
+			$mail->Port       = $this->mail_config['Port'];
+			$mail->Host       = $this->mail_config['Host']; 
+			$mail->Username   = $this->mail_config['Username']; 
+			$mail->Password   = $this->mail_config['Password'];
+			$mail->AddReplyTo($this->mail_config['AddReplyTomail'],$this->mail_config['AddReplyToname']);//回复地址
+			$mail->From       = $this->mail_config['From'];
+			$mail->FromName   = $this->mail_config['FromName'];
+			$to = $email;
+			$mail->AddAddress($to);
+
+
+			$mail->Subject  = $this->mail_config['Subject']; 
+			$body = $this->create_mail_body($authid);
+			$mail->Body = $body['body'];
+			$mail->AltBody    = $body['altbody']; //当邮件不支持html时备用显示，可以省略
+			$mail->WordWrap   = 80; // 设置每行字符串的长度
+			//$mail->AddAttachment("f:/test.png");  //可以添加附件
+			$mail->IsHTML(true);
+			//$res = $accountobj->savefield(array('u_email'=>$email), array("u_pwd"=>md5($body['newpwd'])));
+			$mail->Send();
+		} catch (phpmailerException $e) {
+// 			echo "邮件发送失败：".$e->errorMessage();
+			return false;
+		}	
+		return true;
+	}
+	
+	public  function sendreset($url,$email){
+		if(!$url||!$email) return false;
+		import("ORG.Mail.phpmailer");
+		header("content-type:text/html;charset=utf-8");
+		ini_set("magic_quotes_runtime",0);
+		try {
+			$mail = new PHPMailer(true);
+			$mail->IsSMTP();
+			$mail->CharSet=$this->mail_config['CharSet']; //设置邮件的字符编码，这很重要，不然中文乱码
+			$mail->SMTPAuth   = $this->mail_config['SMTPAuth'];                  //开启认证
+			$mail->Port       = $this->mail_config['Port'];
+			$mail->Host       = $this->mail_config['Host'];
+			$mail->Username   = $this->mail_config['Username'];
+			$mail->Password   = $this->mail_config['Password'];
+			$mail->AddReplyTo($this->mail_config['AddReplyTomail'],$this->mail_config['AddReplyToname']);//回复地址
+			$mail->From       = $this->mail_config['From'];
+			$mail->FromName   = $this->mail_config['FromName'];
+			$to = $email;
+			$mail->AddAddress($to);
+		
+		
+			$mail->Subject  = $this->mail_config['Subject'];
+			$body = $this->create_mail_body_reset($url);
+			$mail->Body = $body['body'];
+			$mail->AltBody    = $body['altbody']; //当邮件不支持html时备用显示，可以省略
+			$mail->WordWrap   = 80; // 设置每行字符串的长度
+			//$mail->AddAttachment("f:/test.png");  //可以添加附件
+			$mail->IsHTML(true);
+			//$res = $accountobj->savefield(array('u_email'=>$email), array("u_pwd"=>md5($body['newpwd'])));
+			$mail->Send();
+		} catch (phpmailerException $e) {
+			// 			echo "邮件发送失败：".$e->errorMessage();
+			return false;
+		}
+		return true;
+	}
+	
+	public function create_mail_body_reset($url){
+		$local = "http://pay.zx-tour.com";
+		$local = "http://192.168.10.148:8089/";
+		$authmailurl = $local.$url;
+		$data['body'] = "<a href=".$authmailurl.">".$authmailurl."</a>";
+		$data['altbody'] = "";
+		return $data;
+	}
+	
+	/**
+	 * 生成邮件内容
+	 * 
+	 * */
+	public function create_mail_body($authid){
+		$sign = md5(C('MAIL_AUTH').$authid);
+		$local = "http://192.168.10.148:8089/";
+		//$local = "http://pay.zx-tour.com";
+		$authmailurl =$local."/Account/mailverify?authid=$authid&sign=$sign";
+		$data['body'] = "<a href=".$authmailurl.">".$authmailurl."</a>";
+		$data['altbody'] = "";
+		return $data;
+	}
+
+}

@@ -1,0 +1,29 @@
+<{include file='Comon/header.html'}>
+<div id="reset_box" class="general_page section">
+	<div class="section_center" >
+		<div id="register_center">
+			<{if $error==1}>
+			<div class="message">
+				<p>抱歉,亲！您访问的页面已过期!</p>
+			</div>
+			<{else}>
+			<div id="register_form_box">
+				<form action="/Account/reset?token=<{$token}>&ac=<{$ac}>&account=<{$account}>" method="post" id="reset_form" class='account_form'>
+				    <input type="hidden" id="pattern_hidden_ipt" name="pattern" value="phone">
+				    <p id="pattern_p_ipt">密码</p>
+			        <p class='input_p' >
+			        	<input name="pwd" type="password" id="pwd_input" />
+			        </p>
+			        <p id="pattern_p_ipt">确认密码</p>
+			        <p class='input_p' >
+			        	<input name="repwd" type="password" id="repwd_input" />
+			        </p>
+			        <p class="error_p" id="reset_error"><{$error}></p>
+					<p class="input_sl"><input id="reset_submit" class="btn" type="submit" value="提交" /></p>
+			    </form>
+		    </div>
+		    <{/if}>
+	    </div>
+	</div>
+</div>
+<{include file='Comon/footer.html'}>

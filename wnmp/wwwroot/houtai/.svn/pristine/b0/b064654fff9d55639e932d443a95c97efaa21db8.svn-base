@@ -1,0 +1,401 @@
+<{include file='Login/header.html'}>
+<{if $ac=='add' || $ac=='edit'}>
+<style>
+#plat_num_list{padding:10px 0;}
+#plat_num_list span{background: #eee;margin-right: 10px;padding:5px 10px;}
+</style>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <form action="?s=MatchV2&a=info&ac=<{$ac}>" method='post' onsubmit="return checkform();">
+                <input type="hidden" name="ctime" value="<{$now}>"/>
+            <!--     <input type="hidden" name="utime" value="<{$now}>"/> -->
+                <input type="hidden" name="id" value="<{$data.id}>"/>
+                <div class="box-header">
+                    <h4>添加内容</h4>
+                </div>
+                <div class="box-content">
+                    <table class="table-font" style="width:80%;">
+                        <tr class="m_name">
+                            <th class="w120">赛事名称：</th>
+                            <td>
+	                            <input type="text" id="m_name"  name="m_name" class="textinput w270" value="<{$data.m_name|escape:html}>" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr class="m_enName">
+                            <th class="w120">赛事英文名称：</th>
+                            <td>
+                                <input type="text"   name="m_enName" class="textinput w270" value="<{$data.m_enName|escape:html}>" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr class="m_icon">
+                            <th class="w120">赛事图标：</th>
+                            <td><input type="text" name="m_icon" class="textinput w270 vpic" value="<{$data.m_icon|escape:html}>" />&nbsp;<input type="button" class="kUpload" value="上传图片"></td>
+                        </tr>
+                        <tr class="m_img">
+                            <th class="w120">赛事海报：</th>
+                            <td><input type="text" name="m_img" id="m_img" class="textinput w270 vpic" value="<{$data.m_img|escape:html}>" />&nbsp;<input type="button" class="kUpload" value="上传图片"></td>
+                        </tr>
+                        <tr class="m_banner">
+                            <th class="w120" style="vertical-align:top">赛事顶部banner：</th>
+                            <td>
+                            <input type="text" name="m_banner[]"  class="textinput w270 vpic" value="<{$data.m_banner[0]|escape:html}>" />&nbsp;<input type="button" class="kUpload" value="上传图片"><br>
+                            <input type="text" name="m_banner[]"  class="textinput w270 vpic" value="<{$data.m_banner[1]|escape:html}>" />&nbsp;<input type="button" class="kUpload" value="上传图片"><br>
+                            <input type="text" name="m_banner[]"  class="textinput w270 vpic" value="<{$data.m_banner[2]|escape:html}>" />&nbsp;<input type="button" class="kUpload" value="上传图片"><br>
+                            <input type="text" name="m_banner[]"  class="textinput w270 vpic" value="<{$data.m_banner[3]|escape:html}>" />&nbsp;<input type="button" class="kUpload" value="上传图片"><br>
+                            <input type="text" name="m_banner[]"  class="textinput w270 vpic" value="<{$data.m_banner[4]|escape:html}>" />&nbsp;<input type="button" class="kUpload" value="上传图片"><br>
+                            </td>
+                        </tr>
+                        <tr class="utime">
+                            <th>比赛时间：</th>
+                            <td><input name="m_GameTime" type="text" id="m_GameTime" class="textinput datepicker" value="<{$data.m_GameTime|escape:html}>" onkeyup=""/></td>
+                        </tr>
+                        <tr class="m_untilTime">
+                            <th>报名截止时间：</th>
+                            <td><input name="m_untilTime" type="text" id="m_untilTime" class="textinput datepicker" value="<{$data.m_untilTime|escape:html}>" onkeyup=""/></td>
+                        </tr>
+                        <tr class="m_city">
+                            <th class="w120">比赛城市：</th>
+                            <td>
+                                <input type="text"   name="m_city" class="textinput w270" value="<{$data.m_city|escape:html}>" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr class="m_area">
+                            <th class="w120">比赛地点：</th>
+                            <td>
+                                <input type="text"   name="m_area" class="textinput w270" value="<{$data.m_area|escape:html}>" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr class="m_country">
+                            <th class="w120">比赛国家：</th>
+                            <td>
+                                <input type="text"   name="m_country" class="textinput w270" value="<{$data.m_country|escape:html}>" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr class="m_Mtypes">
+                            <th class="w120">比赛类型：</th>
+                            <td>
+                               
+                                <{foreach from=$matchtype item=i key=key}>
+                                    
+                                 <label for="m_Mtypes<{$key}>"><input type="checkbox"   name="m_Mtypes[]" id="m_Mtypes<{$key}>" value="<{$i.n_title}>" autocomplete="off" <{if strstr($data.m_Mtypes,"<{$i.n_title}>")}>checked <{/if}>/><{$i.n_title}></label>　
+                                <{/foreach}>
+                            </td>
+                        </tr>
+                        <tr class="m_Mtypes">
+                            <th class="w120">赛事认证：</th>
+                            <td>
+                                <label for="m_auth1"><input type="checkbox"   name="m_auth[]" id="m_auth1" value="WMM" autocomplete="off"<{if strstr($data.m_auth,"WMM")}>checked <{/if}> />WMM</label>　
+                                <label for="m_auth2"><input type="checkbox"   name="m_auth[]" id="m_auth2" value="AIMS" autocomplete="off" <{if strstr($data.m_auth,"AIMS")}>checked <{/if}>/>AIMS</label>
+                                <label for="m_auth9"><input type="checkbox"   name="m_auth[]" id="m_auth9" value="i-TRA" autocomplete="off" <{if strstr($data.m_auth,"i-TRA")}>checked <{/if}>/>i-TRA</label>
+                                <label for="m_auth10"><input type="checkbox"   name="m_auth[]" id="m_auth10" value="UTMB" autocomplete="off" <{if strstr($data.m_auth,"UTMB")}>checked <{/if}>/>UTMB</label>
+                                <label for="m_auth11"><input type="checkbox"   name="m_auth[]" id="m_auth11" value="ISF" autocomplete="off" <{if strstr($data.m_auth,"ISF")}>checked <{/if}>/>ISF</label>
+                                <label for="m_auth12"><input type="checkbox"   name="m_auth[]" id="m_auth12" value="CSA" autocomplete="off" <{if strstr($data.m_auth,"CSA")}>checked <{/if}>/>CSA</label>
+                                <br>
+                                <label for="m_auth3"><input type="checkbox"   name="m_auth[]" id="m_auth3" value="IAAF_G" autocomplete="off" <{if strstr($data.m_auth,"IAAF_G")}>checked <{/if}>/>IAAF-金</label>　
+                                <label for="m_auth4"><input type="checkbox"   name="m_auth[]" id="m_auth4" value="IAAF_S" autocomplete="off" <{if strstr($data.m_auth,"IAAF_S")}>checked <{/if}>/>IAAF-银</label>　
+                                 <label for="m_auth5"><input type="checkbox"   name="m_auth[]" id="m_auth5" value="IAAF_C" autocomplete="off"<{if strstr($data.m_auth,"IAAF_C")}>checked <{/if}> />IAAF-铜</label>　<br>
+                                 <label for="m_auth6"><input type="checkbox"   name="m_auth[]" id="m_auth6" value="CAA_G" autocomplete="off" <{if strstr($data.m_auth,"CAA_G")}>checked <{/if}> />CAA-金</label>　
+                                <label for="m_auth7"><input type="checkbox"   name="m_auth[]" id="m_auth7" value="CAA_S" autocomplete="off" <{if strstr($data.m_auth,"CAA_S")}>checked <{/if}> />CAA-银</label>　
+                                 <label for="m_auth8"><input type="checkbox"   name="m_auth[]" id="m_auth8" value="CAA_C" autocomplete="off" <{if strstr($data.m_auth,"CAA_C")}>checked <{/if}> />CAA-铜</label>
+                            </td>
+                        </tr>
+                        <tr class="m_des hiden">
+                            <th>一句话介绍：</th>
+                            <td><textarea name="m_des" style="width:90%;height:50px;"><{$data.m_des|escape:html}></textarea></td>
+                        </tr>
+                        <tr class="m_special hiden">
+                            <th>赛事特色：</th>
+                         <!--    <td><textarea name="m_special" style="width:90%;height:50px;"><{$data.m_special|escape:html}></textarea></td> -->
+                             <td><textarea  name="m_special" style="width:90%; height:50px;" class="maxlength22"><{$data.m_special|escape:html}></textarea></td>
+                        </tr>
+                        <tr class="m_special hiden">
+                            <th>报名须知：</th>
+                         <!--    <td><textarea name="m_special" style="width:90%;height:50px;"><{$data.m_special|escape:html}></textarea></td> -->
+                             <td><textarea  name="m_info" style="width:90%; height:50px;"><{$data.m_info|escape:html}></textarea></td>
+                        </tr>
+                        <tr class="m_rules hiden">
+                            <th>赛事规程：</th>
+                             <td><textarea class="HTML_EDIT" name="m_rules" style="width:90%;"><{$data.m_rules|escape:html}></textarea></td>
+                        </tr>
+                        <tr class="m_Pfeature">
+                            <th class="w120">产品特点：</th>
+                            <td>
+                                <label for="m_Pfeature1"><input type="checkbox"   name="m_Pfeature[]" id="m_Pfeature1" value="1" autocomplete="off" <{if in_array("1",$data.m_Pfeature)}>checked <{/if}>/>独家授权</label>　　
+                                <label for="m_Pfeature3"><input type="checkbox"   name="m_Pfeature[]" id="m_Pfeature3" value="3" autocomplete="off"  <{if in_array("3",$data.m_Pfeature)}>checked <{/if}>/>官方合作</label>　
+                                <label for="m_Pfeature4"><input type="checkbox"   name="m_Pfeature[]" id="m_Pfeature4" value="4" autocomplete="off"  <{if in_array("4",$data.m_Pfeature)}>checked <{/if}>/>特色比赛</label>　
+                                 <label for="m_Pfeature5"><input type="checkbox"   name="m_Pfeature[]" id="m_Pfeature5" value="5" autocomplete="off"  <{if in_array("5",$data.m_Pfeature)}>checked <{/if}>/>专业领队</label>　<br>
+                                 <label for="m_Pfeature6"><input type="checkbox"   name="m_Pfeature[]" id="m_Pfeature6" value="6" autocomplete="off"  <{if in_array("6",$data.m_Pfeature)}>checked <{/if}>/>跑者保险</label>　
+                                <label for="m_Pfeature7"><input type="checkbox"   name="m_Pfeature[]" id="m_Pfeature7" value="7" autocomplete="off"  <{if in_array("7",$data.m_Pfeature)}>checked <{/if}>/>跑步礼包</label>　
+                                <label for="m_Pfeature2"><input type="checkbox"   name="m_Pfeature[]" id="m_Pfeature2" value="2" autocomplete="off"  <{if in_array("2",$data.m_Pfeature)}>checked <{/if}>/>优质赛事</label>
+                                <label for="m_Pfeature8"><input type="checkbox"   name="m_Pfeature[]" id="m_Pfeature8" value="8" autocomplete="off"  <{if in_array("8",$data.m_Pfeature)}>checked <{/if}>/>高性价比</label>
+                                <label for="m_Pfeature9"><input type="checkbox"   name="m_Pfeature[]" id="m_Pfeature9" value="9" autocomplete="off"  <{if in_array("9",$data.m_Pfeature)}>checked <{/if}>/>名额稀缺</label>
+                                <label for="m_Pfeature10"><input type="checkbox"   name="m_Pfeature[]" id="m_Pfeature10" value="10" autocomplete="off"  <{if in_array("10",$data.m_Pfeature)}>checked <{/if}>/>机酒全包</label>
+                                <label for="m_Pfeature11"><input type="checkbox"   name="m_Pfeature[]" id="m_Pfeature11" value="11" autocomplete="off"  <{if in_array("11",$data.m_Pfeature)}>checked <{/if}>/>假期优选</label>
+                                <label for="m_Pfeature12"><input type="checkbox"   name="m_Pfeature[]" id="m_Pfeature12" value="12" autocomplete="off"  <{if in_array("12",$data.m_Pfeature)}>checked <{/if}>/>签证便捷</label>
+                            </td>
+                        </tr>
+                        <tr class="m_route">
+                            <th>比赛线路：</th>
+                            <td><textarea name="m_route" class="HTML_EDIT" style="width:90%;height:70px;"><{$data.m_route|escape:html}></textarea></td>
+                        </tr>
+                        <tr class="m_routeImg">
+                            <th class="w120">比赛线路图：</th>
+                            <td><input type="text" name="m_routeImg" id="m_routeImg" class="textinput w270 vpic" value="<{$data.m_routeImg|escape:html}>" />&nbsp;<input type="button" class="kUpload" value="上传图片"></td>
+                        </tr>
+                        <tr class="m_ptype">
+                            <th class="w120">赛事类型：
+                            </th>
+                            <td>   
+                            <input id="sign1" type="radio" name="m_ptype" <{if $data.m_ptype==="国内"}>checked=""<{/if}> value="国内" class="textinput">
+                            <label for="sign1">国内</label>  　                          
+                            <input id="sign2" type="radio" name="m_ptype" <{if $data.m_ptype==="海外"}>checked=""<{/if}> value="海外" class="textinput">
+                            <label for="sign2">海外</label>
+                            <input id="sign3" type="radio" name="m_ptype" <{if $data.m_ptype==="运动诊疗"}>checked=""<{/if}> value="运动诊疗" class="textinput">
+                            <label for="sign3">运动诊疗</label>
+                            </td>
+                        </tr>
+                        <tr class="m_enterMode">
+                            <th class="w120">赛事方式：
+                            </th>
+                            <td>   
+                            <input id="m_enterMode1" type="radio" name="m_enterMode" <{if $data.m_enterMode==="location"}>checked=""<{/if}> value="location" class="textinput">
+                            <label for="m_enterMode1">知行官网</label>  　                          
+                            <input id="m_enterMode2" type="radio" name="m_enterMode" <{if $data.m_enterMode==="remote"}>checked=""<{/if}> value="remote" class="textinput">
+                            <label for="m_enterMode2">赛事官网</label>
+                            </td>
+                        </tr>
+                        <tr class="m_enterurl">
+                            <th class="w120">赛事官网报名地址：</th>
+                            <td><input type="text" name="m_enterurl" class="textinput w270" value="<{$data.m_enterurl|escape:html}>" /></td>
+                        </tr>
+                        <tr class="m_isshow">
+                            <th class="w120">列表显示：</th>
+                            <td>
+                                <select name="m_isshow" id="m_isshowSelect">
+                                    <option value="1">显示</option>
+                                    <option value="0" <{if $data.m_isshow==0}>selected<{/if}>>隐藏</option>
+                                </select>
+                                <span style="color:red">*设置成隐藏后，不会出现在列表页也不可被搜索到</span>
+                            </td>
+                        </tr>
+                        <tr class="m_sign">
+                            <th class="w120">是否热门推荐<{$data.m_sign}>：
+                            </th>
+                            <td>
+                            <input id="m_sign1" type="radio" name="m_sign" <{if $data.m_sign==1}>checked=""<{/if}> value="1" class="textinput">
+                            <label for="m_sign1">热门</label>　
+                            <input id="m_sign2" type="radio" name="m_sign" <{if $data.m_sign==="0"|| $data.m_sign==''}>checked=""<{/if}> value="0" class="textinput">
+                            <label for="m_sign2">正常</label>
+                            </td>
+                        </tr>
+                        <tr class="m_places">
+                            <th class="w120">最大名额：</th>
+                            <td>
+                                <input type="text" name="m_places" class="textinput w270" value="<{$data.m_places|escape:html}>" />
+                                <input type="hidden" name="m_plat_num" value='<{$m_plat_num|escape:html}>'>
+                                <div><input type="button" value="分配渠道名额" id="plat_num_add"><p id="plat_num_list"></p></div>
+                            </td>
+                        </tr>
+                        <tr class="m_placesleft">
+                            <th class="w120">名额库存：</th>
+                            <td><input type="text" name="m_placesleft" class="textinput w270" value="<{$data.m_placesleft|escape:html}>" /></td>
+                        </tr>
+                        <tr class="m_order">
+                            <th>排序：</th>
+                            <td><input name="m_order" type="text" id="m_order" class="textinput" value="<{$data.m_order|escape:html}>"  onkeyup="value=value.replace(/[^\d]/g,'') "/></td>
+                        </tr>
+                        <tr class="m_utime">
+                            <th>最后更新时间：</th>
+                            <td><input name="m_utime" type="text" id="m_utime" class="textinput datepicker" value="<{$data.m_utime|escape:html}>" onkeyup=""/></td>
+                        </tr>  
+                        <tr class="m_state">
+                            <th class="w120">赛事状态：
+                            </th>
+                            <td>
+                            <input id="m_state1" type="radio" name="m_state" <{if $data.m_state==="1"||$data.m_state==''}>checked=""<{/if}> value="1" class="textinput">
+                            <label for="m_state1">下线</label>　
+                            <input id="m_state2" type="radio" name="m_state" <{if $data.m_state==="0"}>checked=""<{/if}> value="0" class="textinput">
+                            <label for="m_state2">正常</label>
+                            </td>
+                        </tr>
+                        <tr class="m_repeat_reg_able">
+                            <th class="w120">允许重复报名：
+                            </th>
+                            <td>
+                            <input id="m_repeat_reg_able1" type="radio" name="m_repeat_reg_able" <{if $data.m_repeat_reg_able==="1"||$data.m_repeat_reg_able==''}>checked=""<{/if}> value="1" class="textinput">
+                            <label for="m_repeat_reg_able1">允许</label>　
+                            <input id="m_repeat_reg_able2" type="radio" name="m_repeat_reg_able" <{if $data.m_repeat_reg_able==="0"}>checked=""<{/if}> value="0" class="textinput">
+                            <label for="m_repeat_reg_able2">不允许</label>
+                            </td>
+                        </tr>
+                        <tr class="m_releaseTime">
+                            <th>上线时间：</th>
+                            <td><input name="m_releaseTime" type="text" id="m_releaseTime" class="textinput datepicker" value="<{$data.m_releaseTime|escape:html}>" onkeyup=""/></td>
+                        </tr>
+                        <tr class="m_offineTime">
+                            <th>下线时间：</th>
+                            <td><input name="m_offineTime" type="text" id="m_offineTime" class="textinput datepicker" value="<{$data.m_offineTime|escape:html}>" onkeyup=""/></td>
+                        </tr> 
+                        <tr class="m_attentions hiden">
+                            <th>赛事注意事项：</th>
+                         <!--    <td><textarea name="m_special" style="width:90%;height:50px;"><{$data.m_special|escape:html}></textarea></td> -->
+                             <td><textarea  name="m_attentions" style="width:90%; height:50px;" class="maxlength22"><{$data.m_attentions|escape:html}></textarea></td>
+                        </tr>                    
+                    </table>
+                </div>
+                
+                <div class="box-footer">
+                    <div class="box-footer-inner">
+                    	<input type="submit" value="确定提交" /> 或 <a href="/?s=Classes&a=content&ac=list">取消</a>
+                    </div>
+                </div>
+                </form>
+            </div><!--/ con-->
+            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script>
+var Fields	= '<{$Fields}>';
+</script>
+<link type="text/css" href="/static/datapicker/timepicker/css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+     <link type="text/css" href="/static/datapicker/timepicker/css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+    <script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-timepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="/static/js/classadd.js?v=1.0"></script>
+    <script>
+function checkform(){
+    return true;       
+}
+$('.datepicker').datetimepicker({
+	//showOn: "button",
+	//buttonImage: "./css/images/icon_calendar.gif",
+	//buttonImageOnly: true,
+	showSecond: true,
+	timeFormat: 'hh:mm:ss',
+	stepHour: 1,
+	stepMinute: 1,
+	stepSecond: 1
+});
+var $cid = $('#cid');
+$('#n_title').keyup(function(){
+	var html = "";
+	if($(this).val()!==""){
+		$.getJSON("/?s=Classes&a=checkname&cid="+$cid.val()+"&info="+$(this).val(),function(data){
+			if(data.error==0){
+				for(i=0;i<data.data.length;i++){
+					html+="<p>"+data.data[i].n_title+"</p>";
+				}
+			}
+			$("#hint").html(html);
+		});
+	}else{
+		$("#hint").html(html);
+	}
+});
+var m_plat_str = '<{$m_plat_num}>';
+if(m_plat_str){
+    var m_plat_num = JSON.parse('<{$m_plat_num}>');
+}else{
+    var m_plat_num = {};
+}
+
+$("#plat_num_add").click(function(){
+    var name = prompt("请输入渠道名");
+    if(!name) return false;
+    var num = prompt("请输入渠道分配的数量");
+    if(!num) return false;
+    $("<span>"+name+":"+num+"</span>").appendTo($("#plat_num_list"));
+    m_plat_num[name] = num ;
+    $("input[name=m_plat_num]").val(JSON.stringify(m_plat_num));
+});
+$("#plat_num_list").find("span").live("click",function(){
+    if(!confirm("确认删除？"))  return false;
+    var html = $(this).html();
+    var name = html.split(":");
+    if(m_plat_num[name[0]]){
+        delete m_plat_num[name[0]]
+        $(this).remove();
+        $("input[name=m_plat_num]").val(JSON.stringify(m_plat_num));
+    }else{
+        alert("删除失败");
+    }
+    
+});
+if(m_plat_num){
+    var listhtml = "";
+    for(var key in m_plat_num){
+        listhtml += "<span>"+key+":"+m_plat_num[key]+"</span>";
+    }
+    $("#plat_num_list").html(listhtml);
+}
+</script>
+<{/if}>
+<script charset="utf-8" src="./static/editer/kindeditor-min.js"></script>
+<script charset="utf-8" src="./static/editer/lang/zh_CN.js"></script>
+<script>
+var KK=null;
+
+KindEditor.ready(function(K) {
+	KK=K;
+	var option	= {
+			designMode : <{$table_cfg.designMode|default:true}>,
+			uploadJson : '/?s=editor&a=upload',
+            fileManagerJson : '/?s=editor&a=manager',
+            allowFileManager : false
+			};
+
+    window.editor = KK.create('.HTML_EDIT',option);
+    //上传按钮
+    var editor = K.editor(option);
+	K('.kUpload').click(function() {
+         var that    = this;
+		editor.loadPlugin('image', function() {
+			editor.plugin.imageDialog({
+				imageUrl : $(that).prev("input").val(),
+				clickFn : function(url, title, width, height, border, align) {
+                    $(that).prev("input").val(url);
+					//得到图片高宽
+					//K('#img_size').val(width+"*"+height);
+					editor.hideDialog();
+				}
+			});
+		});
+	});
+	var colorpicker;
+	K('#colorpicker').bind('click', function(e) {
+		e.stopPropagation();
+		if (colorpicker) {
+			colorpicker.remove();
+			colorpicker = null;
+			return;
+		}
+		var colorpickerPos = K('#colorpicker').pos();
+		colorpicker = K.colorpicker({
+			x : colorpickerPos.x,
+			y : colorpickerPos.y + K('#colorpicker').height(),
+			z : 19811214,
+			selectedColor : 'default',
+			noColor : '无颜色',
+			click : function(color) {
+				K('#n_color').val(color);
+				K('#n_title').css({"color":color});
+				colorpicker.remove();
+				colorpicker = null;
+			}
+		});
+	});
+	K(document).click(function() {
+		if (colorpicker) {
+			colorpicker.remove();
+			colorpicker = null;
+		}
+	});
+
+});
+</script>
+<{include file='Login/footer.html'}>

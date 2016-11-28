@@ -1,0 +1,9 @@
+[ 2016-11-02T13:37:26+08:00 ] nuomi_userinfo_log: 2016-11-02 13:37:26 192.168.1.127	6a80cfd020f2272a5b7f9f46ba157072\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"15690633821","siteId":1564631545},"timestamp":1478065039,"cached":0,"serverlogid":"2239467475"}
+
+
+[ 2016-11-02T15:03:26+08:00 ] nuomi_userinfo_log: 2016-11-02 15:03:26 192.168.1.118	cd5dabac8e0e27ae2fadc3febd239c50\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"18311410712","siteId":2017795998},"timestamp":1478070199,"cached":0,"serverlogid":"0199663036"}
+
+
+[ 2016-11-02T16:38:06+08:00 ] nuomi_userinfo_log: 2016-11-02 16:38:06 192.168.1.135	\tnull
+
+

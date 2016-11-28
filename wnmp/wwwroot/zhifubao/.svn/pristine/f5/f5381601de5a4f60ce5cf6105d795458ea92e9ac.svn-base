@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+<script src="/static/js/jquery.js"></script>
+<body>
+<form name="alipayment" id="pay_form" action="/PayResult/gotoPay" method="post" target="_blank">
+    <input size="30" name="WIDout_trade_no" value="123222"  type="hidden"/>
+    <input size="30" name="WIDsubject"  type="hidden" value="黑瞎子岛马拉松报名" />
+    <input size="30" name="WIDtotal_fee"  type="hidden" value="1" id="pay_all_price" />
+    <input size="30" name="WIDbody" type="hidden" value="黑瞎子岛马拉松在抚远人民广场2016年1月1日（星期五）上午5：58,请牢记!" />
+    <input size="30" name="WIDshow_url" type="hidden" value="http://pay.zx-tour.com/enroll/"/>
+    <div class="submit"><input  type="submit" id="pay_price" value="立即支付" /></div>
+</form>
+<script>
+
+document.write(navigator.userAgent);
+/**
+ * 使用BNJS之前，必须声明如下BNJSReady函数，确保BNJS相关属性信息及页面加载准备就绪
+ * BNJSReady直接复制使用，请勿改动
+ */
+var BNJSReady = function (readyCallback) {
+    if(readyCallback && typeof readyCallback == 'function'){
+        if(window.BNJS && typeof window.BNJS == 'object' && BNJS._isAllReady){
+            readyCallback();            
+        }else{
+            document.addEventListener('BNJSReady', function() {
+                readyCallback();
+            }, false)
+        }
+    }
+}; 
+
+BNJSReady(function(){    
+    // 添加分享按钮
+    // BNJS.ui.title.addActionButton({            
+    //     tag: '123',
+    //     text: '分享',
+    //     icon: 'share',
+    //     callback: function(){
+    //         // 点击回调分享功能
+    //         BNJS.ui.share({
+    //             title : '分享测试',
+    //             imgUrl : 'http://e.hiphotos.baidu.com/nuomi/wh%3D470%2C285/sign=bbd1a730d588d43ff0fc99f64a2efe29/3801213fb80e7bec133503a42c2eb9389a506b83.jpg',
+    //             url : 'http://www.nuomi.com',
+    //             onSuccess : function(){
+    //                 alert('分享测试成功~')
+    //             },
+    //             onFail : function(){
+    //                 alert('分享测试失败~')
+    //             }
+    //         });
+    //     }
+    // });
+
+    // 添加分享按钮 - 分享大图
+    BNJS.ui.title.addActionButton({            
+        tag: '123',
+        text: '分享',
+        icon: 'share',
+        callback: function(){
+            alert("Ee");
+            // 点击回调分享功能
+            BNJS.ui.share({
+                title : '分享测试',
+                type : 2,
+                imageList : ['http://e.hiphotos.baidu.com/nuomi/wh%3D470%2C285/sign=bbd1a730d588d43ff0fc99f64a2efe29/3801213fb80e7bec133503a42c2eb9389a506b83.jpg'],
+                onSuccess : function(){
+                    alert('分享测试成功~')
+                },
+                onFail : function(){
+                    alert('分享测试失败~')
+                }
+            });
+        }
+    });
+});
+
+</script>
+</body>
+</html>

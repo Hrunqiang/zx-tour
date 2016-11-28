@@ -1,0 +1,259 @@
+<{include file='Login/header.html'}>
+<body id="main_page">
+	<link type="text/css" href="/static/datapicker/timepicker/css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+     <link type="text/css" href="/static/datapicker/timepicker/css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+    <script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-timepicker-zh-CN.js"></script>
+
+<!-- <script type="text/javascript" src="static/js/graph/highstock.js"></script> -->
+<script type="text/javascript" src="static/js/graph/highcharts.js"></script>
+<script type="text/javascript" src="static/js/graph/exporting.js"></script>
+<script type="text/javascript" src="static/js/graph/grid.js"></script>
+<style>
+.map_tab_left{
+	position: absolute;
+	top:5px;
+	left:10px;
+	z-index:9;
+	padding:5px;
+	background-color: #4572a7;
+	border-top:2px solid #4572a7;
+	border-left:2px solid #4572a7;
+	border-right:2px solid #4572a7;
+	border-bottom:2px solid #4572a7;
+	color:#ffffff;
+	cursor:pointer;
+	font-weight:bold;
+}
+.map_tab_right{
+	position: absolute;
+	top:5px;
+	left:87px;
+	z-index:9;
+	padding:5px;
+	background-color: #ffffff;
+	border-top:2px solid #4572a7;
+	border-left:2px solid #4572a7;
+	border-right:2px solid #4572a7;
+	border-bottom:2px solid #4572a7;
+	color:#000000;
+	cursor:pointer;
+	font-weight:bold;
+}
+.map_tab30{
+	position: absolute;
+	top:12px;
+	left:1044px;
+	z-index:9;
+	padding:3px 10px 3px 10px;
+	background-color: #ffffff;
+	border:1px solid #4572a7;
+	color:#000000;
+	cursor:pointer;
+	font-weight:bold;
+}
+.map_tab7{
+	position: absolute;
+	top:12px;
+	left:977px;
+	z-index:9;
+	padding:3px 10px 3px 10px;
+	background-color: #ffffff;
+	border:1px solid #4572a7;
+	color:#000000;
+	cursor:pointer;
+	font-weight:bold;
+}
+#list{
+	padding-top:8px;
+	margin-top:18px;
+	margin-left:10px;
+	width:1108px;
+}
+#userinfo{
+	padding:15px 0 10px 10px;
+}
+#ucontent{width:987px;border-top:1px solid #cccccc;border-bottom:1px solid #cccccc;border-right:1px solid #cccccc;}
+#userinfo{display:none;}
+.utop{float:left;width:140px;text-align:center;border-left:1px solid #cccccc;height:25px;background-color:#eeeeee;padding-top:8px;font-weight:bold;}
+.uco{float:left;width:140px;text-align:center;border-left:1px solid #cccccc;height:25px;padding-top:8px;font-weight:bold;}
+.datatable1{width:102px;text-align:center;height:25px;border-bottom:1px solid #cccccc;border-right:1px solid #cccccc;padding-top:8px;}
+.datatable2{width:142px;text-align:center;height:25px;border-bottom:1px solid #cccccc;border-right:1px solid #cccccc;padding-top:8px;}
+</style>
+<div style = "width:100%;">
+<div style="padding-left:10px;padding-top:10px;">
+	<form action="" method="POST" id="searchform">
+		<input type="text" name="search" class="input" value="输入用户id" onkeyup="value=value.replace(/[^\d]/g,'');" />&nbsp;<input class="submit" type="submit" value="搜索">
+	</form>
+</div>
+<div id="userinfo"><div style="padding-bottom:10px;"><b>用户基本信息:</b></div><div id="ucontent"></div></div>
+<div style="position: relative;">
+	<!-- <div class="map_tab_left">有效</div>
+	<div class="map_tab_right">无效</div> -->
+	<div class="map_tab7">过去7天</div>
+	<div class="map_tab30">过去30天</div>
+</div>
+<div class="col-2 col-auto mr10" style="width:97%; margin-left:10px; margin-top:5px;">
+  <div class="content" style="color:#ff0000;height: 370px;width:96.9%;" id='stat'> </div>
+</div>
+<div id="list"></div>
+<script type="text/javascript">
+var getd	= <{$data}>;
+var userInfo= <{$userinfo}>;
+var dates	= [];
+var getname	= [];
+if(userInfo){
+	var uhtml="<div class='utop'>用户ID</div>";
+	uhtml	+="<div class='utop'>用户账户</div>";
+	uhtml	+="<div class='utop'>账号创建时间</div>";
+	uhtml	+="<div class='utop'>昵称</div>";
+	uhtml	+="<div class='utop'>性别</div>";
+	uhtml	+="<div class='utop'>地区</div>";
+	uhtml	+="<div class='utop'>出生年份</div>";
+	
+	uhtml	+="<div class='uco'>"+userInfo.id+"</div>";
+	uhtml	+="<div class='uco'>"+userInfo.username+"</div>";
+	uhtml	+="<div class='uco'>"+userInfo.ctime+"</div>";
+	uhtml	+="<div class='uco'>"+userInfo.nickname+"</div>";
+	var sex;
+	if(userInfo.sex == 1){
+		sex='男';
+	}else{
+		sex='女';
+	}
+	uhtml	+="<div class='uco'>"+sex+"</div>";
+	uhtml	+="<div class='uco'>"+userInfo.area+"</div>";
+	uhtml	+="<div class='uco'>"+userInfo.birthday+"</div>";
+//	uhtml	+="<div class='utop'>绑定新浪账号</div>";
+	uhtml	+="<div style='clear:both;'></div>";
+	$('#ucontent').html(uhtml).show();
+	$('#userinfo').slideDown('slow');
+}
+var html	= "<div style='float:left'>";
+html	+= "<div class='datatable1' style='border-top:1px solid #cccccc;background-color:#eeeeee;border-left:1px solid #cccccc;font-weight:bold;'>日期</div>";
+//获取所有日期
+for(i in getd[0].data){
+	html	+= "<div class='datatable1' style='border-left:1px solid #cccccc;'>"+getd[0].data[i][0]+"</div>";
+	
+	dates[i]=getd[0].data[i][0];
+} 
+html	+= "</div>";
+for(i in getd){
+	html	+= "<div style='float:left'>";
+	html	+= "<div class='datatable2' style='border-top:1px solid #cccccc;background-color:#eeeeee;font-weight:bold;'>"+getd[i].name+"</div>";
+	var datatem=getd[i].data;
+	for(ii in datatem){
+		html	+= "<div class='datatable2'>"+datatem[ii][1]+"</div>";
+	}
+	html	+= "</div>";
+	dates[i]=getd[0].data[i][0];
+} 
+html	+=	"<div style='clear:both;'></div>";
+$('#list').html(html);
+//alert(getname);
+$(function () {
+	var io_status	= '<{$io_status}>';
+	if(io_status=='2'){
+		$('.map_tab_right').css({'background-color':'#4572a7','color':'#ffffff'});
+		$('.map_tab_left').css({'background-color':'#ffffff','color':'#000000'});
+	}else{
+		$('.map_tab_left').css({'background-color':'#4572a7','color':'#ffffff'});
+		$('.map_tab_right').css({'background-color':'#ffffff','color':'#000000'});
+	}
+	$('.map_tab_right').click(function(){
+		var href=window.location.href;
+		href	= href.replace(/[&|?]+io=[\d]/,'');
+		window.location.href=href+"&io=2";
+	});
+	$('.map_tab_left').click(function(){
+		var href=window.location.href;
+		href	= href.replace(/[&|?]+io=[\d]/,'');
+		window.location.href=href+"&io=1";
+	});
+	$('.map_tab30').click(function(){
+		var href=window.location.href;
+		href	= href.replace(/[&|?]+dist=[\d]+/,'');
+		window.location.href=href+"&dist=30";
+	});
+	$('.map_tab7').click(function(){
+		var href=window.location.href;
+		href	= href.replace(/[&|?]+dist=[\d]+/,'');
+		window.location.href=href+"&dist=7";
+	});
+	$('#searchform').submit(function(){
+		$v	= $(this).find('input[name=search]').val();
+		if($v=='' || $v==0 || $v=='输入用户id'){
+			alert('请输入正确用户id搜索');
+			$(this).find('input[name=search]').focus();
+			return false;
+		}
+	});
+	$(":text").each(function(index,ele) {
+		var tip=$(ele).val();
+		$(this).focus(function(){
+			if($(this).val()==tip){
+				$(this).val('');
+			}
+			$(this).addClass('focus_text');
+			$(this).parent().addClass('y-row1-focus');
+		}).blur(function(){
+			if(!$(this).val()){
+				$(this).val(tip).removeClass('focus_text');
+			}
+			$(this).parent().removeClass('y-row1-focus');
+		})
+	});
+	
+    $('.content').highcharts({
+        chart: {
+        	zoomType: 'x',
+        	type: 'column',
+            //type: 'area',
+        	width:"1108",
+        	borderWidth:1,
+        	borderColor:"#cccccc",
+        	plotBackgroundColor:"#ffffff",
+        	backgroundColor:"#ffffff",
+        	plotShadow:false,
+        },
+        exporting:false,
+        title: {
+            text: '<{$title}>'
+        },
+        xAxis: {
+        	gridLineWidth: 0,
+        	//tickmarkPlacement: 'on',
+            categories: <{$categories}>,
+        	title:{'text':"日期"}
+        },
+        yAxis: {
+        	gridLineWidth:1,
+        	minorGridLineWidth:0,
+    		minorTickInterval: 'auto'
+        },
+        plotOptions:{
+        	column: {
+               // stacking: 'normal',
+               /*  dataLabels: {
+                    enabled: true,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'black'
+                } */
+            }
+		},
+        tooltip: {
+        	//shared: true,
+        	valueSuffix: ' 元'
+        	}, 
+        credits: {
+            enabled: false
+        },
+        series:getd
+    });
+});
+</script>
+</div>
+<div>
+</div>
+<{include file='Login/footer.html'}>

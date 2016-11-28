@@ -1,0 +1,58 @@
+<{include file='Login/header.html'}>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <div class="box-header">
+                    <h4>公共上传文件页面</h4>
+                </div>
+               <form action="" method="post" enctype="multipart/form-data" onsubmit = "return uploadfile()">
+                <div class="box-content">
+                    <table class="table-font">
+                        <tr>
+                            <td>
+                                <div style="">
+                                    <span>文件路径：<{$path}></span><br /><br />
+                                    <input type="file" name="file" id="fileinput"> <input type = "submit" value="上传" ><br /><br />
+                                </div>
+                               
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                </form>
+            </div><!--/ con-->
+            
+            
+            
+        </div>    
+    </div><!--/ container-->
+    </div><!--/ wrap-->
+<script type="text/javascript">
+    function uploadfile(){
+        var filename = $("#fileinput").val();
+        alert($('form').lenth);
+        var formData = new FormData($('form')[0]);
+        $.ajax({
+            type: "POST",
+            url: "?s=Upload&a=uploadfile",
+            enctype: 'multipart/form-data',
+            xhr: function() {  // custom xhr
+            myXhr = $.ajaxSettings.xhr();
+                if(myXhr.upload){ // check if upload property exists
+                    myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // for handling the progress of the upload
+                }
+                return myXhr;
+            },
+            data:formData,
+            // data: {
+            //     file: filename
+            // },
+            success: function () {
+                alert("Data Uploaded: ");
+            }
+        });
+        return false;
+    }
+</script>
+<{include file='Login/footer.html'}> -->

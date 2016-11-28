@@ -1,0 +1,24 @@
+[ 2016-10-28T15:38:08+08:00 ] nuomi_userinfo_log: 2016-10-28 15:38:08 192.168.1.121	63be2fb46dfb4a32ea2fd8b363e0ecb7\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"13522354197","siteId":4164828528},"timestamp":1477640455,"cached":0,"serverlogid":"2455270513"}
+
+
+[ 2016-10-28T15:46:52+08:00 ] nuomi_userinfo_log: 2016-10-28 15:46:52 192.168.1.122	b831c71dd5c853643eb2cfea61764ca7\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"13911585513","siteId":3445933838},"timestamp":1477640978,"cached":0,"serverlogid":"2978696079"}
+
+
+[ 2016-10-28T15:47:01+08:00 ] nuomi_userinfo_log: 2016-10-28 15:47:01 192.168.1.113	c3fc7e782627c334dbba086e7f18806e\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"15690633821","siteId":1564631545},"timestamp":1477640987,"cached":0,"serverlogid":"2987668895"}
+
+
+[ 2016-10-28T15:53:35+08:00 ] nuomi_userinfo_log: 2016-10-28 15:53:35 192.168.1.120	7ebc7c52a3c1ff967e2950afb6b55ae7\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"13522354197","siteId":4164828528},"timestamp":1477641382,"cached":0,"serverlogid":"3382523665"}
+
+
+[ 2016-10-28T15:55:13+08:00 ] nuomi_userinfo_log: 2016-10-28 15:55:13 192.168.1.122	d8cafb991d4e88e8a8c020b45927332e\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"13911585513","siteId":3445933838},"timestamp":1477641480,"cached":0,"serverlogid":"3480331289"}
+
+
+[ 2016-10-28T15:58:14+08:00 ] nuomi_userinfo_log: 2016-10-28 15:58:14 192.168.1.113	b4815ad4dd264f2eae753a66429022ff\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"15690633821","siteId":1564631545},"timestamp":1477641661,"cached":0,"serverlogid":"0061249170"}
+
+
+[ 2016-10-28T16:01:08+08:00 ] nuomi_userinfo_log: 2016-10-28 16:01:08 192.168.1.117	6f2f1fe8c9a7985f774c899a8e5ca041\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"18311410712","siteId":2017795998},"timestamp":1477641835,"cached":0,"serverlogid":"0235141922"}
+
+
+[ 2016-10-28T18:35:48+08:00 ] nuomi_userinfo_log: 2016-10-28 18:35:48 192.168.1.122	e3225cc4c994f95caa8769caf78055f9\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"13911585513","siteId":3445933838},"timestamp":1477651115,"cached":0,"serverlogid":"2315278476"}
+
+

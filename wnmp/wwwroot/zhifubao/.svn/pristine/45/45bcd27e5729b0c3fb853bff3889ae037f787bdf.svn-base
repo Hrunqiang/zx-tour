@@ -1,0 +1,67 @@
+<{include file='Login/header.html'}>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">
+            	
+                  <div class="table">
+                  	<div class="th">
+                    	<div class="form">
+                        <div class="fl">
+  						 <input type="text" id="add_channel_input" placeholder= "输入要创建渠道名" > <button id="add_channel_btn">创建渠道</button>
+                        </div>
+                        </div>
+                    </div>
+                    <form action='/?s=Classes&a=content' method='post' id="form-for-list">
+                    <table class="admin-tb" id="datatable">
+                    <thead>
+                        <tr>
+                        	<!-- <th><input type="checkbox" id="sall"><label for="sall">全选</label></th> -->
+                            <th style="text-align:center;">id</th>
+                            <th style="text-align:center;">渠道</th>
+                            <th style="text-align:center;">渠道号</th>
+                           	<th style="text-align:center;">ctime</th>
+                            <th style="text-align:center;">操作</th>
+                        </tr>
+					</thead>
+					<tbody id="class_item">
+					<{if $list}>
+					<{foreach from=$list name=n item=i}>
+						<tr>
+                        	<!-- <td><input type="checkbox" ></td> -->
+                            <td style="text-align:center;"><{$i.id}></td>
+                            <td style="text-align:center;"><{$i.c_name}></td>
+                            <td style="text-align:center;"><{$i.c_num}></td>
+                           	<td style="text-align:center;"><{$i.ctime}></td>
+                            <td style="text-align:center;"><a href="/?s=IosSDK&a=del&id=<{$i.id}>">删除</a></td>
+                        </tr>
+					<{/foreach}>
+					<{/if}>
+					</tbody>
+                    </table>
+                    <div class="th">
+                    	<!-- <div class="form">
+                    	                        <input type='hidden' name='commit' value='1' />
+                    	                        <input type='radio' name='ac' value='del' checked />
+                    	                        <input type="button" value="  删 除 " onclick="if(confirm('请注意删除操作不能恢复,确定操作?')){$(this).parents('form').submit();};" />&nbsp;&nbsp; <span id="page_span"><{$show}></span>
+                    	                        </div> -->
+
+                    </div>
+                    </form>
+                </div>
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script type="text/javascript">
+	$("#add_channel_btn").click(function(){
+		var val = $("#add_channel_input").val();
+		if(val=="") return false ; 
+		if(confirm("是否要创建渠道"+val)){
+			window.location = "/?s=IosSDK&a=add&name="+val;
+		}
+	});
+</script>
+<{include file='Login/footer.html'}>

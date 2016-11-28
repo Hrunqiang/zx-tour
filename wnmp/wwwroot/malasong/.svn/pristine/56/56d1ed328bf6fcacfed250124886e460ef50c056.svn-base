@@ -1,0 +1,98 @@
+<?php
+class OrdersInfoModel extends Model{
+	protected  $trueTableName	= "mls_orderinfo";
+	protected $connection = 'DB_CONFIG1';
+	
+	public function delJdOrders($uid,$orderid){
+		if(empty($uid) || empty($orderid)) return false;
+		$rs = $this->where("uid=$uid and orderid='$orderid' and baomingdanid = 0")->delete();
+		if(!$rs){
+			@mwtlog("delJdOrders_error","rs:".json_encode($rs)."\tsql:".$this->getLastSql(),true);
+		}
+		return $rs;
+	}
+	
+	public function addOrders($uid,$orderid,$goodsid,$stime,$etime,$count=1){
+		if(empty($uid) || empty($orderid) || empty($goodsid)) return false;
+		$GM = new GoodsModel();
+		$goodsInfo = $GM->getGoodsInfoById($goodsid);
+		if($goodsInfo && $goodsInfo["goodsleft"]>0){
+			$data = array();
+			$data['uid'] = $uid;
+			$data['orderid'] = $orderid;
+			$data['goodsid']= $goodsid;
+			$data['goodsprice'] = $goodsInfo['goodsprice'];
+			$data['count'] = $count;
+			$data['stime'] = $stime;
+			$data['etime'] = $etime;
+			$ck = $this->field("id")->where("uid=$uid and orderid='$orderid' and goodsid=$goodsid")->find();
+			if(!$ck){
+				$rs = $this->add($data);
+				if(!$rs){
+					@mwtlog("addOrders_error","rs:".json_encode($rs)."\tsql:".$this->getLastSql(),true);
+					return false;
+				}else{
+					return $data['goodsprice'];
+				}
+			}else{
+				$rs = $this->data($data)->where("id=".$ck['id'])->save();
+				return $data['goodsprice'] ;
+			}
+		}else{
+			return false;
+		}
+	}
+	
+	/**
+	 * 补充 逻辑问题,补充报名单购物车上的价格
+	 * @param unknown_type $uid
+	 * @param unknown_type $orderid
+	 * @param unknown_type $banmingdanid
+	 * @param unknown_type $price
+	 */
+	public function updateBaomingdanInfo($uid,$goodsid,$orderid,$baomingdanid,$price){
+		if(empty($uid) || empty($orderid) || empty($baomingdanid)) return false;
+		$time = date("Y-m-d H:i:s");
+		$rs = $this->data(array('goodsprice'=>floatval($price),'goodsid'=>intval($goodsid),'utime'=>$time))->where("uid=".intval($uid)." and orderid='$orderid' and baomingdanid = ".intval($baomingdanid))->save();
+		if(!$rs){
+			@mwtlog("updateBaomingdanInfo_error","error rs:".json_encode($rs)."\tsql:".$this->getLastSql(),true);
+		}
+		return $rs;
+	}
+	public function addBaomingDan($uid,$orderid,$baomingdanid){
+		if(empty($uid) || empty($orderid) || empty($baomingdanid)) return false;
+		$ck = $this->field("count(*) as c")->where("uid=$uid and orderid='$orderid' and baomingdanid=$baomingdanid")->find();
+		if($ck['c']<=0){
+			$data['uid'] = $uid;
+			$data['orderid'] = $orderid;
+			$data['baomingdanid'] = $baomingdanid;
+			$number = UserOrdersModel::getBaomingNum();
+			if($number){
+				$data['number'] = $number;
+			}else{
+				//报名已满
+				return -33;
+			}
+			$data['ctime'] = $data['utime'] = date("Y-m-d H:i:s") ;
+			$rs = $this->add($data);
+			if(!$rs){
+				@mwtlog("addOrders_error","addBaomingDan error rs:".json_encode($rs)."\tsql:".$this->getLastSql(),true);
+			}
+			return $rs;
+		}else{
+			return true;
+		}
+	}
+	
+	public function getXingmingByOrderid($orderid){
+		if(empty($orderid)) return false;
+		$orderid = addslashes($orderid);
+		$sql = "SELECT d.xingming,d.id as baomingdanid FROM mls_baomingdan d left join mls_orderinfo i on i.baomingdanid=d.id where i.orderid='$orderid'";
+		return $this->query($sql);
+	}
+	
+	public function getOrderinfoByOrderid($orderid){
+		if(empty($orderid)) return false;
+		return $this->where("orderid=$orderid")->select();
+	}
+}

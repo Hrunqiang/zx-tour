@@ -1,0 +1,265 @@
+[ 2016-01-22T12:23:16+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+
+[ 2016-01-22T12:23:16+08:00 ] /login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000427s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000494s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000540s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\8d4f5e13bd3eda234fa91e36665717b486cd4564.file.login.html.php 第 135 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\8d4f5e13bd3eda234fa91e36665717b486cd4564.file.login.html.php 第 135 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020582s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020622s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000343s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000331s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000235s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001316s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000378s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2016-01-22T12:23:21+08:00 ] /?s=login&a=login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000466s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_admin_user` [ RunTime:0.041701s ]
+SQL: SELECT `id`,`password`,`is_admin`,`right_action` FROM `mls_admin_user` WHERE ( `user_name`='haiyan' ) LIMIT 1   [ RunTime:0.008178s ]
+SQL: update mls_admin_user set last_login='2016-01-22 12:23:20',lastip='127.0.0.1' where `id`=11 [ RunTime:0.001409s ]
+ERR: 1146:Table 'dh_at321.mls_admin_user' doesn't exist
+ [ SQL语句 ] : update mls_admin_user set last_login='2016-01-22 12:23:20',lastip='127.0.0.1' where `id`=11
+
+[ 2016-01-22T12:23:21+08:00 ] /?s=index&a=index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000700s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000473s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000540s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000589s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.057213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057305s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000660s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000533s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000374s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000635s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002399s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000854s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2016-01-22T12:23:21+08:00 ] /?s=index&a=header
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000493s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000319s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000301s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000333s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.024139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024210s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000417s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000245s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000160s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001188s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000363s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000390s ]
+
+[ 2016-01-22T12:23:21+08:00 ] /?s=index&a=menu&showWelcome=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000490s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000505s ]
+NOTIC: [8] Undefined variable: output D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 29 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 32 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000526s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000572s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\fc992ec0d820ab300b1bbfc78e0c2bc48b74b653.file.menu.html.php 第 31 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\fc992ec0d820ab300b1bbfc78e0c2bc48b74b653.file.menu.html.php 第 31 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.007569s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007609s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000316s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000243s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000157s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001075s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000360s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2016-01-22T12:23:23+08:00 ] /?s=index&a=welcome
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000602s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `tbl_admin_user` [ RunTime:0.043843s ]
+SQL: SELECT VERSION() AS dbversion [ RunTime:0.000206s ]
+NOTIC: [2] Illegal string offset 'dbversion' D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 72 行.
+SQL: SHOW TABLE STATUS [ RunTime:0.000541s ]
+NOTIC: [2] filesize(): stat failed for ../uducy_admin/Runtime/logs/admin_log.php D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 86 行.
+NOTIC: [2] filesize(): stat failed for ../uducy_admin/Runtime/logs/php_error.log D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 90 行.
+NOTIC: [2] filesize(): stat failed for ../uducy_admin/Runtime/logs/mysql_error.php D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 94 行.
+NOTIC: [8] Undefined variable: serverip D:\wnmp\www\malasong\uducy_admin\Lib\Model\LoginModel.class.php 第 99 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_admin_user` [ RunTime:0.004054s ]
+SQL: SELECT count(id) as c FROM `mls_admin_user` LIMIT 1   [ RunTime:0.000388s ]
+SQL: SHOW COLUMNS FROM `tbl_admin_sys` [ RunTime:0.003690s ]
+ERR: 0:Table 'dh_at321.tbl_admin_sys' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tbl_admin_sys`
+SQL: SELECT ctime as x,`mem`,`cpu`,`load` FROM `tbl_admin_sys` WHERE ( ctime>=1453177403 )  [ RunTime:0.000966s ]
+ERR: 0:Table 'dh_at321.tbl_admin_sys' doesn't exist
+ [ SQL语句 ] : SELECT ctime as x,`mem`,`cpu`,`load` FROM `tbl_admin_sys` WHERE ( ctime>=1453177403 ) 
+NOTIC: [2] Invalid argument supplied for foreach() D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 61 行.
+NOTIC: [8] Undefined variable: rs D:\wnmp\www\malasong\uducy_admin\Lib\Action\IndexAction.class.php 第 66 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000897s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000982s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Undefined index: site_new D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\98d1046f2f04fb739a188779fb590e6f931a4eb2.file.welcome.html.php 第 52 行.
+NOTIC: [8] Undefined index: advise D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\98d1046f2f04fb739a188779fb590e6f931a4eb2.file.welcome.html.php 第 60 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.051295s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051363s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000318s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000252s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000168s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001114s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000375s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000403s ]
+
+[ 2016-01-22T12:23:23+08:00 ] /?s=Upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000500s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000516s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000528s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000576s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015653s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000257s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000214s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000148s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000971s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000354s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000389s ]
+
+[ 2016-01-22T12:23:24+08:00 ] /?s=Upload&a=uploadfile
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000494s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000315s ]
+
+[ 2016-01-22T12:23:43+08:00 ] /?s=Upload&a=uploadfile
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000791s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000854s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000780s ]
+
+[ 2016-01-22T12:23:45+08:00 ] /?s=Upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000846s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000660s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000830s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000866s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: charset D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 32 行.
+NOTIC: [8] Undefined index: npa D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 45 行.
+NOTIC: [8] Undefined index: error D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\uducy_admin\Runtime\Temp\de3ec90e1b20301695e7d80d61ae5a27d6d5da19.file.header.html.php 第 69 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.012518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012567s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000908s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000722s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000508s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000623s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002879s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000716s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2016-01-22T12:23:54+08:00 ] /?s=Upload&a=uploadfile
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001014s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001074s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000816s ]
+

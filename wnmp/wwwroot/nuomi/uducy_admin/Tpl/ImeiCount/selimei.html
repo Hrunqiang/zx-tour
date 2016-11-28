@@ -1,0 +1,122 @@
+<{include file='Login/header.html'}>
+   <div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con">                           
+                <div class="table">
+                    <h2 class="th">imei查询<span class="head"></span></h2>    
+
+
+ <link type="text/css" href="http://code.jquery.com/ui/1.9.1/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+
+    <link href="/static/datapicker/timepk/css/jquery-ui-timepicker-addon.css" type="text/css" />
+
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js"></script>
+    <script src="/static/datapicker/timepk/css/jquery-ui-timepicker-addon.js" type="text/javascript"></script>
+
+    <!--中文-->
+    <script src="/static/datapicker/timepk/js/jquery.ui.datepicker-zh-CN.js.js" type="text/javascript" charset="gb2312"></script>
+    <script src="/static/datapicker/timepk/js/jquery-ui-timepicker-zh-CN.js" type="text/javascript"></script>
+    
+<script>
+$(function(){
+	$('.datepicker').datetimepicker({
+		 timeFormat: "HH:mm:ss",
+		 dateFormat: "yy-mm-dd"
+	});
+	//alert($('#selMoth').val());
+	//jQuery("<option value='201409'>201409</option>").appendTo("#selMoth"); 
+	$("#selMoth").empty();
+	var d = new Date();
+	var oyear=2014;
+	var omoth=07;
+	var nyear = d.getFullYear();
+	var nmoth= (d.getMonth() + 1)>9?(d.getMonth() + 1):"0"+(d.getMonth() + 1);
+	//alert(nmoth);
+	var olddate=new Date('2014-07-01');
+	var numMoth=((nyear-oyear)*12)+(nmoth-omoth);
+	
+	for(var i=0;i<=numMoth;i++){
+		var tomo = new   Date((olddate/1000+86400*30*(i+1))*1000);
+		//var d=tomo;
+		var myear = tomo.getFullYear();
+		var mmoth= (tomo.getMonth() + 1)>9?(tomo.getMonth() + 1):"0"+(tomo.getMonth() + 1);
+		//alert("月"+mmoth);
+		if(nmoth==nmoth){
+			jQuery("<option value='"+myear+mmoth+"' selected='selected'>"+myear+mmoth+"</option>").appendTo("#selMoth");
+		}else{
+	        jQuery("<option value='"+myear+mmoth+"'>"+myear+mmoth+"</option>").appendTo("#selMoth");
+		}
+	}
+	
+});
+function page(p){
+	var href= '';
+	if(p>0){
+		href = window.location.href.replace(/&page=\d+/,'')+"&page=<{$page+1}>";
+	}else{
+		href = window.location.href.replace(/&page=\d+/,'')+"&page=<{$page-1}>";
+	}
+	window.location.href=href;
+}
+</script>
+<FORM action="/?s=ImeiCount&a=search" method="GET">
+<div  style="height:30px;padding:10px;">
+	<input type="hidden" name='s' value='ImeiCount'/>
+	<input type="hidden" name='a' value='selimei'/>
+    Moth:<SELECT name="selMoth" id="selMoth">
+              <OPTION value='201407'>201407</OPTION>
+         </SELECT>
+    action:<SELECT name="selAction" id="selAction">
+              <OPTION value='' <{if $selAction == ''}>selected<{/if}>>全部</OPTION>
+              <OPTION value='netinstall' <{if $selAction == 'netinstall'}>selected<{/if}>>用户安装</OPTION>
+              <OPTION value='behavior' <{if $selAction == 'behavior'}>selected<{/if}>>用户行为</OPTION>
+         </SELECT>
+    imei:<INPUT type="text" name="txtImei" value="<{$txtImei}>"/>
+    Begin Time:<INPUT type="text" name="txtBeginTime" class="datepicker" value="<{$txtBeginTime}>"/>
+    End Time:<INPUT type="text" name="txtEndTime" class="datepicker" value="<{$txtEndTime}>"/>
+    <INPUT type="submit" value="查询">
+</div>
+</FORM>
+<table width="100%" align="center">
+     <tr>
+        <th style="text-align:center;">序列</th>
+        <th style="text-align:center;">imei</th>
+        <th style="text-align:center;">版本</th>
+        <th style="text-align:center;">渠道</th>
+        <th style="text-align:center;">手机型号</th>
+	    <th style="text-align:center;">ip</th>
+        <th style="text-align:center;">添加时间</th>
+        <th style="text-align:center;">接口</th>
+        <th style="text-align:center;">数据</th>
+       
+     </tr>
+   <{if $list}>
+   <{foreach from="$list" name="list" item="vo"}>
+       <tr>
+         <td><{$smarty.foreach.list.index}></td>
+         <td><{$vo.i}></td>
+         <td><{$vo.v}></td>
+         <td><{$vo.c}></td>
+         <td><{$vo.p}></td>
+         <td><{$vo.mip}></td>
+         <td><{$vo.addDateTime}></td>
+          <td><{$vo.mpath}></td>
+          <td><{$vo.item}></td>
+       </tr>
+     	<{/foreach}>
+    <{else}>
+    	<tr><td colspan="10" style='text-align:center;'>none data</td></tr>
+    <{/if}>
+  </table>
+  
+   </div>            
+                <div class="table" style="text-align:center">
+                    <h2 class="th">  第<{$page}>页 &nbsp;&nbsp; <a onclick="page(-1);return false;">上一页</a> &nbsp;&nbsp; <a href="#" onclick="page(1);return false;">下一页</a> </h2>                
+                </div>
+            </div><!--/ con-->
+        </div>    
+    </div><!--/ container-->
+</div><!--/ wrap-->
+<{include file='Login/footer.html'}>

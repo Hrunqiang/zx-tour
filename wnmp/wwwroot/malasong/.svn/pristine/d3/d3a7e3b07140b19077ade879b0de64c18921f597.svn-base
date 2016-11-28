@@ -1,0 +1,30 @@
+<?php
+class UserOrdersModel extends Model{
+	protected  $trueTableName	= "mls_userorders";
+	protected $connection = 'DB_CONFIG1_zx';
+	
+	public function apply_num(){
+		
+		$sql = "select count(*),isonline from $this->trueTableName group by isonline";
+		return $this->query($sql);
+	}
+	
+	
+	public function apply_orders(){
+		$sql = "select * from $this->trueTableName";
+		return $this->query($sql);
+	}
+	
+	public function getorderlist(){
+		$sql = "SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b 
+ON o.uid = b.id order by utime desc ";
+		return $this->query($sql);
+	}
+
+	public function getorderinfo($orderid){
+		if(empty($orderid)) return false;
+		$sql = "SELECT o.orderid,o.orderprice,o.paystats,o.payorderid,o.payinfo,o.beizhu,b.xingming,b.match,o.ctime,o.utime FROM mls_userorders o LEFT JOIN mls_baomingdan b ON o.uid = b.id WHERE o.orderid = $orderid";
+		return $this->query($sql);
+	}
+	
+}

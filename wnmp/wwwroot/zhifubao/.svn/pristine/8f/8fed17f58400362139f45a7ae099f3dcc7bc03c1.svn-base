@@ -1,0 +1,6 @@
+[ 2016-09-05T10:27:19+08:00 ] delJdOrders_error: 2016-09-05 10:27:19 127.0.0.1	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='147160905102718044289' )
+
+[ 2016-09-05T14:34:10+08:00 ] delJdOrders_error: 2016-09-05 14:34:10 192.168.1.135	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='1301609051434093231404' )
+
+[ 2016-09-05T14:45:33+08:00 ] delJdOrders_error: 2016-09-05 14:45:33 192.168.1.135	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='1471609051445323231170' )
+

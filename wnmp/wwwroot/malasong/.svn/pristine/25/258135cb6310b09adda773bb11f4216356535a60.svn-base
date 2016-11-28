@@ -1,0 +1,156 @@
+<?php
+/*
+ * 报名
+ * */
+class EnrollAction extends Action {
+	
+	public function _initialize(){
+		B('AuthCheck');
+	}
+	public function index(){
+		$goodsM = new GoodsModel();
+		$matchs = $goodsM->getmatchsname();
+		foreach ($matchs as $k=>$v){
+			if($v['goodscls']){
+				$matchlist[$v['goodscls']] = $v['goodscls'];
+			}
+		}
+		$table_cfg	= array(
+				"tables"=>array(
+						
+						'mls_userorders' =>array(
+								"join" =>"uid",
+								"field"=>array(
+										'orderid'	=>array('ismain'=>true,'title'=>'报名订单号','isabm'=>false,'islist'=>true),
+ 										'paystats'	=>array('title'=>'订单状态','isabm'=>true,'islist'=>true,'type'=>'select','selectdata'=>array("1"=>"支付完成","5"=>"等待支付")),
+										'payorderid'	=>array('title'=>'支付订单号','isabm'=>true,'islist'=>true,'type'=>'text'),
+										'orderprice'	=>array('title'=>'价钱','islist'=>true,),
+										'platform'=>array('title'=>'平台','isabm'=>false,'islist'=>true,'type'=>'text'),
+										'zhushi'=>array('title'=>'注释','isabm'=>false,'islist'=>true,'type'=>'textarea'),
+										'utime'	=>array('title'=>'最后更改时间','isabm'=>true,'islist'=>true,'type'=>'time'),
+								)
+						),
+						'mls_baomingdan'=>array(
+								"join" =>"id",
+								"iszb" =>true,
+								"field"=>array(
+										'xingming'	=>array('title'=>'姓名','isabm'=>true,'islist'=>true,'type'=>'text'),
+										'match'	=>array('title'=>'赛事','isabm'=>true,'islist'=>true,'type'=>'select','selectdata'=>$matchlist),
+								)
+						),
+				),
+				's'		=>'SdkNumData',
+				'a'		=>'index',
+				'perpage'=>'30',
+				'designMode'=>'false',
+				'tpl'=>'common:sdkNumData',
+				// 				'submitBtns'=>array("发送push"=>"./?s=Push&a=Pushusers"),
+		);
+		$CommonAction	= new CommonV2Action();
+		$CommonAction->list_fb($table_cfg);
+	}
+	
+	public function index2(){
+		$m =  htmlspecialchars(addslashes(trim($_GET['match'])));
+		$goodsM = new GoodsModel();
+		$matchs = $goodsM->getmatchs();
+		if($matchs!==false){
+			$select = "";
+			foreach ($matchs as $k=>$v){
+				if($m ==$v['goodscls']){
+					$select.="<option value='{$v['goodscls']}' selected>{$v['goodscls']}</option>";
+				}else{
+					$select.="<option value='{$v['goodscls']}'>{$v['goodscls']}</option>";
+				}
+		
+			}
+		}
+		$enrollM = new UserOrdersModel();
+		$list = $enrollM->getorderlist($m);
+		$this->assign("select",$select);
+		$this->assign("list",$list);
+		$this->display('index');
+	}
+	
+	public function orderinfo(){
+		$orderid = htmlspecialchars(addslashes(trim($_GET['orderid'])));
+		$enrollM = new UserOrdersModel();
+		$info = $enrollM->getorderinfo($orderid);
+		$orderinfoM = new UserOrdersInfoModel;
+		$list = $orderinfoM->getorderinfo($orderid);
+// 		var_dump($list);
+ 		$this->assign("info",$info[0]);
+		$this->assign("list",$list);
+		$this->display();
+	}
+	
+	public function exportall(){
+		$where = "";
+		$ordersM = new UserOrdersModel();
+		$export_list = $ordersM->getexportlist($where);
+		EnrollAction::exportexcel($export_list,"",Date("Y-m-d h:i:s"));
+	}
+	
+	public function update_zhushi(){
+		$rs = array("error"=>65535,"msg"=>"注释修改失败！未知错误！");
+		$data['zhushi'] =  htmlspecialchars(addslashes(trim($_GET['zhushi'])));
+		$orderid =  htmlspecialchars(addslashes(trim($_GET['orderid'])));
+		if($orderid){
+			$ordersM = new UserOrdersModel();
+			$res = $ordersM->where("orderid = '".$orderid."'")->save($data);
+			if($res!==false){
+				$rs['error'] = 0 ;
+				$rs['msg'] = "注释修改成功！";
+			}else{
+				$rs['error'] = 1 ;
+				$rs['msg'] = "注释修改失败！系统错误";
+			}
+		}else{
+			$rs['msg'] = "注释修改失败！未找到订单号！";
+		}
+		
+		echo json_encode($rs);
+	}
+	
+	public function export($where){
+		$m =  htmlspecialchars(addslashes(trim($_GET['match'])));
+		$ordersM = new UserOrdersModel();
+		$export_list = $ordersM->getexportlist($where);
+		EnrollAction::exportexcel($export_list,"",Date("Y-m-d h:i:s"));
+	}
+	
+	
+	function exportexcel($data=array(),$title=array(),$filename='report'){
+		header("Content-type:application/octet-stream");
+		header("Accept-Ranges:bytes");
+		header("Content-type:application/vnd.ms-excel");
+		header("Content-Disposition:attachment;filename=".$filename.".xls");
+		header("Pragma: no-cache");
+		header("Expires: 0");
+		if(empty($title)){
+			$title = array("赛事","订单号","姓名","性别","手机","下单平台","订单状态","价格","支付订单号","支付信息","邮箱","姓名拼音-姓","姓名拼音-名","国籍","身份证号","护照号","护照签发日期","护照有效日期","生日","省","市","地区","地址","邮编","是否参加全马","最好成绩","最好成绩赛事","预期成绩","装备尺码","紧急联系人","与紧急联系人关系","紧急联系人邮箱","紧急联系人电话","创建时间","订单最后更新时间");
+		}
+		//导出xls 开始
+		if (!empty($title)){
+			foreach ($title as $k => $v) {
+				$title[$k]=iconv("UTF-8", "GB2312",$v);
+			}
+			$title= implode("\t", $title);
+			echo "$title\n";
+		}
+		if (!empty($data)){
+			foreach($data as $key=>$val){
+				foreach ($val as $ck => $cv) {
+					$data[$key][$ck]=iconv("UTF-8", "GB2312", $cv);
+					if(is_numeric($data[$key][$ck])){
+					$data[$key][$ck] = "`".$data[$key][$ck];
+					}
+				}
+				$data[$key]=implode(" \t", $data[$key]); 
+			}
+			echo "".implode("\n",$data);
+		}
+	 }
+
+
+}

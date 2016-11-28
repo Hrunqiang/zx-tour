@@ -1,0 +1,108 @@
+<{include file='Login/header.html'}>
+
+<div id="add_game">
+	<form action="./?s=IosGame&a=edit_game"  method="post">
+	<table border="0">
+		<tr>
+			<td align="right">游戏名称：</td>
+			<td align="left"><input type="text" class="text" name="title" id="title" value="<{$data.title}>">
+			<input type="hidden" name="game_id" value="<{$data.game_id}>"></td>
+		</tr>
+		<tr>
+			<td align="right">游戏URL：</td>
+			<td align="left"><input type="text" class="text" name="game_url" id="game_url" value="<{$data.game_url}>"></td>
+		</tr>
+		<tr>
+			<td align="right">图标URL：</td>
+			<td align="left"><input type="text" class="text" name="img_url" id="imgurl" value="<{$data.img_url}>"><input  type="button" value="浏览" upload="upload_imgurl" class="but"></td>
+		</tr>
+		<tr>
+			<td align="right">排序ID：</td>
+			<td align="left"><input type="text" class="text" name="orderid" id="orderid" value="<{$data.orderid}>"></td>
+		</tr>
+		<tr>
+			<td align="right">游戏简介：</td>
+			<td align="left"><textarea name="description" id="description" cols="33" rows="33" class="text" ><{$data.description}></textarea></td>
+		</tr>
+		<tr>
+			<td align="right">游戏标识：</td>
+			<td align="left">
+			<select name="sign" id="">
+			<{if $data.sign==0}>
+			<option value="0">普通</option>
+			<option value="1">最新</option>
+			<option value="2">精选</option>
+			<option value="3">屌丝男</option>
+			<option value="4">白富美</option>
+			<{else if $data.sign==1}>
+			<option value="1">最新</option>
+			<option value="0">普通</option>
+			<option value="2">精选</option>
+			<option value="3">屌丝男</option>
+			<option value="4">白富美</option>
+			<{else if $data.sign==2}>
+			<option value="2">精选</option>
+			<option value="1">最新</option>
+			<option value="0">普通</option>		
+			<option value="3">屌丝男</option>
+			<option value="4">白富美</option>	
+			<{else if $data.sign==3}>
+			<option value="3">屌丝男</option>
+			<option value="1">最新</option>
+			<option value="0">普通</option>
+			<option value="2">精选</option>	
+			<option value="4">白富美</option>
+			<{else if $data.sign==4}>
+			<option value="4">白富美</option>
+			<option value="1">最新</option>
+			<option value="0">普通</option>
+			<option value="2">精选</option>
+			<option value="3">屌丝男</option>
+			<{else}>
+			<option value="0">普通</option>
+			<option value="1">最新</option>
+			<option value="2">精选</option>
+			<option value="3">屌丝男</option>
+			<option value="4">白富美</option>
+			<{/if}>
+			</select>
+			</td>
+		</tr>
+		</table>
+		<input type="submit" class="but" id="sub" value="修改">
+		<input type="reset" class="but"  value="重置">
+	</form>
+</div>
+
+	<div class="error" id="error_info" style="display:none;"></div>
+	<{if $res.status==error}><div class="error">修改失败！<{$res.message}></div><{elseif $res.status==success}><div class="success"> 修改成功！</div><{/if}>
+<style>
+	#add_game{text-align: center;width: 100%; padding-top:20px;margin-bottom: 10px;font-size: 16px;color: #999999;}
+	#add_game table{margin:0 auto;}
+	.text,select{width: 300px;margin: 5px 0px;height: 30px;padding-left:5px; font-size: 16px;color: #999999;}
+	option{height: 30px;}
+	#description{min-width: 300px;min-height: 60px;max-width: 300px;}
+	.but{width: 100px;height: 30px;cursor: pointer;}
+	.error_input{border:1px solid red;}
+</style>
+
+<{include file='Login/footer.html'}>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#sub').click(function(){
+			key = Array("title","game_url","img_url");
+			for(i=0;i<key.length;i++){
+				if($("#"+key[i]).val()==""){
+					$("#"+key[i]).addClass("error_input");
+					$("#"+key[i]).attr("placeholder","请填写！")
+					return false;
+				};
+			}
+			
+		});
+		$(".text").focus(function(){
+			$(this).removeClass("error_input");
+		});
+	})
+
+</script>

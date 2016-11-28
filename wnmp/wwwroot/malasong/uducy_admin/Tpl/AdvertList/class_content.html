@@ -1,0 +1,443 @@
+<{include file='Login/header.html'}>
+<{if $ac=='add' || $ac=='edit'}>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <form action="?s=AndroidRecommend&a=content&ac=<{$ac}>" method='post'>
+                <input type="hidden" name="ctime" value="<{$now}>"/>
+                <input type="hidden" name="id" value="<{$id}>"/>
+                <div class="box-header">
+                    <h4>添加内容</h4>
+                </div>
+                <div class="box-content">
+                    <table class="table-font" style="width:680px;">
+                        <tr>
+                            <th class="w120">选择分类：</th>
+                            <td>
+                            <select name="cid" id="cid">
+				            <option value="0">-----选择分类-----</option>
+				            <{$select}>
+				         	</select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">app名称：</th>
+                            <td>
+	                            <input type="text" style="color:<{$data.color|escape:html}>" id="js_test_link"  name="app_name" class="textinput w270" value="<{$data.app_name|escape:html}>" />
+	                            <span id="js_link_color" style="margin-right:10px;"></span>
+                        		<input id="js_test_input" name="color" type="hidden" value="<{$data.color|escape:html}>" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">是否显示：</th>
+                            <td>
+                            <label for="inindex1">是</label>
+                            <input id="inindex1" type="radio" name="isdisplay" <{if $data.isdisplay==="1" || $data.isdisplay==''}>checked=""<{/if}> value="1" class="textinput w60">
+                            <label for="inindex2">否</label>
+                            <input id="inindex2" type="radio" name="isdisplay" <{if $data.isdisplay==="0"}>checked=""<{/if}> value="0" class="textinput w60">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">是否推荐：
+                            </th>
+                            <td>
+                            <label for="sign1">是</label>
+                            <input id="sign1" type="radio" name="sign" <{if $data.sign==="1" || $data.sign==''}>checked=""<{/if}> value="1" class="textinput w60">
+                            <label for="sign2">否</label>
+                            <input id="sign2" type="radio" name="sign" <{if $data.sign==="0"}>checked=""<{/if}> value="0" class="textinput w60">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">关键字：</th>
+                            <td><input type="text" name="app_key" class="textinput w270" value="<{$data.app_key|escape:html}>" /> <font color=red>*注:</font>(用户维护搜索)</td>
+                        </tr>
+                        <tr>
+                            <th class="w120">版本：</th>
+                            <td><input type="text" name="app_ver" class="textinput w270" value="<{$data.app_ver|escape:html}>" /></td>
+                        </tr>
+                        <tr>
+                            <th class="w120">大小：</th>
+                            <td><input type="text" name="app_size" class="textinput w270" value="<{$data.app_size|escape:html}>" /></td>
+                        </tr>
+                        <tr>
+                            <th class="w120">icon：</th>
+                            <td><input type="text" name="app_icon" id="imgicon" class="textinput w270 vpic" value="<{$data.app_icon|escape:html}>" />&nbsp;<input type="button" class="upload_imgicon" value="上传图片"></td>
+                        </tr>
+                        <tr>
+                            <th class="w120">app_pic_1：</th>
+                            <td><input type="text" name="app_pic_1" id="imgpic1" class="textinput w270 vpic" value="<{$data.app_pic_1|escape:html}>" />&nbsp;<input type="button" class="upload_imgpic1" value="上传图片"></td>
+                        </tr>
+                        <tr>
+                            <th class="w120">app_pic_2：</th>
+                            <td><input type="text" name="app_pic_2" id="imgpic2" class="textinput w270 vpic" value="<{$data.app_pic_2|escape:html}>" />&nbsp;<input type="button" class="upload_imgpic2" value="上传图片"></td>
+                        </tr>
+                        <tr>
+                            <th class="w120">app_pic_3：</th>
+                            <td><input type="text" name="app_pic_3" id="imgpic3" class="textinput w270 vpic" value="<{$data.app_pic_3|escape:html}>" />&nbsp;<input type="button" class="upload_imgpic3" value="上传图片"></td>
+                        </tr>
+                        <tr>
+                            <th class="w120">app_pic_4：</th>
+                            <td><input type="text" name="app_pic_4" id="imgpic4" class="textinput w270 vpic" value="<{$data.app_pic_4|escape:html}>" />&nbsp;<input type="button" class="upload_imgpic4" value="上传图片"></td>
+                        </tr>
+                        <tr>
+                            <th class="w120">app_pic_5：</th>
+                            <td><input type="text" name="app_pic_5" id="imgpic5" class="textinput w270 vpic" value="<{$data.app_pic_5|escape:html}>" />&nbsp;<input type="button" class="upload_imgpic5" value="上传图片"></td>
+                        </tr>
+                        <tr>
+                            <th class="w120">other_pic：</th>
+                            <td><input type="text" name="other_pic" id="otherpic" class="textinput w270 vpic" value="<{$data.other_pic|escape:html}>" />&nbsp;<input type="button" class="upload_otherpic" value="上传图片"></td>
+                        </tr>
+                        <tr>
+                            <th class="w120">下载地址：</th>
+                            <td><input type="text" name="app_url" class="textinput w270" value="<{$data.app_url|escape:html}>" /></td>
+                        </tr>
+                        <tr>
+                            <th class="w120">模拟下载数据：</th>
+                            <td><input type="text" name="app_dcount" class="textinput w270" value="<{$data.app_dcount|escape:html}>" /></td>
+                        </tr>
+                        <tr>
+                            <th>排序：</th>
+                            <td><input name="orderid" type="text" id="orderid" class="textinput" value="<{$data.orderid|escape:html}>"  onkeyup="value=value.replace(/[^\d]/g,'') "/></td>
+                        </tr>
+                        <tr>
+                        	<th>描述</th>
+                        	<td><textarea name="app_intro" style="width:370px; height:200px;"><{$data.app_intro|escape:html}></textarea></td>
+                        </tr>
+                        <tr>
+                        	<th>分类属性</th>
+                        	<td><textarea name="attr" style="width:370px; height:200px;float:left;"><{$data.attr|escape:html}></textarea>
+                        	<div style="float:right;overflow:hidden;">
+                        	
+                        	<br><font color=red>*注意</font>:<br/>请不要使用英文半角引号(双/单)
+                        	</div>
+                        	</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                
+                <div class="box-footer">
+                    <div class="box-footer-inner">
+                    	<input type="submit" value="确定提交" /> 或 <a href="/?s=AndroidRecommend&a=content&ac=list">取消</a>
+                    </div>
+                </div>
+                </form>
+            </div><!--/ con-->
+            
+        </div>    
+    </div><!--/ container-->
+
+</div>
+<script>
+var view_box=null;
+var view_sign=0;
+$(function(){
+	
+	$('.vpic').mouseover(function(e){
+		e.stopPropagation();
+		var x,y;
+		var values	= $(this).val();
+		if(view_box === null){
+			view_box = $('<div><div style="right:0px;top:0px;color:red;position:absolute;cursor:pointer;background-color:#cccccc;width:100%;height:15px;line-height:10px;text-align:right;font-size:16px;" onclick="$(view_box).hide(\'slow\');">x</div><div class="img" style="padding-top:15px;"></div></div>');
+			
+			view_box.css({"position":"absolute","border":"1px solid #999999"});
+			$('.wrap').prepend(view_box);
+		}
+		view_box.show('slow');
+		var reg	= /^\/st\/public\//i;
+		if(reg.test(values)){
+			values	= "http://www.uducy.com"+values;
+		}
+		view_box.find(".img").html("<img src='"+values+"' />");
+		var e = e||window.event;
+		//x=e.clientX+document.body.scrollLeft+document.documentElement.scrollLeft+10;
+		x=450;
+		y=e.clientY+document.body.scrollTop+document.documentElement.scrollTop;
+		if(view_sign==0){
+			view_sign=1;
+			view_box.animate({"left":x+"px","top":y+"px"},'normal','swing',function(){view_sign=0;});
+		}else{
+			return false;
+		}
+		
+		//view_box.css({"left":x+"px","top":y+"px"});
+		//alert($(this).val());
+	});
+	//$('#picout').mouseout(function(e){e.stopPropagation();view_box.hide("slow");});
+})
+function fillcontent(str,name){
+	$('input[name=infoId]').val(str);
+	$('input[name=name]').val(name);
+	childWindow.close();
+}
+$('#s_infoid').click(function(){
+	var infoid	= $(this).prev('input[name=infoId]').val();
+	var iHeight = 220;
+	var iWidth = 450;
+	 //获得窗口的垂直位置
+    var iTop = (window.screen.availHeight-30-iHeight)/2;        
+    //获得窗口的水平位置
+    var iLeft = (window.screen.availWidth-10-iWidth)/2;   
+	childWindow = window.open("./?s=class&a=content&ac=s_infoid&infoId="+infoid,"Plug_upload","top="+iTop+",left="+iLeft+",width="+iWidth+",height="+iHeight+",menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+	return false;
+});
+</script>
+<{elseif $ac =='list'}>
+<link href="/static/datapicker/css/ui.all.css" rel="stylesheet" type="text/css" />
+<script src="/static/datapicker/jquery-ui-1.7.1.custom.min.js"></script>
+<script src="/static/datapicker/ui.datepicker.js"></script>
+<script>
+$(function(){
+	$('.datepicker').datepicker();
+	$('#export').click(function(){
+		var start	= $(this).prevAll('#start_data').val();
+		var end		= $(this).prevAll('#end_data').val();
+		var type	= $(this).prevAll('#type').val();
+		var cid	= $('#s_cid').val();
+		if(start=='' || end==''){
+			alert('请选择导出日期');
+			return false;
+		}
+		if(type==""){
+			alert('请选择导出内容');
+			return false;
+		}
+		if(start>end){
+			alert("起始时间不能大于结束时间!");
+			return false;
+		}
+		window.open("/?s=AndroidRecommend&a=export&start="+start+"&end="+end+"&type="+type+"&cid="+cid);
+	});
+});
+$(function(){
+	$('#isdis').change(function(){
+		var val	= $(this).val();
+		var url	= window.location.href;
+		url	= url.replace(/&?isdisplay=[\d]?/g,"");
+		if(val!=""){
+			url	= url+"&isdisplay="+val;
+		}
+		window.location.href=url;
+	});
+	$('#issign').change(function(){
+		var val	= $(this).val();
+		var url	= window.location.href;
+		url	= url.replace(/&?sign=[\d]?/g,"");
+		if(val!=""){
+			url	= url+"&sign="+val;
+		}
+		window.location.href=url;
+	});
+	$('.sign').click(function(){
+		var aid	= $(this).attr('aid');
+		var txt	= $(this).val();
+		var that	= this;
+		$.ajax({
+			cache: false,
+			url:'/?s=AndroidRecommend&a=changeSign',
+			type: "POST",
+//			dataType: "json",
+			dataType: "text",
+			timeout:'30000',
+//			async: false,
+			data: {
+				id:aid
+			},
+			success: function(result){
+				if(result=='1'){
+					if($.trim(txt)=="是"){
+						$(that).val('否');
+					}else{
+						$(that).val('是');
+					}
+					
+				}else{
+					alert('修改失败,请重试。');
+				}
+			}
+		});
+	});
+	$('.display').click(function(){
+		var aid	= $(this).attr('aid');
+		var txt	= $(this).val();
+		var that	= this;
+		$.ajax({
+			cache: false,
+			url:'/?s=AndroidRecommend&a=changeDisplay',
+			type: "POST",
+//			dataType: "json",
+			dataType: "text",
+			timeout:'30000',
+//			async: false,
+			data: {
+				id:aid
+			},
+			success: function(result){
+				if(result=='1'){
+					if($.trim(txt)=="隐藏"){
+						$(that).val('显示');
+					}else{
+						$(that).val('隐藏');
+					}
+					
+				}else{
+					alert('修改失败,请重试。');
+				}
+			}
+		});
+	});
+});
+</script>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">
+            	
+                  <div class="table">
+                  	<div class="th">
+                    	<div class="form">
+                        <div class="fl">
+                        	<select name="cid" id="s_cid" onchange="var v=this.value;window.location.href='/?s=AndroidRecommend&a=content&ac=list&cid='+v">
+                        	<option value=0>全部分类</option>
+                        	<{$select}>
+                        	</select>&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="window.location.href='/?s=AndroidRecommend&a=content&ac=add&cid='+document.getElementById('s_cid').value" value="添加内容"/>
+                        	&nbsp;&nbsp;&nbsp;&nbsp;
+                        	<input type="text" class="datepicker" id="start_data"/> 
+                        	至 
+                        	<input type="text" class="datepicker" id="end_data"/>
+                        	&nbsp;
+                        	<select id="type">
+                        		<option value="">导出选择</option>
+                        		<option value="tjcount">下载量</option>
+                        		<option value="comcount">下载完成量</option>
+                        		<option value="all">下载量+下载完成量</option>
+                        	</select>
+                        	&nbsp;
+                        	<input type="button" id="export" value=" 导 出 "/>
+                        </div>
+                       
+                        </div>
+                    </div>
+                    <form action='/?s=AndroidRecommend&a=content' method='post'>
+                    <table class="admin-tb" id="datatable">
+                    <thead>
+                        <tr>
+                        	<th><input type="checkbox" id="sall"><label for="sall">全选</label></th>
+                            <th style="text-align:center;">应用名称</th>
+                            <th style="text-align:center;">版本</th>
+                            <th style="text-align:center;">icon</th>
+                            <th style="text-align:center;">key <input type="text" name="kwd" value="<{$get['kwd']}>" title="搜索不分类" /><input type="button" id="searchBtn" value=" 搜索 "></th>
+                            <th style="text-align:center;">分类名</th>
+                            <th style="text-align:center;">排序</th>
+                            <th style="text-align:center;">推荐
+                            <select id="issign" name="issign">
+                           	 	<option value="">全</option>
+                           	 	<option value="0" <{if $get.sign==0 && $get.sign!=''}>selected<{/if}>>否</option>
+                           	 	<option value="1" <{if $get.sign==1}>selected<{/if}>>是</option>
+                           	 </select>
+                            </th>
+                            <th style="text-align:center;">显示
+                            <select id="isdis" name="isdis">
+                           	 	<option value="">全</option>
+                           	 	<option value="0" <{if $get.isdisplay==0 && $get.isdisplay!=''}>selected<{/if}>>否</option>
+                           	 	<option value="1" <{if $get.isdisplay==1}>selected<{/if}>>是</option>
+                           	 </select></th>
+                            <th style="text-align:center;">统计</th>
+                            <th style="text-align:center;">操作</th>
+                        </tr>
+					</thead>
+					<tbody id="class_item">
+					<{if $list}>
+					<{foreach from=$list name=n item=i}>
+					<tr  childindex="1">
+						<td><input type="checkbox" name="id[]" value="<{$i.aid}>" title="<{$i.aid}>"></td>
+	                    <td style="text-align:center;"><a href="/?s=AndroidRecommend&a=content&ac=edit&id=<{$i.aid}>" ><{$i.app_name}></a></td>   
+	                    <td style="text-align:center;"><{$i.app_ver}></td>   
+	                    <td style="text-align:center;"><a href="/?s=AndroidRecommend&a=content&ac=edit&id=<{$i.aid}>" ><img src="http://www.uducy.com<{$i.app_icon}>" width=50/></a></td>   
+	                    <td style="text-align:center;"><{$i.app_key}></td>   
+	                    <td style="text-align:center;"><a href="/?s=AndroidRecommend&a=content&ac=list&cid=<{$i.cid}>"><{$i.classname}></a></td>
+	                    <td style="text-align:center;" rel="classname" class="update_order" info="<{$i.aid}>|tbl_app_android_class_info|orderid|id"><{$i.orderid}></td>
+	                    <td style="text-align:center;" ><input type="button" aid="<{$i.aid}>" class="sign" value="<{if $i.sign==1}>是<{else}>否<{/if}>"/></td>
+	                    <td style="text-align:center;" ><input type="button" aid="<{$i.aid}>" class="display" value="<{if $i.isdisplay==1}>显示<{else}>隐藏<{/if}>"/></td>
+	                    <td style="text-align:left;" >
+	                    <{foreach from=$tj[$i.aid] item=ii}>
+	                    	<{if $ii}>
+	                    		<{$ii.tjdate}>[<{if $ii.cls_id==1}>管家<{elseif $ii.cls_id==2}>加速器<{elseif $ii.cls_id==3}>吹吹<{/if}>]:【 下载:<font class="downd"><{$ii.tjcount|default:0}></font> 完成:<font class="downc"><{$ii.comcount|default:0}></font>】<br/>
+	                    	<{/if}>
+	                    <{/foreach}>
+	                    
+						</td>
+	                    <td style="text-align:center;">
+	                        [<a href="/?s=AndroidRecommend&a=content&ac=edit&id=<{$i.aid}>&sname=<{$sname}>">修改</a>] &nbsp; [<a href="/?s=AndroidRecommend&a=content&ac=del&id=<{$i.aid}>&sname=<{$sname}>" onclick="return confirm('删除后不能恢复,确定删除?');">删除</a>]
+	                    </td>
+	                    </tr>
+					<{/foreach}>
+					<{/if}>
+					</tbody>
+                    
+                    
+                    </table>
+                    <div class="th">
+                    	<div class="form">
+                        <input type='hidden' name='commit' value='1' />
+                        <input type='radio' name='ac' value='del' checked />删除
+                        <input type="button" value="  确  定  " onclick="if(confirm('请注意删除操作不能恢复,确定操作?')){$(this).parents('form').submit();};" />&nbsp;&nbsp; 
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script>
+$('#searchBtn').click(function(){
+	var kwd	= $(this).prev('input').val();
+	var url	= window.location.href;
+	url	= url.replace(/(&|\?)?kwd=[^&]*/g,'');
+	url	+="&kwd="+kwd;
+	window.location.href=url;
+});
+$('#sall').click(function(){
+	var state	= $(this).attr('checked');
+	var form	= $(this).parents('form');
+	if(state){
+		form.find('input[type=checkbox][name^=id]').attr('checked',true);
+	}else{
+		form.find('input[type=checkbox][name^=id]').attr('checked',false);
+	}
+});
+</script>
+<{/if}>
+<style type="text/css">
+	.js_search_msg{ position:absolute; background:#fff; border:1px solid #CEDEAE;}
+	.js_search_msg li{ padding:3px 5px; cursor:pointer;}
+	.js_search_msg li.active{ background:#EBF4D8}
+</style>
+<link href="static/datapicker/css/jquery-ui-1.7.1.custom.css" rel="stylesheet" type="text/css"  />
+<script type="text/javascript" src="static/qrx/qrxpcom.js"></script>
+<script type="text/javascript" src="static/qrx/qrcpicker.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	try{
+		var colorstr = "";
+		colorstr = document.getElementById("js_test_input").value;
+
+		var cp = new QrColorPicker(colorstr);
+		cp.onChange = function(color){
+			document.getElementById("js_test_link").style.color = color;
+			document.getElementById("js_test_input").value = color;
+		}
+		cp.onSelect = function(color){
+			document.getElementById("js_test_link").style.color = color;
+			document.getElementById("js_test_input").value = color;
+		}
+		document.getElementById("js_link_color").innerHTML = cp.getHTML();
+	}catch(e){}
+	
+});
+</script>
+<{include file='Login/footer.html'}>

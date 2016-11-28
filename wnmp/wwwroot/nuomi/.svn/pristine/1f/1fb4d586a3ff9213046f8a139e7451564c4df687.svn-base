@@ -1,0 +1,460 @@
+<{include file='Comon/header.html'}>
+<title>知行合逸</title>
+<style>
+.wrap{background:#F3F6F5;}
+.search_section{display: none;}
+.index_section{background: #F3F6F5;}
+.banner{background: #FFF;}
+.banner_links ul {display: flex;display: -webkit-flex;padding: 1rem 0;position: relative;display: -moz-box;display: -ms-flexbox;display: -webkit-box;}
+/*.banner_links ul:before{content: "";width: 100%;height: 1px;position: absolute;background: #D9D9D9;left: 0;top: 0;}*/
+/*.banner_links ul:after{content: "";width: 100%;height: 1px;position: absolute;background: #D9D9D9;left: 0;bottom: 0;}*/
+.banner_links ul a{flex: 1;-webkit-flex: 1;text-align: center;-webkit-box-flex: 1;-moz-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;display:block;}
+.color-b{color: #666666!important;padding-top: 0.3571428571428571rem;font-weight: normal;font-size: 0.9285714285714286rem;}
+.banner_link_img{background: url(/static/images/header_enter.png) no-repeat;background-size: 22.57142857142857rem auto;height: 3rem;width: 3rem;margin: 0 auto;}
+.img_abroad{background-position: -0.9285714285714286rem -0.3571428571428571rem;}
+.img_china{background-position: -4.428571428571429rem -0.3571428571428571rem;}
+.img_enrolling{background-position: -15rem -0.3571428571428571rem;}
+.img_rare{background-position:  -18.57142857142857rem -0.3571428571428571rem;}
+.footer{font-size: 0.857142rem!important;}
+.weui_msg{padding:0.7142857rem 0;}
+.weui_text_area{margin-bottom:0!important;}
+
+.search_section{background: #FFF;}
+ .search_default_title_bar{border-bottom: 1px solid #efeef3;line-height: 2.5rem;font-size: 0.8571428571428571rem;color: #888888;}
+.search_default .search_default_title_bar .title{color: #888888;font-size: 1rem;height: 2.5rem;}
+.search_default .search_default_title_bar .title .icon{width: 10px;height: 14px;background-image: url(/static/images/icons.png);background-size:173.5px 202px;display: inline-block;background-position:-69px -4px;margin: 0 0.571428rem 0 0px;}
+.search_default .search_default_title_bar .title p{height: 1rem;line-height: 1rem;font-size: 0.7857142857142857rem;padding-left: 0.9285714285714286rem;}
+ .search_default_title_bar .title .title_word{flex:1;-webkit-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;}
+ /*.search_default_title_bar .title .change_hot{margin-right: 1.07142rem;color: #556F94;}*/
+.search_default .search_default_hot{font-size: 1rem;overflow: hidden;padding: 0 0.7142857142857143rem;border-top: 1px solid #d9d9d9;border-bottom: 1px solid #d9d9d9;}
+.search_default .search_default_hot p{float: left;border:1px solid #efeef3;padding:0 0.7142857rem;margin:0 1.07142rem 1.42857rem 0;border-radius: 12px;height: 1.71428rem;line-height: 1.71428rem;color: #555555;}
+               /*///////////////////////////////////////////////添加样式///////////////////////////////////*/
+.search_default_hot .search_default_hot_p_color p{color: #04BE02;}
+.weui_media_appmsg{padding: 0.8571428571428571rem;}
+.weui_media_box.weui_media_appmsg .weui_media_hd{margin-right: 1.14285rem;}
+/*.weui_msg .weui_msg_desc a{color: #556F94;padding: 0 0.285rem;}*/
+.weui_msg_desc a:first-child{padding: 0 0.2857rem;}
+.weui_msg_desc a:last-child{padding: 0 0.3357rem;}
+.weui_msg .weui_msg_desc{font-size: 0.85714rem;}
+#search_text .weui_icon_search{margin-right: 4px;}
+#search_text span{display: inline-block;}
+.weui_msg_desc p{font-size: 0.857rem;}
+.weui_msg_desc a{padding: 0 0.2857rem;}
+#j_z_f{display: inline-block;height: 0.68rem;width: 1px;background: rgba(166,166,166,0.5);position: absolute;top: 23.5%;}
+.loading .jz{line-height: 3.928571428571429rem;font-size: 1rem;padding-left: 2.642857142857143rem;}
+.weui_loading_leaf:before{height: 0.1485714285714286rem;width: 0.4385714285714286rem;}
+.weui_loading_leaf_0:before{-webkit-transform: rotate(0deg) translate(0.28rem, 0px);transform: rotate(0deg) translate(0.28rem, 0px);}
+.weui_loading_leaf_1:before{-webkit-transform: rotate(40deg) translate(0.28rem, 0px);transform: rotate(40deg) translate(0.28rem, 0px);}
+.weui_loading_leaf_2:before{-webkit-transform: rotate(80deg) translate(0.28rem, 0px);transform: rotate(80deg) translate(0.28rem, 0px);}
+.weui_loading_leaf_3:before{-webkit-transform: rotate(120deg) translate(0.28rem, 0px);transform: rotate(120deg) translate(0.28rem, 0px);}
+.weui_loading_leaf_4:before{-webkit-transform: rotate(160deg) translate(0.28rem, 0px);transform: rotate(160deg) translate(0.28rem, 0px);}
+.weui_loading_leaf_5:before{-webkit-transform: rotate(200deg) translate(0.28rem, 0px);transform: rotate(200deg) translate(0.28rem, 0px);}
+.weui_loading_leaf_6:before{-webkit-transform: rotate(240deg) translate(0.28rem, 0px);transform: rotate(240deg) translate(0.28rem, 0px);}
+.weui_loading_leaf_7:before{-webkit-transform: rotate(280deg) translate(0.28rem, 0px);transform: rotate(280deg) translate(0.28rem, 0px);}
+.weui_loading_leaf_8:before{-webkit-transform: rotate(320deg) translate(0.28rem, 0px);transform: rotate(320deg) translate(0.28rem, 0px);}
+.weui_search_cancel{margin-left: 0px;padding-left: 10px;}
+/*.weui_msg{padding-bottom: 1.285rem;}*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.weui_search_text{border-radius: 2.857142857142857rem;}
+.weui_search_bar{background: #FFFFFF;}
+.weui_search_outer{background: none;}
+.weui_search_outer:after{border-radius: 2.857142857142857rem;border: 1px solid #cacaca;}
+#search_cancel{color: #04BE02;font-size: 1.142857142857143rem;line-height: 2rem;}
+.hot_tj{border-top: 1px solid #d9d9d9;line-height: 2.785714285714286rem;}
+.hot_tj a{display: inline-block;width: 8.142857142857143rem;text-align: center;border-left: 1px dashed #d9d9d9;line-height: 1.428571428571429rem;}
+.hot_tj a:nth-child(1){border: none;}
+#hotword_view div:nth-child(1){border-top: none;}
+.hot_tj .hot_color{color: #04BE02;}
+.hot_color .hot_color_1{position: relative;}
+.hot_color .hot_color_1 span{height: 0.5714285714285714rem;width: 0.5714285714285714rem;background: #04BE02;border-radius: 5px; position: absolute;right: -0.5714285714285714rem;top: -0.1428571428571429rem;}
+.hot_seach{background: #efeef4;line-height: 2.5rem;border-top: 1px solid #D9D9D9;}
+/*/////////////////////////////////////////////搜索框//////////////////////////////////////////*/
+.weui_search_bar{padding: 0.4285714285714286rem 0 0.4285714285714286rem 0.9285714285714286rem;}
+.weui_search_inner .weui_search_input{height: 2rem;font-size: 1rem;padding: 0;}
+.weui_search_text{line-height: 1.928571428571429rem;}
+.weui_search_inner .weui_icon_search{left: 0.7142857142857143rem;top: 0.2857142857142857rem;line-height: 0.0714285714285714rem;}
+.weui_icon_search:before{font-size: 1rem;line-height: 1.5rem;}
+.weui_search_inner .weui_search_input::-webkit-input-placeholder{font-size: 1rem;}
+.weui_search_text span{font-size: 1rem;}
+.weui_search_bar:after{display: none;}
+.weui_search_inner{padding-left: 2.142857142857143rem;padding-right: 2.142857142857143rem;}
+.back_top{position: fixed;bottom: 5rem;right: 1.21428rem;width: 3rem;height: 3rem;background: url(/static/images/back_top.png) no-repeat;background-size: 100% 100%;display: none;z-index: 10000;}
+.search_goback{width: 0.8571428571428571rem;height: 0.8571428571428571rem; margin: auto; background: url(/static/images/close_singel.jpg) no-repeat;background-size:100%;position: absolute;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);}
+#search_goback{display: none;width: 1.571428571428571rem;position: relative;}
+/*///////////////////////////////////////////////////////////////*/
+.box{width: 13.21428571428571rem;overflow: hidden;background: #FFFFFF;}
+.box_header{position: relative;}
+.box_header div:nth-child(1){position: absolute;left: 0;top: 0;font-size: 0.9285714285714286rem;background: #ffd800;padding: 1px 8px;color: #000000;}
+.box_img{width: 185px;height: 103px;overflow: hidden;}
+.box_img img{width: 100%;float: left;}
+.box_content{box-sizing: border-box;padding: 0 8px;}
+.box_content h2{font-size: 1.071428571428571rem;padding: 0.3571428571428571rem 0px 0 0;color: #000000;}
+.box_content p{text-overflow: ellipsis;white-space: nowrap;overflow: hidden;font-size: 0.8571428571428571rem;}
+.box_info{overflow: hidden;padding-bottom: 0.5714285714285714rem;line-height: 1.214285714285714rem;padding-top: 6px;}
+.box_info_time{overflow: hidden;float: left;margin-top: 0.0714285714285714rem;}
+.box_info_time span:nth-child(1){float: left;margin-top: 0.1428571428571429rem;margin-right: 0.5rem;width: 1.285714285714286rem;height: 0.9285714285714286rem; background: url(/static/images/index_gametime_icon.png) no-repeat;background-size: 100%;}
+.box_info_time span:nth-child(2){float: left;font-size: 0.8571428571428571rem;}
+.box_info_price{float: right;color: #ff7400;font-size: 0.8571428571428571rem;}
+.box_special{width: 26.78571428571429rem;background: #FFFFFF;box-shadow: 0px 2px 8px rgba(120,120,120,0.1);}
+.box_header_special{width: 100%;position: relative;height: 10.71428571428571rem;overflow: hidden;}
+.box_header_special div:nth-child(1){position: absolute;left: 0;top: -1px;font-size: 0.9285714285714286rem;background: #ffd800;padding: 0.0714285714285714rem 0.5714285714285714rem;color: #000000;z-index: 1000;}
+.box_img_special{width: 100%;height: 100%; overflow: hidden;position: absolute;left: 0;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);-moz-transform: translateY(-50%);transform: translateY(-50%);z-index: 100;}
+.box_img_special img{float: left;width: 100%;}
+.game_box>a{margin-top: 1rem;}
+.index_commend{overflow: hidden;margin: 0.9285714285714286rem auto -0.7857142857142857rem;position: absolute;left: 50%;-webkit-transform: translateX(-50%);transform: translateX(-50%);-ms-transform: translateX(-50%);-moz-transform: translateX(-50%);}
+.index_commend span:nth-child(1){float: left;width: 1.285714285714286rem;height: 1.142857142857143rem;margin-top: 0.4285714285714286rem; background: url(/static/images/index_recommend.png) no-repeat;background-size: 100%;margin-right:0.2857142857142857rem;}
+.index_commend span:nth-child(2){float: left;font-size: 1.214285714285714rem;}
+</style>
+<div class="wrap" >
+	<div style="overflow: hidden; display: flex;display: -webkit-flex;display: -ms-flexbox;display: -moz-box;display: -webkit-box;background: #FFFFFF;">
+		<div class="weui_search_bar" id="search_bar" style="flex: 1;-webkit-flex: 1;-moz-box-flex: 1;-ms-flex: 1;-webkit-box-flex: 1;">
+	    	<div id="search_goback" style=""><div class="search_goback" style=""></div></div>
+	        <form class="weui_search_outer">
+	            <div class="weui_search_inner">
+	                <i class="weui_icon_search"></i>
+	                <input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required="">
+	                <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+	            </div>
+	            <label for="search_input" class="weui_search_text" id="search_text">
+	                <i class="weui_icon_search"></i>
+	                <span>搜索全球跑步赛事</span>
+	            </label>
+	        </form>
+	        <a href="javascript:" class="weui_search_cancel" id="search_cancel">搜索</a>
+	    </div>
+	    <a href="/User" style="padding: 0 12px;background: #FFFFFF;">
+	    	<i style="width: 16px;height: 16.5px;display: inline-block;background: url(/static/images/new_index_2.png) no-repeat;background-size: 100%;margin-top: 10px;"></i>
+	    </a>
+	</div>
+   
+    <div class="index_section" id="index_page">
+        <div class="banner">
+            <{include file='Comon/banner.html'}>
+            <div class="banner_links">
+                <ul>
+                    <a href="/Run?p_type=2" class="color-g">
+                        <li class="link">
+                        	<div class="banner_link_img img_abroad"></div> 
+                            <h5 class="color-b">国际赛事</h5>   
+                        </li>
+                    </a>
+                    <a href="/Run" class="color-g">
+                        <li class="link">
+                        	<div id="bgsize" class="banner_link_img img_china"></div>
+                            <h5 class="color-b">国内赛事</h5>
+                        </li>
+                    </a>
+                    <a href="/Run?p_type=3" class="color-g">
+                        <li class="link">
+                        	<div id="bgsize" class="banner_link_img img_enrolling"></div>
+                            <h5 class="color-b">正在报名</h5>
+                        </li>
+                    </a>
+                     <a href="/Run?p_type=4" class="color-g">
+                        <li class="link">
+                        	<div id="bgsize" class="banner_link_img img_rare"></div>
+                            <h5 class="color-b">稀缺名额</h5>
+                        </li>
+                    </a>
+                    <!--<a href="/User" class="color-g">
+                        <li class="link">
+                            <h5 class="color-b">我的赛事</h5>
+                            <p class="color-g9">完善个人资料</p>
+                            <{if $sexy==2}>
+                            女
+                            <div class="banner_link_img img_mine1"></div>
+                            <{else}>
+                            男
+                            <div class="banner_link_img img_mine"></div>
+                            <{/if}>
+                        </li>
+                    </a>-->
+                </ul>
+            </div>
+        </div>
+        <div style="position: relative;height: 2.785714285714286rem;">
+        	<div class="index_commend">
+	        	<span></span>
+	        	<span>推荐赛事</span>
+        	</div>
+        </div>
+        
+		 <!--<{include file='Comon/hotList.html' type='vertical'}>-->
+		 	<!--////////////////赛事列表//////////////////-->
+		 	<div class="game_box" style="overflow: hidden;"></div>
+			<!--<div class="box_special">
+				<div class="box_header_special">
+					<div>浦东</div>
+					<div class="box_img_special"><img src="http://download.zx-tour.com/public/image/20160706/20160706142758_69097.jpg"/></div>
+				</div>
+				<div class="box_content">
+					<h2>上海浦东女子半程马拉松可能折行,可能</h2>
+					<div class="box_info">
+						<div class="box_info_time">
+							<span></span>
+							<span>2013.12.03</span>
+						</div>
+						<div class="box_info_price"><span>￥</span><span style="font-size: 17px;">399</span><span>起/人</span></div>
+					</div>
+				</div>
+			</div>-->
+		 	
+		 	
+		 	<a href="/Matchinfo?m_id=<{$i.id}>&platform=zx-tour"></a>
+        <div class="footer  weui_msg">
+            <div class="weui_text_area">
+                <p class="weui_msg_desc"><a href="tel:4000-842-195">服务资询</a><span id="j_z_f"></span><a href="/user/feedback">意见反馈</a></p>
+                <p class="weui_msg_desc">本服务由知行合逸提供</p>
+            </div>
+        </div>
+   </div>
+    <div class="search_section" id="search_page">
+        <div class="search_default">
+        	<div class="search_default_title_bar">
+                <div class="title flexBox hot_seach"><p class="title_word">热门搜索推荐</p></div>
+            </div>
+            <div class="search_default_hot" id="hotword">
+            	<div id="hotword_view" style="overflow: hidden;">
+	                <{if count($hotwords)>=1}>
+	                	<div class="hot_tj">
+		                <{foreach from=$hotwords item=i key=key}>
+		                	<{if $key%3==0 && $key!=0 }>
+		                		</div>
+		                		<div class="hot_tj">
+		                	<{/if}>
+				                <{if $i.sign==1}>
+				                <a class="hot_color" href="/Search?ws=<{$i.n_title}>&type=1"><span class="hot_color_1"><{$i.n_title}><span></span></span></a>
+				                <{else}>
+	                 			<a href="/Search?ws=<{$i.n_title}>&type=1"><{$i.n_title}></a>
+				                <{/if}>
+		                <{/foreach}>
+		                </div>
+                 	<{/if}>
+                 		
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="back_top" onclick="goTop(0.2,16);return false;"></div>
+<script src="/static/js/zepto.js"></script>
+<script src="/static/weui/js/weui_2.js"></script>
+<script type="text/javascript">
+weui.search_bar.init();
+$(".banner_pic").silder();
+$(window).resize(function(){
+    // windW = $(".wrap").width();
+    // $(".banner").silder();
+});
+// $(".change_hot").tap(function(){
+//     alert('e');
+//     return false;
+// });
+///////////////////////////热词切换//////////////////
+$(document).ready(function(){
+	$('#search_input').focus(function () {
+		var Scro=$('.search_default').height();
+		var Scro_top=$('#hotword_view').height();
+		var num=0;
+		$('.change_hot').click(function  () {
+			var hot=document.getElementById('hotword');
+			num++;
+			if(Scro*num>Scro_top){
+				num=0;
+			}
+			hot.scrollTop=Scro*num;
+		})
+	})	
+})
+var now = "<{$now}>";
+	$(document).ready(function  () {
+		weui.Loading.show();
+		$.ajax({
+				type:"get",
+				url:"/ajax/hotlistv2",
+				async:true,
+				dataType:"json",
+				success:function(obj){
+					weui.Loading.hide()
+					if(obj.error==0){
+						var Obj=obj.data;
+						console.log(Obj);
+						for (var i=0;i<Obj.length;i++) {
+							var M_types =  Obj[i].m_Mtypes.replace(/\|/g, "<span></span>");
+							var m_Gametime = Obj[i].m_GameTime.substring(0,10).replace(/\-/g,".");
+							console.log(m_Gametime);
+							var tag = '';
+							///////////////////未到报名时间////////////////////////////////////
+		                	var infolist =  Obj[i]['info'];
+							var mealHTML = sourceHTML = "";
+						if(Obj[i].m_ptype=='海外'){
+							console.log(Obj);
+							for(var m_i=0,len=infolist.length;m_i<len;m_i++){
+								if(infolist[m_i].g_currprice>=1){
+									infolist[m_i]['g_currprice']=Math.round(infolist[m_i]['g_currprice']);
+								}
+
+									if(sourceHTML=="" && infolist[m_i]['g_type']==1 && parseInt(infolist[m_i]['g_currprice'])!=0){
+//										sourceHTML='</div></div><div class="box_list"><div class="box_price"><span>￥</span><span style="font-size: 1.142857142857143rem;">'+infolist[m_i]['g_currprice']+'</span><span>起/人</span></div><div class="box_attend_num"><span>已报</span><span style="font-size: 0.9285714285714286rem;float:right;">'+stock+'</span></div></div></div></div></a>';
+										sourceHTML='<div class="box_info_price"><span>￥</span><span style="font-size: 1.071428571428571rem;font-weight:bold;">'+infolist[m_i]['g_currprice']+'</span><span>起/人</span></div></div></div></div></a>';
+									}
+		
+									if(mealHTML=="" && infolist[m_i]['g_type']==2 && infolist[m_i]['g_name']!="赛事单独报名"){
+										mealHTML = '<div class="box_info_price"><span>￥</span><span style="font-size: 1.071428571428571rem;font-weight:bold;">'+infolist[m_i]['g_currprice']+'</span><span>起/人</span></div></div></div></div></a>';
+									}
+									if(mealHTML!=''){
+										var sourceHTML=mealHTML;
+									}
+								}
+//								if(i%3==2){
+									var str='<a style="float:left;" href="/Matchinfo?m_id='+Obj[i].id+'&platform=zx-tour"><div class="box_special"><div class="box_header_special"><div>'+Obj[i].m_city+'</div><div class="box_img_special"><img src="'+Obj[i].m_img+'"/></div></div><div class="box_content"><h2>'+Obj[i].m_name+'</h2><p>'+Obj[i].m_des+'</p><div class="box_info"><div class="box_info_time"><span></span><span>'+m_Gametime+'</span></div>';	
+//								}else if(i%3==0){
+//									var str='<a style="float:left;" href="/Matchinfo?m_id='+Obj[i].id+'&platform=zx-tour"><div class="box"><div class="box_header"><div>'+Obj[i].m_city+'</div><div class="box_img"><img src="'+Obj[i].m_img+'"/></div></div><div class="box_content"><h2>'+Obj[i].m_name+'</h2><div class="box_info"><div class="box_info_time"><span></span><span>'+m_Gametime+'</span></div>';
+									
+//								}else{
+//									var str='<a style="float:right;" href="/Matchinfo?m_id='+Obj[i].id+'&platform=zx-tour"><div class="box"><div class="box_header"><div>'+Obj[i].m_city+'</div><div class="box_img"><img src="'+Obj[i].m_img+'"/></div></div><div class="box_content"><h2>'+Obj[i].m_name+'</h2><div class="box_info"><div class="box_info_time"><span></span><span>'+m_Gametime+'</span></div>';
+									
+//								}
+//								var str='<a href="/Matchinfo?m_id='+Obj[i].id+'&platform=zx-tour"><div class="box"><div class="box_header"><div>'+Obj[i].m_city+'</div><div class="box_img"><img src="'+Obj[i].m_img+'"/></div></div><div class="box_content"><h2>'+Obj[i].m_name+'</h2><div class="box_info"><div class="box_info_time"><span></span><span>'+m_Gametime+'</span></div>';
+								var htm=str+sourceHTML;
+//								$('.box_broad').append(htm);
+							}else{
+								console.log(i);
+								for(var m_i=0,len=infolist.length;m_i<len;m_i++){
+								if(infolist[m_i].g_currprice>=1){
+									infolist[m_i]['g_currprice']=Math.round(infolist[m_i]['g_currprice']);
+								}
+
+								if(sourceHTML=="" && infolist[m_i]['g_type']==1 && parseInt(infolist[m_i]['g_currprice'])!=0){
+									sourceHTML='<div class="box_info_price"><span>￥</span><span style="font-size: 1.071428571428571rem;font-weight:bold;">'+infolist[m_i]['g_currprice']+'</span><span>起/人</span></div></div></div></div></a>';
+								}
+		
+//									if(mealHTML=="" && infolist[m_i]['g_type']==2 && infolist[m_i]['g_name']!="赛事单独报名"){
+//										mealHTML = '</div></div><div class="box_list"><div class="box_price"><span>￥</span><span style="font-size: 1.142857142857143rem;">'+infolist[m_i]['g_currprice']+'</span><span>起/人</span></div><div class="box_attend_num"><span>已报</span><span style="font-size: 0.9285714285714286rem;">'+stock+'</span></div></div></div></div>';
+//									}
+								}
+//								if(i%3==2){
+									var str='<a style="float:left;" href="/Matchinfo?m_id='+Obj[i].id+'&platform=zx-tour"><div class="box_special"><div class="box_header_special"><div>'+Obj[i].m_city+'</div><div class="box_img_special"><img src="'+Obj[i].m_img+'"/></div></div><div class="box_content"><h2>'+Obj[i].m_name+'</h2><p>'+Obj[i].m_des+'</p><div class="box_info"><div class="box_info_time"><span></span><span>'+m_Gametime+'</span></div>';
+										
+//								}else if(i%3==0){
+//									var str='<a style="float:left;" href="/Matchinfo?m_id='+Obj[i].id+'&platform=zx-tour"><div class="box"><div class="box_header"><div>'+Obj[i].m_city+'</div><div class="box_img"><img src="'+Obj[i].m_img+'"/></div></div><div class="box_content"><h2>'+Obj[i].m_name+'</h2><div class="box_info"><div class="box_info_time"><span></span><span>'+m_Gametime+'</span></div>';
+									
+//								}else{
+//									var str='<a style="float:right;" href="/Matchinfo?m_id='+Obj[i].id+'&platform=zx-tour"><div class="box"><div class="box_header"><div>'+Obj[i].m_city+'</div><div class="box_img"><img src="'+Obj[i].m_img+'"/></div></div><div class="box_content"><h2>'+Obj[i].m_name+'</h2><div class="box_info"><div class="box_info_time"><span></span><span>'+m_Gametime+'</span></div>';
+									
+//								}
+//								var str='<a href="/Matchinfo?m_id='+Obj[i].id+'&platform=zx-tour"><div class="box"><div class="box_top"><div class="box_top_time"><span>'+Obj[i].m_city+'</span><span>'+m_Gametime+'</span></div></div><div class="box_top_img"><img src="'+Obj[i].m_img+'" alt="" /></div><div class="box_top"><h2>'+Obj[i].m_name+'</h2><div class="type_game">'+Obj[i].m_mtypes_class+'<span></span>'+M_types+'</div></div><div class="box_bottom"><div><div class="state_tag">';
+//								var str='<a href="/Matchinfo?m_id='+Obj[i].id+'&platform=zx-tour"><div class="box"><div class="box_header"><div>'+Obj[i].m_city+'</div><div class="box_img"><img src="'+Obj[i].m_img+'"/></div></div><div class="box_content"><h2>'+Obj[i].m_name+'</h2><div class="box_info"><div class="box_info_time"><span></span><span>'+m_Gametime+'</span></div>';
+								var htm=str+sourceHTML;
+//								$('.box_china').append(htm);
+							}
+						$('.game_box').append(htm);
+						}
+						
+					}else if(obj.error==1){
+						weui.Loading.hide();
+						$('.loading').remove();
+						var jz_succeed='<div class="loading">已加载完毕<div>';
+						$('.hot_matchs').append(jz_succeed);
+					}
+				}
+			})
+	})
+
+function countInstances(mainStr, subStr)
+    {
+        var count = 0;
+        var offset = 0;
+        do
+        {
+            offset = mainStr.indexOf(subStr, offset);
+            if(offset != -1)
+            {
+                count++;
+                offset += subStr.length;
+            }
+        }while(offset != -1)
+//      console.log(count);
+        return count;
+    }
+</script>
+<script>
+var shareObject = {
+    title:"title",
+    content:"content",
+    imgUrl:"http://download.zx-tour.com/public/image/20160524/20160524102112_89439.jpg",
+    type:1,
+    imageList:"",
+    url:"http://nuomi.zx-tour.com/",
+    platforms:[
+        "qq_zone",
+        "weixin_session" ,
+        "weixin_timeline" ,
+        "sinaweibo" ,
+        "copylink" ,
+        "email" ,
+        "sms" ,
+    ]
+};
+var BNJSReady = function (readyCallback) {
+    if(readyCallback && typeof readyCallback == 'function'){  
+        if(window.BNJS && typeof window.BNJS == 'object' && BNJS._isAllReady){
+                 readyCallback();               
+        }else{
+             document.addEventListener('BNJSReady', function() {
+                   readyCallback();
+             }, false)
+        }
+    }
+};
+BNJSReady(function(){    
+    // 添加分享按钮
+    BNJS.ui.title.addActionButton({            
+        tag: '123',
+        text: '分享',
+        icon: 'share',
+        callback: function(){
+            // 点击回调分享功能
+            BNJS.ui.share({
+                title : '糯米马拉松',
+                content:"有名额，免抽签！",
+                imgUrl : 'http://nuomi.zx-tour.com/static/images/195319221523194007.jpg',
+                url : 'http://nuomi.zx-tour.com/',
+                onSuccess : function(){
+                    //alert('分享测试成功~')
+                },
+                onFail : function(){
+                    //alert('分享测试失败~')
+                }
+            });
+        }
+    });
+     // 设置A页面pageID为'a'
+    // BNJS.page.setPageId({
+    //     pageId: 'a'
+    // });
+
+    // // 返回堆栈指定页面，比如A->B->C->D，在D页面想返回A页面
+    // BNJS.page.back('a');
+    // 返回堆栈指定页面，比如A->B->C->D，在D页面想返回A页面
+    // A页面调用BNJS.page.setPageId()接口设置A页面pageID
+});
+//$(function () {
+//	for (var i=1;i<6;i++) {
+//			_change(i,'hot_matchs',9,'<div class="nuomi_7"></div>');
+//		}
+//})
+$(function () {
+	$('#search_input').bind('focus',function () {
+		$('#search_goback').css('display','block');
+	}) 
+	$('#search_goback').bind('click',function () {
+		$('#index_page').show();
+		$(this).hide();
+		$('#search_page').hide();
+	})
+})
+_hmt.push(['_trackEvent', "事件", "展示", "首页"]);
+</script>
+</body>
+</html>

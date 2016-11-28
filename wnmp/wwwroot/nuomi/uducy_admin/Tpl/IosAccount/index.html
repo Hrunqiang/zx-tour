@@ -1,0 +1,78 @@
+<{include file='Login/header.html'}>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">
+            	
+                  <div class="table">
+                  	<div class="th">
+<!--                     	<div class="form">
+                        <div class="fl">
+                        	<select name="cid" id="s_cid" onchange="var v=this.value;window.location.href='/?s=Classes&a=content&ac=list&cid='+v">
+                        	<option value=0>全部分类</option>
+                        	<{$select}>
+                        	</select>&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="window.location.href='/?s=Classes&a=content&ac=add&cid='+document.getElementById('s_cid').value" value="添加内容"/> 　　　当前共有<span id= "count_num"></span>条数据
+                        </div>
+                       
+                        </div> -->
+                    </div>
+                    <table class="admin-tb" id="datatable">
+                    <thead>
+                        <tr>
+                        	<th>头像</th>
+                            <th style="text-align:center;">昵称</th>
+                            <th style="text-align:center;">性别
+								<select id="gender_choose" name="gender_choose">
+	                           	 	<option value="">全</option>
+	                           	 	<option value="1" <{if $gender =='1'}>selected<{/if}>>男</option>
+	                           	 	<option value="0" <{if $gender =='0'}>selected<{/if}>>女</option>	
+                           		 </select>
+                            </th>
+                            <th style="text-align:center;">类型
+	                            <select id="usr_choose" name="usr_choose">
+	                           	 	<option value="">全</option>
+	                           	 	<option value="weixin" <{if $type =='weixin'}>selected<{/if}>>微信用户</option>
+	                           	 	<option value="direct" <{if $type =='direct'}>selected<{/if}>>注册用户</option>
+	                           	</select>
+                           	 </th>
+                           	 <th style="text-align:center;">创建时间</th>
+                           	 <th style="text-align:center;">最后登录</th>
+                           	 <th style="text-align:center;">地理位置</th>
+                        </tr>
+					</thead>
+					<tbody id="class_item">
+					<{if $list}>
+					<{foreach from=$list name=n item=i}>
+						<td style="width:45px"><img style ="padding:5px;width: 35px;height:35px;-webkit-border-radius:50%;border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;-ms-border-radius:50%;"src="<{if $i.u_pic}><{$i.u_pic}><{else}>http://weixin.at321.cn/static/images/wx/touxiang.png<{/if}>" alt=""></td>
+	                    <td style="text-align:center;"><{$i.u_name}></td>   
+	                    <td style="text-align:center;"><{if $i.gender =='0'}>女<{else if $i.gender =='1'}>男<{else}>未知<{/if}></td>
+	                    <td style="text-align:center;"><{if $i.u_type =='weixin'}>微信用户<{else}>注册用户<{/if}></td>
+	                    <td style="text-align:center;" ><{$i.ctime}></td>
+	                    <td style="text-align:center;" ><{$i.lastlogin}></td>
+	                    <td style="text-align:center;" ><{$i.location}></td>
+	                    </tr>
+					<{/foreach}>
+					<{/if}>
+					</tbody>
+                    </table>
+                    <div class="th">
+                    </div>
+                </div>
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script type="text/javascript">
+	$('#usr_choose').change(function(){
+		choose();
+	});
+	$('#gender_choose').change(function(){
+		choose();
+	});
+	function choose(){
+		window.location.href = "./?s=IosAccount&a=index&type="+$('#usr_choose').val()+"&gender="+$('#gender_choose').val();
+	}
+</script>
+<{include file='Login/footer.html'}>

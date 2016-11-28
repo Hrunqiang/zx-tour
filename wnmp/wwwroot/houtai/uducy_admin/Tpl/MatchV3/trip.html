@@ -1,0 +1,229 @@
+<{include file='Login/header.html'}>
+<{if $ac=='add' || $ac=='edit'}>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <form action="/?s=MatchV2&a=trip&ac=<{$ac}>&matchid=<{$matchid}>&mealid=<{$mealid}>" method='post' onsubmit="return checkform();">
+                <input type="hidden" name="meal_id" value="<{$mealid}>"/>
+                <input type="hidden" name="id" value="<{$data.id}>"/>
+                <div class="box-header">
+                    <h4>添加内容</h4>
+                </div>
+                <div class="box-content">
+                    <table class="table-font" style="width:80%;">
+                        <tr class="trip_title">
+                            <th class="w120">行程：</th>
+                            <td>
+	                            <input type="text" id="trip_title"  name="trip_title" class="textinput w270" value="<{$data.trip_title|escape:html}>" autocomplete="off" />
+                        		<p id="hint"></p>
+                            </td>
+                        </tr>
+                        <tr class="trip_des">
+                            <th class="w120">行程描述：</th>
+                            <td>
+                            <textarea name="trip_des" style="width:90%;height:100px;"><{$data.trip_des|escape:html}></textarea></td>
+                        </tr>
+                        <tr class="n_url hiden">
+                            <th class="w120">图片：</th>
+                            <td><input type="text" name="trip_img[]" class="textinput w270" value="<{$data.trip_img[0]|escape:html}>" />&nbsp;<input type="button" class="kUpload" value="上传图片"><br>
+                            <input type="text" name="trip_img[]" class="textinput w270" value="<{$data.trip_img[1]|escape:html}>" />&nbsp;<input type="button" class="kUpload" value="上传图片"><br>
+                            <input type="text" name="trip_img[]" class="textinput w270" value="<{$data.trip_img[2]|escape:html}>" />&nbsp;<input type="button" class="kUpload" value="上传图片">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>行程日期：</th>
+                            <td><input name="trip_date" type="text" id="trip_date" class="textinput datepicker" value="<{$data.trip_date|escape:html}>" onkeyup=""/></td>
+                        </tr>
+                        <tr>
+                            <th>行程图标：</th>
+                            <td>
+                                <label for="trip_icon1"><input type="radio" name="trip_icon" id="trip_icon1" value="airplane" checked>飞机</label>
+                                <label for="trip_icon2"><input type="radio" name="trip_icon" id="trip_icon2" value="hotel" <{if $data.trip_icon=="hotel"}>checked<{/if}>>酒店</label>
+                                <label for="trip_icon3"><input type="radio" name="trip_icon" id="trip_icon3" value="match" <{if $data.trip_icon=="match"}>checked<{/if}>>赛程</label>
+                                <label for="trip_icon4"><input type="radio" name="trip_icon" id="trip_icon4" value="other" <{if $data.trip_icon=="other"}>checked<{/if}>>其它</label>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                
+                <div class="box-footer">
+                    <div class="box-footer-inner">
+                    	<input type="submit" value="确定提交" /></a>
+                    </div>
+                </div>
+                </form>
+            </div><!--/ con-->
+            
+        </div>    
+    </div><!--/ container-->
+
+</div>
+<script>
+var Fields	= <{$Fields}>;
+</script>
+<link type="text/css" href="/static/datapicker/timepicker/css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+     <link type="text/css" href="/static/datapicker/timepicker/css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+    <script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-timepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="/static/js/classadd.js?v=1.0"></script>
+    <script>
+function checkform(){
+    return true;       
+}
+$('.datepicker').datetimepicker({
+	//showOn: "button",
+	//buttonImage: "./css/images/icon_calendar.gif",
+	//buttonImageOnly: true,
+	showSecond: true,
+	timeFormat: 'hh:mm:ss',
+	stepHour: 1,
+	stepMinute: 1,
+	stepSecond: 1
+});
+</script>
+<{elseif $ac =='list'}>
+<link href="/static/datapicker/css/ui.all.css" rel="stylesheet" type="text/css" />
+<script src="/static/datapicker/jquery-ui-1.7.1.custom.min.js"></script>
+<script src="/static/datapicker/ui.datepicker.js"></script>
+<script type="text/javascript" src="/static/js/classadd.js?v=1212"></script>
+<script>
+$(function(){
+	$('.datepicker').datepicker();
+});
+
+</script>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">
+            	
+                  <div class="table">
+                  	<div class="th">
+                    	<div class="form">
+                        <div class="fl">
+                            <input type="button" onclick="window.location.href='./?s=MatchV2&a=trip&ac=add&matchid=<{$matchid}>&mealid=<{$mealid}>'" value="添加行程"/> 　共<span id= "count_num"></span>项行程
+                            &nbsp;&nbsp;<a href="?s=MatchV2&a=goodsinfo&id=<{$matchid}>">返回套餐</a>
+                        </div>
+                        </div>
+                    </div>
+                    <form action='/?s=MatchV2&a=trip&ac=del&mealid=<{$mealid}>' method='post' id="form-for-list">
+                    <table class="admin-tb" id="datatable">
+                    <thead>
+                        <tr>
+                        	<th><input type="checkbox" id="sall"><label for="sall">　行程</label></th>
+                            <th style="text-align:center;">行程简介</th>
+                            <th style="text-align:center;">行程日期</th>
+                            <th style="text-align:center;">操作</th>
+                        </tr>
+					</thead>
+					<tbody id="class_item">
+					<{if $list}>
+					<{foreach from=$list name=n item=i}>
+						<tr  childindex="1" >
+	                    <td><input type="checkbox" name="id[]" value="<{$i.id}>" title="<{$i.id}>">　<{$i.trip_title}></td>   
+	                    <td><{$i.trip_des}></td>
+	                    <td style="text-align:center;" rel="classname" class="update_order" info="<{$i.aid}>|ios_news|orderid|id"><{$i.trip_date}></td>
+	                    <td style="text-align:center;">
+	                        [<a href="/?s=MatchV2&a=trip&ac=edit&matchid=<{$matchid}>&id=<{$i.id}>&mealid=<{$mealid}>">修改</a>] &nbsp; [<a href="/?s=MatchV2&a=trip&ac=del&matchid=<{$matchid}>&id=<{$i.id}>&mealid=<{$mealid}>" onclick="return confirm('删除后不能恢复,确定删除?');">删除</a>]
+	                    </td>
+	                    </tr>
+					<{/foreach}>
+					<{/if}>
+					</tbody>
+                    </table>
+                    <div class="th">
+                    	<div class="form">
+                        <input type='hidden' name='commit' value='1' />
+                        <input type='radio' name='ac' value='del' checked />
+                        <input type="button" value="  删 除 " onclick="if(confirm('请注意删除操作不能恢复,确定操作?')){$(this).parents('form').submit();};" />&nbsp;&nbsp; 
+                        </div>
+
+                    </div>
+                    </form>
+                </div>
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script>
+$('#count_num').html($('#form-for-list').find('input[type=checkbox][name^=id]').length);
+$('#sall').click(function(){
+	var state	= $(this).attr('checked');
+	var form	= $(this).parents('form');
+	if(state){
+		form.find('input[type=checkbox][name^=id]').attr('checked',true);
+	}else{
+		form.find('input[type=checkbox][name^=id]').attr('checked',false);
+	}
+});
+</script>
+<{/if}>
+<script charset="utf-8" src="./static/editer/kindeditor-min.js"></script>
+<script charset="utf-8" src="./static/editer/lang/zh_CN.js"></script>
+<script>
+var KK=null;
+
+KindEditor.ready(function(K) {
+	KK=K;
+	var option	= {
+			designMode : <{$table_cfg.designMode|default:true}>,
+			uploadJson : '/?s=editor&a=upload',
+            fileManagerJson : '/?s=editor&a=manager',
+            allowFileManager : false
+			};
+
+    window.editor = KK.create('.HTML_EDIT',option);
+    //上传按钮
+    var editor = K.editor(option);
+	K('.kUpload').click(function() {
+         var that    = this;
+		editor.loadPlugin('image', function() {
+			editor.plugin.imageDialog({
+				imageUrl : K('#imgicon').val(),
+				clickFn : function(url, title, width, height, border, align) {
+					$(that).prev("input").val(url);
+					editor.hideDialog();
+				}
+			});
+		});
+	});
+	var colorpicker;
+	K('#colorpicker').bind('click', function(e) {
+		e.stopPropagation();
+		if (colorpicker) {
+			colorpicker.remove();
+			colorpicker = null;
+			return;
+		}
+		var colorpickerPos = K('#colorpicker').pos();
+		colorpicker = K.colorpicker({
+			x : colorpickerPos.x,
+			y : colorpickerPos.y + K('#colorpicker').height(),
+			z : 19811214,
+			selectedColor : 'default',
+			noColor : '无颜色',
+			click : function(color) {
+				K('#n_color').val(color);
+				K('#n_title').css({"color":color});
+				colorpicker.remove();
+				colorpicker = null;
+			}
+		});
+	});
+	K(document).click(function() {
+		if (colorpicker) {
+			colorpicker.remove();
+			colorpicker = null;
+		}
+	});
+
+});
+</script>
+<{include file='Login/footer.html'}>

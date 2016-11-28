@@ -1,0 +1,614 @@
+[ 2016-06-23T11:21:59+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001323s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002274s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=JSW7zYShT+eSvdWsYzqP7d8muEbHseKqEDjgdzb+Dqdqn1+x1/r+JqLkjny+quvK+5bN3DTfwhjrxeFs7+039WjKH2YJoTSJn+d0jZYE/WdTCNqw3qI9jYS/FeL9FLWFUy6RGfUDYYuJtu9/sWQmnfE1oC50zAb/MyWo4UQYX1E=, signSourceData={"code":"40004","msg":"Business Failed","sub_code":"ACQ.TRADE_HAS_CLOSE","sub_msg":"交易已经关闭"}]
+
+[ 2016-06-23T14:03:24+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000705s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=JSW7zYShT+eSvdWsYzqP7d8muEbHseKqEDjgdzb+Dqdqn1+x1/r+JqLkjny+quvK+5bN3DTfwhjrxeFs7+039WjKH2YJoTSJn+d0jZYE/WdTCNqw3qI9jYS/FeL9FLWFUy6RGfUDYYuJtu9/sWQmnfE1oC50zAb/MyWo4UQYX1E=, signSourceData={"code":"40004","msg":"Business Failed","sub_code":"ACQ.TRADE_HAS_CLOSE","sub_msg":"交易已经关闭"}]
+
+[ 2016-06-23T15:43:52+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.023323s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.004902s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.009701s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php on line 38 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.006310s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000739s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001359s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001439s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.127409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.127475s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.003514s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000664s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000520s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000704s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005542s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000825s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2016-06-23T15:43:53+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8089%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000903s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000990s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\WeixinAction.class.php on line 112 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+ERR: Redis server went away
+
+[ 2016-06-23T15:43:56+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001857s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.003763s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.004489s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php on line 38 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.000976s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001011s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000537s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000607s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.014146s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014211s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000533s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000334s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000222s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001781s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000601s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000674s ]
+
+[ 2016-06-23T15:43:58+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8089%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000914s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001029s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\WeixinAction.class.php on line 112 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+ERR: Redis server went away
+
+[ 2016-06-23T15:44:00+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003706s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.002603s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.002786s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php on line 38 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.001318s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000843s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000433s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000495s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.012739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012804s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000741s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000829s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000277s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000569s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002715s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000703s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000772s ]
+
+[ 2016-06-23T15:44:01+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8089%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000868s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\WeixinAction.class.php on line 112 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+ERR: Redis server went away
+
+[ 2016-06-23T15:45:34+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004088s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.001463s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.003779s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php on line 38 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.000697s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000723s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000439s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000521s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.014224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014297s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000775s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000437s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002081s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000548s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000611s ]
+
+[ 2016-06-23T15:45:35+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8089%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000879s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000987s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\WeixinAction.class.php on line 112 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+ERR: Redis server went away
+
+[ 2016-06-23T15:45:39+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000821s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000918s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000947s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004997s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.004803s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\SearchAction.class.php on line 47 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\MatchInfoModel.class.php 第 94 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.001185s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003321s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.001115s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000803s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000906s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 190 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 190 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.155044s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.155114s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000733s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000324s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000217s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000361s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001757s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000448s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000493s ]
+
+[ 2016-06-23T15:45:40+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8089%2FSearch%3Fws%3D%25E5%259B%25BD%25E5%2586%2585%26type%3D1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000621s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\WeixinAction.class.php on line 112 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+ERR: Redis server went away
+
+[ 2016-06-23T15:46:21+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000499s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004351s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.001502s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\SearchAction.class.php on line 47 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\MatchInfoModel.class.php 第 94 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.003433s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004157s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,999  [ RunTime:0.003323s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001057s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001170s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 190 行.
+NOTIC: [8] Undefined index: m_entermode D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 190 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016131s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016199s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000761s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000292s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000178s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001694s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000404s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000446s ]
+
+[ 2016-06-23T15:46:22+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8089%2FSearch%3Fws%3D%25E5%259B%25BD%25E5%2586%2585%26type%3D1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000906s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001010s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\WeixinAction.class.php on line 112 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+ERR: Redis server went away
+
+[ 2016-06-23T15:46:30+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001835s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.000665s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.001482s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php on line 38 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.000535s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000863s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000435s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000488s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.010270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010338s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000818s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000326s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000201s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000354s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001866s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000587s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2016-06-23T15:46:31+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8089%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000607s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\WeixinAction.class.php on line 112 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+ERR: Redis server went away
+
+[ 2016-06-23T16:31:37+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001090s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004447s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.001879s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.002305s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php on line 38 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.000866s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001062s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002110s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002208s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 52 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.039284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039361s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001242s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000941s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000800s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000952s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004096s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001068s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001126s ]
+
+[ 2016-06-23T16:31:38+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8089%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003497s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003614s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001064s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Action\WeixinAction.class.php on line 112 and defined D:\wnmp1\wwwroot\v1\branches\v1\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+ERR: Redis server went away
+
+[ 2016-06-23T16:36:33+08:00 ] /PayResult/alipay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002056s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002289s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+NOTIC: [8] Undefined index: WIDout_trade_no D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipay\alipayapi.php 第 43 行.
+NOTIC: [8] Undefined index: WIDsubject D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipay\alipayapi.php 第 47 行.
+NOTIC: [8] Undefined index: WIDtotal_fee D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipay\alipayapi.php 第 51 行.
+NOTIC: [8] Undefined index: WIDbody D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipay\alipayapi.php 第 56 行.
+NOTIC: [8] Undefined index: WIDshow_url D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipay\alipayapi.php 第 58 行.
+
+[ 2016-06-23T16:36:44+08:00 ] /PayResult/ali
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003194s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003330s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+
+[ 2016-06-23T16:36:53+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000728s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=JSW7zYShT+eSvdWsYzqP7d8muEbHseKqEDjgdzb+Dqdqn1+x1/r+JqLkjny+quvK+5bN3DTfwhjrxeFs7+039WjKH2YJoTSJn+d0jZYE/WdTCNqw3qI9jYS/FeL9FLWFUy6RGfUDYYuJtu9/sWQmnfE1oC50zAb/MyWo4UQYX1E=, signSourceData={"code":"40004","msg":"Business Failed","sub_code":"ACQ.TRADE_HAS_CLOSE","sub_msg":"交易已经关闭"}]
+
+[ 2016-06-23T16:38:15+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001353s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001516s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=BdPOMSh16pWPkyAeaE/Ug9yljcvK9Guf35bdoOCY/QsDjrJPwQ7CYZv6ECJ3uHjb64+nZCSPAIibOn6Uw7JP4gVmjr32nMh5mauTUK6Lm6wsnaSw6OZ0wW2dpf8D3ZMjNg8X7az7xht/IwKlqomDbzSfYLmZYsY/wRoOP9yqCew=, signSourceData={"code":"20000","msg":"Service Currently Unavailable","sub_code":"aop.ACQ.SYSTEM_ERROR","sub_msg":"系统异常"}]
+
+[ 2016-06-23T16:38:24+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000770s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000848s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=O+BXdBOhkPpSS0scOikc5LgkZlyrUHsx4Xy0hBFVs/NIh19gLgchfoT7c30vBWI0r0KrnIAYgUKU8Vr4YiMXlNIA5RStHfQfIjBE8ipldrUBMgivSf/L9Foiku5YqOEHj9XWzRSXXCwtZ+eW/VdFsUr50rz/X0dPZjcUVYMc9Wo=, signSourceData={"code":"10000","msg":"Success","out_trade_no":"203200103310100122","trade_no":"2016062321001004150274121516"}]
+
+[ 2016-06-23T16:39:48+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000756s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001283s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 110 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T16:54:45+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000814s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000904s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001131s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 110 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T16:59:07+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000649s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 110 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T17:00:55+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001087s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001214s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 110 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T17:01:05+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000580s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 110 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T17:22:37+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000904s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 111 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T17:55:31+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001432s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001550s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 112 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T18:00:08+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000695s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 112 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T18:12:54+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000682s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 113 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T18:22:09+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003298s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003413s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.003755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003819s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 113 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T18:25:13+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001365s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001471s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 113 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T18:27:09+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000706s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 113 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T18:27:47+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000705s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001173s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001391s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 113 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T18:28:41+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000531s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 113 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+
+[ 2016-06-23T18:37:30+08:00 ] /PayResult/gotopay
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000669s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+NOTIC: [8] Undefined variable: accessToken D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\f2fpay\gotopay.php 第 113 行.
+NOTIC: [2] openssl_verify() [<a href='function.openssl-verify'>function.openssl-verify</a>]: supplied key param cannot be coerced into a public key D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 414 行.
+NOTIC: [2] openssl_free_key() expects parameter 1 to be resource, boolean given D:\wnmp1\wwwroot\v1\branches\v1\lib\ThinkPHP\Extend\Vendor\alipayv2\aop\AopClient.php 第 417 行.
+ERR: check sign Fail1! [sign=RLQqBp8HVrQSdDRLKTsrWa58ycOdcl4RLJDe+rEkoIPRA2xmUyekf619KbTFLoubdKFW52pXPfIBb6uAfhKo+AjZx+Bvhz2cLa2NqdvfZjRRoMSck6CLvXSwG0LmwBTK7cyeOdT4oey8Oh6c5HAfjKbjj4kpy6gH+8Up9yOXx7U=, signSourceData={"code":"20001","msg":"Insufficient Token Permissions","sub_code":"aop.invalid-auth-token","sub_msg":"无效的访问令牌"}]
+

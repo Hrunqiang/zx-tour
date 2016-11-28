@@ -1,0 +1,137 @@
+<{include file='Login/header.html'}>
+<{if $ac=='add' || $ac=='edit'}>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <form action="./?s=Match&a=<{$ac}>&match=<{$match}>&id=<{$id}>" method='post'>
+                <input type="hidden" name="ctime" value="<{$now}>"/>
+                <input type="hidden" name="id" value="<{$id}>"/>
+                <div class="box-header">
+                    <h4>添加分类</h4>
+                </div>
+                <div class="box-content">
+                    <table class="table-font" >
+                        <tr>
+                            <th class="w120">父类：</th>
+                            <td>
+                            <select name="goodspid" id="goodspid">
+				            <option value="0">-----顶级分类-----</option>
+				            <{$select}>
+				         	</select>
+	                            <!-- <input type="text" name="pid" value="<{$pid}>"/> -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">名称：</th>
+                            <td>
+	                            <input type="text"  name="goodscls" class="textinput w270" value="<{$data.goodscls|escape:html}>" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>单价：</th>
+                            <td style="width:370px;">
+                            	<input name="goodsprice" type="text" id="goodsprice" class="textinput" value="<{$data.goodsprice|escape:html}> " onkeyup="value=value.replace(/[^\d|.]/g,'') "/>
+                            </td>
+                        </tr>
+                        <tr>
+                        	<th>数量:</th>
+                        	<td>
+                            <input name="goodsnum" type="text" id="goodsnum" class="textinput" value="<{$data.goodsnum|escape:html}> " onkeyup="value=value.replace(/[^\d]/g,'') "/>
+							</td>
+                        </tr>
+                        <tr>
+                        	<th>剩余数量:</th>
+                        	<td>
+                             <input name="goodsleft" type="text" id="goodsleft" class="textinput" value="<{$data.goodsleft|escape:html}>" onkeyup="value=value.replace(/[^\d]/g,'') "/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>排序：</th>
+                            <td><input name="order" type="text" id="order" class="textinput" value="<{$data.order|escape:html}>"  onkeyup="value=value.replace(/[^\d]/g,'') "/></td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="box-footer">
+                    <div class="box-footer-inner">
+                    	<input type="submit" value="确定" /> 或 <a href="?s=classes">取消</a>
+                    </div>
+                </div>
+                </form>
+            </div><!--/ con-->
+            
+        </div>    
+    </div><!--/ container-->
+
+</div>
+<{elseif $ac =='list'}>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">	
+                  <div class="table">
+                  	<div class="th">
+                    	<div class="form">
+                        <div class="fl">
+                        	 <input type="button" onclick="window.location='./?s=Match'" value="&nbsp;&nbsp;返回列表&nbsp;&nbsp;" />
+                           <input type="button"  onclick="window.location='./?s=Match&a=add&match=<{$match.id}>&pid=<{$match.id}>'" value="&nbsp;&nbsp;添加项目&nbsp;&nbsp;" />
+                        </div>        
+                        </div>
+                    </div>
+                    <form action='#' method='post'>
+                    <table class="admin-tb" id="datatable">
+                    <thead>
+                        <tr>
+                            <th>赛事（<{$match.goodscls}>）</th>
+                            <th>排序</th>
+                            <th>单价</th>
+                            <th>剩余数量 / 总量</th>
+                            <th>创建时间</th>
+                            <th>最后修改时间</th>
+
+                            <th width="161">操作</th>
+                        </tr>
+					</thead>
+					<{$html}>
+                    <tr id="class_53" pid="class_50" style=";">
+      <td>|-- <a href="">备注</a></td><td colspan="5"><input id="beizhu" style="width:100%;" value="<{$match.beizhu}>" placeholder="编辑备注……"/></td>
+      <td><div align="center">[<a onclick="edit_beizhu()">保存修改</a>]</div></td></tr>
+					<!-- <tbody id="class_item">
+						<tr  childindex="1">
+	                    <td>分类名称</td>   
+	                    <td>分类简称</td>
+	                    <td rel="classname">分类排序</td>
+	                    <td>
+	                        [<a href="">修改</a>] &nbsp; [<a href="">添加下级分类</a>] &nbsp; [<a href="">删除</a>]
+	                    </td>
+	                    </tr>
+					</tbody> -->
+                    
+                    
+                    </table>
+                    <div class="th">
+                    	
+                    </div>
+                    </form>
+                </div>
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script>
+function edit_beizhu(){
+    var beizhu = $("#beizhu").val();
+    $.getJSON("./?s=Match&a=edit_beizhu&match_id=<{$match.id}>&info="+beizhu,function(data){
+            if(data.error===0){
+                alert("修改成功！");
+            }else{
+                alert(data.msg);
+            }
+        });
+}  
+</script>
+<{/if}>
+<{include file='Login/footer.html'}>

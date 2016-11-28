@@ -1,0 +1,54 @@
+<{include file='Comon/header.html'}>
+<div id="register_box" class="general_page section">
+	<div class="section_center" >
+		<div id="register_center">
+			<div id="register_tab_box">
+				<a id="phone_reg_tab" class='reg_pattern_step curr_reg_tab'>手机注册</a> | <a id="mail_reg_tab" class='reg_pattern_step'>邮箱注册</a>
+			</div>
+			<div id="register_form_box">
+				<p class="hints">如您之前已经注册上马帐号可直接登录，无需重新注册，非中国大陆用户请在手机号前加入国际区号</p>
+				<form action="/Account/register" method="post" id="register_form" class='account_form'>
+				    <input type="hidden" id="pattern_hidden_ipt" name="pattern" value="phone">
+				    <p id="pattern_p_ipt">手机号码</p>
+			        <p class='input_p' >
+			        	<input name="account" type="text" id="account_input" />
+			        	<button class="send_phone_btn" id="send_phone_code_register">发送手机验证码</button>
+			        	<label id="send_phone_error" class="error_p"></label>
+			        </p >
+			        <div class='phonecode'>
+			        <p >手机验证码</p>
+			        <p class='input_c' >
+			        	<input name="phone_code" type="text" id="phone_code" />
+			        </p>
+			        </div>
+			        <p>密码</p>
+			        <p class='input_p'>
+			        	<input name="pwd" type="password" id="pwd_input" />
+			        	<label>密码长度6-16位</label>
+			        </p>
+			        <p>确认密码</p>
+			        <p class='input_p'>
+			        	<input  type="password" id="repwd_input" />
+			        	<label>密码长度6-16位</label>
+			        </p>
+			        <div class="verifycode">
+				        <p>验证码</p>
+				        <p class='input_c'>
+				        	<input type="text" name="code" id="email_code"/>
+					        <img class="code_img" src="/Account/verify" id="register_code_img" onclick="this.src=this.src+'?'+Math.random()" alt="">
+					        <label class="changeCode">换一张</label>
+				        </p>
+			        </div>
+			        <p class="reg_pro_p">
+			        	<input class="checkbox" type="checkbox" name="" id="use_protocol_check">
+			        	<label for="use_protocol_check">我已阅读并同意</label>
+			        	<a id="user_reg_pro" href="">用户注册协议</a>
+			        </p>
+			        <p class="error_p" id="register_error"><{$error}></p>
+					<p class="input_sl"><input id="register_submit" class="btn" type="button" value="立即注册" /></p>
+			    </form>
+		    </div>
+	    </div>
+	</div>
+</div>
+<{include file='Comon/footer.html'}>

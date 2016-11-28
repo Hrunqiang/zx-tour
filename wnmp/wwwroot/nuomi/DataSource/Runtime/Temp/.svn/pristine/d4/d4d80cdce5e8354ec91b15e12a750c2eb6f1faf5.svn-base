@@ -1,0 +1,158 @@
+<{include file='Login/header.html'}>
+<style>
+<!--
+.searchtxt {
+width: 50px;
+}
+.searchbtn {
+width: 35px;
+}
+-->
+</style>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">
+                  <div class="table">
+                     <div class="th">
+                        <h1><a href="<{$Reques_uri}>&a=add" style="color:red;">添加</a></h1>
+                    </div>                  
+                </div>
+
+            	<form action="<{$Reques_uri}>&ac=del" method="post">
+                    <input type="hidden" name="cid" value="<{$cid}>"/>
+                  <div class="table">
+                    <table class="admin-tb" id="js_data_source">
+                   <tr>
+                        <th><input type="checkbox" id="select_all"/></th>
+                    <{foreach from=$table item=j key=k2}>
+                        <{foreach from=$j.field item=i key=k}>
+                        <{if $i.islist==true}>
+                        <th style="text-align:center;<{if $k=='dicttok'}>display:none;<{/if}>">
+                            <{if $i.type=="select"}>
+                                <{$i.title}> <br>
+                                <select name="<{$k}>" class="tselect">
+                                    <option value="">请选择</option>
+                                    <{foreach from=$i.selectdata item=si key=sk}>
+                                    <option value="<{$sk}>" <{if ($get.$k==$sk && $get.$k!="")}> selected <{/if}>><{$si}></option>
+
+                                    <{/foreach}>
+                                </select>
+                            <{elseif $i.type=="text"}>
+                                <!-- <{if $i.ismain===true}><input type="checkbox" id="select_all"/> &nbsp;<{/if}> --><{$i.title}> <br>
+                                <input type="text" name="<{$k}>" class="searchtxt" value="<{$get.$k}>"/><input type="button" class="searchbtn" value="搜索"/> <br>
+                            <{elseif $i.type=="textarea"}>
+                                <{$i.title}><br>
+                                <input type="text" name="<{$k}>" class="searchtxt" value="<{$get.$k}>"/><input type="button" class="searchbtn" value="搜索"/> <br>
+                            <{elseif $i.type=="img"}>
+                                <{$i.title}>
+                                <input type="text" name="<{$k}>" class="searchtxt" value="<{$get.$k}>"/><input type="button" class="searchbtn" value="搜索"/>
+                            <{else}>
+                                <{if $i.ismain===true}><input type="checkbox" id="select_all"/> &nbsp;<{/if}><{$i.title}>
+                            <{/if}>
+                        </th>
+                        <{/if}>
+                     <{/foreach}>
+                    <{/foreach}>
+                <!--     <th style="text-align:center;">操作</th> -->
+                        <!-- <th width="170">名称</th>                
+                        <th width="120">key</th>
+                        <th width="80">操作</th>  -->                     
+                    </tr>
+                    <{foreach from=$list item=li key=lk}>
+                    <tr>
+                        <td><input type="checkbox" name="id[]" value="<{$li.orderid}>"/><{$lk+1}></td>
+                        <{foreach from=$table item=j key=k2}>
+                            <{foreach from=$j.field item=cfgi key=cfgk}>
+                             <{if $cfgi.islist}>
+                                <td style="text-align:center;max-width:150px;">
+                                <{if $cfgi.type=='textarea' || $cfgi.type=='textarea1' }>
+                                    <textarea rows="3" cols="18" style="text-align:left;" id="zhushi_<{$li.orderid}>"><{$li.$cfgk}></textarea>
+                                <{elseif $cfgi.type=='img'}>
+                                    <img src="<{$li.$cfgk|add_host}>" width="50"/>
+                                <{elseif $cfgi.type=='flag'}>
+                                    <{$cfgi.flagdata[$li.$cfgk]}>
+                                <{elseif $cfgi.type=='time'}>
+                                    <{$li.$cfgk|date_format:"%Y-%m-%d %H:%M:%S"}>
+                                <{elseif $cfgi.type=='select'}>
+                                    <{$cfgi.selectdata[$li.$cfgk]}>
+                                <{else}>
+                                    <{if $cfgk=="payprice"}>
+                                        <{round($li.payprice-$li.discount,2)}> <br>
+                                        <del><{$li.payprice}></del>
+                                    <{else}>
+                                    <{$li.$cfgk}>
+                                    <{/if}>
+                                <{/if}>
+                                </td>
+                                <{/if}>
+                                <{/foreach}>
+                            <{/foreach}>
+                    </tr>
+                   <{/foreach}>
+                    </table>
+
+                    <div class="th">
+                        <{if $page}>
+                        <div class="pages">
+							<{$page}>
+                        </div>                
+                        <{/if}>
+                        
+                    	<!-- <div class="form">
+                        <input type="button" onclick="$(this).parents('form').submit();" value=" 删 除 "/>
+                        <{if $table_cfg.submitBtns}>
+                            <{foreach from=$table_cfg.submitBtns item=i key=k name=n}>
+                                &nbsp;&nbsp;<input type="button" onclick="$(this).parents('form').attr('action','<{$i}>').submit();" value=" <{$k}> "/>
+                            <{/foreach}>
+                        <{/if}>
+                                                <input type="submit" value=" 删 除 "/>&nbsp;
+                                                </div> -->
+                    </div>
+                </div>
+				</form>
+            </div><!--/ con-->
+        </div>    
+    </div><!--/ container-->
+    </div><!--/ wrap-->
+  <script>
+  function change_url(obj){
+	  var v	= $(obj).val();
+	  var n	= $(obj).attr('name');
+	  var requestUrl	= '<{$Reques_uri}>';
+	  var reg	= new RegExp("(\\?|&)?"+n+"=[^&]{0,}");
+	  requestUrl	= requestUrl.replace(reg,'');
+	  requestUrl	= requestUrl+'&'+n+"="+v+"&ac=list";
+	  window.location=requestUrl;
+  }
+  $('#select_all').click(function(){
+	  var able	= $(this).attr('checked');
+	  if(able){
+		  $(this).parents('form').find('input[type=checkbox]').attr('checked',true);
+	  }else{
+		  $(this).parents('form').find('input[type=checkbox]').attr('checked',false);
+	  }
+  });
+  $('.tselect').change(function(){
+	  change_url(this);
+  });
+  $('.searchbtn').click(function(){
+	  var that	= $(this).prev('input');
+	  change_url(that);
+  });
+  $('.del_ctl').click(function(){
+	  return confirm('删除无法恢复,确定删除?');
+  });
+  </script>
+<script charset="utf-8" src="./static/editer/kindeditor-min.js"></script>
+<script charset="utf-8" src="./static/editer/lang/zh_CN.js"></script>
+<script>
+var KK=null;
+	KindEditor.ready(function(K) {
+		KK=K;
+        window.editor = KK.create('.HTML_EDIT');
+	});
+</script>
+<{include file='Login/footer.html'}>

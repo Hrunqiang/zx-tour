@@ -1,0 +1,72 @@
+[ 2015-12-02T22:44:18+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.013988s ]
+INFO: [ route_check ] --END-- [ RunTime:0.014103s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.014365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014440s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-02T22:44:54+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001343s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001477s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-02T22:47:18+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000748s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-02T22:47:27+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001103s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001218s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001068s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-02T22:57:24+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001199s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001314s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-02T23:39:44+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000985s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001080s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-02T23:50:36+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001231s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001350s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-02T23:55:05+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001278s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001396s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001155s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+

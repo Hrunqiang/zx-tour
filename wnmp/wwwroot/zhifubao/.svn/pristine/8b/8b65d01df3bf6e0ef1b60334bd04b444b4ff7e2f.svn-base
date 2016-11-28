@@ -1,0 +1,20 @@
+<{if !session('SESSION_ZX_AUTHID')}>
+	<{if $isnuomi}>
+		<script type="text/javascript">
+		var url = encodeURIComponent("http://u.nuomi.com/redirect?appId=10020&tpUrl=http://nuomi.zx-tour.com/Account/test&needLogin=1");
+		location.href = "bainuo://component?url="+url;
+		</script>
+	<{else}>
+		<script>
+		var host = 'nuomi.zx-tour.com';
+		var host = '192.168.1.107:8099';
+		var url = encodeURIComponent("http://"+host+"/Account/test");
+		//location.href = 'http://u.nuomi.com/platform/h5login?tp_id=134&app_id=10020&from='+url;
+		location.href = "http://u.nuomi.com/redirect?appId=10020&needLogin=1&tpUrl="+url;
+		</script>
+	<{/if}>
+<{else}>
+	<script>
+		location.href = "http://nuomi.zx-tour.com/";
+	</script>
+<{/if}>

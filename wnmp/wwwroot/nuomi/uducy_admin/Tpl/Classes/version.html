@@ -1,0 +1,122 @@
+ <{include file='Login/header.html'}>
+ <{if $ac == 'list'}>
+<div class="wrap">
+    <div class="container">
+        <div id="main">          
+            <div class="con">       	
+                  <div class="table">
+                  	<div class="th">
+                    	<div class="form">
+                       		<select id="option" style="width:100px;height: 30px;">
+								<{$option}>
+							</select>
+                            <input type="button" onclick="window.location='./?s=Classes&a=version&ac=add&app=<{$app}>'" value="添加版本" />               
+                        </div>
+                    </div>
+                    <table class="admin-tb" id="datatable">
+                    <thead>
+                        <tr>
+                        	<th>项目</th>
+                            <th>版本</th>
+                            <th>状态</th> 
+                            <th>创建时间</th>                   
+                            <th>最后更新时间</th>
+                            <th>操作</th>
+                        </tr>
+					</thead>
+					<{foreach from=$list item=v }>
+						<tr>
+							<td><{$v.app}></td>
+						    <td><{$v.v}></td>
+						    <td><{if $v.status==0}>审核中<{else if $v.status==1}>己上线<{/if}></t>
+						    <td><{$v.ctime}></td>
+						    <td><{$v.utime}></td>
+                            <td><button class="change" data-id="<{$v.id}>"><{if $v.status==0}>上线<{else if $v.status==1}>下线<{/if}></button>&nbsp;&nbsp;|&nbsp;&nbsp;<button class="del" data-id="<{$v.id}>">删除</button></td>
+						</tr>
+					<{/foreach}>
+                    </table>
+                    <div class="th">
+                    </div>
+                </div>
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+<script type = "text/javascript">
+	$("#option").change(function(){
+		window.location.href = "/?s=Classes&a=version&app="+$(this).val();
+	});
+    $(".change").click(function(){
+        var $this = $(this);
+       window.location.href = "/?s=Classes&a=version&ac=change&app="+$("#option").val()+"&id="+$this.attr("data-id");
+    });
+    $(".del").click(function(){
+        var $this = $(this);
+        if(confirm("确定要删除此版本？")){
+            window.location.href = "/?s=Classes&a=version&ac=del&app="+$("#option").val()+"&id="+$this.attr("data-id");
+        }
+    });
+</script>
+</div>
+<{else if $ac=='add'}>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <form action="./?s=Classes&a=version&ac=<{$ac}>" method='post' >
+            <!--     <input type="hidden" name="utime" value="<{$now}>"/> -->
+                <div class="box-header">
+                    <h4>添加内容</h4>
+                </div>
+                <div class="box-content">
+                    <table class="table-font" style="width:80%;">
+                        <tr>
+                            <th class="w120">选择应用：</th>
+                            <td>
+                            <select name="app" id="app">
+                            <{$option}>
+                            </select>　<span id="custom_input"></span>
+                            </td>
+                        </tr>
+                        <tr class="hiden">
+                            <th class="w120">版本：</th>
+                            <td>
+                                <input type="text" id="v"  name="v" class="textinput w270" value="<{$data.v|escape:html}>" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr class="hiden">
+                            <th class="w120">状态：</th>
+                            <td>
+                            <label for="inindex1">审核</label>
+                            <input id="inindex1" type="radio" name="status" <{if $data.status==0 || $data.isdisplay==''}>checked=""<{/if}> value="0" class="textinput w60">
+                            <label for="inindex2">线上</label>
+                            <input id="inindex2" type="radio" name="status"  <{if $data.status==1}>checked=""<{/if}> value="1" class="textinput w60">
+                            </td>
+                        </tr>  
+                    </table>
+                </div>
+                
+                <div class="box-footer">
+                    <div class="box-footer-inner">
+                        <input type="submit" value="确定提交" /> 或 <a href="/?s=Classes&a=version&ac=list">取消</a>
+                    </div>
+                </div>
+                </form>
+            </div><!--/ con-->
+            
+        </div>    
+    </div><!--/ container-->
+
+</div>
+<script type="text/javascript">
+var custom_input = $("#custom_input");
+$("#app").change(function(){
+    var app = $(this).val();
+    if(app == "custom"){
+        custom_input.html('<input type="text" name="custom_app" placeholder="请输入你要添加的应用名！"/>');
+    }else{
+        custom_input.html();
+    }
+});
+</script>
+<{/if}>
+<{include file='Login/footer.html'}>

@@ -1,0 +1,81 @@
+<style>
+#hotwdheader{border-bottom: 2px solid #000;height: 30px;line-height: 30px;}
+#hotwdcontent{overflow: hidden;padding-bottom: 10px;height: 500px;}
+#add_hotwd{float: left;width: 20px;height: 20px;border-radius: 50%;text-align: center;color: #fff;background: #4e9ad4;margin-top: 12px;font-size: 16px;cursor: pointer;}
+#hotwdcontent p{width: 60px;position: relative;padding:10px 10px 10px 0;margin-right:20px; float: left;}
+#addhotwd_p{width: 220px!important;float: left;}
+#hotwdcontent p input{width: 60px;height: 20px;}
+#addhotwd_p #add_hotwd_input{width: 120px!important;float: left;padding:10px 10px 10px 0;}
+#hotwdcontent p span{position: absolute;top:0;right:0;width: 20px;height: 20px;background: red;color: #fff;border-radius: 50%;text-align: center;cursor: pointer;display: none;}
+#hotwdcontent p:hover span{display: block;}
+</style>
+<div id="hotwdheader">
+	<p id="hotwdheader">
+		<select name="" id="banner_sname">
+			<option value="zx_hotwords">搜索热词-官网</option>
+			<option value="zx_hotwords_nuomi" <{if $sname=="zx_hotwords_nuomi"}>selected<{/if}>>搜索热词-糯米</option>
+		</select>
+		<span id="host"><{if $sname=="zx_hotwords_nuomi"}>nuomi.zx-tour.com<{else}>weixin.zx-tour.com<{/if}></span>建议设置完后到用户端看看效果
+	</p>
+</div>
+<div id="hotwdcontent">
+<{foreach from=$list item=i }>
+	<p id="hotwd<{$i.aid}>">
+    	<input type="text" name="m_title[]" value="<{$i.n_title}>"/>
+        <span class="del_hotwd" onclick = "del_hotwd(<{$i.aid}>)" >—</span>
+	</p>    
+<{/foreach}>
+    <div id="addhotwd_p">
+	    <input type="text" value="" placeholder="在此输入要添加的热词" id="add_hotwd_input"/>
+	    <div id="add_hotwd" onclick="add_hotwd()">+</div>
+	</div>
+	
+</div>
+<script>
+function del_hotwd(id){
+	if(!id) return false;
+	$.ajax({
+		url:"?s=Recommend&a=hotwd&ac=del",
+		dataType:"json",
+        data:{id:id},
+        type: "POST",
+        success:function(data){
+        	if(data.error==0){
+        		$("#hotwd"+id).remove();
+        	}else{
+        		alert(data.msg);
+        	}
+        },
+        error:function(){
+        	alert("删除失败！");
+        }
+	});
+}
+function add_hotwd(){
+	var  wd = $('#add_hotwd_input').val();
+	if(!wd){
+		alert("请输入热词！");
+		return false;
+	}
+	$.ajax({
+		url:"?s=Recommend&a=hotwd&ac=add&sname=<{$sname}>",
+		dataType:"json",
+        data:{n_title:wd},
+        type: "POST",
+        success:function(data){
+        	if(data.error==0){
+        		window.location.reload();
+        	}else{
+        		alert(data.msg);
+        	}
+        },
+        error:function(){
+        	alert("添加失败！");
+        }
+	});
+}
+$("#banner_sname").change(function(){
+	var sname = $(this).val();
+	window.location.href = "?s=Recommend&ac=hotwd&sname="+sname;
+});
+</script>

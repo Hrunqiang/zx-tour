@@ -1,0 +1,34 @@
+<{include file='Comon/header.html'}>
+<title>想跑的赛事</title>
+<style>
+.matchBox{margin-bottom: 20px;}
+.borderLeft{margin: 5px 15px;}
+.borderLeft span{float: left;width: 0.2142rem;height: 1.2142rem;background: #04b102;margin: 0.322rem 0.5rem 0 0;}
+.weui_media_desc{padding: 0.3rem 0;}
+.weui_media_box.weui_media_appmsg .weui_media_hd{margin-right: 1.14285rem;}
+.weui_media_box{padding: 1.071428571428571rem;}
+.weui_media_desc span{display: inline-block;height: 0.9285rem;width: 1px;background: rgba(166,166,166,0.5);float: inherit;margin: 0 0.285rem;vertical-align: -0.1428rem;}
+</style>
+<div class="wrap centerBox">
+<{if $abroad || $domestic}>
+    <{if $abroad}>
+    <div class="matchBox">
+        <h5 class="borderLeft"><span></span>海外赛事</h5>
+        <{$abroad}>
+    </div>
+    <{/if}>
+     <{if $domestic}>
+    <div class="matchBox">
+        <h5 class="borderLeft"><span></span>国内赛事</h5>
+        <{$domestic}>
+    </div>
+    <{/if}>
+<{else}>
+<{include file="User/empty.html"}>
+<{/if}>
+</div><!--end of wrap -->
+<!-- <script src="/static/js/zepto.js"></script>
+<script src="/static/weui/js/weui.js"></script> -->
+
+</body>
+</html>

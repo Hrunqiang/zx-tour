@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="Author" content="" />
+  	<meta name="Keywords" content="" />
+  	<meta name="Description" content="" />
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  	<link rel="stylesheet" type="text/css" href="./css/lottery.css">  
+  	<title>上马活动</title>
+</head>
+<body>
+<div id="wrap">
+	<div id="qrcode">
+		<div>
+			<div><div><img src="./images/qrcode_1.jpg"><p id="ZXHYLY">已关注</p></div><p>知行合逸旅游</p></div>
+			<div><div><img src="./images/qrcode_2.jpg"><p id="PZZB">已关注</p></div><p>跑者装备</p></div>
+		</div>
+		<!-- <p>*公众号中回复“上马”,进入抽奖页面</p> -->
+	</div>
+	<p></p>
+	<div id="lottery">
+		<div></div>
+		<span id="zhuanpan"></span>
+	</div>
+	<div id="result">
+		<p id="res_word"></p>
+		<p id="res_num"></p>
+	</div>
+	<p id="hunt">　*奖品以实物为准</p>
+</div>
+<script type="text/javascript" src="./js/lottery.js"></script> 
+</body>
+</html>

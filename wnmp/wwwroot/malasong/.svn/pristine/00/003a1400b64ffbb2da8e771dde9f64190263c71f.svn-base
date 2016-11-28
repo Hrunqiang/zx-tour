@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * 公共上传
+ * @author kitter
+ *
+ */
+class UploadAction extends Action {
+	Public function _initialize(){
+		B('AuthCheck');
+	}
+	public function index(){
+		if($_FILES['file']['name']!=''){
+			var_dump($_FILES);
+			$path = UploadModel::upload($_FILES);
+			$this->assign('path',$path);
+		}
+		$this->display('upload');
+	}
+		
+	public function plug_upload()
+	{
+		$toobj	= $_GET['toobj'];
+		if($_FILES['file']['name']!=''){
+			$path = UploadModel::upload($_FILES);
+			$this->assign('path',$path);
+		}
+		$this->assign('toobj',$toobj);
+		$this->assign('dir',$_GET['dir']);
+		$this->assign('new_name',$_GET['new_name']);
+		//  	 	app_tpl::assign('obj',$obj);
+		$this->display('plug_upload');
+	}
+	
+}

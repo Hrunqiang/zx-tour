@@ -1,0 +1,202 @@
+[ 2016-08-24T10:17:43+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001826s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 24 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.029765s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.007916s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.009097s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 41 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.004728s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 45 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000804s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001460s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001535s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 62 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 62 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.025222s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025286s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000949s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000753s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000819s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000738s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003460s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000816s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2016-08-24T10:17:47+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 24 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004226s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.001963s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.003723s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 41 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.001400s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 45 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001589s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001043s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001188s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 62 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 62 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013891s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013980s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000826s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000425s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000261s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002178s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000625s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000701s ]
+
+[ 2016-08-24T10:17:49+08:00 ] /ajax/hotlist?page=2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.004463s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004585s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+NOTIC: [8] Undefined index: length D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 37 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001809s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 5,5  [ RunTime:0.000898s ]
+
+[ 2016-08-24T10:17:50+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000816s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000886s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+
+[ 2016-08-24T10:17:50+08:00 ] /Account/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000562s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+NOTIC: [8] Undefined index: type D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AccountAction.class.php 第 94 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001660s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001771s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.038195s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038252s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000476s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000288s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000212s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001422s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000423s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2016-08-24T10:17:50+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002854s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003035s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+
+[ 2016-08-24T10:17:55+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 24 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004002s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.002237s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.003186s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 41 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.001262s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 45 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001292s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001371s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001539s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 62 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 62 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018857s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018928s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001037s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000400s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000224s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000353s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002173s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000411s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000461s ]
+
+[ 2016-08-24T10:18:08+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000502s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+
+[ 2016-08-24T10:41:51+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000648s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+
+[ 2016-08-24T10:41:51+08:00 ] /Account/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000589s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+NOTIC: [8] Undefined index: type D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AccountAction.class.php 第 94 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000552s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000625s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.009363s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009419s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000337s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000328s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000243s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001477s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000507s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000549s ]
+

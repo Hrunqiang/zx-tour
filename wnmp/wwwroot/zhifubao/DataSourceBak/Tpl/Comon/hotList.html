@@ -1,0 +1,75 @@
+<{if $hotlist}>
+<style>
+	.hot_matchs{background: #FFF;overflow: hidden;}
+	.horizontal{background: #FFF;overflow: hidden;margin-bottom: 1.42857rem;padding:0.7142857142857143rem 1.071428571428571rem;}
+	/*.horizontal h5{margin-bottom: 0.71428rem;}*/
+	.horizontal .flex_1{width: 100%;display: block;}
+	.hot_img{width:7.75rem;height: 5.57rem;}
+	.hot_img img{width: 100%;height: 100%;}
+	/*////////////////////////////////新加样式///////////////////////////////*/
+	/*.weui_media_appmsg {position: relative;}*/
+	.weui_media_bd .weui_media_desc_1{padding-bottom: 0.3rem;padding-top: 0.3rem;}
+	.weui_media_desc_padding{ overflow: hidden;}
+	.weui_media_desc_padding span{display: inline-block;height: 0.9285rem;width: 1px;background: rgba(166,166,166,0.5);float:inherit; margin: 0 0.285rem;vertical-align: -0.1428rem;}
+	/*.weui_media_bd .weui_media_desc_padding{position: absolute;bottom: 1rem;}
+	.weui_media_bd{margin-top: -5.428rem;}
+	.weui_media_title_position{position: absolute;top: 2.857rem;padding-right: 1.0714rem;}*/
+	.weui_media_box:before{content: '';left: 0;}
+	.weui_tabbar_label{font-size: 1rem;margin-top: 0.3571rem;color: #000000;}
+	.hot_img_center a:nth-child(2) {margin: 0 0 0 0.25rem;}
+	.hot_img_center a:nth-child(3){overflow: hidden;}
+	.hot_img_center a:nth-child(3) div{float: right;}
+	.hot_img_center a:nth-child(3) p{float: right;}
+	.S_overhiden{overflow: hidden;/*width: 9.857142857142857rem;*/text-overflow: ellipsis;white-space: nowrap;display: inline-block;}
+	.weui_media_box .flex{width: 14.14285714285714rem;white-space: nowrap;overflow: hidden;display: -webkit-box;}
+	.flex span:nth-child(1){-webkit-box-flex:1;display: block;}
+	.flex span:nth-child(2){display: block;line-height: 1.5rem;float: none;}
+	/*///////////////////////////////////////支付宝版本//////////////////////////////////*/
+	.weui_media_box{position: relative;overflow: hidden;}
+	.flex span:nth-child(2){transform: rotateZ(45deg);-webkit-transform: rotateZ(45deg); border: none;color: #FFFFFF!important; position: absolute;right: -1.357142857142857rem;top: 0.357142857rem;width: 4.845686450484948rem;text-align: center;border-radius: 0;font-size: 0.7142857142857143rem;}
+	.match_tips_pay1{background: #cdcdcd;} 
+	.match_tips_pay2{background: #fb6165;}     
+	.loading{background: #f5f5f9;text-align: center;color: #888888;font-size: 1rem;line-height: 2.71rem;height: 3.71rem; position: relative;width: 100%;}
+	.loading .weui_loading{top: 14%;margin-top: 1.428571428571429rem;left: 44%;}
+</style>
+<{if $type=="vertical"}>
+<p class="list_title">热门赛事推荐</p>
+<div class="hot_matchs matchBox" style="margin-bottom: 4.285714285714286rem;" id="hot_matchs">
+    <{foreach from=$hotlist item=i}>
+    <a href="/Matchinfo?m_id=<{$i.id}>" class="weui_media_box weui_media_appmsg">
+        <div class="weui_media_hd">
+            <img class="weui_media_appmsg_thumb" src="<{$i.m_img}>" alt="">
+        </div>
+        <div class="weui_media_bd">
+            <h4 class="weui_media_title flex"><span class="S_overhiden"><{$i.m_name}></span>
+            <{if $i.m_state!=0 || $i.m_GameTime <=$now || $i.m_releaseTime >$now || $i.m_untilTime<$now || $i.m_offineTime <$now}>
+            	<span class="match_tips match_tips_pay1">名额已满</span>
+            <{else if $i.m_placesleft<=20}>
+            	<span class="match_tips match_tips_warm match_tips_pay2">名额紧张</span>
+            <{/if}>
+            </h4>
+            <p class="weui_media_desc weui_media_desc_1 line2 weui_media_title_position"><{$i.m_des}></p>
+            <p class="weui_media_desc weui_media_desc_padding"><{substr($i.m_GameTime,0,10)}> <{str_replace("|","<span></span>",$i.m_Mtypes)}></p>
+        </div>
+    </a>
+    <{/foreach}>
+</div>
+<{else}>
+<div class="horizontal">
+	<h5 class="borderLeft"><span class="borderLeft—green"></span>热门赛事</h5>
+	<div class="flexBox hot_img_center" id="hot_img_center">
+		<{foreach from=$hotlist item=i}>
+	    <a href="/Matchinfo?m_id=<{$i.id}>" class="flex_1">
+	        <div class="hot_img">
+	            <img style="width: 7.75rem;height: 5.57rem;" src="<{$i.m_img}>" alt="">
+	        </div>
+	        <p class="weui_tabbar_label"style="  text-overflow:ellipsis; white-space:nowrap; overflow:hidden;width: 7.76rem;"><{$i.m_name}></p>
+	    </a>
+	    <{/foreach}>
+	</div>
+</div>
+<{/if}>
+<{/if}>
+	<script type="text/javascript">
+		
+</script>

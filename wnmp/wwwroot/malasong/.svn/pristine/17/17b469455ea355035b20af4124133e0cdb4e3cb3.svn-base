@@ -1,0 +1,401 @@
+function checkIdcard(idcard){
+	var Errors=new Array(
+	"验证通过!",
+	"身份证号码位数不对!",
+	"身份证号码出生日期超出范围或含有非法字符!",
+	"身份证号码校验错误!",
+	"身份证地区非法!"
+	);
+	var area={11:"北京",12:"天津",13:"河北",14:"山西",15:"内蒙古",21:"辽宁",22:"吉林",23:"黑龙江",31:"上海",32:"江苏",33:"浙江",34:"安徽",35:"福建",36:"江西",37:"山东",41:"河南",42:"湖	北",43:"湖南",44:"广东",45:"广西",46:"海南",50:"重庆",51:"四川",52:"贵州",53:"云南",54:"西藏",61:"陕西",62:"甘肃",63:"青海",64:"宁夏",65:"新疆",71:"台湾",81:"香港",82:"澳门",91:"国外"};
+	var retflag=false;
+	var idcard,Y,JYM;
+	var S,M;
+	var idcard_array = new Array();
+	idcard_array = idcard.split("");
+	//地区检验
+	if(area[parseInt(idcard.substr(0,2))]==null) return Errors[4];
+	//身份号码位数及格式检验
+	switch(idcard.length){
+	case 15:
+	if ( (parseInt(idcard.substr(6,2))+1900) % 4 == 0 || ((parseInt(idcard.substr(6,2))+1900) % 
+	100 == 0 && (parseInt(idcard.substr(6,2))+1900) % 4 == 0 )){
+	ereg=/^[1-9][0-9]{5}[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))[0-9]{3}$/;//测试出生日期的合法性
+	} else {
+	ereg=/^[1-9][0-9]{5}[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|1[0-9]|2[0-8]))[0-9]{3}$/;//测试出生日期的合法性
+	}
+	if(ereg.test(idcard)) 
+	return Errors[0];
+	else 
+	{
+	 return Errors[2];
+	}
+	break;
+	case 18:
+	//18位身份号码检测
+	//出生日期的合法性检查 
+	//闰年月日:((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))
+	//平年月日:((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|1[0-9]|2[0-8]))
+	if ( parseInt(idcard.substr(6,4)) % 4 == 0 || (parseInt(idcard.substr(6,4)) % 100 == 0 && 
+	parseInt(idcard.substr(6,4))%4 == 0 )){
+	ereg=/^[1-9][0-9]{5}19[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))[0-9]{3}[0-9Xx]$/;//闰年出生日期的合法性正则表达式
+	} else {
+	ereg=/^[1-9][0-9]{5}19[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|1[0-9]|2[0-8]))[0-9]{3}[0-9Xx]$/;//平年出生日期的合法性正则表达式
+	}
+	if(ereg.test(idcard)){//测试出生日期的合法性
+	//计算校验位
+	S = (parseInt(idcard_array[0]) + parseInt(idcard_array[10])) * 7
+	+ (parseInt(idcard_array[1]) + parseInt(idcard_array[11])) * 9
+	+ (parseInt(idcard_array[2]) + parseInt(idcard_array[12])) * 10
+	+ (parseInt(idcard_array[3]) + parseInt(idcard_array[13])) * 5
+	+ (parseInt(idcard_array[4]) + parseInt(idcard_array[14])) * 8
+	+ (parseInt(idcard_array[5]) + parseInt(idcard_array[15])) * 4
+	+ (parseInt(idcard_array[6]) + parseInt(idcard_array[16])) * 2
+	+ parseInt(idcard_array[7]) * 1 
+	+ parseInt(idcard_array[8]) * 6
+	+ parseInt(idcard_array[9]) * 3 ;
+	Y = S % 11;
+	M = "F";
+	JYM = "10X98765432";
+	M = JYM.substr(Y,1);//判断校验位
+	if(M == idcard_array[17]) return Errors[0]; //检测ID的校验位
+	else return Errors[3];
+	}
+	else return Errors[2];
+	break;
+	default:
+	return Errors[1];
+	break;
+	}
+	}
+function ajax_post(url,data,fun){
+	$.ajax({
+		cache: false,
+		url:url,
+		type: "POST",
+		dataType: "json",
+		timeout:'30000',
+//		async: false,
+		data: data,
+		success: function(result){
+			if(result.error===0){
+				fun(result.data);
+			}else{
+				alert(result.msg);
+			}
+		}
+	});
+}
+
+function minDate(stime,etime){
+	var stimesplit = stime.split("-");
+	var etimesplit = etime.split("-");
+	if(stimesplit.length <=0){
+		alert("请输入正确的时间格式");
+		return false;
+	}
+    var bng = stime;
+    var end =  etime;
+    var bngDate = new Date(stimesplit[0],stimesplit[1],stimesplit[2]);
+    var endDate = new Date(etimesplit[0],etimesplit[1],etimesplit[2]);
+    var days = (endDate.getTime()-bngDate.getTime())/24/60/60/1000;
+    return days;
+}
+$(function(){
+	$("#ziliao_table").submit(function(){
+		var riqi_reg = /^(19|20)\d{2}(-|\/)(1[0-2]|0?[1-9])(-|\/)(0?[1-9]|[1-2][0-9]|3[0-1])$/;
+		var shouji_reg = /^1[\d]{10}$/;
+		var email_reg = /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/;
+		
+		var xingbie = $("input[name=xingbie]:checked").val();
+		//////////////////////////////////////////////////
+		var xingming = $("input[name=xingming]").val();
+		if(xingming == "" || xingming== "请输入真实姓名"){
+			alert("姓名不能为空");
+			$("input[name=xingming]").focus();
+			return false;
+		}
+		
+		var guojia = $("select[name=guojia]").val();
+		if(guojia == ""){
+			alert("国家不能为空");
+			$("select[name=guojia]").focus();
+			return false;
+		}
+		
+		var zjtype = $("select[name=zjtype]").val();
+		if(zjtype == ""){
+			alert("证件类型不能为空");
+			$("select[name=zjtype]").focus();
+			return false;
+		}
+		
+		var zjcode = $("input[name=zjcode]").val();
+		var checkrs = checkIdcard(zjcode);
+		if(checkrs != "验证通过!" && zjtype=="身份证"){
+			alert("请输入正确的身份证号码");
+			$("input[name=zjcode]").focus();
+			return false;
+		}
+		if(zjcode == "" || zjcode== "请输入证件号码"){
+			alert("证件号码不能为空");
+			$("input[name=zjcode]").focus();
+			return false;
+		}
+		
+		var shengri = $("input[name=shengri]").val();
+		var machrs = riqi_reg.test(shengri);
+		if(!machrs){
+			alert("请填写正确的生日格式");
+			$("input[name=shengri]").focus();
+			return false;
+		}
+		if(shengri == "" || shengri== "请输入生日"){
+			alert("生日不能为空");
+			$("input[name=shengri]").focus();
+			return false;
+		}
+		
+		var shouji = $("input[name=shouji]").val();
+		var machrs = shouji_reg.test(shouji);
+		if(!machrs){
+			alert("请填写正确的手机号");
+			$("input[name=shouji]").focus();
+			return false;
+		}
+		if(shouji == "" || shouji=="请输手机号"){
+			alert("手机号不能为空");
+			$("input[name=shouji]").focus();
+			return false;
+		}
+		
+		var youxiang = $("input[name=youxiang]").val();
+		var machrs = email_reg.test(youxiang);
+		if(!machrs){
+			alert("请填写正确的电子邮箱");
+			$("input[name=youxiang]").focus();
+			return false;
+		}
+		if(youxiang == "" || youxiang=="请输电子邮箱"){
+			alert("电子邮箱不能为空");
+			$("input[name=youxiang]").focus();
+			return false;
+		}
+		
+		var diqu = $("select[name=diqu]").val();
+		if(diqu == ""){
+			alert("地区不能为空");
+			$("select[name=diqu]").focus();
+			return false;
+		}
+		
+		var shengfen = $("select[name=shengfen]").val();
+		if(shengfen == ""){
+			alert("省份不能为空");
+			$("select[name=shengfen]").focus();
+			return false;
+		}
+		
+		var dizhi = $("input[name=dizhi]").val();
+		if(dizhi == "" || dizhi== "请输入详细地址"){
+			alert("详细地址不能为空");
+			$("input[name=dizhi]").focus();
+			return false;
+		}
+		
+
+		var qmfirstdate = $("input[name=qmfirstdate]").val();
+		var machrs = riqi_reg.test(qmfirstdate);
+		if(qmfirstdate != "请输入日期" && !machrs){
+			alert("请填写正确的日期");
+			return false;
+		}
+		
+		var bmfirstdate = $("input[name=bmfirstdate]").val();
+		var machrs = riqi_reg.test(bmfirstdate);
+		if(bmfirstdate != "请输入日期" && !machrs){
+			alert("请填写正确的日期");
+			return false;
+		}
+		return true;
+	});
+	
+		$(":text").each(function(index,ele) {
+				var tip=$(ele).val();
+				$(this).focus(function(){
+					if($(this).val()==tip){
+						$(this).val('');
+					}
+					$(this).addClass('focus_text');
+					$(this).parent().addClass('y-row1-focus');
+				}).blur(function(){
+					if(!$(this).val()){
+						$(this).val(tip).removeClass('focus_text')
+					}
+					$(this).parent().removeClass('y-row1-focus');
+				})
+			});
+			//单间房子价格计算器
+			function calcJdPrice(obj){
+				var stime = $(obj).parents(".jd_fangjian").find('input[name=stime]').val();
+				var etime = $(obj).parents(".jd_fangjian").find('input[name=etime]').val();
+				var count = $(obj).parents(".jd_fangjian").find('input[name=count]').val();
+				count = parseInt(count);
+				var perprice = $(obj).parents(".jd_fangjian").find('.perprice').html();
+				var AllPriceObj = $(obj).parents(".jd_fangjian").find('.allprice');
+				perprice = parseFloat(perprice);
+				if(stime && etime ){
+					var dates = minDate(stime,etime);
+					if(dates <=0 ){
+						alert("起始时间不能小于结束时间。");
+						 $(obj).parents(".jd_fangjian").find('input[name=etime]').focus();
+						return false;
+					}else{
+						var AllPrice = count * dates * perprice;
+						AllPriceObj.html(AllPrice);
+					}
+				}
+				return AllPrice;
+			}
+			//支付按钮
+			if($("#pay_price").length>0){
+				$("#pay_price").click(function(){
+					var bmtype = $("input[name=bmtype]:checked").val();
+					if(!bmtype){
+						$("input[name=bmtype]").eq(0).focus();
+						alert("请选择马拉松项目。");
+						return false;
+					}
+					var orderid = $(".step2").attr("orderid");
+					if($(".pepo").length>0){
+						var baomingdanid = $(".pepo").attr("id");
+					}else{
+						if(confirm("您还没有添加报名单,请回去添加报名单")){
+							window.location.href="/enroll/index";
+						}else{
+							window.location.href="/enroll/index";
+						}
+						return false;
+					}
+					var data = {"bmtypeid":bmtype,"orderid":orderid,"baomingdanid":baomingdanid};
+					data.jdinfo=[];
+					//获取预订的酒店id
+					$(".jd_fangjian[isyd=1]").each(function(){
+						var d = {};
+						d.id = $(this).attr('id');
+						d.stime = $(this).find("input[name=stime]").val();
+						d.etime = $(this).find("input[name=etime]").val();
+						d.count = $(this).find("input[name=count]").val();
+						data.jdinfo.push(d);
+					});;
+					//购物车中添加项目及补充报名单价格
+					ajax_post("/Enroll/payOrder",data , function(data){
+						//@todo 提交支付订单
+						$("#pay_form").submit();
+					})
+					return false;
+				});
+			}
+			//酒店入住日期选择时计算价格(不计入总价格)
+			if($('.selectDate').length>0){
+				$('.selectDate').datepicker({
+					minDate:new Date(),
+					onSelect: function(selectedDate) {//选择日期后执行的操作 
+						if($(this).attr("readonly") ==true){
+							return false;
+						}
+						calcJdPrice($(this));
+		            },
+		            beforeShow:function(){}
+				}); 
+			}
+			//房间数量变化时,计算价格(不计入总价格)
+			if($(".jd_fangjian").length>0){
+				$(".jd_fangjian input[name=count]").change(function(){
+					calcJdPrice($(this));
+				});
+			}
+			//选择马拉松项目长度算价格(计入总价格)
+			if($("input[name=bmtype]").length>0){
+				$("input[name=bmtype]").click(function(){
+					var bmpre_price = $("#bmprice").html();
+					bmpre_price = parseFloat(bmpre_price);
+					var price = $(this).attr("price");
+					price = parseFloat(price);
+					var allprice = $("#allprice").html();
+					allprice = parseFloat(allprice);
+					$("#bmprice").html(price);
+					allprice = allprice+price-bmpre_price;
+					allprice = allprice.toFixed(2);
+					 $("#allprice").html(allprice);
+					 $("#pay_all_price").val(allprice);
+				});
+			}
+			//酒店选取算价格及交互(计入总价格)
+			if($(".jd_fangjian").length>0){
+				$(".jd_fangjian .ydbtn").click(function(){
+					var jdallprice = $("#jdallprice").html();
+					var allprice = $("#allprice").html();
+					jdallprice = parseFloat(jdallprice);
+					allprice = parseFloat(allprice);
+					$(this).parents('.jd_fangjian').attr("isyd",1);
+					$(this).parents('.jd_fangjian').find("input").attr("disabled",true);
+					$(this).hide();
+					$(this).parents('.jd_fangjian').find(".cancelbtn").show();
+					var thisprice = calcJdPrice($(this));
+					jdallprice = thisprice+jdallprice;
+					jdallprice = jdallprice.toFixed(2);
+					$("#jdallprice").html(jdallprice);
+					allprice = thisprice+allprice;
+					allprice = allprice.toFixed(2);
+					$("#allprice").html(allprice);
+					$("#pay_all_price").val(allprice);
+				});
+				$(".jd_fangjian .cancelbtn").click(function(){
+					$(this).parents('.jd_fangjian').attr("isyd",0);
+					$(this).parents('.jd_fangjian').find("input").attr("disabled",false);
+					$(this).hide();
+					var thisprice = $(this).parents('.jd_fangjian').find(".allprice").html();
+					var jdallprice = $("#jdallprice").html();
+					var allprice = $("#allprice").html();
+					jdallprice = parseFloat(jdallprice);
+					allprice = parseFloat(allprice);
+					thisprice = parseFloat(thisprice);
+					$(this).parents('.jd_fangjian').find(".ydbtn").show();
+					$(this).parents('.jd_fangjian').find(".allprice").html(0);
+					var jdallprice_2 = (jdallprice-thisprice);
+					jdallprice_2 = jdallprice_2.toFixed(2);
+					$("#jdallprice").html(jdallprice_2);
+					var allprice_2 = allprice-thisprice;
+					allprice_2 = allprice_2.toFixed(2);
+					$("#allprice").html(allprice_2);
+					$("#pay_all_price").val(allprice_2);
+				});
+			}
+			//酒店预订 选项框事件
+			var jdyd = $("#jdyd");
+			if(jdyd.length > 0){
+				jdyd.change(function(){
+					var ischeck = $(this).is(':checked');
+					if(ischeck){
+						$(".jdyd_list").slideDown("slow");
+					}else{
+						$(".jdyd_list").slideUp("slow");
+					}
+				});
+			}
+			//每个大酒店下的房间展示按钮
+			var jdyd_list = $(".jdyd_list");
+			if(jdyd_list.length>0){
+				$(".jdyd_list .btn2").click(function(){
+					$(this).parents(".item").next('.item_content').slideToggle("slow");
+				});;
+			}
+			
+			/*获取产品*/
+//			$step2 = $(".step2");
+			/*if($step2.length>0){
+				ajax_post("/Enroll/getGoods",{"pid":1},function(data){
+					console.log(data);
+				});
+			}*/
+})

@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="95091b0d-6d69-4899-b93c-cd9db85e216c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/0.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/10.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/100.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/101.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/102.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/103.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/104.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/105.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/106.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/107.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/108.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/109.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/11.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/110.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/111.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/112.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/113.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/114.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/115.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/116.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/117.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/118.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/119.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/12.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/120.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/121.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/122.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/123.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/124.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/125.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/126.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/127.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/128.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/129.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/13.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/130.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/131.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/132.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/133.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/134.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/14.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/15.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/16.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/17.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/18.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/20.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/21.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/22.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/23.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/24.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/25.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/26.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/27.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/28.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/29.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/30.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/31.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/32.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/33.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/34.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/35.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/36.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/37.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/38.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/39.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/40.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/static/images/404.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/41.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/42.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/43.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/44.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/45.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/46.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/47.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/48.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/49.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/50.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/51.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/52.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/53.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/54.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/55.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/56.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/57.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/58.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/59.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/60.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/61.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/62.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/63.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/64.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/65.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/66.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/67.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/68.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/69.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/70.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/71.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/72.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/73.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/74.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/75.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/76.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/77.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/78.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/79.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/8.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/80.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/81.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/82.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/83.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/84.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/85.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/86.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/87.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/88.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/89.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/9.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/90.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/91.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/92.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/93.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/94.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/95.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/96.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/97.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/98.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/99.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataSource/Lib/Action" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Lib/Action" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Action" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/AdvertClass" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/AdvertList" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Amf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Analysis" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/AppStore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataSource/Lib/Behavior" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Lib/Behavior" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Behavior" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Behavior" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Rest/Behavior" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Behavior" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Behavior" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Cache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Driver/Cache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Driver/Cache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Classes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Cli" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataSource/Common" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Common" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Common" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Common" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Common" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataSource/Conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Core" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Crypt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataSource" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Driver/Db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Driver/Db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Driver" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Driver" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Image/Driver" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Driver" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Function" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Image" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/ImeiCount" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/IosAccount" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/IosGame" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/IosSDK" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataSource/Lang" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Lang" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lang" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataSource/Lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Library" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Lite" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/LogChart" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Login" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Logs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mail" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Member" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Memcququ" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mine" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataSource/Lib/Model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Lib/Model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Library/ORG/Net" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Net" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Nt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Library/ORG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Phprpc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/PushTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Push" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Rest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Tool/SaeCacheBuilder" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Session" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/TagLib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Driver/TagLib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Template" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Template" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Template" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Test" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Testing" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Thin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Tool" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataSource/Tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Upload" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Library/ORG/Util" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Weixin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataSource/Lib/Widget" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Lib/Widget" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Widget" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/add.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/aes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/image/images/align_left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/image/images/align_right.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/image/images/align_top.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/common/anchor.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/anchor" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/arrow.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/autoheight" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/default/background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/baidumap" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/banner.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/img/bg_img.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/img/bg_img.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/common/blank.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/border-arrow.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/button_01.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/button_02.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/cfg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/class_icon.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/clearhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/close.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/close_btn.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/closed.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/code" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/qrx/colorpicker.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/comm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/common" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/common" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/cross.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/wwwroot/static/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/dialog/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepk/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/static/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/default.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/default/default.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/default" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/denied" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/dialog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/qq/editor.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/editor" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/failed.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/wwwroot/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/filemanager/images/file-16.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/filemanager/images/file-64.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/filemanager" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/common/flash.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/flash" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/filemanager/images/folder-16.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/filemanager/images/folder-64.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/filemanager/images/go-up.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/graph" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/qrx/graybar.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/qrx/grid.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/header_bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/header_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/template/html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/icon_calendar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/multiimage/images/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/image" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/images.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/wwwroot/static/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/filemanager/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/image/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/multiimage/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/static/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/img" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/info.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/infor-ico.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/insertfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/jifeng" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/wwwroot/static/js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepk/js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/static/js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/keyword_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/keyword_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/lang" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/left_bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/left_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/lgoin_btn.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/light.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/lineheight" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/link" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/loadding.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/common/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/login_head.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/logo.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/common/media.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/media" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/multiimage" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/open.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/open_btn.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/pagebreak" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/passed.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/plainpaste" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/plugins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/preview" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/st/public" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/qrx/pulldownfc-back.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/qq" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_0.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_10.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_100.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_101.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_102.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_103.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_104.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_11.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_12.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_13.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_14.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_15.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_16.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_17.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_18.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_19.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_20.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_21.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_22.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_23.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_24.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_25.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_26.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_27.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_28.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_29.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_30.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_31.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_32.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_33.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_34.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_35.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_36.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_37.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_38.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_39.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_40.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_41.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_42.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_43.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_44.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_45.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_46.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_47.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_48.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_49.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_50.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_51.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_52.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_53.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_54.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_55.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_56.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_57.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_58.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_59.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_60.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_61.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_62.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_63.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_64.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_65.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_66.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_67.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_68.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_69.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_70.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_71.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_72.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_73.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_74.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_75.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_76.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_77.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_78.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_79.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_8.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_80.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_81.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_82.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_83.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_84.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_85.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_86.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_87.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_88.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_89.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_9.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_90.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_91.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_92.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_93.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_94.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_95.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_96.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_97.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_98.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/qq_face/qq_face_99.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/qrx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/quickformat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/image/images/refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/repeat.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/img/resize_center.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/img/resize_leftjpg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/rewrite" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/common/rm.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/sae.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/search.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/multiimage/images/select-files-en.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/multiimage/images/select-files-zh_CN.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/simple" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/img/spacer.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/wwwroot/st" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/st" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/images/static.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/wwwroot/static" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/static" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/storage" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/submit.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/multiimage/images/swfupload.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/table" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/template" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/test" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/th_bar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/tick.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/top_focus.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/qrx/transparentpixel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-bg_diagonals-thick_15_0b3e6f_40x40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-bg_dots-medium_30_0b58a2_4x4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-bg_dots-small_20_333333_2x2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-bg_dots-small_30_a32d00_2x2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-bg_dots-small_40_00498f_2x2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-bg_flat_10_000000_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-bg_flat_40_292929_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-bg_glass_100_f6f6f6_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-bg_glass_100_fdf5ce_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-bg_gloss-wave_20_111111_500x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/images/ui-highDefinition.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-icons_00498f_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-icons_228ef1_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-icons_98d2fb_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-icons_9ccdfc_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-icons_ef8c08_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-icons_ffd27a_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/users" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/st/users" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/vcastr2.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/warning.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/wordpaste" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/wwwroot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/.hg_archival.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/denied/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/rewrite/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/template/html/1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams/1024.dhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams/128.dhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams/1536.dhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams/160.dhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams/192.dhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/template/html/2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams/2048.dhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams/256.dhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/template/html/3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams/3072.dhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/storage/3459a86f4c25bdc815698874afe3dd4e" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams/4096.dhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/wwwroot/502.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams/512.dhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams/768.dhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams/96.dhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Core/Action.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Amf/Action.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Cli/Action.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Lite/Action.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Phprpc/Action.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Rest/Action.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Thin/Action.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core/Action.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Model/AdvModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Behavior/AgentCheckBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/AjaxAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/AlbumService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/AnalysisAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Amf/App.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Cli/App.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Lite/App.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Phprpc/App.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Thin/App.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core/App.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/AppService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/ArrayList.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Behavior/AuthCheckBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Authority.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Crypt/Base64.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core/Behavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/jifeng/Biz_model.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/BlogService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Behavior/BrowserCheckBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/CREDITS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core/Cache.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Cache/CacheApachenote.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Cache/CacheApc.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Cache/CacheDb.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Cache/CacheEaccelerator.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Driver/Cache/CacheFile.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Cache/CacheMemcache.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Driver/Cache/CacheMemcache_sae.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/CacheModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Cache/CacheRedis.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Cache/CacheShmop.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Cache/CacheSqlite.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Cache/CacheWincache.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Cache/CacheXcache.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Behavior/CheckActionRouteBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Behavior/CheckLangBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Rest/Behavior/CheckRestRouteBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Behavior/CheckRouteBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Rest/Behavior/CheckUrlExtBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/ClassInfoModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/ClassModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/ClassesAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/CodeSwitch.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/CommentService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/CommonModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/CommonV2Model.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/ComonMainAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Behavior/ContentReplaceBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/jifeng/Convertor.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Cookie.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/CoreModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Behavior/CronRunBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/CrontabAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/CrontabClassAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/CrontabIbroAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Crypt/Crypt.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Date.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Amf/Db.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Cli/Db.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Lite/Db.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Phprpc/Db.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Thin/Db.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core/Db.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Db/DbIbase.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Db/DbMongo.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Db/DbMssql.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Driver/Db/DbMysql.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Driver/Db/DbMysql.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Driver/Db/DbMysqli.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Driver/Db/DbMysqli.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Db/DbOracle.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Db/DbPdo.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Db/DbPgsql.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Db/DbSqlite.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Db/DbSqlsrv.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Debug.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Crypt/Des.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/DictModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Lite/Dispatcher.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core/Dispatcher.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/EditorAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/class/ErrorCase.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/FeedService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Behavior/FireShowPageTraceBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/FriendService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Image/Driver/GIF.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Crypt/Hmac.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/HtmlExtractor.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mine/Http.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Net/Http.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/INSTALL" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Image.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Image/Driver/ImageGd.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Image/Driver/ImageImagick.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Library/ORG/Util/Image_sae.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Image_sae.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/ImitSqlite.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/users/InProportion.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataSource/Lib/Action/IndexAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/IndexAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Input.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/InvitationService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Net/IpLocation.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/editor/JSON.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/Lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/LikeService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Behavior/LocationTemplateBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Core/Log.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core/Log.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/LogChartAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/LoginAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/LoginModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/LogsModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/jifeng/MarketApi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/jifeng/MarketApiV1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/jifeng/MarketApiV2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/MemberAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/Memcache.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/MemcququAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/MessageAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Amf/Model.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Cli/Model.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Lite/Model.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Phprpc/Model.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Thin/Model.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core/Model.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Model/MongoModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/NotificationService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/class/Oauth.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Page.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Behavior/ParseTemplateBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Behavior/ParseTemplateBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/PhotoService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mine/PicCut.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/ProfileService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/PublishAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mine/PushApple.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Push/Pushusers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/class/QC.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/QueueModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/RBAC.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Behavior/ReadHtmlCacheBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Behavior/ReadHtmlCacheBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/aes/ReadMe.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/class/Recorder.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/RedisModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Model/RelationModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/RennClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/RennClientBase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/RennServiceBase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/RenrenConnectAPI.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Action/RestAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Behavior/RobotCheckBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Crypt/Rsa.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/SaeCounter.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/SaeFetchurl.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/SaeImage.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/SaeKV.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/SaeKVClient.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Core/SaeMC.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/SaeMail.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/SaeMysql.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/SaeObject.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/SaeRank.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/SaeStorage.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/SaeTaskQueue.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Session.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Session/SessionDb.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/ShareService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Behavior/ShowPageTraceBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Behavior/ShowRuntimeBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mine/SimpleHtml.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/Smarty.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/SmartyBC.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Core/Sms.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Socket.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Stack.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/StatusService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/String.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/SysModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Template/TagLib.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Driver/TagLib/TagLibCx.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/TagLib/TagLibHtml.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Template/TemplateEase.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Template/TemplateLite.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Template/TemplateMobile.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Template/TemplateSmart.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Driver/Template/TemplateSmarty.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mine/Tencent.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/TestAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/TestingAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Core/Think.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Tool/SaeCacheBuilder/Think.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core/Think.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/ThinkEditor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core/ThinkException.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Image/ThinkImage.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/ThinkPHP.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Template/ThinkTemplate.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Template/ThinkTemplate.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Behavior/TokenBuildBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/class/URL.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/UbbService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/UpdateAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Behavior/UpgradeNoticeBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Behavior/UpgradeNoticeBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/UploadAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mine/UploadDlKhdCdn.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Net/UploadFile.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Library/ORG/Net/UploadFile_sae.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/UploadModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Model/UserAuthModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/rennclient/service/UserService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/UsersManageAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core/View.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Model/ViewModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Lib/Action/WeixinAction.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Core/Widget.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Behavior/WriteHtmlCacheBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lib/Behavior/WriteHtmlCacheBehavior.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Crypt/Xxtea.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Nt/add_nt.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/IosGame/addgame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/AdvertClass/advert_com.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Conf/alias.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Conf/alias.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Phprpc/alias.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/amf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/anchor/anchor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/jifeng/api.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/lang/ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/autoheight/autoheight.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/baidumap/baidumap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/dialog/css/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/bigint.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/block.textformat.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/cfg/callback.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/cate_list_manager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/catgorymanager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/denied/checker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/rewrite/checker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/checker.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/checker.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/class.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/AdvertClass/class_content.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/AdvertList/class_content.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Classes/class_content.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/class_content.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/class_import.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/class_site.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/classadd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/clearhtml/clearhtml.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/cli.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/code/code.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Common/common.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Common/common.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Common/common.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Common/common.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/AdvertClass/common_class.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/AdvertList/common_class.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Classes/common_class.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/common_class.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/compat.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/config.m4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataSource/Conf/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Conf/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Rest/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/comm/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/cfg/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Conf/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/config.w32" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Conf/convention.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Conf/convention_sae.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/data_uniq.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/common/datamap.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Conf/debug.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/debug.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/default/default.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Tpl/default_index.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/defines.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/aes/demo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/cfg/demo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/dhparams.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/dialog/dialog.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/data/dic.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Tpl/dispatch_jump.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/IosGame/edit_game.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/emoticons/emoticons.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lang/en-us.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/lang/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/aes/errorCode.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/graph/exporting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Function/extend.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/common/feedback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/filemanager/filemanager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/flash/flash.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Login/footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/footer.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/function.counter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/function.cycle.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/function.fetch.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/function.html_checkboxes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/function.html_image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/function.html_options.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/function.html_radios.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/function.html_select_date.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/function.html_select_time.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/function.html_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/function.mailto.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/function.math.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Common/functions - 副本.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Common/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Common/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Cli/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/graph/grid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Login/header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/header.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/graph/highcharts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/graph/highstock.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/image/image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/imit_functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/comm/inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/AppStore/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/IosAccount/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/IosGame/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/IosSDK/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/LogChart/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Memcququ/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Test/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Testing/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/common/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/baidumap/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/wwwroot/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/renren/cfg/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/index_cli.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/index_cli.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/index_list.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/PushTest/info.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/init.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/insertfile/insertfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/jquery-1.3.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/jquery-1.6.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/js/jquery-1.7.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/jquery-ui-1.7.1.custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/jquery-ui-1.7.1.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/jquery-ui-1.8.17.custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/js/jquery-ui-1.8.17.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/css/jquery-ui-timepicker-addon.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepk/css/jquery-ui-timepicker-addon.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/js/jquery-ui-timepicker-addon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepk/css/jquery-ui-timepicker-addon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepicker/js/jquery-ui-timepicker-zh-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepk/js/jquery-ui-timepicker-zh-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/static/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/timepk/js/jquery.ui.datepicker-zh-CN.js.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/juji.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/kindeditor-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Weixin/kuaidi.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/lineheight/lineheight.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/link/link.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/list.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/list_add.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/list_edit.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/list_playurl.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/lite.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Login/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/login.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/make_html_all.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/baidumap/map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/map/map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/map/map.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/common/map_line.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/media/media.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Member/member_add.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/member_add.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Member/member_edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/member_edit.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Member/member_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/member_list.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Member/member_password.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/member_password.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Memcququ/memcindex.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Login/menu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/menu.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Login/message.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/message.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/mls.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/common/mobile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifier.capitalize.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifier.date_format.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifier.debug_print_var.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifier.escape.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifier.json_decode.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifier.regex_replace.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifier.replace.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifier.spacify.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifier.truncate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifier.truncate_cn.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.cat.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.count_characters.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.count_paragraphs.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.count_sentences.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.count_words.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.escape.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.from_charset.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.indent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.lower.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.noprint.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.string_format.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.strip.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.strip_tags.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.to_charset.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.unescape.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.upper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/modifiercompiler.wordwrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/common/mongo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/multiimage/multiimage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/plugins/myplugins.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/orderp.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/outputfilter.trimwhitespace.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Tpl/page_trace.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/pagebreak/pagebreak.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mine/pagination.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/php_xxtea.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/php_xxtea.dsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/php_xxtea.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/php_xxtea.sln" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/php_xxtea.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mail/phpmailer.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/phprpc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/phprpc_client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/phprpc_date.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/phprpc_server.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/phpunit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/aes/pkcs7Encoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/plainpaste/plainpaste.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/common/play.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Upload/plug_upload.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/plug_upload.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/code/prettify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/code/prettify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/preview/preview.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/AdvertClass/pro_in_map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Classes/push.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/qq/qq.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/qqConnectAPI.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/qrx/qrcpicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/qrx/qrxpcom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/quickformat/quickformat.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Memcququ/ququindex.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Util/Image/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/readme.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/IosGame/recover.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/rest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Common/runtime.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Common/runtime.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Lib/Extend/Tool/SaeCacheBuilder/runtime.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/sae.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Common/sae_functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/SaeImit/sae_functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mine/saetv2.ex.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/common/sdkNumData.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/search.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/ImeiCount/selimei.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Logs/selimei.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/aes/sha1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/shared.escape_special_chars.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/shared.literal_compiler_param.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/shared.make_timestamp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/shared.mb_str_replace.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/shared.mb_unicode.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/shared.mb_wordwrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/sidebar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/themes/simple/simple.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_cacheresource.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_cacheresource_custom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_cacheresource_keyvaluestore.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_config_source.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_cacheresource_file.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_append.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_assign.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_block.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_break.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_call.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_capture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_config_load.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_continue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_debug.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_eval.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_extends.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_for.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_foreach.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_if.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_include.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_include_php.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_insert.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_ldelim.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_nocache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_private_block_plugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_private_function_plugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_private_modifier.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_private_object_block_function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_private_object_function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_private_print_expression.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_private_registered_block.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_private_registered_function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_private_special_variable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_rdelim.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_section.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_setfilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compile_while.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_compilebase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_config_file_compiler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_configfilelexer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_configfileparser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_data.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_debug.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_filter_handler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_function_call_handler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_get_include_path.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_nocache_insert.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_parsetree.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_resource_eval.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_resource_extends.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_resource_file.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_resource_php.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_resource_registered.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_resource_stream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_resource_string.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_template.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_templatebase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_templatecompilerbase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_templatelexer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_templateparser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_internal_write_file.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_resource.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_resource_custom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_resource_recompiled.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_resource_uncompiled.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/sysplugins/smarty_security.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mail/smtp.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Library/ORG/Mine/sphinxapi.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/sphinxapi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/plugins/system.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/table/table.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Conf/tags.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Engine/Sae/Conf/tags.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Lite/tags.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/Rest/tags.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/users/tasks_map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/skins/default/dialog/css/te_dialog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/template/template.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/jifeng/test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/test/test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/js/textboxdrop.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Mode/thin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Tpl/think_exception.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Login/tjindex.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Login/tjview.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Login/top.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wwwroot/uducy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/ui.accordion.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/ui.all.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/ui.base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/ui.core.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/ui.core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/ui.datepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/ui.datepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/ui.dialog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/ui.progressbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/ui.resizable.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/ui.slider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/ui.tabs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/datapicker/css/ui.theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Upload/upload.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/upload.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/thinkeditor/plugins/upload_interface.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/common/users.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/users/users_all_io_map_column.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/qq/comm/utils.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/Smarty/plugins/variablefilter.htmlspecialchars.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Analysis/ver_per.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Classes/version.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/LogChart/versiontage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/common/video.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/common/video_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/denied/web.config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Tool/Requirements-Checker/assets/rewrite/web.config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Weixin/weixin_auto.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Login/welcome.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/Tpl/Index/welcome.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/plugins/wordpaste/wordpaste.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/aes/wxBizMsgCrypt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/aes/xmlparse.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/xxtea.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/pecl/xxtea/xxtea.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Extend/Vendor/phpRPC/xxtea.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ThinkPHP/Lang/zh-cn.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/lang/zh_CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uducy_admin/static/editer/lang/zh_TW.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wwwroot/index.html" afterPath="$PROJECT_DIR$/wwwroot/index.html" />
+    </list>
+    <ignored path="branche01.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="branche01" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uducy_admin/Conf/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="2580">
+              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uducy.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wwwroot/uducy.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="330">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+              <folding>
+                <element signature="e#6#29#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataSource/Conf/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.791667" vertical-offset="776" max-vertical-offset="1440">
+              <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexAction.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataSource/Lib/Action/IndexAction.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="195">
+              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+              <folding>
+                <marker date="1444746424000" expanded="true" signature="388:407" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestAction.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uducy_admin/Lib/Action/TestAction.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="165">
+              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wwwroot/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16178736" vertical-offset="0" max-vertical-offset="649">
+              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/wwwroot/test.php" />
+        <option value="$PROJECT_DIR$/uducy_admin/Lib/Action/TestAction.class.php" />
+        <option value="$PROJECT_DIR$/uducy_admin/Conf/config.php" />
+        <option value="$PROJECT_DIR$/DataSource/Lib/Action/IndexAction.class.php" />
+        <option value="$PROJECT_DIR$/DataSource/Conf/config.php" />
+        <option value="$PROJECT_DIR$/wwwroot/uducy.php" />
+        <option value="$PROJECT_DIR$/wwwroot/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="25" />
+    <option name="y" value="41" />
+    <option name="width" value="1402" />
+    <option name="height" value="770" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="branche01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="branche01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wwwroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DataSource/Conf" />
+      <recent name="$PROJECT_DIR$/uducy_admin/Lib/Action" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95091b0d-6d69-4899-b93c-cd9db85e216c" name="Default" comment="" />
+      <created>1444703525317</created>
+      <option name="number" value="Default" />
+      <updated>1444703525317</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="25" y="41" width="1402" height="770" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952926" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964337" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/uducy_admin/Lib/Action/TestAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="165">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uducy_admin/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="2580">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataSource/Lib/Action/IndexAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="195">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding>
+            <marker date="1444746424000" expanded="true" signature="388:407" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataSource/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.791667" vertical-offset="776" max-vertical-offset="1440">
+          <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wwwroot/uducy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding>
+            <element signature="e#6#29#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wwwroot/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16178736" vertical-offset="0" max-vertical-offset="649">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,110 @@
+<{include file='Login/header.html'}>
+
+   <div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con">                           
+                <div class="table">
+                    <h2 class="th">memcache队列基本信息 <span class="head"></span></h2>                
+         <TABLE>
+         <tr>
+             <td>pid</td>
+             <td><{$data.pid}></td>
+             <td>该服务器进程的进程ID</td>
+            
+         </tr>
+          <tr>
+	          <td>uptime</td>
+	          <td><{$data.uptime}></td>
+              <td>这个服务器已经运行的秒数</td>
+             
+         </tr>
+          <tr>
+             <td>time</td>
+             <td><{$data.time}></td>
+             <td>根据服务器当前的UNIX时间</td>
+            
+         </tr>
+          <tr>
+             <td>version</td>
+              <td><{$data.version}></td>
+             <td>此服务器的版本字符串</td>
+         </tr>
+          <tr>
+	          <td>rusage_user</td>
+	          <td><{$data.rusage_user}></td>
+              <td>累计用户时间，这个过程</td>
+             
+         </tr>
+          <tr>
+             <td>rusage_system</td>
+             <td><{$data.rusage_system}></td>
+             <td>累计的系统时间这个过程</td>
+         </tr>
+         <tr>
+             <td>bytes_read</td>
+             <td><{$data.bytes_read}></td>
+             <td>总读取字节数</td>
+         </tr>
+          <tr>
+             <td>bytes_written</td>
+             <td><{$data.bytes_written}></td>
+             <td>总发送字节数</td>
+         </tr>
+           <tr>
+            <td>curr_connections</td>
+            <td><{$data.curr_connections}></td>
+             <td>打开的连接数</td>
+         </tr>
+           <tr>
+             <td>total_connections</td>
+             <td><{$data.total_connections}></td>
+             <td>连接总数开业以来，服务器开始运行</td>
+         </tr>
+           <tr>
+             <td>connection_structures</td>
+             <td><{$data.connection_structures}></td>
+             <td>由服务器分配的连接结构的数量</td>
+         </tr>
+         <tr>
+             <td>get_cmds</td>
+             <td><{$data.get_cmds}></td>
+             <td>检索请求的累计次数</td>
+            
+         </tr>
+          <tr>
+             <td>set_cmds</td>
+             <td><{$data.set_cmds}></td>
+             <td>存储请求的累计次数</td>
+         </tr>
+          <tr>
+	          <td>get_hits</td>
+	          <td><{$data.get_hits}></td>
+              <td>表示获取数据成功的次数</td>
+         </tr>
+          <tr>
+	          <td>set_hits</td>
+	          <td><{$data.set_hits}></td>
+              <td>表示写入数据成功的次数</td>
+         </tr>
+          <tr>
+	          <td>bytes_read</td>
+	          <td><{$data.bytes_read}></td>
+             <td>通过网络这个服务器上读取的字节总数</td>
+         </tr>
+          <tr>
+             <td>bytes_written</td>
+             <td><{$data.bytes_written}></td>
+             <td>通过服务器向网络发送的总字节数</td>
+         </tr>
+      </TABLE>
+                </div>            
+                <div class="table">
+                    <h2 class="th"></h2>                
+                </div>
+            </div><!--/ con-->
+        </div>    
+    </div><!--/ container-->
+</div><!--/ wrap-->
+
+<{include file='Login/footer.html'}>

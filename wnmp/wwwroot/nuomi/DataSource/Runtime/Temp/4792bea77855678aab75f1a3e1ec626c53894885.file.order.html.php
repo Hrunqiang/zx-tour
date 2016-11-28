@@ -1,0 +1,329 @@
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-21 17:28:06
+         compiled from "../DataSource/Tpl\User\order.html" */ ?>
+<?php /*%%SmartyHeaderCode:278225832be26893360-30056086%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '4792bea77855678aab75f1a3e1ec626c53894885' => 
+    array (
+      0 => '../DataSource/Tpl\\User\\order.html',
+      1 => 1479115472,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '278225832be26893360-30056086',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'orderHTML' => 0,
+    'empty' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5832be26a502e',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5832be26a502e')) {function content_5832be26a502e($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('Comon/header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<title>赛事订单</title>
+<style>
+/*.wrap{background: #F3F6F5;}
+.matchBox{margin-bottom: 20px;}
+.borderLeft{margin: 5px 15px;}
+.matchicon,.matchicon img{width: 40px!important;height: 40px;margin-right: 10px;}
+.orderBox{margin-bottom: 10px;background: #FFF;overflow: hidden;}
+.orderBox .weui_media_box .weui_media_hd,.orderBox .weui_media_box .weui_media_hd img{width: 120px;height: 90px;}
+.gopaybtn{color: #04BE02!important;border: 1px solid #04BE02!important;padding: 0 5px;margin-right: 10px;border-radius: 2px;}
+.cancelbtn{color: #888888!important;border: 1px solid #888888!important;padding: 0 5px;border-radius: 2px;}*/
+/*////////////////////////////////////////新加样式/////////////////////////////////////*/
+/*.weui_msg .weui_msg_desc a{color: #FF2244;}
+.weui_msg .weui_msg_desc{font-size: 0.85714rem;}
+.orderBox .weui_cell_bd p{font-size: 1.28571rem;}
+.orderBox .weui_cell_ft{font-size: 1rem;}
+.orderBox .weui_media_box .weui_media_hd img{position: absolute;top: 15px;left: 15px;}
+.weui_media_box.weui_media_appmsg .weui_media_hd{margin-right: 1.07142rem;}
+.weui_media_bd p:first-child{font-size: 1rem;}
+.weui_media_bd p:nth-child(2){padding-top: 0.78571rem;}
+.weui_media_bd p:last-child span{font-size: 1.21428rem;}
+.weui_cell:before{top: -1px;}
+.weui_cell{padding: 10px 1.074285rem 10px;}
+.weui_media_appmsg{padding-bottom: 0px;}
+.weui_msg{position: absolute;bottom: 0px;left: 0;right: 0;}
+.weui_msg .weui_text_area{margin-bottom: 0.7142857rem ;}
+.weui_cells{margin-top: 0px;}
+#j_z_f {display: inline-block;height: 0.68rem;width: 1px;background: rgba(166,166,166,0.5);position: absolute;top: 23.5%;}
+.weui_toast{width: 8.571428571rem;height: 8.571428571428571rem;}
+.matchicon img{width: 100%;height: 100%;border: 1px solid rgba(156,156,156,0.2);border-radius: 0.535rem;}*/
+
+
+.top_choices{display:flex;height:3.14285714285714rem;display:-webkit-flex}
+.top_choices>div{height: 2.96428571428571rem;text-align: center;line-height:3.14285714285714rem;-webkit-flex:1;margin:0 1.07142857142857rem 0 1.07142857142857rem;}
+.top_choiced{border-bottom: 0.17857142857143rem solid red;color: red}
+.weui_cells{margin-top:0.71428571428571rem }
+.order_list_wrap{padding-left:0.71428571428571rem;padding-right: 0.71428571428571rem}
+
+.order_list{height:11.96428571428571rem;}
+.raceName{border-bottom: 1px solid rgb(217,217,217);font-size: 1.07142857142857rem;color: black;height: 3.21428571428571rem;line-height: 3.21428571428571rem;}
+.entry_status{float: right;color: rgb(171,171,171);font-size: 0.85714285714286rem;}
+.status_nopay,.status_nomsg{color:red;}
+.order_list_content{border-bottom: 1px solid rgb(217,217,217);height:5.60714285714286rem;padding: 0.1px}
+.order_img{width: 5.71428571428571rem;height:4.28571428571429rem;margin-top:0.60714285714286rem;float: left;margin-right: 0.60714285714286rem;}
+.race_msg{color: rgb(171,171,171);font-size: 0.85714285714286rem;margin-top: 0.60714285714286rem;}
+.race_msg>p{line-height: 1.60714285714286rem}
+.list_desc{height: 3.21428571428571rem;line-height: 3.21428571428571rem}
+.race_money{float: left;}
+.race_money>span{color: red;}
+.race_state{height: 100%;float: right;width: 60%}
+.race_desc{float: right;margin-right: 1.07142857142857rem;font-size: 0.89285714285714rem}
+.race_special{color: red}
+.race_pay{float:right;width: 5.00000000000000rem;height: 1.78571428571429rem;font-size: 1rem!important;margin-top: 0.71428571428571rem;line-height: 1.78571428571429rem;color: white!important}
+.race_statusbtn{float: right;font-size: 0.8571428571428rem;margin-top:0.71428571428571rem;height: 1.78571428571429rem;line-height: 1.78571428571429rem;color: rgb(255,116,0)!important; border-color: rgb(255,116,0)!important;background-color: rgba(255,255,255,1);}
+</style>
+<div class="wrap centerBox">
+    <div style="width: 100%;padding-bottom: 6rem;">
+        <div class="weui_cells top_choices">
+            <div class="top_choice top_choiced">全部订单</div>
+            <div class="top_choice">未付款</div>
+            <div class="top_choice">未完善资料</div>
+        </div>
+        
+        <!-- 所有的 -->
+        <div class="order_content"></div>
+
+    </div>
+   <!--  <?php if ($_smarty_tpl->tpl_vars['orderHTML']->value){?>
+        <?php echo $_smarty_tpl->tpl_vars['orderHTML']->value;?>
+ -->
+    </div>
+        <div class="footer  weui_msg">
+        <div class="weui_text_area">
+            <p class="weui_msg_desc"><a href="tel:4000-842-195">服务资询</a><span id="j_z_f"></span><a href="/User/feedback">意见反馈</a></p>
+            <p class="weui_msg_desc">本服务由知行合逸提供</p>
+        </div>
+    </div>
+</div>
+<!--end of wrap -->
+   <!--  <?php }else{ ?>
+    <?php echo $_smarty_tpl->getSubTemplate ("User/empty.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+    <?php }?> -->
+
+<script src="/static/js/zepto.js"></script>
+<script src="/static/weui/js/weui.js"></script>
+<script>
+    // $('.cancelbtn').click(function(){ 
+    //     var _this = $(this);
+    //     var orderid = _this.attr("data-id");
+    //     if(orderid=="") return false;
+    //     weui.Loading.show();  
+    //     $.ajax({
+    //         cache: false,
+    //         url:"/User/delorder?orderid="+orderid,
+    //         type: "POST",
+    //         dataType: "json",
+    //         timeout:3000,
+    //         success: function(data){
+    //             weui.Loading.hide();
+    //             if(data.error == 0 ){            
+    //                 weui.Loading.success(2000,"已删除");
+    //                 setTimeout(function(){
+    //                     window.location.href = "/User/order";
+    //                 },2000);
+    //             }else{
+    //                 weui.Loading.error(data.msg,2000);
+    //             }
+    //         },
+    //         error:function(){
+    //             weui.Loading.hide();
+    //             weui.Loading.error("系统错误！",222000);
+    //         }
+    //     });
+    // });
+
+    // 请求数据
+    var nopayNum = 0; //判断是否有未付款订单
+    var perfectNum = 0;//判断是否有未完善资料订单
+    var allNum = 0; //判断是否有订单
+    $.ajax({
+        cache: false,
+        url:"/Ajax/userorderlist",
+        type:'GET',
+        async:false,
+        success:function(data){
+            data = JSON.parse(data);
+            var deadLine = [];
+            function getDate(strDate){
+                var st = strDate;
+                var a = st.split(" ");
+                var b = a[0].split("-");
+                var c = a[1].split(":");
+                var date = new Date(b[0], b[1]-1, b[2], c[0], c[1], c[2])
+                return date;
+            }
+
+            // 判断比赛结束否
+            function endGame(Gtime,Ntime){
+                var gameTime = getDate(Gtime);
+                var nowTime = getDate(Ntime);
+                var k = (gameTime-nowTime)>0?'1':'0';
+                return k;
+            }
+            // 倒计时
+            function countTime(Dtime,Ntime){
+                var deadTime = getDate(Dtime);
+                var dtime = deadTime.getTime();
+                if((dtime - Ntime) < 0){return str = '0:0:0'}
+                var lastTime = (dtime - Ntime)/1000;
+                var lastDay = Math.floor(lastTime/(3600*24));
+                var lastHour =  Math.floor((lastTime - lastDay*3600*24)/3600);
+                var lastMinute =  Math.floor((lastTime - lastDay*3600*24 -lastHour * 3600)/60);
+                if(lastMinute < 0){lastMinute = 0;}
+                var lastSecond = Math.floor(lastTime - lastDay*3600*24 - lastHour * 3600 - lastMinute*60);
+               
+                if(lastSecond < 0){lastSecond = 0;}
+                var str = lastHour + ':' + lastMinute + ':' + lastSecond;
+                return str;
+            }
+            // 有数据
+            if(data.error == 0){
+                allNum++;
+                var allData = data.data;
+                for(var i = 0 ; i < allData.length;i++){
+                    var _money = allData[i].payprice - allData[i].discount;
+                    var newNode =$('<a href="/Matchinfo?m_id='+ allData[i].mid +'"><div class="weui_cells order_list show_all">'+'<div style="padding-left:0.71428571428571rem;padding-right: 0.71428571428571rem">'+'<p class="raceName">'+ allData[i].m_name +'<span class="entry_status status_nomsg"></span></p>'+'<div class="order_list_content">'+'<img src="'+ allData[i].m_img +'" alt="图片" class="order_img">'+'<article class="race_msg">'+'<p style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><span>'+ allData[i].info +'</span></p>'+'<p>订单编号 :<span>&nbsp;'+ allData[i].orderid +'</span></p>'+'<p>开赛时间 :<span>&nbsp;'+ allData[i].m_GameTime+'</span></p>'+'</article></div>'+'<div class="list_desc">'+'<p class="race_money">实付款: <span>￥'+_money.toFixed(2)+'</span></p>'+'<div class="race_state">'+'<a href="javascript:;" class="weui_btn"></a>'+'</div></div></div></div></a>');
+                    switch (allData[i].paystats){
+                        // 未完善资料的
+                        case '1':{ 
+                            perfectNum++;
+                            newNode.addClass('show_perfect');
+                            newNode.find('.entry_status').addClass('status_nomsg').text('未完善资料');
+                            newNode.find('.weui_btn').addClass('weui_btn_plain_primary race_statusbtn').attr('href','/User/perfect?orderid='+allData[i].orderid).text('去完善资料');
+                        };break;
+                        // 支付超时的
+                        case '3':{
+                            newNode.find('.entry_status').addClass('status_nomsg').text('未付款');
+                            var _showstate = $('<p class="race_desc race_special">已过期</p>');
+                            newNode.find('.weui_btn').addClass('weui_btn_plain_primary race_statusbtn').attr('href','/Enroll?m_id='+allData[i].mid).text('重新报名');
+                            newNode.find('.race_state').append(_showstate);
+                        };break;
+                        // 未支付的
+                        case '5':{
+                            nopayNum++;
+                            deadLine.push(allData[i].pay_deadline);
+                            newNode.addClass('show_nopay');
+                            newNode.find('.entry_status').addClass('status_nopay').text('未付款');
+                            var _time = $('<p class="race_desc race_special"><span class="race_djs"></span></p>');
+                            newNode.find('.weui_btn').addClass('weui_btn_mini weui_btn_warn race_pay').attr('href','/PayResult/payorder?orderid='+allData[i].orderid).text('去支付');
+                            newNode.find('.race_state').append(_time);
+                           
+                        };break;
+                        // 支付成功
+                        case '10':{
+                            // 比赛下线
+                            var _panduan = endGame(allData[i].m_GameTime,data.datetime);
+                            if(_panduan == '1'){
+                                newNode.find('.entry_status').text('报名成功');
+                                var _showstate = $('<p class="race_desc">等待开赛</p>');
+                                newNode.find('.weui_btn').remove();
+                                newNode.find('.race_state').append(_showstate);
+                            }
+                            // 比赛正常
+                            else{
+                                newNode.find('.entry_status').text('报名成功');
+                                var _showstate = $('<p class="race_desc">已经完赛</p>');
+                                newNode.find('.weui_btn').remove();
+                                newNode.find('.race_state').append(_showstate);
+                            }
+                        };break;
+                   }
+                  $('.order_content').append(newNode);
+                }
+                var emptyNode = $('<style>.empty{width: 70%;display:none}.empty .emptyImg{width: 50%;margin: 0 auto 12px;}.empty .emptyImg>img{width: 100%;}.empty>p{text-align: center;}.empty p{font-size: 1.142857rem;color: #888888;}.empty p a{color: #ff2244;}</style><div class="center_cell empty"><div class="emptyImg"><img src="/static/images/order_empty.png" alt=""></div><p>没有未完成订单 <a href="/"><?php echo $_smarty_tpl->tpl_vars['empty']->value[1];?>
+</a></p></div>');
+                $('.order_content').append(emptyNode);
+                var l_time = getDate(data.datetime).getTime();
+                for(var i =0 ; i<deadLine.length;i++){
+                    var _str = countTime(deadLine[i],l_time);
+                    $($('.race_djs')[i]).html('付款倒计时:' + _str);
+                }
+                setInterval(function(){
+                    l_time = l_time+1000;
+                    for(var i=0;i<deadLine.length;i++){
+                        var _str = countTime(deadLine[i],l_time);
+                         $($('.race_djs')[i]).html('付款倒计时:' + _str);
+                    }
+                },1000)
+            }
+            // 没有数据
+            if(data.error == 1){
+                var _empty = '<style>.empty{width: 70%;}.empty .emptyImg{width: 50%;margin: 0 auto 12px;}.empty .emptyImg>img{width: 100%;}.empty>p{text-align: center;}.empty p{font-size: 1.142857rem;color: #888888;}.empty p a{color: #ff2244;}</style><div class="center_cell empty"><div class="emptyImg"><img src="/static/images/order_empty.png" alt=""></div><p><?php echo $_smarty_tpl->tpl_vars['empty']->value[0];?>
+ <a href="/"><?php echo $_smarty_tpl->tpl_vars['empty']->value[1];?>
+</a></p></div>'
+                $('.order_content').html(_empty);
+            }
+            (function(){
+                var pageMsg = window.location.search.split('=')[1];
+                if(pageMsg){
+                    $('.top_choice').removeClass('top_choiced');
+                    $('.top_choice').eq(pageMsg).addClass('top_choiced');
+
+                    switch (pageMsg){
+                        case '1':{
+                            $('.show_all').css('display','none');
+                            if(nopayNum){
+                                $('.show_nopay').css('display','block');  
+                            }else{
+                                $('.empty').css('display','block');
+                            }       
+                        };break;
+                        case '2':{
+                            $('.show_all').css('display','none');
+                            if(perfectNum){
+                                $('.show_perfect').css('display','block');
+                            }else{
+                                $('.empty').css('display','block');
+                            }
+                        };break;
+                    }
+                }
+            })()
+        }
+    }) 
+    $('.top_choice').bind('tap',function(){
+        $(this).addClass('top_choiced');
+        $(this).siblings().removeClass('top_choiced');
+        var num = $(this).index();
+        switch (num){
+            case 0 : {
+                $('.empty').css('display','none');
+                if(allNum){
+                   $('.show_all').css('display','block');
+                }
+                else{
+                   $('.empty').css('display','block');
+                }
+            };break;
+            case 1:{
+                $('.empty').css('display','none');
+                $('.show_all').css('display','none');
+                if(nopayNum){ 
+                    $('.show_nopay').css('display','block');
+                }else{
+                    $('.empty').css('display','block');
+                }
+            };break;
+            case 2:{
+                $('.empty').css('display','none');
+                $('.show_all').css('display','none');
+                if(perfectNum){
+                    $('.show_perfect').css('display','block');
+                }else{
+                    $('.empty').css('display','block');
+                }
+            };break;
+        }
+    })
+</script>
+</body>
+</html><?php }} ?>

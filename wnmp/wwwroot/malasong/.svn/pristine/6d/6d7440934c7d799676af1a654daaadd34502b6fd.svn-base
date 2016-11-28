@@ -1,0 +1,28 @@
+<?php
+class GoodsModel extends Model{
+	protected  $trueTableName	= "mls_goods";
+	protected $connection = 'DB_CONFIG1';
+		
+	public function getDataByParendId($id) {
+		if(empty($id) || !is_numeric($id)) return false;
+		$data = $this->where("goodspid = $id")->order("`order` desc")->select();
+		return $data;
+	}
+	
+	public function updateGoodsCountById($id){
+		$id = intval($id);
+		if(empty($id)) return false;
+		$time = date("Y-m-d H:i:s");
+		$sql = "update ".$this->trueTableName." set goodsleft = goodsleft-1,utime='$time' where id=$id and goodsleft>=1";
+		$rs = $this->query($sql);
+		if(!$rs){
+			@mwtlog("updateGoodsCountById_error","empty goods[$id] error rs:".json_encode($rs)."\tsql:".$this->getLastSql(),true);
+		}
+		return $rs;
+	}
+	public function getGoodsInfoById($id){
+		if(empty($id) || !is_numeric($id)) return false;
+		return $this->where("id=$id")->find();
+	}
+	
+}

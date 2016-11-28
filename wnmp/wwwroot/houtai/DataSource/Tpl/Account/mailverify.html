@@ -1,0 +1,29 @@
+<{include file='Comon/header.html'}>
+<div id="register_box" class="general_page section">
+	<div class="section_center" >
+		<div id="register_center">
+			<{if $error == 0}>
+				<div id="register_tab_box">
+					激活成功
+				</div>
+				<div class="message">
+					<p><span class="tagging">恭喜您！</span>您的帐号已激活成功！</p>
+					<p>快去登录你的帐号吧！</p>
+					<p>请点<a href="/Account/login">这里</a>登录</p>
+				</div>
+		    <{else}>
+			    <div id="register_tab_box">
+					激活失败！
+				</div>
+				<div class="message">
+					<p><span class="tagging">很抱歉！</span>您的帐号激活失败！</p>
+					<p>可能存在下面几方面原因</p>
+					<p>1、链接已过期失效</p>
+					<p>2、系统错误</p>
+					<p>如果您有疑问，可以<span>联系我们的客服!</span></p>
+				</div>
+		    <{/if}>
+	    </div>
+	</div>
+</div>
+<{include file='Comon/footer.html'}>

@@ -1,0 +1,746 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Author" content="" />
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>双11活动</title>
+</head>
+<script type="text/javascript">
+	(function sy(){
+	var Html=document.getElementsByTagName('html');
+	var w=document.documentElement.clientWidth;
+	var scale=w/375;
+	if (scale>=2) {
+		scale=2;
+	} 
+	Html[0].style.fontSize=14*scale+'px';
+})();
+</script>
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script>
+function get(key){
+	var Arg,arg,i;
+	Arg = document.location.search.split("?");
+	if(Arg[1]) {
+		Arg=Arg[1].split("&");
+	}
+	for(i=0; i < Arg.length; i++) {
+		var arg = Arg[i].split("=");
+		if(key == arg[0]) {
+			return  decodeURI(arg[1]);
+		}
+	}
+	return "";
+};
+var openid = get("openid"),
+	test   = get("test"),
+	authUrl = test?"/Discount11/auth?test="+test+"&openid="+openid+"&time=20:12:00&date=2016-11-11":"/Discount11/auth";
+//登录
+$.ajax({
+	cache: false,
+	url:authUrl,
+	type: "POST",
+	dataType: "json",
+	timeout:'30000',
+	data: "",
+	success: function(data){
+		if(data.error == 1){
+			window.location.href = "/weixin/touserauth?login=1";
+		}else if(data.error == 2){
+			$('#mask_time').css('display','block');
+			$('.runman').attr('src','images/runman.png');
+			document.body.addEventListener('touchmove', function (event) {
+   				 event.preventDefault();
+			}, false);
+		}else if(data.error == 3){
+			$('#mask_date').css('display','block');
+			$('.runman').attr('src','images/runman.png');
+			document.body.addEventListener('touchmove', function (event) {
+   				 event.preventDefault();
+			}, false);
+		}else if(data.error == 4){
+			$('.wrap').remove();
+			$('#mask_end').css('display','block');
+		}
+	},
+	error:function(){
+		alert("系统错误！");
+	}
+});
+</script>
+<style>
+.box{width:11.67857142857143rem!important;height: 18.14285714285714rem;box-sizing: border-box;background: #FFFFFF;border-radius:0.35714285714286rem;float: left;margin-right: 0.71428571428571rem;}
+.box_top{padding: 0 0.4285714285714286rem;font-size: 0.85714285714286rem;}
+.box_top .box_top_time{overflow: hidden;padding: 0.3571428571428571rem 0;color: #000000;white-space: nowrap;}
+.box_center{height: 8.21428571428571rem}
+.box_top .box_top_time span:nth-child(1){float: left;width: 5.71428571428571rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.box_top .box_top_time span:nth-child(2){float: right;}
+.box_top_img{overflow: hidden;height: 5.92857142857143rem}
+.box_top_img img{float: left;width:10.67857142857143rem;height:5.92857142857143rem;margin-left:0.35714285714286rem}
+.box_top h2{padding: 0.3571428571428571rem 0;font-size: 0.9285714285714286rem;color: #000000;font-weight: normal;font-size: 1rem;line-height: 1.42857142857143rem}
+.box_top p{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;color: #888888;line-height: 1.42857142857143rem}
+.type_game{padding-bottom: 0.3571428571428571rem 0;color: #888888;font-size: 0.85714285714286rem;line-height: 1.42857142857143rem;}
+.type_game div{display: inline-block;}
+.type_game span{border-right: dashed 1px #888888;margin: 0 0.2142857142857143rem;display: inline-block;height: 1.071428571428571rem;height: 0.8571428571428571rem;transform: translateY(0.1428571428571429rem);-webkit-transform: translateY(0.1428571428571429rem)}
+.type_game span:nth-child(1){border-right: 1px solid #888888;}
+.box_bottom{padding: 0 0.4285714285714286rem;border-top: 1px solid rgb(171,171,171)}
+.mejz{background: url(/static/images/tag_mingejz.jpg) no-repeat;background-size: 100%;}
+.jz{background: url(/static/images/tag_jiezhi.jpg) no-repeat;background-size: 100%;}
+.yh{background: url(/static/images/tag_youhui.jpg) no-repeat;background-size: 100%;}
+.box_list{padding: 0.3571428571428571rem 0;overflow: hidden;}
+.box_price{color: #ff2244;float: left;}
+.box_attend_num{color: #888888;float: right;margin-top: 0.10714285714286rem;text-decoration: line-through;}
+.state_tag{overflow: hidden;}
+.state_tag span{width:2.85714285714286rem ;height: 1.071428571428571rem;float: left;margin-top: 0.3571428571428571rem;float: right;}
+.mejz{margin:0 0.35714285714286rem;margin-left: 0.42857142857143rem}
+.list_intr{width: 100%;height: 3.53571428571429rem;padding-top: 0.78571428571429rem;margin-bottom: 0.35714285714286rem}
+.list_one_icon,.list_two_icon,.list_three_icon{float: left;width:3.07142857142857rem;height:3.50000000000000rem;background: url(images/logo_icon.png) no-repeat -7.46428571428571rem 0rem;background-size:12.50000000000000rem 8.57142857142857rem;margin:0 0 0 0.71428571428571rem;}
+.list_two_icon{background-position:-5.50000000000000rem -3.71428571428571rem;}
+.list_three_icon{background-position:-8.82142857142857rem -3.7542857142857rem;}
+.list_name{float: left;font-size: 1.14285714285714rem;color: white;font-weight: bold;}
+.list_name_content{margin: 1.07142857142857rem 0 0.35714285714286rem 0;}
+.line{width: 100%;height:1px;background-color: white;}
+.line1{margin-left:0.53571428571429rem }
+.line2{margin-top:0.21428571428571rem}
+.list_one_box,.list_two_box,.list_three_box{background: #4a2e72;padding-top:0.57142857142857rem;height: 18.71428571428572rem;width: 100%;}
+.list_three_box{padding:0;background: url(images/11_zhuangbei.png) no-repeat left center;background-size:100%;margin-bottom: 0.71428571428571rem;}
+</style>
+
+
+
+<style>
+	*{padding: 0;margin: 0;}
+	a{text-decoration: none;}
+	.body{background-color: rgb(42,9,89)}
+	.wrap{background-color: rgb(42,9,89);width: 100%;overflow: hidden;}
+	.head{background: url(./images/11HeadBg.jpg)no-repeat left top;background-size:26.78571428571428rem 30.28571428571428rem;width: 100%;position: relative;padding: 0.1px;background-color: #2a0959;}
+	.foot_pink{width:100%;height: 0.57142857142857rem;background-color: #b03b96;position:fixed;bottom: 0;left: 0;display: none}
+	.coupon,.coupon_alert{position: absolute;width:19.46428571428572rem;height:6.60714285714286rem;top: 16.67857142857143rem;left: 3.82142857142857rem}
+	.coupon_alert{background:white;font-size: 0.85714285714286rem;padding: 0.35714285714286rem;border-radius: 0.35714285714286rem;line-height: 1.07142857142857rem;left: 3.39285714285714rem;text-align: center;display: none;}
+	.coupon_alert p{height: 5.00000000000000rem;font-weight: bold;}
+	.every_person{font-size: 1.14285714285714rem;color: white;font-weight: bold;position: relative;}
+	.xiang_word{display:inline-block;background-color: rgba(176,55,175,0.8); border-radius: 50%;width: 2.14285714285714rem;height: 2.14285714285714rem;position: absolute;line-height: 2.14285714285714rem;text-align: center;left:2.92857142857143rem;top: -0.17857142857143rem;}
+	.shuruMsg{font-size:0.92857142857143rem;color: white;margin-top:0.92857142857143rem;font-weight: bold;margin-bottom: 0.89285714285714rem;}
+	.phone{width:8rem;height:1.78571428571429rem;border-radius: 0.53571428571429rem;font-size: 1.14285714285714rem}
+	.allBtn{display: inline-block;color: white;font-size: 0.92857142857143rem;font-weight: bold;text-decoration: none;width:5.00000000000000rem;height:1.78571428571429rem;background:url(./images/logo_icon.png)no-repeat -0.28571428571429rem -4.03571428571429rem;background-size:12.50000000000000rem 8.57142857142857rem;line-height: 1.78571428571429rem;text-align: center;}
+	.coupon_intr{color: white;margin-top: 25.28571428571428rem;margin-left: 2.07142857142857rem;font-size: 0.85714285714286rem;position: relative;}
+	.runman{width:10.46428571428571rem;height:7.85714285714286rem;position: absolute;right:0;bottom: -2.85714285714286rem }
+	.coupon_intr p{line-height: 1.42857142857143rem}
+	#mask_date,#mask_time,#mask_end{width: 100%;height: 47.64285714285715rem;background: rgba(0,0,0,0.75);position:fixed;top: 0;left: 0;z-index: 100;display: none;}
+	#mask_end{background: rgb(0,0,0)}
+	.mask_content{position: absolute;top: 12.85714285714286rem;left: 7.14285714285714rem;text-align: center;color: white;font-weight:bold;font-size: 1.07142857142857rem}
+	.mask_content p{line-height: 1.78571428571429rem}
+
+	.mask_run{width:10.46428571428571rem;height:7.85714285714286rem;}
+</style>
+<body>
+	<div id="mask_date">
+		<div class="mask_content">
+			<img src="images/runman.gif" alt="" class="mask_run">
+			<p>双11全球狂跑，即将出发！</p>
+			<p>请耐心等待</p>
+			<p>Date:2016.11.11</p>
+			<p>Time:11:11AM</p>
+		</div>
+	</div>
+	<div id="mask_time">
+		<div class="mask_content" style="left: 1.42857142857143rem">
+			<img src="images/runman.gif" alt="" class="mask_run">
+			<p style="margin-top: 1.07142857142857rem">休息一下，上午11:11分再来吧！</p>
+			<p>活动时间为11月11日至11月13日 AM11:11-PM11:11</p>
+		</div>
+	</div>
+	<div id="mask_end">
+		<div class="mask_content">
+			<img src="images/runman.gif" alt="" class="mask_run">
+			<p style="margin-top: 1.07142857142857rem">活动已结束！感谢支持！</p>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="head">
+			<article class="coupon">
+				<p class="every_person">人人“<span class="xiang_word">享</span><span style="margin-left: 2.14285714285714rem">”跑</span></p>
+				<p class="shuruMsg">输入手机号立即领取111.1元现金抵用券</p>
+				<p>
+				<input type="number" name="phone" class="phone" placeholder="请输入手机号">
+				<a href="javascript:" class="allBtn getBtn">立即领取</a>
+				<a href="http://weixin.zx-tour.com/weixin/touserauth?login=1&xm=zxyjbm&secondurl=http%3A%2F%2Fweixin.zx-tour.com%2FUser" class="allBtn turnBtn" style="display: inline-block;">立即兑换</a></p>
+			</article>
+			<article class="coupon_alert">
+				<p class="alert_content"></p>
+				<a href="javascript:" class="allBtn get_ok">OK</a></p>
+			</article>
+			<article class="coupon_intr">
+				<h3>优惠券说明:</h3>
+				<p>1.参与活动的用户均可领取优惠券一张，每人限领一张;</p>
+				<p>2.优惠券串码将通过短信发送到您输入的手机号中;</p>
+				<p style="color: red;font-weight: bold;">3.现金优惠券仅限购买知行合逸海外赛事套餐使用<br>&nbsp;&nbsp;(赛事单独报名不可使用);</p>
+				<p>4.优惠券不能与其他优惠活动共同使用;</p>
+				<p>5.优惠券有效期至2016年12月31日;</p>
+				<p>6.优惠券最终解释权归知行合逸所有。</p>
+				<img src="images/runman.gif" class="runman">
+			</article>
+		</div>
+
+		<!-- 第一部分轮播 -->
+		<div class="list list_one">
+			<div class="list_intr">
+				<div class="list_one_icon"></div>
+				<div class="list_name">
+					<p class="list_name_content">
+					&nbsp;跑遍世界之"最"
+					</p>
+					<p class="line line1"></p>
+					<p class="line line2"></p>
+				</div>
+			</div>
+			<!-- 轮播内容 -->
+			<div class="list_one_box">
+			<div style="width:100%;overflow-x:scroll;overflow-y: hidden;">
+			<div class="box-wrap" style="width: 75.07142786rem;overflow: hidden;">
+				<div class="box" style="margin-left: 0.71428571428571rem">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=374">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>德国-柏林</span>
+							<span>2017.09.24</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20160926/20160926140821_26128.jpg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>最速度:2017柏林马拉松</h2>
+						<p>在世界最快的赛道上创造PB，见证打破人类极限的奇迹！</p >
+						<div class="type_game">马拉松<span></span>全马</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">3399</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">3799</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=323">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>日本-名古屋</span>
+							<span>2017.03.12</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20160725/20160725093150_42449.jpg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>最Tiffany:2017名古屋女子马拉松</h2>
+						<p>最受全世界女性跑者欢迎的赛事！完赛就有Tiffany定制项链！</p >
+						<div class="type_game">马拉松<span></span>全马</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">4199</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">5099</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=375">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>以色列-耶路撒冷</span>
+							<span>2017.03.17</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20160829/20160829114931_99058.jpg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>最历史:2017耶路撒冷马拉松</h2>
+						<p>跑过圣城三千年！机酒全包！</p >
+						<div class="type_game">马拉松<span></span>半马<span></span>全马</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">18599</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">18999</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=377">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>朝鲜-平壤</span>
+							<span>2017.04.09</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20160720/20160720164741_33427.jpg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>最神秘:2017平壤马拉松</h2>
+						<p>这是唯一一次可以自由奔走在平壤大街上的机会！机酒全包!</p >
+						<div class="type_game">马拉松<span></span>半马<span></span>全马</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">5599</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">6199</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+				
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=379">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>捷克-布拉格</span>
+							<span>2017.05.07</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20160929/20160929172953_21852.jpg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>最美丽:2017布拉格马拉松</h2>
+						<p>欧洲首屈一指的绝美赛道！</p >
+						<div class="type_game">马拉松<span></span>全马</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">2699</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">3199</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=380">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>日本-鹿儿岛</span>
+							<span>2017.03.05</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20161011/20161011162007_51920.jpg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>最实惠:鹿儿岛马拉松纯名额</h2>
+						<p>跑进宫崎骏的童话世界，感受最原汁原味的日本风情！</p >
+						<div class="type_game">马拉松<span></span>全马</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">666</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">800</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+			</div>
+			</div>
+			</div>
+		</div>
+		
+
+		<!-- 第二部分轮播 -->
+		<div class="list list_two">
+			<div class="list_intr">
+				<div class="list_two_icon"></div>
+				<div class="list_name">
+					<p class="list_name_content">
+					&nbsp;跑遍"冬"南西北
+					</p>
+					<p class="line line1"></p>
+					<p class="line line2"></p>
+				</div>
+			</div>
+			<!-- 轮播内容 -->
+			<div class="list_two_box">
+			<div style="width: 100%;overflow-x:scroll;overflow-y: hidden;">
+				<div class="box_wrap" style="width: 112.285713rem;overflow: hidden;">
+				<div class="box" style="margin-left: 0.71428571428571rem">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=394&platform=zx-tour">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>中国-深圳</span>
+							<span>2016.11.26</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20161107/20161107121645_46003.jpg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>她世界公益跑-深圳站</h2>
+						<p>甜蜜纪念礼品包（价值20元以上的京都念慈菴礼品）</p >
+						<div class="type_game">欢乐跑<span></span>6公里</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">0.11</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">99</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=387&platform=zx-tour">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>中国-无锡</span>
+							<span>2016.12.03</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20161017/20161017152648_67045.png" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>无锡马山女子迷你马拉松</h2>
+						<p>全方位微信、微博直播，让朋友圈的每一个人都能看到你。</p >
+						<div class="type_game">马拉松<span></span>半马<span></span>全马</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">11.11</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">150</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=388&platform=zx-tour">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>中国-广州</span>
+							<span>2016.12.03</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20161013/20161013120353_37429.jpg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>强音酷跑节-广州站</h2>
+						<p>邀你与中国好声音历届明星学员李琦、张磊、张玮及2016年中国新歌声人气学员一同嗨翻音乐盛宴，挑战动感炫酷的潮流酷跑！</p >
+						<div class="type_game">欢乐跑<span></span>5公里</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">11.11</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">36</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=390&platform=zx-tour">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>中国-成都</span>
+							<span>2016.11.19</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20161013/20161013121830_32491.jpg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>强音酷跑节 -成都站 </h2>
+						<p>邀你与中国好声音历届明星学员李琦、张磊、张玮及2016年中国新歌声人气学员一同嗨翻音乐盛宴，挑战动感炫酷的潮流酷跑！</p >
+						<div class="type_game">马拉松<span></span>3公里</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">11.11</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">36</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+			
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=391&platform=zx-tour">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>中国-汕头</span>
+							<span>2016.12.25</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20161025/20161025151203_16395.jpg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>汕头国际半程马拉松赛</h2>
+						<p>汕头是全国主要港口城市、中国最早开放的经济特区、海西经济区重要组成部分。</p >
+						<div class="type_game">马拉松</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">11.11</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">120</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+				
+				
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=389&platform=zx-tour">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>中国-万宁</span>
+							<span>2016.12.24</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20161031/20161031155303_78167.jpg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>海南万宁·华润石梅湾滨海半程马拉松</h2>
+						<p>万宁滨海旅游公路作为海南最美旅游公路，汇聚了万宁最具代表性的滨海生态美景，是展示多彩万宁的重要窗口。</p >
+						<div class="type_game">马拉松</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">11.11</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">70</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+
+
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=392&platform=zx-tour">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>中国-重庆</span>
+							<span>2016.12.04</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20160920/20160920203328_86258.jpg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>重庆国际半程马拉松</h2>
+						<p>本届赛事将在中国田径协会、重庆市体育局、巴南区人民政府的正确指导下，力争成为西南片区最具竞技性、权威性、群众性的国际马拉松赛事。</p >
+						<div class="type_game">马拉松<span></span>半马</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">11.11</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">100</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+
+
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=386&platform=zx-tour">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>中国-北京</span>
+							<span>2016.12.04</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20161021/20161021201906_98542.png" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>北京冬季城市越野赛</h2>
+						<p>入门级的越野赛道，适合热爱户外运动的马拉松跑者</p >
+						<div class="type_game">马拉松<span></span>半马<span></span>全马</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">111.1</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">199</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+
+				<div class="box">
+				<a href="http://weixin.zx-tour.com/Matchinfo?m_id=385&platform=zx-tour">
+					<div class="box_top">
+						<div class="box_top_time">
+							<span>中国-北京</span>
+							<span>2017.01.07</span>
+						</div>
+					</div>
+					<div class="box_top_img">
+							<img src="http://download.zx-tour.com/public/image/20161027/20161027183345_60539.jpeg" alt="" />
+					</div>
+					<div class="box_top box_center">
+						<h2>第二届北京野鸭湖冰雪马拉松（半程） </h2>
+						<p>国内规模最大冰雪马拉松2.0</p >
+						<div class="type_game">马拉松<span></span>半马</div>	
+					</div>
+
+					<div class="box_bottom">
+						<div class="box_list">
+							<div class="box_price">
+								<span>￥</span><span style="font-size: 1.142857142857143rem;">111.1</span>
+							</div>
+							<div class="box_attend_num">
+								<span>原价</span><span style="font-size: 0.9285714285714286rem;">200</span>
+							</div>
+							</div>
+					</div>
+					</a>
+				</div>
+			</div>
+			</div>
+			</div>
+		</div>
+		
+		<!-- 第三部分装备展示 -->
+		<div class="list list_three">
+			<div class="list_intr">
+				<div class="list_three_icon"></div>
+				<div class="list_name">
+					<p class="list_name_content">
+					&nbsp;全球限量装备11%OFF
+					</p>
+					<p class="line line1"></p>
+					<p class="line line2"></p>
+				</div>
+			</div>
+			<a href="https://weidian.com/?userid=259701508" style="display: block;padding:0.28571428571429rem 0.71428571428571rem;background-color: #4a2e72;">
+			<div class="list_three_box"></div>
+			</a>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var _msg = '恭喜您获得<span style="color:#bb00cc">111.1</span>元现金优惠券一张！<br> 请耐心等待我们的短信通知。收到通知后，请您 前往知行合逸报名平台中，点击我的资料，优惠券入口，输入短信中的兑换码，并点击"兑换"'
+	var _wrongphong = '<span style="line-height: 5rem">请输入正确的手机号码！</span>'
+	var reg_phone = /^1[\d]{10}$/;
+	$('.getBtn').bind('click',function(){
+		var _phone = $('input[name=phone]').val();
+		if(reg_phone.test(_phone)){
+			$.ajax({
+				cache:false,
+				url:'/Discount11/coupon',
+				type:'POST',
+				data:{phone:_phone,test:0},
+				success:function(data){
+					data = JSON.parse(data);
+					if(data.error == 0){
+						$('.coupon_alert').css('display','block');
+						$('.alert_content').html(_msg).css('line-height','1.07142857142857rem');
+					}else if(data.error == 1){
+						$('.coupon_alert').css('display','block');
+						$('.alert_content').html(data.msg).css('line-height','5rem');
+					}else if(data == 304){
+						window.location.href = "/weixin/touserauth?login=1";
+					}
+				},
+				error:function(){
+					$('.coupon_alert').css('display','block');
+					$('.alert_content').html("系统错误请重试").css('line-height','5rem');
+				}
+			})
+		}else{
+			$('.coupon_alert').css('display','block');
+			$('.alert_content').html(_wrongphong);
+		}
+	})
+	
+	$('.get_ok').bind('click',function(){
+		$('.coupon_alert').css('display','none');
+	})
+
+
+
+</script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="./js/weixin.js"></script>
+</html>

@@ -1,0 +1,682 @@
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-21 18:17:06
+         compiled from "../DataSource/Tpl\User\userinfo.html" */ ?>
+<?php /*%%SmartyHeaderCode:203685832c934c78b13-50642330%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '52183c10c030deba17cd13c5c511db0c5d28fbcd' => 
+    array (
+      0 => '../DataSource/Tpl\\User\\userinfo.html',
+      1 => 1479723423,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '203685832c934c78b13-50642330',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5832c93524a40',
+  'variables' => 
+  array (
+    'userstate' => 0,
+    'info' => 0,
+    'phone' => 0,
+    'updateres' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5832c93524a40')) {function content_5832c93524a40($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('Comon/header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<link rel="stylesheet" type="text/css" href="/static/css/time.css">
+<title>我的资料</title>
+<style>
+	/*.weui_cells{margin-top: 0;}
+	.weui_cell{padding:0 1.07142rem}
+	.weui_cell>div{padding:0.7142857rem 0;}
+	.weui_input{padding:0 1.071428rem;box-sizing:border-box;}
+	.weui_label{width: 5em;}
+	.weui_select{height: auto;font-size: 1.1rem;}
+	.weui_cell_select .weui_cell_bd:after{display: none;}*/
+	/*//////////////////新加样式/////////////////*/
+	/*.msg_desc{font-size: 1rem;}
+	.weui_cell_bd_color{color: #888888;}
+	.weui_cell_bd_color_1{color: #C9C9C9;}
+	.userinfo_head{height: 5.1428rem;padding-bottom: 0;margin-bottom: 0;}
+	input::-webkit-input-placeholder{font-size: 1.1rem;color: #C9C9C9;} 
+	.weui_label{width: 6rem;}
+	.weui_cell_bd_1  {width: 17.37385714285714rem;}
+	.btn{padding-bottom: 1.214285714285714rem;}*/
+
+	/* 改版 */
+	.userinfo_head{margin-top:0.71428571428571rem;padding-left: 1.07142857142857rem;padding-right: 1.07142857142857rem;}
+	.msg_desc{font-size: 0.92857142857143rem;color: rgb(173,173,173);margin-left:1.64285714285714rem;line-height: 1.78571428571429rem}
+	.userinfo_headIcon{display:block;width:1.07142857142857rem;height:1.07142857142857rem;float: left;margin-top: 2.14285714285714rem;background: url(/static/images/icon_shield.png)no-repeat left center;background-size: 1.07142857142857rem 1.07142857142857rem}
+	.twoChoice{width: 100%;height:3.14285714285714rem;margin-top:0.71428571428571rem;margin-bottom:0.71428571428571rem }
+	.choice_msg{width:8.57142857142857rem;height: 2.42857142857143rem;float: left;background: 1px solid black;text-align: center;margin-left: 2.5rem;font-size: 1.14285714285714rem;line-height: 2.42857142857143rem;margin-top: 0.53571428571429rem}
+	.msgChecked{color: red;border-bottom:0.17857142857143rem solid red;}
+	.baseMsg,.passportMsg{width: 100%;height:3.14285714285714rem;margin-top: 0;margin-bottom: 0;}
+	.baseMsg>div,.passportMsg>div{width: 92%;height: 100%;line-height:3.14285714285714rem;position: relative;margin-left: 1.07142857142857rem}
+	.importantMsg{color: red}
+	.titleMsg{display: inline-block;font-size: 1.14285714285714rem}
+	.userMsg{display: inline-block;position: absolute;text-align: right;width: 70%;right: 0;font-size: 1.14285714285714rem!important}
+	.userMsg_change{color:rgb(146,146,146)!important;font-size: 1.14285714285714rem!important;height:1.42857142857143rem!important;line-height:1.42857142857143rem!important; margin-top: 0.92857142857143rem}
+	.userMsg_change::-webkit-input-placeholder{color:rgb(146,146,146)!important;font-size: 1.14285714285714rem!important;}
+
+	.inputStyle{line-height: 3.14285714285714rem;height: 3.14285714285714rem;}
+</style>
+<div class="infowrap">
+	<div class="weui_cells userinfo_head">
+		<span class='userinfo_headIcon'></span><p class="msg_desc">您的信息将仅用于跑步赛事的报名使用，知行平台采用智能加密处理，保障您的信息安全</p>
+	</div>
+
+	<!-- <div class="weui_cells twoChoice">
+		<div class="choice_msg msgChecked" personal-data='1'>基本信息</div>
+		<div class="choice_msg" personal-data='2' style="float: right;margin-right:2.5rem ">报名必填信息</div>
+	</div> -->
+	<div class="weui_cells msg_title" style="margin-top: 0.71428571428571rem;height: 3.14285714285714rem;line-height: 3.14285714285714rem">
+		<div style="margin-left: 1.07142857142857rem;height: 2.42857142857143rem;display: inline-block;text-align: left;font-size: 1.21428571428571rem;line-height: 2.42857142857143rem;margin-top: 0.53571428571429rem color: red;border: none;border-bottom:0.17857142857143rem solid red;color: red;">基本信息
+		</div>
+	</div>
+	<?php if ($_smarty_tpl->tpl_vars['userstate']->value<3){?>
+	<form action="/User/userinfo" method="post" id="userFormbase">
+	<div id="allBaseMsg" style="">
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>真实姓名</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="name" placeholder="确认后无法修改，将加密处理" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['name'];?>
+">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>手机号</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="phone" placeholder="确认后无法修改，将加密处理" value="<?php echo $_smarty_tpl->tpl_vars['phone']->value;?>
+">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>国籍</p>
+				<select class="weui_select userMsg userMsg_change inputStyle" name="country" dir="rtl" style="width:7.50000000000000rem" >
+                    <option value="中国" <?php if ($_smarty_tpl->tpl_vars['info']->value['country']=="中国"){?>selected<?php }?> >中国大陆</option>
+                    <option value="港澳台" <?php if ($_smarty_tpl->tpl_vars['info']->value['country']=="港澳台"){?>selected<?php }?>>中国-港澳台</option>
+                    <option value="外国籍" <?php if ($_smarty_tpl->tpl_vars['info']->value['country']=="国外"){?>selected<?php }?>>外国籍</option>
+              </select>
+              <span class="broad_icon" style="position: absolute;background: url(/static/images/broad_input.png) no-repeat;background-size: 100%; width: 1.071428571428571rem;height: 1rem;right:7.5rem;top: 0.9285714285714286rem;display: none;"></span>
+                <input class="weui_input userMsg userMsg_change inputStyle" type="text" name="broad_country" placeholder="请输入国籍" style="border: 1px solid red;height: 95%;width: 8.92857142857143rem;display: none;border-radius: 5px;box-sizing: border-box;padding-left: 1.642857142857143rem;" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['broad_country'];?>
+">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>身份证</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="sfz_code" placeholder="确认后无法修改，将加密处理" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['sfz_code'];?>
+">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg">生日</p> <input class="weui_input datepick userMsg userMsg_change inputStyle" type="text" name="birth"  placeholder="请选择生日日期" date-s="1900-1-1" placeholder="2015-08-08" readonly value="<?php echo $_smarty_tpl->tpl_vars['info']->value['birth'];?>
+">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg">性别</p>
+				<select id="sexy" class="weui_select userMsg userMsg_change inputStyle" name="sexy" dir="rtl" style="width:7.14285714285714rem ">
+                	<option value="">请选择性别</option>
+                    <option value="1" <?php if ($_smarty_tpl->tpl_vars['info']->value['sexy']==1){?>selected<?php }?>>男</option>
+                    <option value="2" <?php if ($_smarty_tpl->tpl_vars['info']->value['sexy']==2){?>selected<?php }?>>女</option>
+                </select>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>血型</p>
+				<select id="sexy" class="weui_select userMsg userMsg_change inputStyle" name="blood_type" dir="rtl" style="width:7.14285714285714rem">
+                	<option value="">请选择血型</option>
+                    <option value="A" <?php if ($_smarty_tpl->tpl_vars['info']->value['blood_type']=="A"){?>selected<?php }?> >A</option>
+                    <option value="B" <?php if ($_smarty_tpl->tpl_vars['info']->value['blood_type']=="B"){?>selected<?php }?> >B</option>
+                    <option value="AB" <?php if ($_smarty_tpl->tpl_vars['info']->value['blood_type']=="AB"){?>selected<?php }?> >AB</option>
+                    <option value="O" <?php if ($_smarty_tpl->tpl_vars['info']->value['blood_type']=="O"){?>selected<?php }?> >O</option>
+                </select>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg">地区</p><input class="weui_input areaSelectipt userMsg userMsg_change inputStyle" name="area" type="text"  placeholder="请选择地区"  readonly value="<?php echo $_smarty_tpl->tpl_vars['info']->value['area'];?>
+">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg">详细地址</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="addr" placeholder="请输入街道门牌信息" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['addr'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg">邮编</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="postcode" placeholder="请输入邮政编码" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['postcode'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>邮箱</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="e_mail" placeholder="请输入E-mail地址" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['e_mail'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>服装尺码</p>
+	            <select id="cloth_size" class="weui_select userMsg userMsg_change inputStyle" name="cloth_size" dir="rtl" style="width: 3.57142857142857rem;color:rgb(146,146,146); ">
+	                <option value="XS" <?php if ($_smarty_tpl->tpl_vars['info']->value['cloth_size']=="XS"){?>selected<?php }?>>XS</option>
+	                <option value="S" <?php if ($_smarty_tpl->tpl_vars['info']->value['cloth_size']=="S"){?>selected<?php }?>>S</option>
+	                <option value="M" <?php if ($_smarty_tpl->tpl_vars['info']->value['cloth_size']=="M"){?>selected<?php }?>>M</option>
+	                <option value="L" <?php if ($_smarty_tpl->tpl_vars['info']->value['cloth_size']=="L"){?>selected<?php }?>>L</option>
+	                <option value="XL" <?php if ($_smarty_tpl->tpl_vars['info']->value['cloth_size']=="XL"){?>selected<?php }?>>XL</option>
+	                <option value="XXL" <?php if ($_smarty_tpl->tpl_vars['info']->value['cloth_size']=="XXL"){?>selected<?php }?>>XXL</option>
+	            </select>
+	        </div>
+		</div>
+	</div>
+	<div class="weui_cells msg_title" style="margin-top: 0.71428571428571rem;height: 3.14285714285714rem;line-height: 3.14285714285714rem">
+		<div style="margin-left: 1.07142857142857rem;height: 2.42857142857143rem;display: inline-block;text-align: left;font-size: 1.21428571428571rem;line-height: 2.42857142857143rem;margin-top: 0.53571428571429rem color: red;border: none;border-bottom:0.17857142857143rem solid red;color: red;">报名必填信息
+		</div>
+	</div>
+	<div id="allPassportMsg" style="display: block">
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg">护照号码</p><input class="weui_input userMsg userMsg_change inputStyle" type="text"  placeholder="很重要，若护照不在手边请之后补填" name="pass_code" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['pass_code'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>中文姓拼音</p><input class="weui_input userMsg userMsg_change inputStyle" type="text"  placeholder="请以护照姓拼音为准" name="surname" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['surname'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>中文名拼音</p><input class="weui_input userMsg userMsg_change inputStyle" type="text"  placeholder="请以护照名拼音为准" name="en_name" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['en_name'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg">签发日期</p><input class="weui_input datepick userMsg userMsg_change inputStyle" type="text"  placeholder="请选择签发日期Date of issues" date-s="1949-10-1" name="issue_date"  readonly value="<?php echo $_smarty_tpl->tpl_vars['info']->value['issue_date'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg">有效期至</p><input class="weui_input datepick userMsg userMsg_change inputStyle" type="text"  placeholder="请选择有效期Date of expiry" name="expiry_date" date-e="2116-1-1" readonly value="<?php echo $_smarty_tpl->tpl_vars['info']->value['expiry_date'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg" style="margin-top:0.71428571428571rem ">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>是否参加过马拉松</p>
+	            <select id="userRecords" class="weui_select userMsg userMsg_change inputStyle" name="isattended" dir="rtl" style="width: 4.28571428571429rem;color:rgb(146,146,146); ">
+	            	<option value="">请选择</option>
+	                <option value="1" <?php if ($_smarty_tpl->tpl_vars['info']->value['isattended']==1){?>selected<?php }?>>是 </option>
+	                <option value="0" <?php if ($_smarty_tpl->tpl_vars['info']->value['isattended']==0){?>selected<?php }?>>否</option>
+                </select>
+	        </div>
+		</div>
+		<div id="attendedHistory" style="display: none">
+			<div class="weui_cells passportMsg">
+				<div>
+		            <p class="titleMsg">马拉松最好成绩</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入个人最好成绩" name="personbest" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['personbest'];?>
+">
+		        </div>
+			</div>
+			<div class="weui_cells passportMsg">
+				<div>
+		            <p class="titleMsg">最好成绩赛事名称</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入最好成绩赛事" name="personbestmatch" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['personbestmatch'];?>
+">
+		        </div>
+			</div>
+			<div class="weui_cells passportMsg">
+				<div>
+		            <p class="titleMsg"><span class="importantMsg">*</span>预期完赛时间</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="影响起跑分区，请输入" date-s="1949-10-1" name="wishfinish"  value="<?php echo $_smarty_tpl->tpl_vars['info']->value['wishfinish'];?>
+">
+		        </div>
+			</div>
+		</div>
+		<div class="weui_cells passportMsg" style="margin-top: 0.71428571428571rem">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>紧急联系人</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入紧急联系人姓名" name="contact_name" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['contact_name'];?>
+" >
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>联系人电话</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入紧急联系人手机号码" name="contact_phone" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['contact_phone'];?>
+">
+	        </div>
+		</div>
+	</div>
+	<div class="btn">
+		<input type="submit" value="保存" class="weui_btn weui_btn_warn" >
+	</div>
+	</form>
+	<?php }else{ ?>
+	<form action="/User/userinfo" method="post" id="userFormbase1">
+	<div id="allBaseMsg">
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>真实姓名</p>
+				<p class="userMsg"><?php echo $_smarty_tpl->tpl_vars['info']->value['name'];?>
+</p>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>手机号</p>
+				<p class="userMsg"><?php if ($_smarty_tpl->tpl_vars['info']->value['phone']){?><?php echo $_smarty_tpl->tpl_vars['info']->value['phone'];?>
+<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['phone']->value;?>
+<?php }?></p>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>国籍</p>
+				<p class="userMsg"><?php echo $_smarty_tpl->tpl_vars['info']->value['country'];?>
+</p>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>身份证</p>
+				<p class="userMsg"><?php echo $_smarty_tpl->tpl_vars['info']->value['sfz_code'];?>
+</p>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg">生日</p>
+				<p class="userMsg"><?php echo $_smarty_tpl->tpl_vars['info']->value['birth'];?>
+</p>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg">性别</p>
+				<p class="userMsg"><?php if ($_smarty_tpl->tpl_vars['info']->value['sexy']==1){?>男<?php }else{ ?>女<?php }?></p>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>血型</p>
+				<select class="weui_select userMsg userMsg_change inputStyle" name="blood_type" dir="rtl" style="width:7.14285714285714rem">
+                	<option value="">请选择血型</option>
+                    <option value="A" <?php if ($_smarty_tpl->tpl_vars['info']->value['blood_type']=="A"){?>selected<?php }?> >A</option>
+                    <option value="B" <?php if ($_smarty_tpl->tpl_vars['info']->value['blood_type']=="B"){?>selected<?php }?> >B</option>
+                    <option value="AB" <?php if ($_smarty_tpl->tpl_vars['info']->value['blood_type']=="AB"){?>selected<?php }?> >AB</option>
+                    <option value="O" <?php if ($_smarty_tpl->tpl_vars['info']->value['blood_type']=="O"){?>selected<?php }?> >O</option>
+                </select>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg">地区</p><input class="weui_input areaSelectipt userMsg userMsg_change inputStyle" name="area" type="text"  placeholder="请选择地区"  readonly value="<?php echo $_smarty_tpl->tpl_vars['info']->value['area'];?>
+">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg">详细地址</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="addr" placeholder="请输入街道门牌信息" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['addr'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg">邮编</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="postcode" placeholder="请输入邮政编码" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['postcode'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>邮箱</p>
+	            <input class="weui_input userMsg userMsg_change inputStyle" type="text" name="e_mail" placeholder="请输入E-mail地址" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['e_mail'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>服装尺码</p>
+	            <select id="cloth_size" class="weui_select userMsg userMsg_change inputStyle" name="cloth_size" dir="rtl" style="width: 3.57142857142857rem;color:rgb(146,146,146); ">
+	                <option value="XS" <?php if ($_smarty_tpl->tpl_vars['info']->value['cloth_size']=="XS"){?>selected<?php }?>>XS</option>
+	                <option value="S" <?php if ($_smarty_tpl->tpl_vars['info']->value['cloth_size']=="S"){?>selected<?php }?>>S</option>
+	                <option value="M" <?php if ($_smarty_tpl->tpl_vars['info']->value['cloth_size']=="M"){?>selected<?php }?>>M</option>
+	                <option value="L" <?php if ($_smarty_tpl->tpl_vars['info']->value['cloth_size']=="L"){?>selected<?php }?>>L</option>
+	                <option value="XL" <?php if ($_smarty_tpl->tpl_vars['info']->value['cloth_size']=="XL"){?>selected<?php }?>>XL</option>
+	                <option value="XXL" <?php if ($_smarty_tpl->tpl_vars['info']->value['cloth_size']=="XXL"){?>selected<?php }?>>XXL</option>
+	            </select>
+	        </div>
+		</div>
+	</div>
+	<div class="weui_cells msg_title" style="margin-top: 0.71428571428571rem;height: 3.14285714285714rem;line-height: 3.14285714285714rem">
+		<div style="margin-left: 1.07142857142857rem;height: 2.42857142857143rem;display: inline-block;text-align: left;font-size:1.21428571428571rem;line-height: 2.42857142857143rem;margin-top: 0.53571428571429rem color: red;border: none;border-bottom:0.17857142857143rem solid red;color: red;">报名必填信息
+		</div>
+	</div>
+	<div id="allPassportMsg" style="display: block">
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg">护照号码</p><input class="weui_input userMsg userMsg_change inputStyle" type="text"  placeholder="很重要，若护照不在手边请之后补填" name="pass_code" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['pass_code'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>中文姓拼音</p><input class="weui_input userMsg userMsg_change inputStyle" type="text"  placeholder="请以护照姓拼音为准" name="surname" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['surname'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>中文名拼音</p><input class="weui_input userMsg userMsg_change inputStyle" type="text"  placeholder="请以护照名拼音为准" name="en_name" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['en_name'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg">签发日期</p><input class="weui_input datepick userMsg userMsg_change inputStyle" type="text"  placeholder="请选择签发日期Date of issues" date-s="1949-10-1" name="issue_date" <?php if (substr($_smarty_tpl->tpl_vars['info']->value['issue_date'],0,10)!='0000-00-00'){?>value="<?php echo substr($_smarty_tpl->tpl_vars['info']->value['issue_date'],0,10);?>
+"<?php }?> readonly>
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg">有效期至</p><input class="weui_input datepick userMsg userMsg_change inputStyle" type="text"  placeholder="请选择有效期Date of expiry" name="expiry_date" date-e="2116-1-1" <?php if (substr($_smarty_tpl->tpl_vars['info']->value['expiry_date'],0,10)!='0000-00-00'){?>value="<?php echo substr($_smarty_tpl->tpl_vars['info']->value['expiry_date'],0,10);?>
+"<?php }?> readonly>
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg" style="margin-top:0.71428571428571rem ">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>是否参加过马拉松</p>
+	            <select id="userRecords" class="weui_select userMsg userMsg_change inputStyle" name="isattended" dir="rtl" style="width: 4.28571428571429rem;color:rgb(146,146,146); ">
+	            	<option value="">请选择</option>
+	                <option value="1" <?php if ($_smarty_tpl->tpl_vars['info']->value['isattended']==="1"){?>selected<?php }?>>是 </option>
+	                <option value="0" <?php if ($_smarty_tpl->tpl_vars['info']->value['isattended']==="0"){?>selected<?php }?>>否</option>
+                </select>
+	        </div>
+		</div>
+		<div id="attendedHistory" style="display: none">
+			<div class="weui_cells passportMsg">
+				<div>
+		            <p class="titleMsg">马拉松最好成绩</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入个人最好成绩" name="personbest" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['personbest'];?>
+" >
+		        </div>
+			</div>
+			<div class="weui_cells passportMsg">
+				<div>
+		            <p class="titleMsg">最好成绩赛事名称</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入最好成绩赛事" name="personbestmatch" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['personbestmatch'];?>
+">
+		        </div>
+			</div>
+			<div class="weui_cells passportMsg">
+				<div>
+		            <p class="titleMsg"><span class="importantMsg">*</span>预期完赛时间</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="影响起跑分区，请输入" date-s="1949-10-1" name="wishfinish" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['wishfinish'];?>
+">
+		        </div>
+			</div>
+		</div>
+		<div class="weui_cells passportMsg" style="margin-top: 0.71428571428571rem">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>紧急联系人</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入紧急联系人姓名" name="contact_name" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['contact_name'];?>
+">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>联系人电话</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入紧急联系人手机号码" name="contact_phone" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['contact_phone'];?>
+">
+	        </div>
+		</div>
+	</div>
+
+	<div class="btn">
+		<input type="submit" value="保存" class="weui_btn weui_btn_warn">
+	</div>
+	</form>
+	<?php }?>
+</div>
+<div id="datePlugin"></div>
+<script src="/static/weui/js/weui.js"></script>
+<script type="text/javascript" src="/static/js/iscroll.js?v=1.2"></script>
+<script type="text/javascript" src="/static/js/date.js?v=1.2"></script>
+<script type="text/javascript" src="/static/js/function.js?v=1.2"></script>
+<script type="text/javascript">
+<?php echo $_smarty_tpl->tpl_vars['updateres']->value;?>
+
+$('input[name=wishfinish]').finished_data();
+
+$('input[name=sfz_code]').blur(function(){
+	if($('input[name=country]').val()=="国外"){
+		return false;
+	}else{
+		if($(this).val().length < 12){
+			return false;
+		}else{
+			var _birthY = $(this).val().substr(6,4);
+			var _birthM = $(this).val().substr(10,2);
+			var _birthD = $(this).val().substr(12,2);
+			$('input[name=birth]').val(_birthY+'-'+_birthM+'-'+_birthD);
+		}
+	}
+
+})
+
+$('input[name=surname]').blur(function () {
+	var val =$(this).val().toLocaleUpperCase();
+	$(this).val(val);
+	
+})
+$('input[name=en_name]').blur(function () {
+	var val =$(this).val().toLocaleUpperCase();
+	$(this).val(val);
+})
+
+var YJBM = function(){this.init()},
+	shouji_reg = /^1[\d]{10}$/,
+	email_reg =/^([a-zA-Z0-9_-|.])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+YJBM.prototype ={
+	init:function(){
+		var me = this;
+		$('.datepick').each(function(){
+			var begin = $(this).attr("date-s")?$(this).attr("date-s"):me.getyearstr();
+			var end = $(this).attr("date-e")?$(this).attr("date-e"):me.getyearstr();
+			begin = begin.split("-");
+			end = end.split("-");
+			$(this).date({beginyear:begin[0],endyear:end[0]});
+		});
+		$(".areaSelectipt").areaSelect({});
+		$("#userFormbase").submit(function(){
+			if(me.check()){
+				$.ajax({
+	                cache: false,
+	                url:"/User/saveuserinfo",
+	                type: "POST",
+	                dataType: "json",
+	                timeout:'3000',
+	                data: $("#userFormbase").serialize(),
+	                success: function(data){
+	                    if(data.msg == "ok"){
+	                       	weui.Loading.success(2000,"保存成功");
+		                    setTimeout(function(){
+		                        window.location.href = "/User/index";
+		                    },2000);
+	                    }else{
+	                        weui.alert(data.msg);
+	                    }
+	                },
+            	});
+			}
+			return false;
+		});
+		$("#userFormbase1").submit(function(){
+			if(me.check()){
+               	return true;
+            }else{
+                return false;
+            }
+            
+		})
+	},
+	getyearstr:function(){
+		var nowDate = new Date(),
+			year = parseInt(nowDate.getFullYear()),
+			month = parseInt(nowDate.getMonth()+1),
+			day = parseInt(nowDate.getDate());
+		return year+"-"+month+"-"+day;
+	},
+	check:function(){
+
+		var xingming = $("input[name=name]").val()?$("input[name=name]").val():'<?php echo $_smarty_tpl->tpl_vars['info']->value['name'];?>
+';
+		if(xingming == ""){
+			weui.alert("请输入您的姓名");
+			$("input[name=name]").focus();	
+			return false;
+		}
+		
+		var country = $("select[name=country]").val()?$("select[name=country]").val():'<?php echo $_smarty_tpl->tpl_vars['info']->value['country'];?>
+';
+		console.log(country);
+		if(country == ""){
+			weui.alert("请选择国家");
+			$("select[name=country]").focus();
+			return false;
+		}
+		if(country=="外国籍"){
+			country=$("input[name=broad_country]").val();
+			if(country==''){
+				weui.alert("请填写国籍");
+				$("select[name=country]").focus();
+				return false;
+			}
+			var sfz_code = $("input[name=sfz_code]").val()?$("input[name=sfz_code]").val():'<?php echo $_smarty_tpl->tpl_vars['info']->value['sfz_code'];?>
+';
+			if(sfz_code == ""){
+				weui.alert("证件号码号不能为空！");
+				$("input[name=zjcode]").focus();
+				return false;
+			}
+		}else if(country=="港澳台"){
+			var sfz_code = $("input[name=sfz_code]").val()?$("input[name=sfz_code]").val():'<?php echo $_smarty_tpl->tpl_vars['info']->value['sfz_code'];?>
+';
+			if(sfz_code == ""){
+				weui.alert("证件号码号不能为空！");
+				$("input[name=zjcode]").focus();
+				return false;
+			}
+		}else{
+			var sfz_code = $("input[name=sfz_code]").val()?$("input[name=sfz_code]").val():'<?php echo $_smarty_tpl->tpl_vars['info']->value['sfz_code'];?>
+';
+			if(sfz_code == ""){
+				weui.alert("证件号码号不能为空！");
+				$("input[name=zjcode]").focus();
+				return false;
+			}
+			
+			var checkrs = sfz_code&&checkIdcard(sfz_code);
+			if(checkrs != "验证通过!"){
+				console.log(1111);
+				weui.alert(checkrs);
+				$("input[name=zjcode]").focus();
+				return false;
+			}
+		}
+
+		var blood = $('select[name=blood_type]').val()?$('select[name=blood_type]').val():'<?php echo $_smarty_tpl->tpl_vars['info']->value['blood_type'];?>
+';
+		if(blood == ""){
+			weui.alert('请选择血型');
+			$("select[name=blood_type]").focus();
+			return false;
+		}
+		var youxiang = $("input[name=e_mail]").val();
+		if(youxiang == ""){
+			weui.alert("请输入电子邮箱");
+			$("input[name=e_mail]").focus();
+			return false;
+		}
+
+		var machrs = email_reg.test(youxiang);
+		if(!machrs){
+			weui.alert("您的邮箱格式不正确！");
+			$("input[name=e_mail]").focus();
+			return false;
+		}
+
+		var cloth_size = $("select[name=cloth_size]").val();
+		if(cloth_size == ""){
+			weui.alert("请选择服装尺码");
+			$("select[name=cloth_size]").focus();
+			return false;
+		}
+
+		return true;
+	}
+};
+Zepto(function($){new YJBM()});
+//////////////////////////////////////////////////////////////////////
+$('#sexy').change(function () {
+	console.log(this.value)
+	if (this.value!='') {
+		$('#sexy').css({'color':'#000000',})
+	} else{
+		$('#sexy').css({'color':'#c9c9c9',})
+	}
+})
+$('#cloth_size').change(function () {
+	console.log(this.value)
+	if (this.value!='') {
+		$('#cloth_size').css({'color':'#000000',})
+	} else{
+		$('#cloth_size').css({'color':'#c9c9c9',})
+	}
+})
+$("#un_re_code").click(function(){
+	Passport.alert();
+});
+
+$(".choice_msg").click(function(){
+	if($(this).attr('personal-data') == '1'){
+		$('#allBaseMsg').show();
+		$('#allPassportMsg').hide();
+	}else{
+		$('#allBaseMsg').hide();
+		$('#allPassportMsg').show();
+	}
+	$(this).addClass('msgChecked');
+	$(this).siblings().removeClass('msgChecked');
+})
+
+
+$("select[name=country]").change(function(){
+	if($(this).val()=='外国籍'){
+		$(this).css('right','10.00000000000000rem');
+		$('input[name=broad_country]').show();
+		$('.broad_icon').show();
+	}else{
+		$(this).css('right','0');
+		$('input[name=broad_country]').hide();
+		$('.broad_icon').hide();
+	}
+})
+if($('#userRecords').val()==1){
+	$('#attendedHistory').show();
+}else{
+	$('#attendedHistory').hide();
+};
+$('#userRecords').change(function(){
+	if($(this).val()==1){
+		$('#attendedHistory').show();
+	}else{
+		$('#attendedHistory').hide();
+	}
+})
+</script>
+</body>
+</html><?php }} ?>

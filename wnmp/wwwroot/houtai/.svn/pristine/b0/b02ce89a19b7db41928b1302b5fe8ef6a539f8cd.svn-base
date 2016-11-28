@@ -1,0 +1,409 @@
+<{include file='Login/header.html'}>
+<{if $ac=='add' || $ac=='edit'}>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <form action="?s=Classes&a=content&ac=<{$ac}>" method='post' onsubmit="return checkform();">
+                <input type="hidden" name="ctime" value="<{$now}>"/>
+            <!--     <input type="hidden" name="utime" value="<{$now}>"/> -->
+                <input type="hidden" name="id" value="<{$id}>"/>
+                <div class="box-header">
+                    <h4>添加内容</h4>
+                </div>
+                <div class="box-content">
+                    <table class="table-font" style="width:80%;">
+                        <tr>
+                            <th class="w120">选择分类：</th>
+                            <td>
+                            <select name="cid" id="cid">
+				            <option value="0">-----选择分类-----</option>
+				            <{$select}>
+				         	</select>
+                            </td>
+                        </tr>
+                        <tr class="n_title hiden">
+                            <th class="w120">标题：</th>
+                            <td>
+	                            <input type="text" style="color:<{$data.n_color|escape:html}>" id="n_title"  name="n_title" class="textinput w270" value="<{$data.n_title|escape:html}>" autocomplete="off" />
+                        		<p id="hint"></p>
+                            </td>
+                        </tr>
+                        <tr class="isdisplay hiden">
+                            <th class="w120">是否显示：</th>
+                            <td>
+                            <label for="inindex1">是</label>
+                            <input id="inindex1" type="radio" name="isdisplay" <{if $data.isdisplay==="1" || $data.isdisplay==''}>checked=""<{/if}> value="1" class="textinput w60">
+                            <label for="inindex2">否</label>
+                            <input id="inindex2" type="radio" name="isdisplay" <{if $data.isdisplay==="0"}>checked=""<{/if}> value="0" class="textinput w60">
+                            </td>
+                        </tr>
+                        <tr class="sign hiden">
+                            <th class="w120">是否推荐：
+                            </th>
+                            <td>
+                            <label for="sign1">是</label>
+                            <input id="sign1" type="radio" name="sign" <{if $data.sign==="1"}>checked=""<{/if}> value="1" class="textinput w60">
+                            <label for="sign2">否</label>
+                            <input id="sign2" type="radio" name="sign" <{if $data.sign==="0"|| $data.sign==''}>checked=""<{/if}> value="0" class="textinput w60">
+                            </td>
+                        </tr>
+                        <tr class="n_img hiden">
+                            <th class="w120">图片：</th>
+                            <td><input type="text" name="n_img" id="imgicon" class="textinput w270 vpic" value="<{$data.n_img|escape:html}>" />&nbsp;<input type="button" class="kUpload" value="上传图片"></td>
+                        </tr>
+                        <tr class="n_url hiden">
+                            <th class="w120">链接地址：</th>
+                            <td><input type="text" name="n_url" class="textinput w270" value="<{$data.n_url|escape:html}>" /></td>
+                        </tr>
+                        <tr class="orderid hiden">
+                            <th>排序：</th>
+                            <td><input name="orderid" type="text" id="orderid" class="textinput" value="<{$data.orderid|escape:html}>"  onkeyup="value=value.replace(/[^\d]/g,'') "/></td>
+                        </tr>
+                        <tr class="utime hiden">
+                            <th>更新时间：</th>
+                            <td><input name="utime" type="text" id="utime" class="textinput datepicker" value="<{$data.utime|escape:html}>" onkeyup=""/></td>
+                        </tr>
+                        <tr>
+                        	<th>上线时间：</th>
+                        	<td><input name="itime" type="text" id="itime" class="textinput datepicker" value="<{$data.itime|escape:html}>" onkeyup=""/></td>
+                        </tr>
+                        <tr>
+                            <th>下线时间：</th>
+                            <td><input name="offtime" type="text" id="offtime" class="textinput datepicker" value="<{$data.offtime|escape:html}>" onkeyup=""/></td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                
+                <div class="box-footer">
+                    <div class="box-footer-inner">
+                    	<input type="submit" value="确定提交" /> 或 <a href="/?s=Classes&a=content&ac=list">取消</a>
+                    </div>
+                </div>
+                </form>
+            </div><!--/ con-->
+            
+        </div>    
+    </div><!--/ container-->
+
+</div>
+<script>
+var Fields	= <{$Fields}>;
+</script>
+<link type="text/css" href="/static/datapicker/timepicker/css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+     <link type="text/css" href="/static/datapicker/timepicker/css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+    <script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-timepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="/static/js/classadd.js?v=1.0"></script>
+    <script>
+function checkform(){
+    return true;       
+}
+$('.datepicker').datetimepicker({
+	//showOn: "button",
+	//buttonImage: "./css/images/icon_calendar.gif",
+	//buttonImageOnly: true,
+	showSecond: true,
+	timeFormat: 'hh:mm:ss',
+	stepHour: 1,
+	stepMinute: 1,
+	stepSecond: 1
+});
+var $cid = $('#cid');
+$('#n_title').keyup(function(){
+	var html = "";
+	if($(this).val()!==""){
+		$.getJSON("/?s=Classes&a=checkname&cid="+$cid.val()+"&info="+$(this).val(),function(data){
+			if(data.error==0){
+				for(i=0;i<data.data.length;i++){
+					html+="<p>"+data.data[i].n_title+"</p>";
+				}
+			}
+			$("#hint").html(html);
+		});
+	}else{
+		$("#hint").html(html);
+	}
+});
+</script>
+<{elseif $ac =='list'}>
+<link href="/static/datapicker/css/ui.all.css" rel="stylesheet" type="text/css" />
+<script src="/static/datapicker/jquery-ui-1.7.1.custom.min.js"></script>
+<script src="/static/datapicker/ui.datepicker.js"></script>
+<script type="text/javascript" src="/static/js/classadd.js?v=1212"></script>
+<script>
+$(function(){
+	$('.datepicker').datepicker();
+});
+$(function(){
+	$('#isdis').change(function(){
+		var val	= $(this).val();
+		var url	= window.location.href;
+		url	= url.replace(/&?isdisplay=[\d]?/g,"");
+		if(val!=""){
+			url	= url+"&isdisplay="+val;
+		}
+		window.location.href=url;
+	});
+	$('#issign').change(function(){
+		var val	= $(this).val();
+		var url	= window.location.href;
+		url	= url.replace(/&?sign=[\d]?/g,"");
+		if(val!=""){
+			url	= url+"&sign="+val;
+		}
+		window.location.href=url;
+	});
+	$('.sign').live("click",function(){
+		var aid	= $(this).attr('aid');
+		var txt	= $(this).val();
+		var that	= this;
+		$.ajax({
+			cache: false,
+			url:'/?s=Classes&a=changeSign',
+			type: "POST",
+//			dataType: "json",
+			dataType: "text",
+			timeout:'30000',
+//			async: false,
+			data: {
+				id:aid
+			},
+			success: function(result){
+				if(result=='1'){
+					window.location.href =window.location.href;
+				}else{
+					alert('修改失败,请重试。');
+				}
+			}
+		});
+	});
+	$('.display').live("click",function(){
+		var aid	= $(this).attr('aid');
+		var txt	= $(this).val();
+		var that	= this;
+		$.ajax({
+			cache: false,
+			url:'/?s=Classes&a=changeDisplay',
+			type: "POST",
+//			dataType: "json",
+			dataType: "text",
+			timeout:'30000',
+//			async: false,
+			data: {
+				id:aid
+			},
+			success: function(result){
+				if(result=='1'){
+					window.location.href =window.location.href;
+				}else{
+					alert('修改失败,请重试。');
+				}
+			}
+		});
+	});
+	$('#search_btn').click(function(){
+		var val = $('#search_title').val();
+        if(!val){
+            window.location.href = "./?s=Classes&a=content&ac=list&cid=<{$cid}>";
+            return false;
+        };
+		var html = "";
+		$.getJSON("./?s=Classes&a=checkname&cid=<{$cid}>&info="+val,function(data){
+			search_end(data);
+		});
+
+		
+	});
+    function search_end(data){
+        var html = "";
+        if(data.error == 0){
+                for(i=0,l=data.data.length;i<l;i++){
+                    var display = data.data[i].isdisplay == 1?"显示":"隐藏";
+                    if(data.data[i].sign==1){
+                        html += "<tr  childindex='1' style='background: #A1E8F4;'><td><input type='checkbox' name='id[]' value='"+data.data[i].aid+"' title="+data.data[i].aid+"></td><td style='text-align:center;'><a href='/?s=Classes&a=content&ac=edit&id="+data.data[i].aid+"' style='color:"+data.data[i].n_color+"' >"+data.data[i].aid+"</a></td><td style='text-align:center;''><a href='/?s=Classes&a=content&ac=edit&id="+data.data[i].id+"' style='color:"+data.data[i].n_color+"' >"+data.data[i].n_title+"</a></td><td style='text-align:center;''><a href='/?s=Classes&a=content&ac=list&cid="+data.data[i].id+"'>"+data.data[i].classname+"</a></td><td style='text-align:center;'' rel='classname' class='update_order' info='"+data.data[i].id+"|ios_news|orderid|id'>"+data.data[i].orderid+"</td>  <td style='text-align:center;'><input type='button' aid='"+data.data[i].aid+"' class='sign' value='是'/></td><td style='text-align:center;' ><input type='button' aid='"+data.data[i].aid+"' class='display' value='"+display+"'/><td style='text-align:center;'>[<a href='/?s=Classes&a=content&ac=edit&id="+data.data[i].aid+"'>修改</a>] &nbsp; [<a href='/?s=Classes&a=content&ac=del&id=<{$i.aid}>&sname=<{$sname}>' onclick='return confirm('删除后不能恢复,确定删除?');'>删除</a>]</td></tr>";
+                    }else{
+                        html += "<tr  childindex='1'><td><input type='checkbox' name='id[]' value='"+data.data[i].aid+"' title="+data.data[i].aid+"></td><td style='text-align:center;'><a href='/?s=Classes&a=content&ac=edit&id="+data.data[i].aid+"' style='color:"+data.data[i].n_color+"' >"+data.data[i].aid+"</a></td><td style='text-align:center;''><a href='/?s=Classes&a=content&ac=edit&id="+data.data[i].aid+"' style='color:"+data.data[i].n_color+"' >"+data.data[i].n_title+"</a></td><td style='text-align:center;''><a href='/?s=Classes&a=content&ac=list&cid="+data.data[i].id+"'>"+data.data[i].classname+"</a></td><td style='text-align:center;'' rel='classname' class='update_order' info='"+data.data[i].aid+"|ios_news|orderid|id'>"+data.data[i].orderid+"</td>  <td style='text-align:center;'><input type='button' aid='"+data.data[i].aid+"' class='sign' value='否'/></td><td style='text-align:center;' ><input type='button' aid='"+data.data[i].aid+"' class='display' value='"+display+"'/></td><td style='text-align:center;'>[<a href='/?s=Classes&a=content&ac=edit&id="+data.data[i].aid+"'>修改</a>] &nbsp; [<a href='/?s=Classes&a=content&ac=del&id=<{$i.aid}>&sname=<{$sname}>' onclick='return confirm('删除后不能恢复,确定删除?');'>删除</a>]</td></tr>";
+                    }
+                }
+                $('#count_num').html(l);
+            }else{
+                $('#count_num').html(0);
+            }
+            $("#class_item").html(html);
+    }
+	$('.class').live('click',function(){
+		$(this).changeclass({
+			append:$('#main'),
+            url:"/?s=Classes&a=getclass&val="
+		});	
+	});
+});
+</script>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">
+            	
+                  <div class="table">
+                  	<div class="th">
+                    	<div class="form">
+                        <div class="fl">
+                        	<select name="cid" id="s_cid" onchange="var v=this.value;window.location.href='/?s=Classes&a=content&ac=list&cid='+v">
+                        	<option value=0>全部分类</option>
+                        	<{$select}>
+                        	</select>&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="window.location.href='/?s=Classes&a=content&ac=add&cid='+document.getElementById('s_cid').value" value="添加内容"/> 　　　当前页面共有<span id= "count_num"></span>条数据   <input type="text" id="search_title" placeholder = "搜索"><button id="search_btn">搜索</button>
+                        </div>
+                        </div>
+                    </div>
+                    <form action='/?s=Classes&a=content&sname=<{$sname}>&cid=<{$cid}>' method='post' id="form-for-list">
+                    <table class="admin-tb" id="datatable">
+                    <thead>
+                        <tr>
+                        	<th><input type="checkbox" id="sall"><label for="sall">全选</label></th>
+                            <th style="text-align:center;">id</th>
+                            <th style="text-align:center;">标题</th>
+                            <th style="text-align:center;">分类名</th>
+                            <th style="text-align:center;">排序</th>
+                            <th style="text-align:center;">推荐
+                            <select id="issign" name="issign">
+                           	 	<option value="" >全</option>
+                           	 	<option value="0" <{if $get.sign==0 && $get.sign!=''}>selected<{/if}>>否</option>
+                           	 	<option value="1" <{if $get.sign==1}>selected<{/if}>>是</option>
+                           	 </select>
+                            </th>
+                            <th style="text-align:center;">显示
+                            <select id="isdis" name="isdis">
+                           	 	<option value="">全</option>
+                           	 	<option value="0" <{if $get.isdisplay==0 && $get.isdisplay!=''}>selected<{/if}>>否</option>
+                           	 	<option value="1" <{if $get.isdisplay==1}>selected<{/if}>>是</option>
+                           	 </select></th>
+                            <th style="text-align:center;">操作</th>
+                        </tr>
+					</thead>
+					<tbody id="class_item">
+					<{if $list}>
+					<{foreach from=$list name=n item=i}>
+					 <{if $i.sign==1}><tr  childindex="1" style="background: #A1E8F4;">
+                    <{else if $i.isadv ==1}><tr  childindex="1" style="background: #EBEDA9;">
+                    <{else if $i.issetupadv ==1}><tr  childindex="1" style="background: #BAD8BB;">
+                     <{else}>
+						<tr  childindex="1" >
+					 <{/if}>
+						<td><input type="checkbox" name="id[]" value="<{$i.aid}>" title="<{$i.aid}>"></td>
+                        <td style="text-align:center;"><a href="/?s=Classes&a=content&ac=edit&id=<{$i.aid}>" style="color:<{$i.n_color}>" ><{$i.aid}></a></td> 
+	                    <td style="text-align:center;"><a href="/?s=Classes&a=content&ac=edit&id=<{$i.aid}>" style="color:<{$i.n_color}>" ><{$i.n_title}></a></td>   
+	                    <td style="text-align:center;"><a href="/?s=Classes&a=content&ac=list&cid=<{$i.cid}>"><{$i.classname}></a></td>
+	                    <td style="text-align:center;" rel="classname" class="update_order" info="<{$i.aid}>|ios_news|orderid|id"><{$i.orderid}></td>
+	                    <td style="text-align:center;" ><input type="button" aid="<{$i.aid}>" class="sign" value="<{if $i.sign==1}>是<{else}>否<{/if}>"/></td>
+	                    <td style="text-align:center;" ><input type="button" aid="<{$i.aid}>" class="display" value="<{if $i.isdisplay==1}>显示<{else}>隐藏<{/if}>"/></td>
+	                    <td style="text-align:center;">
+	                        [<a href="/?s=Classes&a=content&ac=edit&id=<{$i.aid}>&sname=<{$sname}>">修改</a>] &nbsp; [<a href="/?s=Classes&a=content&ac=del&id=<{$i.aid}>&sname=<{$sname}>" onclick="return confirm('删除后不能恢复,确定删除?');">删除</a>]
+	                    </td>
+	                    </tr>
+					<{/foreach}>
+					<{/if}>
+					</tbody>
+                    </table>
+                    <div class="th">
+                    	<div class="form">
+                        <input type='hidden' name='commit' value='1' />
+                        <input type='radio' name='ac' value='del' checked />
+                        <input type="button" value="  删 除 " onclick="if(confirm('请注意删除操作不能恢复,确定操作?')){$(this).parents('form').submit();};" />&nbsp;&nbsp; <span id="page_span"><{$show}></span>
+                        </div>
+
+                    </div>
+                    </form>
+                </div>
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script>
+$('#count_num').html($('#form-for-list').find('input[type=checkbox][name^=id]').length);
+$('#searchBtn').click(function(){
+	var kwd	= $(this).prev('input').val();
+	var url	= window.location.href;
+	url	= url.replace(/(&|\?)?kwd=[^&]*/g,'');
+	url	+="&kwd="+kwd;
+	window.location.href=url;
+});
+$('#sall').click(function(){
+	var state	= $(this).attr('checked');
+	var form	= $(this).parents('form');
+	if(state){
+		form.find('input[type=checkbox][name^=id]').attr('checked',true);
+	}else{
+		form.find('input[type=checkbox][name^=id]').attr('checked',false);
+	}
+});
+</script>
+<{/if}>
+<script charset="utf-8" src="./static/editer/kindeditor-min.js"></script>
+<script charset="utf-8" src="./static/editer/lang/zh_CN.js"></script>
+<script>
+var KK=null;
+
+KindEditor.ready(function(K) {
+	KK=K;
+	var option	= {
+			designMode : <{$table_cfg.designMode|default:true}>,
+			uploadJson : '/?s=editor&a=upload',
+            fileManagerJson : '/?s=editor&a=manager',
+            allowFileManager : false
+			};
+
+    window.editor = KK.create('.HTML_EDIT',option);
+    //上传按钮
+    var editor = K.editor(option);
+	K('.kUpload').click(function() {
+		editor.loadPlugin('image', function() {
+			editor.plugin.imageDialog({
+				imageUrl : K('#imgicon').val(),
+				clickFn : function(url, title, width, height, border, align) {
+					K('#imgicon').val(url);
+					//得到图片高宽
+					K('#img_size').val(width+"*"+height);
+					editor.hideDialog();
+				}
+			});
+		});
+	});
+	var colorpicker;
+	K('#colorpicker').bind('click', function(e) {
+		e.stopPropagation();
+		if (colorpicker) {
+			colorpicker.remove();
+			colorpicker = null;
+			return;
+		}
+		var colorpickerPos = K('#colorpicker').pos();
+		colorpicker = K.colorpicker({
+			x : colorpickerPos.x,
+			y : colorpickerPos.y + K('#colorpicker').height(),
+			z : 19811214,
+			selectedColor : 'default',
+			noColor : '无颜色',
+			click : function(color) {
+				K('#n_color').val(color);
+				K('#n_title').css({"color":color});
+				colorpicker.remove();
+				colorpicker = null;
+			}
+		});
+	});
+	K(document).click(function() {
+		if (colorpicker) {
+			colorpicker.remove();
+			colorpicker = null;
+		}
+	});
+
+});
+</script>
+<{include file='Login/footer.html'}>

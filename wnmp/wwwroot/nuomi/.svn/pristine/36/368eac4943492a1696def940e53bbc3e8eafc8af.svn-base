@@ -1,0 +1,28 @@
+<{include file='Comon/header.html'}>
+<link rel="stylesheet" type="text/css" href="/static/css/time.css">
+<title>报名成功</title>
+<style type="text/css">
+.weui_cells{margin-top: 0;}
+.userinfo_head{padding-bottom: 0;margin-bottom: 0;background: #F3F6F5;padding: 0;}
+	input::-webkit-input-placeholder{font-size: 1.1rem;color: #C9C9C9;} 
+.msg_desc{font-size: 1rem;margin: 1.285714285714286rem 0;}
+.msg_desc>i{width: 21rem;height: 8.57142857142857rem;background: blue}
+.weui_btn{color: white!important;width: 11.89285714285714rem;height: 2.50000000000000rem;display: inline-block;line-height:2.50000000000000rem;background-color: #ff2244;margin-top: 2.85714285714286rem;font-size: 1.21428571428571rem!important;}
+</style>
+<div class="wrap">
+	<div class="weui_cells msg userinfo_head" style="text-align: center;">
+		<p class="msg_desc icon_s"><i style="background: url(/static/images/lack_passId.png) no-repeat left center;background-size: 100%;"></i></p>
+		<p style="font-size: 1rem;padding: 0 1.07142857142857rem;text-align: left;line-height: 1.42857142857143rem;color: black">请尽快提供护照号信息，您可以在我的赛事中点击“我的资料”完善</p>
+	</div>
+	<div class="btn_wrap" style="padding: 0 1.07142857142857rem">
+		<a href="/index" class="weui_btn weui_btn_warn">稍晚填写</a><a href="/User/perfect" class="weui_btn weui_btn_warn" style="margin-left: 0.71428571428571rem">马上填写</a>
+	</div>
+	
+</div>
+
+<script src="/static/weui/js/weui.js"></script>
+<script type="text/javascript" src="/static/js/iscroll.js?v=1.2"></script>
+<script type="text/javascript" src="/static/js/date.js?v=1.2"></script>
+<script type="text/javascript" src="/static/js/function.js?v=1.2"></script>
+</body>
+</html>

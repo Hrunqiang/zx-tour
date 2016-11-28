@@ -1,0 +1,762 @@
+[ 2016-11-11T10:17:23+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004459s ]
+NOTIC: [8] Undefined index: match C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.041018s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.019975s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.029098s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php on line 38 and defined C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.002561s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001005s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.015484s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015572s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 53 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 53 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 197 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 197 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 197 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.097057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.097107s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001887s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001487s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001097s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005747s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001486s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001595s ]
+
+[ 2016-11-11T10:17:31+08:00 ] /ajax/hotlist?page=2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.025589s ]
+INFO: [ route_check ] --END-- [ RunTime:0.025703s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001383s ]
+NOTIC: [8] Undefined index: length C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AjaxAction.class.php 第 37 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.007536s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 5,5  [ RunTime:0.003335s ]
+
+[ 2016-11-11T10:17:34+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002450s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002532s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001434s ]
+
+[ 2016-11-11T10:17:34+08:00 ] /Account/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000723s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000820s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 76 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.063008s ]
+INFO: [ view_template ] --END-- [ RunTime:0.063158s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: phone_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Undefined index: phone C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 98 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 98 行.
+NOTIC: [8] Undefined index: code_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 103 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 103 行.
+NOTIC: [8] Undefined index: error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.394397s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.394564s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.002062s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001133s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.002347s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007605s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001159s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001227s ]
+
+[ 2016-11-11T10:18:27+08:00 ] /Account/verify?phone=18311410712
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000577s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+NOTIC: [8] Memcache::pconnect() [<a href='memcache.pconnect'>memcache.pconnect</a>]: Server 192.168.10.200 (tcp 11211) failed with: �������ӷ���һ��ʱ���û����ȷ�𸴻����ӵ�����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ (10060) C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 109 行.
+NOTIC: [2] Memcache::pconnect() [<a href='memcache.pconnect'>memcache.pconnect</a>]: Can't connect to 192.168.10.200:11211, �������ӷ���һ��ʱ���û����ȷ�𸴻����ӵ�����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ (10060) C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 109 行.
+NOTIC: [2] Memcache::get() [<a href='memcache.get'>memcache.get</a>]: No servers added to memcache connection C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 115 行.
+NOTIC: [2] Memcache::set() [<a href='memcache.set'>memcache.set</a>]: No servers added to memcache connection C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 126 行.
+NOTIC: [2] Memcache::increment() [<a href='memcache.increment'>memcache.increment</a>]: No servers added to memcache connection C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 132 行.
+
+[ 2016-11-11T10:18:43+08:00 ] /Account/login?type=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001076s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001649s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+NOTIC: [8] Memcache::pconnect() [<a href='memcache.pconnect'>memcache.pconnect</a>]: Server 192.168.10.200 (tcp 11211) failed with: �������ӷ���һ��ʱ���û����ȷ�𸴻����ӵ�����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ (10060) C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 49 行.
+NOTIC: [2] Memcache::pconnect() [<a href='memcache.pconnect'>memcache.pconnect</a>]: Can't connect to 192.168.10.200:11211, �������ӷ���һ��ʱ���û����ȷ�𸴻����ӵ�����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ (10060) C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 49 行.
+NOTIC: [2] Memcache::get() [<a href='memcache.get'>memcache.get</a>]: No servers added to memcache connection C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 50 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000611s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000673s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: phone_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Undefined index: error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009060s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000403s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000349s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000252s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000393s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001523s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000479s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000525s ]
+
+[ 2016-11-11T10:18:47+08:00 ] /Account/verify?phone=18311410712
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001142s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001215s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+NOTIC: [2] Memcache::pconnect() [<a href='memcache.pconnect'>memcache.pconnect</a>]: Can't connect to 192.168.10.200:11211, Unknown error (0) C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 109 行.
+NOTIC: [2] Memcache::get() [<a href='memcache.get'>memcache.get</a>]: No servers added to memcache connection C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 115 行.
+NOTIC: [2] Memcache::set() [<a href='memcache.set'>memcache.set</a>]: No servers added to memcache connection C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 126 行.
+NOTIC: [2] Memcache::increment() [<a href='memcache.increment'>memcache.increment</a>]: No servers added to memcache connection C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 132 行.
+
+[ 2016-11-11T10:19:01+08:00 ] /Account/login?type=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000793s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000914s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+NOTIC: [8] Memcache::pconnect() [<a href='memcache.pconnect'>memcache.pconnect</a>]: Server 192.168.10.200 (tcp 11211) failed with: �������ӷ���һ��ʱ���û����ȷ�𸴻����ӵ�����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ (10060) C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 49 行.
+NOTIC: [2] Memcache::pconnect() [<a href='memcache.pconnect'>memcache.pconnect</a>]: Can't connect to 192.168.10.200:11211, �������ӷ���һ��ʱ���û����ȷ�𸴻����ӵ�����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ (10060) C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 49 行.
+NOTIC: [2] Memcache::get() [<a href='memcache.get'>memcache.get</a>]: No servers added to memcache connection C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 50 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000495s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000544s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: phone_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Undefined index: error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.008960s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009013s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000452s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000302s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000230s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000398s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001497s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000428s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-11-11T10:19:21+08:00 ] /Account/login?type=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000913s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000996s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000801s ]
+NOTIC: [8] Memcache::pconnect() [<a href='memcache.pconnect'>memcache.pconnect</a>]: Server 192.168.10.200 (tcp 11211) failed with: �������ӷ���һ��ʱ���û����ȷ�𸴻����ӵ�����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ (10060) C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 49 行.
+NOTIC: [2] Memcache::pconnect() [<a href='memcache.pconnect'>memcache.pconnect</a>]: Can't connect to 192.168.10.200:11211, �������ӷ���һ��ʱ���û����ȷ�𸴻����ӵ�����û�з�Ӧ�����ӳ���ʧ�ܡ�
+ (10060) C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 49 行.
+NOTIC: [2] Memcache::get() [<a href='memcache.get'>memcache.get</a>]: No servers added to memcache connection C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 50 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000671s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000732s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: phone_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Undefined index: error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009925s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009985s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000415s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000337s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000248s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000385s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001513s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000485s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2016-11-11T10:19:28+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000839s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000909s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+
+[ 2016-11-11T10:19:28+08:00 ] /Account/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.004785s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004891s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 76 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000846s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000945s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: phone_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Undefined index: phone C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 98 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 98 行.
+NOTIC: [8] Undefined index: code_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 103 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 103 行.
+NOTIC: [8] Undefined index: error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009144s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000386s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000302s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000322s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001676s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000593s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000640s ]
+
+[ 2016-11-11T10:19:41+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+NOTIC: [8] Undefined index: match C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.018808s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.002873s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.004661s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php on line 38 and defined C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.002184s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001063s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000931s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000991s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 53 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 53 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 197 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 197 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 197 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018008s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001148s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000632s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000381s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000474s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002774s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000548s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000610s ]
+
+[ 2016-11-11T10:19:44+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001127s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001251s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000999s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005755s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.100023s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\SearchAction.class.php on line 47 and defined C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\MatchInfoModel.class.php 第 94 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.398143s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.018480s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,999  [ RunTime:0.002676s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000798s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000862s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ../DataSource/Runtime/Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(../DataSource/Runtime/Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.257722s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.257800s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.004207s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001065s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000435s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007237s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.002376s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002480s ]
+
+[ 2016-11-11T10:19:45+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000732s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000802s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+NOTIC: [8] Undefined index: page C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.021050s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.003024s ]
+
+[ 2016-11-11T10:57:52+08:00 ] /Matchinfo?m_id=67
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003017s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005791s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.013972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014047s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.273637s ]
+SQL: select * from zx_tb_matchs where id = 67 [ RunTime:0.067728s ]
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\MatchinfoAction.class.php 第 26 行.
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\MatchinfoAction.class.php 第 161 行.
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\MatchinfoAction.class.php 第 161 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.011236s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 67 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.089002s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 67 and g_pid =752 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.020388s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 67 and g_pid =756 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.005548s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 67 and g_pid =757 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000479s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 67 and g_pid =758 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000362s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 67 and g_pid =759 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000528s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 67 and g_pid =760 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.006094s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=67 )  [ RunTime:0.161252s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004375s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.093430s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.004725s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.015002s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015071s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 63 行.
+NOTIC: [8] Undefined index: collection C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 342 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 342 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 355 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 355 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 358 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 358 行.
+NOTIC: [8] Undefined index: varable C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 361 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 361 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.048423s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048502s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001554s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000914s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000787s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000815s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004226s ]
+
+[ 2016-11-11T10:57:52+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000551s ]
+NOTIC: [8] Undefined index: match C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.016530s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.001469s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.004776s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php on line 38 and defined C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.056079s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000998s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.013684s ]
+INFO: [ view_template ] --END-- [ RunTime:0.013786s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 53 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 53 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 197 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 197 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 197 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.024309s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024384s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000793s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000367s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000299s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002033s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.019881s ]
+INFO: [ view_end ] --END-- [ RunTime:0.019984s ]
+
+[ 2016-11-11T10:57:54+08:00 ] /Search?ws=%E5%9B%BD%E5%86%85&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002512s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002643s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001287s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.049589s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.192519s ]
+NOTIC: [2] Missing argument 2 for MatchInfoModel::search(), called in C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\SearchAction.class.php on line 47 and defined C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\MatchInfoModel.class.php 第 94 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Model\MatchInfoModel.class.php 第 100 行.
+SQL:  select * from zx_tb_matchs where (m_name like '%国内%' or m_des like '%国内%' or m_ptype like '%国内%')  and  m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_order desc,id desc [ RunTime:0.382759s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.209641s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,999  [ RunTime:0.020807s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.003348s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003472s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+NOTIC: [8] Undefined index: m_entermode C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\139e5a03f767c9373af3d23625cae0b5de65c7a6.file.index.html.php 第 207 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.133818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.133905s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.006837s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000891s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000562s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001096s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009623s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001019s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001150s ]
+
+[ 2016-11-11T10:57:55+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001263s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001364s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+NOTIC: [8] Undefined index: page C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.006159s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.002113s ]
+

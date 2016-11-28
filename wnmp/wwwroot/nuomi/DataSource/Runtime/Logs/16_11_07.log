@@ -1,0 +1,1784 @@
+[ 2016-11-07T10:34:33+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001308s ]
+NOTIC: [8] Undefined index: match C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.006301s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.032999s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.003785s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.001385s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php on line 46 and defined C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000689s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001403s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001480s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.025743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025814s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001227s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001689s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000891s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005485s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001127s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001185s ]
+
+[ 2016-11-07T10:34:35+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001393s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001497s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001245s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001658s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.031110s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=25519 ) LIMIT 1   [ RunTime:0.003002s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.007024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 25519 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-07 10:34:35' ) LIMIT 1   [ RunTime:0.002324s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.012691s ]
+INFO: [ view_template ] --END-- [ RunTime:0.012772s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.021254s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021323s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000771s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000755s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000633s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003490s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001189s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001269s ]
+
+[ 2016-11-07T10:34:37+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001087s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001186s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001176s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001247s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.017442s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.025165s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001018s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001102s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.029202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029273s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000916s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.024297s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.023795s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.050330s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001521s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001589s ]
+
+[ 2016-11-07T10:34:45+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.007484s ]
+INFO: [ route_check ] --END-- [ RunTime:0.007615s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.006685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006785s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001382s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.016593s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000625s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001056s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001122s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.018037s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018146s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000969s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000778s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000852s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003914s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001343s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001433s ]
+
+[ 2016-11-07T10:38:14+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001499s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001574s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000934s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000983s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001252s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.004267s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000543s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001626s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001727s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.404113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.404182s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001112s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000820s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000628s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000961s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003662s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001026s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001075s ]
+
+[ 2016-11-07T10:38:18+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001485s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001624s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001369s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001069s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.003873s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000403s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001103s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001179s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.016917s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017008s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001029s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000805s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000702s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000784s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003510s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000943s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000994s ]
+
+[ 2016-11-07T10:39:00+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000982s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001057s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000753s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.007706s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000481s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000564s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000628s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.306951s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.307048s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001008s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000386s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000371s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000417s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002308s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000577s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000633s ]
+
+[ 2016-11-07T10:40:38+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001521s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001599s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001433s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.007866s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.001725s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001160s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001223s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.430232s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.430296s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001111s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000862s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000761s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004238s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001148s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001241s ]
+
+[ 2016-11-07T10:43:13+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001042s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001115s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001358s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000781s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.004344s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000597s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000849s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000897s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.262021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.262079s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000730s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000367s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000403s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002093s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000579s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2016-11-07T10:43:19+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+NOTIC: [8] Undefined index: match C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005184s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.019724s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.004252s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.006258s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php on line 46 and defined C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000701s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000856s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000912s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.014550s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014678s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000635s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000417s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000237s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000382s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001785s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000491s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2016-11-07T10:43:21+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000966s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001038s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000754s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.009071s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=25519 ) LIMIT 1   [ RunTime:0.001138s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.007396s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 25519 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-07 10:43:21' ) LIMIT 1   [ RunTime:0.000856s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000853s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000920s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.120993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.121062s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000435s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000417s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000331s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001733s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000831s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000894s ]
+
+[ 2016-11-07T10:43:23+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000611s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000437s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.005617s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000446s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000502s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000572s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.011654s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011725s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000475s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000309s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000227s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001607s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000568s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000613s ]
+
+[ 2016-11-07T10:44:42+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000691s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000434s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.006183s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000804s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000640s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000712s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.301727s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.301799s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000660s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000436s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000283s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001971s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000577s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2016-11-07T10:47:17+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001489s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001555s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001193s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001274s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.004158s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000467s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001294s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001371s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.310969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.311030s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001155s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000907s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000831s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000989s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004049s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001093s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001145s ]
+
+[ 2016-11-07T10:47:20+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000860s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000922s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000588s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.008517s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000538s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000742s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000791s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.010339s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010394s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000521s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000459s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000351s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000456s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001921s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000583s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2016-11-07T10:47:26+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000537s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000490s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.007114s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000551s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000432s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000477s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.009745s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009799s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000427s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000498s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000238s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001698s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000514s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000564s ]
+
+[ 2016-11-07T10:50:38+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000901s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.003812s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.009616s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000555s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000763s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000810s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.297468s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.297526s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000665s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000471s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000290s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001983s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000609s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2016-11-07T10:50:42+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000757s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000823s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001033s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.007029s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000654s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001037s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001117s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.010580s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010646s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000447s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000311s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000319s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000355s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001563s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000485s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2016-11-07T10:57:29+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000729s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000603s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.007261s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000608s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000772s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000830s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.292526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.292595s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000652s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000446s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000415s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002171s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000527s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000571s ]
+
+[ 2016-11-07T11:09:41+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000869s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001246s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000754s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.008126s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 25519 ) LIMIT 1   [ RunTime:0.000993s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000719s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000770s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.305327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.305395s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000805s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000500s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000484s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000716s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002674s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000729s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2016-11-07T11:21:36+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001873s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001945s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001411s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001175s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003984s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000588s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001258s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001310s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.132934s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.132986s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001104s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000899s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000735s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000913s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003792s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001079s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001163s ]
+
+[ 2016-11-07T11:21:36+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000594s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003715s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000460s ]
+
+[ 2016-11-07T11:22:14+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000588s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000700s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.006529s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000872s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001321s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001468s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.127916s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.127981s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000814s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000460s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000431s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002372s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001406s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001467s ]
+
+[ 2016-11-07T11:22:15+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000685s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000751s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.007208s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000508s ]
+
+[ 2016-11-07T11:25:24+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001083s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001144s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001150s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001096s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004752s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000541s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001023s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001073s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.138019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.138078s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001232s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000887s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000640s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000922s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003861s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001125s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001223s ]
+
+[ 2016-11-07T11:25:25+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000591s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003832s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000548s ]
+
+[ 2016-11-07T11:25:30+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001490s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001647s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001286s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001122s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.016986s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000579s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001333s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001404s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.019753s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019835s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000900s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000889s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000646s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003667s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001089s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001153s ]
+
+[ 2016-11-07T11:25:30+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000590s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004755s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.001576s ]
+
+[ 2016-11-07T11:25:46+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000582s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000456s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.006856s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000616s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000442s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000486s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009977s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010024s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000462s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000324s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000228s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000390s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001519s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000477s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2016-11-07T11:25:47+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001362s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001659s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.006234s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000653s ]
+
+[ 2016-11-07T11:26:07+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+NOTIC: [8] Undefined index: match C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004916s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.003934s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.004222s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.001294s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php on line 46 and defined C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000578s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000695s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000750s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013790s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000657s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000321s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000225s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001783s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000505s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2016-11-07T11:26:09+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000552s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000472s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.015852s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=25519 ) LIMIT 1   [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003649s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 25519 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-07 11:26:09' ) LIMIT 1   [ RunTime:0.000503s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000609s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000660s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.010393s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010462s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000371s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000298s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000289s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000337s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001406s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000525s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000569s ]
+
+[ 2016-11-07T11:26:12+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000577s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000556s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.006871s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000494s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000487s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000533s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.103893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.103957s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000678s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000424s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000282s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001969s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000713s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000773s ]
+
+[ 2016-11-07T11:26:12+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000706s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000782s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001208s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004933s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000513s ]
+
+[ 2016-11-07T11:27:10+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000538s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000561s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003826s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000577s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000785s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000834s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.128115s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.128167s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000799s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000421s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000348s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002223s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000692s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000754s ]
+
+[ 2016-11-07T11:27:10+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000639s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004862s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000523s ]
+
+[ 2016-11-07T11:27:17+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000587s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000644s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.007380s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000507s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000769s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000822s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013018s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013070s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000548s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000362s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000228s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000474s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001750s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000627s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2016-11-07T11:27:17+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000798s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000866s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.006773s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000536s ]
+
+[ 2016-11-07T11:27:21+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000624s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000428s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.016288s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000510s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000628s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000693s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009755s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009814s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000463s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000389s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000300s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000355s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001651s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000492s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2016-11-07T11:27:21+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000762s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000915s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001114s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.007527s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000693s ]
+
+[ 2016-11-07T11:27:23+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000651s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000670s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.008432s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000658s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000659s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000751s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.010285s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010345s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000491s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000390s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000228s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000602s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001844s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001153s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001290s ]
+
+[ 2016-11-07T11:27:24+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000703s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.007006s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000554s ]
+
+[ 2016-11-07T11:28:15+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000590s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000432s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.007442s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000542s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000501s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000557s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.122931s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.123011s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000773s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000418s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000457s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000490s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002301s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000642s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2016-11-07T11:28:15+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000742s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.005425s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000663s ]
+
+[ 2016-11-07T11:28:19+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000966s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001029s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000808s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000985s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003811s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000545s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001420s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001534s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018748s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018818s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000979s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000739s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000609s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000816s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003308s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000918s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000967s ]
+
+[ 2016-11-07T11:28:19+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001144s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001244s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001635s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004029s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000498s ]
+
+[ 2016-11-07T11:28:57+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000541s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000483s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.007202s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000593s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000445s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000491s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011226s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000497s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000369s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000336s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000356s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001696s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000587s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000652s ]
+
+[ 2016-11-07T11:28:57+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000766s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.006756s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000497s ]
+
+[ 2016-11-07T11:29:17+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000870s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000496s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004331s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000577s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000464s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000508s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderHTML C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\4792bea77855678aab75f1a3e1ec626c53894885.file.order.html.php 第 95 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.008958s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009009s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000481s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000421s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000254s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001731s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000535s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2016-11-07T11:29:17+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000856s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000942s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.005708s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 25519 and o.paystats>=0 order by o.ctime desc [ RunTime:0.000550s ]
+
+[ 2016-11-07T11:57:08+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001409s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001481s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001157s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.001064s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.003667s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.000695s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001238s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001294s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.063918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063981s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001135s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000960s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000952s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000894s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004162s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001085s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001142s ]
+
+[ 2016-11-07T17:09:59+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001949s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002080s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001199s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001279s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.001173s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.004605s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.001166s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001328s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001387s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.088471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088541s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001218s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000923s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000712s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000950s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003963s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001330s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001445s ]
+
+[ 2016-11-07T17:10:05+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001101s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001188s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000786s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000591s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.006209s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.000802s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001264s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001350s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.019305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019387s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000908s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000586s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000462s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000814s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002940s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000827s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000893s ]
+
+[ 2016-11-07T17:10:11+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000612s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000518s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.006393s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.000715s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000687s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000737s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014831s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014902s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000489s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000470s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000320s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000482s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001882s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000986s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001085s ]
+
+[ 2016-11-07T17:12:39+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000734s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000798s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000526s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.006660s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.000860s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002753s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002835s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.102654s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102728s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000791s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000455s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000470s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002300s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000604s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000654s ]
+
+[ 2016-11-07T17:14:37+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000592s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000568s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.007164s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.000705s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000711s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000764s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.083411s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083484s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000873s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000569s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000536s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000718s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002886s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000949s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001029s ]
+
+[ 2016-11-07T18:31:54+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001599s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001668s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001093s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.001237s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.003727s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.000681s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001245s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001336s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\f6bdd7dfffd6914c4f29bb0f0d3acbdf382db816.file.index.html.php 第 138 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\f6bdd7dfffd6914c4f29bb0f0d3acbdf382db816.file.index.html.php 第 138 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.102512s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102586s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001037s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000978s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000839s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001064s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004076s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001116s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001168s ]
+
+[ 2016-11-07T18:31:55+08:00 ] /Ajax/coupon?orderid=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000902s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+ERR: 非法操作:coupon
+
+[ 2016-11-07T18:32:42+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000617s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000646s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.004903s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.000626s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000767s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000822s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\f6bdd7dfffd6914c4f29bb0f0d3acbdf382db816.file.index.html.php 第 138 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\f6bdd7dfffd6914c4f29bb0f0d3acbdf382db816.file.index.html.php 第 138 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013208s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000515s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000474s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000276s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000525s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001945s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000683s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000749s ]
+
+[ 2016-11-07T18:32:42+08:00 ] /Ajax/coupon?orderid=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000622s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+ERR: 非法操作:coupon
+
+[ 2016-11-07T18:34:00+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001049s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001187s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000478s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.007467s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.000664s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000501s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000546s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\f6bdd7dfffd6914c4f29bb0f0d3acbdf382db816.file.index.html.php 第 138 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\f6bdd7dfffd6914c4f29bb0f0d3acbdf382db816.file.index.html.php 第 138 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.091735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091792s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001070s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000699s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001102s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004257s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.002042s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002135s ]
+
+[ 2016-11-07T18:34:00+08:00 ] /Ajax/coupon?orderid=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001096s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001203s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+ERR: 非法操作:coupon
+
+[ 2016-11-07T18:34:22+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000967s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001075s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000634s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000585s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.006227s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.000622s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000697s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000752s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\f6bdd7dfffd6914c4f29bb0f0d3acbdf382db816.file.index.html.php 第 138 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\f6bdd7dfffd6914c4f29bb0f0d3acbdf382db816.file.index.html.php 第 138 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013497s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013555s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000485s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000342s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001672s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000525s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2016-11-07T18:34:22+08:00 ] /Ajax/coupon?orderid=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001109s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001236s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000806s ]
+ERR: 非法操作:coupon
+
+[ 2016-11-07T18:54:22+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000773s ]
+NOTIC: [8] Undefined index: match C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004483s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.009504s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.004353s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.000537s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\IndexAction.class.php on line 46 and defined C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\nuomi\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001146s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000841s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000893s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.201505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.201565s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000955s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000436s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000285s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000422s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002216s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000525s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2016-11-07T18:54:26+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000712s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000543s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.003443s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.000737s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000688s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000739s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\f6bdd7dfffd6914c4f29bb0f0d3acbdf382db816.file.index.html.php 第 138 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\nuomi\DataSource\Runtime\Temp\f6bdd7dfffd6914c4f29bb0f0d3acbdf382db816.file.index.html.php 第 138 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.080364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080418s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001188s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000414s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000283s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002492s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000652s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2016-11-07T18:54:26+08:00 ] /Ajax/coupon?orderid=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000986s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001083s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+ERR: 非法操作:coupon
+
+[ 2016-11-07T18:54:50+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000607s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000641s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000724s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000778s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.010629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010711s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000435s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000306s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000279s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000346s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001481s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000461s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2016-11-07T18:54:50+08:00 ] /Ajax/coupon?orderid=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001048s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001147s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.009722s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.001150s ]
+
+[ 2016-11-07T18:55:28+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000667s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000585s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000483s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000549s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.099338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099418s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000867s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000478s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000457s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000563s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002564s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001059s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001156s ]
+
+[ 2016-11-07T18:55:29+08:00 ] /Ajax/coupon?orderid=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001022s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001146s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.006424s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.000766s ]
+
+[ 2016-11-07T18:59:31+08:00 ] /Coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000767s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000836s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000600s ]
+NOTIC: [8] Undefined index: orderid C:\wnmp\wwwroot\nuomi\DataSource\Lib\Action\CouponAction.class.php 第 15 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000599s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000643s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.081604s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081671s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000663s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000418s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000282s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001893s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000552s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000617s ]
+
+[ 2016-11-07T18:59:31+08:00 ] /Ajax/coupon?orderid=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000924s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\nuomi\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_couponlist` [ RunTime:0.006711s ]
+SQL: SELECT i.id,i.codestr,i.stats,c.coupon_type,c.coupon_name,c.discount,c.min_able_price,c.able_ptype,c.able_meal,c.able_match,c.effective_date,c.expiry_date FROM `zx_tb_couponlist` i LEFT JOIN `zx_tb_coupon` c ON c.id= i.cid WHERE i.stats=1 AND c.expiry_date >NOW()  AND i.owner = 25519  [ RunTime:0.000682s ]
+

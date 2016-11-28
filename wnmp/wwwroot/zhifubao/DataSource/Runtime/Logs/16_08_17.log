@@ -1,0 +1,209 @@
+[ 2016-08-17T11:44:48+08:00 ] /Search?ws=&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001388s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001460s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001325s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002657s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.001878s ]
+NOTIC: [8] Undefined variable: list D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002215s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.000811s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002369s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002432s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.025101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025185s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001319s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000856s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000729s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.004163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007244s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001317s ]
+
+[ 2016-08-17T11:44:49+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002823s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002961s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002193s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004395s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.002386s ]
+
+[ 2016-08-17T11:44:51+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001016s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001091s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+
+[ 2016-08-17T11:44:52+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001466s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001553s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002511s ]
+SQL:  select * from zx_tb_matchs where  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_GameTime asc,  m_order desc,id desc [ RunTime:0.003951s ]
+
+[ 2016-08-17T11:45:13+08:00 ] /Search?ws=&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003277s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003514s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002056s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005480s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.006280s ]
+NOTIC: [8] Undefined variable: list D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.002361s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.000820s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002657s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002830s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.016533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016618s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001076s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000884s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000784s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000943s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003852s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001769s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001824s ]
+
+[ 2016-08-17T11:45:14+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001682s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001813s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004748s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.002437s ]
+
+[ 2016-08-17T11:45:16+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000838s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000903s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004234s ]
+SQL:  select * from zx_tb_matchs where  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_GameTime asc,  m_order desc,id desc [ RunTime:0.003041s ]
+
+[ 2016-08-17T11:45:29+08:00 ] /Search?ws=&type=1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000877s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000944s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001179s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001248s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.007699s ]
+SQL: SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='国内' UNION SELECT  m_ptype, m_country ,m_city FROM `zx_tb_matchs`  WHERE m_ptype='海外' [ RunTime:0.003870s ]
+NOTIC: [8] Undefined variable: list D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\SearchAction.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003603s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.002599s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002690s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002817s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.021302s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021395s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000930s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000699s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000547s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000702s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003025s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000780s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000827s ]
+
+[ 2016-08-17T11:45:31+08:00 ] /ajax/hotlist?length=200
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000892s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000958s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+NOTIC: [8] Undefined index: page D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AjaxAction.class.php 第 36 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001753s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,200  [ RunTime:0.000893s ]
+
+[ 2016-08-17T11:45:33+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000831s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000891s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001865s ]
+SQL:  select * from zx_tb_matchs where  m_placesleft>0 and m_untilTime>NOW() and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_GameTime asc,  m_order desc,id desc [ RunTime:0.003491s ]
+
+[ 2016-08-17T11:45:43+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000619s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.001947s ]
+SQL:  select * from zx_tb_matchs where  (m_placesleft<=0 or m_untilTime<=NOW()) and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_GameTime asc,  m_order desc,id desc [ RunTime:0.002728s ]
+
+[ 2016-08-17T11:45:44+08:00 ] /Search/screen?ws=
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001011s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001106s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000809s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004552s ]
+SQL:  select * from zx_tb_matchs where  (m_placesleft<=0 or m_untilTime<=NOW()) and  m_state = 0 and m_releaseTime < NOW() and m_offineTime > NOW()  order by  m_GameTime asc,  m_order desc,id desc [ RunTime:0.004571s ]
+
+[ 2016-08-17T11:46:24+08:00 ] /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000682s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+NOTIC: [8] Undefined variable: group D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:Favicon.ico
+

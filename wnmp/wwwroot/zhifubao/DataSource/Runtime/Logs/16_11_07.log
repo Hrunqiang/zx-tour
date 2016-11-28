@@ -1,0 +1,34 @@
+[ 2016-11-07T12:12:41+08:00 ] /Account/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001987s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002101s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001706s ]
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\zhifubao\DataSource\Lib\Action\AccountAction.class.php 第 76 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002139s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ../DataSource/Runtime/Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(../DataSource/Runtime/Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory C:\wnmp\wwwroot\zhifubao\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: phone_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 95 行.
+NOTIC: [8] Undefined index: phone C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 98 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 98 行.
+NOTIC: [8] Undefined index: code_error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 103 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 103 行.
+NOTIC: [8] Undefined index: error C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\zhifubao\DataSource\Runtime\Temp\22487da300e9d88f77e7c31805b0b0b672038c3d.file.login.html.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.152713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.152792s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001241s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000848s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000726s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000909s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003919s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001212s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001280s ]
+

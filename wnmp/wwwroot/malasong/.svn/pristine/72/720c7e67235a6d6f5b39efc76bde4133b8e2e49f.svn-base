@@ -1,0 +1,78 @@
+<div class="footer">
+	<div id="footer_info_box" class="section_center">
+		<div id="footer_briefintroduction" class="dashed">
+			<p class="footer_mini_title">黑瞎子岛新年日出马拉松 (Black Bear Island New Year Sunrise Marathon)</p>
+			<div id="footer_briefintroduction_box">
+				<p>2016年 FEM 中国东极抚远·黑瞎子岛新年日出马拉松赛事，是抚远县人民政府携手黑瞎子岛管理委员会共同打造的独特中国极地马拉松赛事，也是远东马拉松联赛（Far East Marathon League）的首场赛事。</p>
+				<ul class="fl" style="width:50%;">
+					<li><p>电　　话:   0454-2122716</p></li>
+					<li><p>地　　址:   抚远县教体局</p></li>
+				</ul>
+			</div>
+		</div>
+		<div id="footer_sponsor" class="dashed" >
+			<p class="footer_mini_title">联合赞助商</p>
+			<div id="footer_sponsor_list_box">
+				<ul>
+					<li><img class="vertical_center" src="/static/images/sponsor00.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor01.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor02.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor03.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor04.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor05.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor06.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor07.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor08.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor09.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor10.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor11.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor12.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor13.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor14.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor15.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor16.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<div id="footer_media">
+			<p class="footer_mini_title">合作媒体</p>
+			<div id="footer_media_list_box">
+				<ul>
+                    <li>三联生活周刊</li>
+                    <li>人民画报</li>
+                    <li>中国报道</li>
+                    <li>跑者世界</li>
+                    <li>户外outside</li>
+                    <li>户外探险</li>
+                    <li>时尚旅游</li>
+                    <li>体坛周报</li>
+                    <li>人民日报</li>
+                    <li>中国旅游报·乡村周末</li>
+                    <li>中国体育报</li>
+                    <li>南方周末</li>
+                    <li>新京报</li>
+                    <li>东方早报</li>
+                    <li>新晚报</li>
+                    <li>CCTV4</li>
+                    <li>CCTV1</li>
+                    <li>CCTV5</li>
+                    <li>旅游卫视</li>
+                    <li>广东卫视</li>
+                    <li>黑龙江卫视</li>
+                    <li>北京交通台</li>
+                    <li>中国国际广播</li>
+                    <li>新浪体育搜狐体育</li>
+                    <li>腾讯体育</li>
+                    <li>凤凰体育</li>
+                    <li>乐视TV</li>
+                    <li>腾讯新闻</li>
+                    <li>悦跑圈</li>
+                    <li>咕咚运动</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<p id="footer_strip" class="strip">© 2015 Marathon.cn 京ICP备11015476号 京公网安备110105013401号 京ICP证110318号 新出网证(京)字242号</p>
+</div>
+</body>
+</html>

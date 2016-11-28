@@ -1,0 +1,1200 @@
+[ 2016-11-03T15:29:22+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001398s ]
+NOTIC: [8] Undefined index: match D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: platform D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.003095s ]
+SQL:  select id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des from zx_tb_matchs where  m_sign = 1  and m_ptype='国内' and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.001177s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.001488s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.000909s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\IndexAction.class.php on line 46 and defined D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords_nuomi' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000487s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001259s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001462s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.035894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035959s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.003097s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.050188s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.049814s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000950s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.104255s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000927s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001005s ]
+
+[ 2016-11-03T15:29:24+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002204s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002287s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+
+[ 2016-11-03T15:29:24+08:00 ] /Account/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000974s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001070s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+NOTIC: [8] Undefined index: type D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AccountAction.class.php 第 45 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000654s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000720s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.046641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046702s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000445s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000330s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000241s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000354s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001503s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000469s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2016-11-03T15:29:27+08:00 ] /Account/test?token=e333a781e442355af3b6303c03c01013
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000606s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000551s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Common\common.php 第 61 行.
+NOTIC: [8] Undefined index: error D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\AccountAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.002181s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( phone='13522354197' ) LIMIT 1   [ RunTime:0.000607s ]
+NOTIC: [8] Undefined variable: ac D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Model\NuomiUsersModel.class.php 第 25 行.
+
+[ 2016-11-03T15:29:28+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001521s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001631s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000819s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000907s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.002888s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=44 ) LIMIT 1   [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003455s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 44 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-03 15:29:28' ) LIMIT 1   [ RunTime:0.000952s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001776s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001943s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015263s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000543s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000470s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000371s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000520s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002061s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000666s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000717s ]
+
+[ 2016-11-03T15:29:31+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001039s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001195s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001625s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.002404s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 44 and o.paystats>=0 order by o.ctime desc [ RunTime:0.002992s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.001409s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '143161102171232044859' [ RunTime:0.000343s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161102145949044982' [ RunTime:0.000267s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '039161102134247044179' [ RunTime:0.000254s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '085161102131508044861' [ RunTime:0.000235s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161031135829044691' [ RunTime:0.000234s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161027153230044876' [ RunTime:0.000252s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161027145358044624' [ RunTime:0.000235s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161026183731044954' [ RunTime:0.000234s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161026150630044474' [ RunTime:0.000250s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161024142628044560' [ RunTime:0.000259s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161023213850044819' [ RunTime:0.000232s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021122752044546' [ RunTime:0.000242s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021120916044448' [ RunTime:0.000329s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021113106044452' [ RunTime:0.000228s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161020105220044961' [ RunTime:0.001654s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161019152912044537' [ RunTime:0.000564s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235161019144819044990' [ RunTime:0.000458s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161019105438044225' [ RunTime:0.000865s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '071161011171025044633' [ RunTime:0.002307s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235161010065450044592' [ RunTime:0.000239s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010065312044177' [ RunTime:0.000233s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010065001044573' [ RunTime:0.000245s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010064544044721' [ RunTime:0.000227s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010063840044594' [ RunTime:0.000230s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '287160928191658044679' [ RunTime:0.000273s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '237160915001953044605' [ RunTime:0.000275s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235160913153328044529' [ RunTime:0.000286s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '071160907094416044864' [ RunTime:0.000264s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '069160824152958044866' [ RunTime:0.000268s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '143160824140914044182' [ RunTime:0.000275s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '156160819164514044989' [ RunTime:0.000299s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '161160802131247044194' [ RunTime:0.000273s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '117160725203917044543' [ RunTime:0.000284s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '013160628191802044284' [ RunTime:0.000297s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '012160628183820044439' [ RunTime:0.000348s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000651s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000702s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.106433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106488s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000938s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000363s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000245s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002193s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000589s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000654s ]
+
+[ 2016-11-03T15:29:32+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000559s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.002087s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 44 and o.paystats>=0 order by o.ctime desc [ RunTime:0.001083s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.001781s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '143161102171232044859' [ RunTime:0.000312s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161102145949044982' [ RunTime:0.000216s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '039161102134247044179' [ RunTime:0.000202s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '085161102131508044861' [ RunTime:0.000179s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161031135829044691' [ RunTime:0.000186s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161027153230044876' [ RunTime:0.000178s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161027145358044624' [ RunTime:0.000195s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161026183731044954' [ RunTime:0.000184s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161026150630044474' [ RunTime:0.000177s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161024142628044560' [ RunTime:0.000677s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161023213850044819' [ RunTime:0.000219s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021122752044546' [ RunTime:0.000177s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021120916044448' [ RunTime:0.000207s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021113106044452' [ RunTime:0.000184s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161020105220044961' [ RunTime:0.000167s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161019152912044537' [ RunTime:0.000163s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235161019144819044990' [ RunTime:0.000165s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161019105438044225' [ RunTime:0.000180s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '071161011171025044633' [ RunTime:0.000162s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235161010065450044592' [ RunTime:0.000156s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010065312044177' [ RunTime:0.000161s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010065001044573' [ RunTime:0.000164s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010064544044721' [ RunTime:0.000189s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010063840044594' [ RunTime:0.000166s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '287160928191658044679' [ RunTime:0.000255s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '237160915001953044605' [ RunTime:0.000206s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235160913153328044529' [ RunTime:0.000190s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '071160907094416044864' [ RunTime:0.000191s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '069160824152958044866' [ RunTime:0.000202s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '143160824140914044182' [ RunTime:0.000267s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '156160819164514044989' [ RunTime:0.000194s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '161160802131247044194' [ RunTime:0.000237s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '117160725203917044543' [ RunTime:0.000259s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '013160628191802044284' [ RunTime:0.000290s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '012160628183820044439' [ RunTime:0.000206s ]
+
+[ 2016-11-03T15:29:43+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001822s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004532s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001516s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.050545s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.002278s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 44 and o.paystats>=0 order by o.ctime desc [ RunTime:0.001110s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.002053s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '143161102171232044859' [ RunTime:0.000883s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161102145949044982' [ RunTime:0.000267s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '039161102134247044179' [ RunTime:0.000218s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '085161102131508044861' [ RunTime:0.000194s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161031135829044691' [ RunTime:0.000182s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161027153230044876' [ RunTime:0.000176s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161027145358044624' [ RunTime:0.000174s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161026183731044954' [ RunTime:0.000174s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161026150630044474' [ RunTime:0.000202s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161024142628044560' [ RunTime:0.000208s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161023213850044819' [ RunTime:0.000175s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021122752044546' [ RunTime:0.000170s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021120916044448' [ RunTime:0.000274s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021113106044452' [ RunTime:0.000181s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161020105220044961' [ RunTime:0.000171s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161019152912044537' [ RunTime:0.000188s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235161019144819044990' [ RunTime:0.000174s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161019105438044225' [ RunTime:0.000178s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '071161011171025044633' [ RunTime:0.000167s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235161010065450044592' [ RunTime:0.000329s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010065312044177' [ RunTime:0.000190s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010065001044573' [ RunTime:0.000169s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010064544044721' [ RunTime:0.000172s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010063840044594' [ RunTime:0.000168s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '287160928191658044679' [ RunTime:0.000198s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '237160915001953044605' [ RunTime:0.000209s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235160913153328044529' [ RunTime:0.000274s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '071160907094416044864' [ RunTime:0.000199s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '069160824152958044866' [ RunTime:0.000204s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '143160824140914044182' [ RunTime:0.000218s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '156160819164514044989' [ RunTime:0.000209s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '161160802131247044194' [ RunTime:0.000202s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '117160725203917044543' [ RunTime:0.000387s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '013160628191802044284' [ RunTime:0.000216s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '012160628183820044439' [ RunTime:0.000200s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000748s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000827s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.214928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.215014s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001290s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000931s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000582s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000671s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003700s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000914s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000965s ]
+
+[ 2016-11-03T15:29:45+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000508s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.005475s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.m_img,m.id as mid,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 44 and o.paystats>=0 order by o.ctime desc [ RunTime:0.002581s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.003519s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '143161102171232044859' [ RunTime:0.000851s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161102145949044982' [ RunTime:0.000591s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '039161102134247044179' [ RunTime:0.000372s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '085161102131508044861' [ RunTime:0.000359s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161031135829044691' [ RunTime:0.000342s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161027153230044876' [ RunTime:0.000324s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161027145358044624' [ RunTime:0.000340s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161026183731044954' [ RunTime:0.000351s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161026150630044474' [ RunTime:0.000349s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161024142628044560' [ RunTime:0.000416s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161023213850044819' [ RunTime:0.000350s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021122752044546' [ RunTime:0.000380s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021120916044448' [ RunTime:0.000384s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021113106044452' [ RunTime:0.000331s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161020105220044961' [ RunTime:0.000337s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161019152912044537' [ RunTime:0.000343s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235161019144819044990' [ RunTime:0.000332s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161019105438044225' [ RunTime:0.000336s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '071161011171025044633' [ RunTime:0.000334s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235161010065450044592' [ RunTime:0.000327s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010065312044177' [ RunTime:0.000328s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010065001044573' [ RunTime:0.000335s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010064544044721' [ RunTime:0.000338s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010063840044594' [ RunTime:0.000334s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '287160928191658044679' [ RunTime:0.000374s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '237160915001953044605' [ RunTime:0.000388s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235160913153328044529' [ RunTime:0.000384s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '071160907094416044864' [ RunTime:0.000375s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '069160824152958044866' [ RunTime:0.000391s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '143160824140914044182' [ RunTime:0.000384s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '156160819164514044989' [ RunTime:0.000399s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '161160802131247044194' [ RunTime:0.000449s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '117160725203917044543' [ RunTime:0.000393s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '013160628191802044284' [ RunTime:0.000389s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '012160628183820044439' [ RunTime:0.000381s ]
+
+[ 2016-11-03T15:31:27+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002099s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004183s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001224s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000672s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.002530s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=44 ) LIMIT 1   [ RunTime:0.000412s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 44 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-03 15:31:27' ) LIMIT 1   [ RunTime:0.000649s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000956s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001049s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.020568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020639s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000871s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001174s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000542s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000700s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003450s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001087s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001154s ]
+
+[ 2016-11-03T15:31:49+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000628s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000434s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.002728s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=44 ) LIMIT 1   [ RunTime:0.001508s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.005583s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 44 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-03 15:31:49' ) LIMIT 1   [ RunTime:0.000780s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001029s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001128s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.083095s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083168s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000498s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000583s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000546s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002358s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000473s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000527s ]
+
+[ 2016-11-03T15:31:52+08:00 ] /User/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000895s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000975s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000451s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001766s ]
+SQL: SELECT m.id,m.m_name,m.m_state,m.m_releaseTime,m.m_untilTime,m.m_offineTime,m.m_placesleft,m.m_img,m.m_GameTime,m.m_Mtypes,m.m_des,m.m_ptype FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000360s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000543s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000601s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: abroad D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+NOTIC: [8] Undefined index: domestic D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.103083s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.103144s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000500s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000304s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000293s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000349s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001565s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000509s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2016-11-03T15:31:53+08:00 ] /Ajax/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000660s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001245s ]
+SQL: SELECT m.id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000336s ]
+
+[ 2016-11-03T15:32:38+08:00 ] /User/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000661s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000464s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.003270s ]
+SQL: SELECT m.id,m.m_name,m.m_state,m.m_releaseTime,m.m_untilTime,m.m_offineTime,m.m_placesleft,m.m_img,m.m_GameTime,m.m_Mtypes,m.m_des,m.m_ptype FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000933s ]
+NOTIC: [8] Undefined index: m_enterMode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 163 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001596s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001738s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.025783s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025874s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000535s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000426s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000325s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000577s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002016s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000623s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000674s ]
+
+[ 2016-11-03T15:32:40+08:00 ] /Ajax/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000637s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001540s ]
+SQL: SELECT m.id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.003384s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 143 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 143 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.004802s ]
+
+[ 2016-11-03T15:32:44+08:00 ] /User/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001192s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001333s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000505s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.002748s ]
+SQL: SELECT m.id,m.m_name,m.m_state,m.m_releaseTime,m.m_untilTime,m.m_offineTime,m.m_placesleft,m.m_img,m.m_GameTime,m.m_Mtypes,m.m_des,m.m_ptype FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000676s ]
+NOTIC: [8] Undefined index: m_enterMode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 163 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001146s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001249s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.023376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023487s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000980s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001054s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000631s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000911s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003855s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000861s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000935s ]
+
+[ 2016-11-03T15:32:45+08:00 ] /Ajax/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000693s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000774s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000950s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001315s ]
+SQL: SELECT m.id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002020s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 143 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 143 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002382s ]
+
+[ 2016-11-03T15:32:56+08:00 ] /Matchinfo/collection?m_id=143
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000689s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002699s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001212s ]
+SQL: SELECT * FROM `zx_tb_collect` WHERE ( `uid`=44 and `match_id` = 143  ) LIMIT 1   [ RunTime:0.000277s ]
+SQL: DELETE FROM `zx_tb_collect` WHERE ( `uid`=44 and `match_id` = 143  ) [ RunTime:0.021531s ]
+
+[ 2016-11-03T15:33:04+08:00 ] /User/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000672s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002317s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001830s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.002433s ]
+SQL: SELECT m.id,m.m_name,m.m_state,m.m_releaseTime,m.m_untilTime,m.m_offineTime,m.m_placesleft,m.m_img,m.m_GameTime,m.m_Mtypes,m.m_des,m.m_ptype FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: m_enterMode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 163 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000792s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000874s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017239s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017318s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000693s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000663s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000469s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000689s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002732s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000837s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000905s ]
+
+[ 2016-11-03T15:33:05+08:00 ] /Ajax/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001465s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001663s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001755s ]
+SQL: SELECT m.id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000481s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002842s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 143 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 143 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.003014s ]
+
+[ 2016-11-03T15:33:32+08:00 ] /Matchinfo/collection?m_id=143
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000730s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.002033s ]
+SQL: SELECT * FROM `zx_tb_collect` WHERE ( `uid`=44 and `match_id` = 143  ) LIMIT 1   [ RunTime:0.000274s ]
+SQL: DELETE FROM `zx_tb_collect` WHERE ( `uid`=44 and `match_id` = 143  ) [ RunTime:0.009110s ]
+
+[ 2016-11-03T15:33:40+08:00 ] /User/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000755s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000522s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.002404s ]
+SQL: SELECT m.id,m.m_name,m.m_state,m.m_releaseTime,m.m_untilTime,m.m_offineTime,m.m_placesleft,m.m_img,m.m_GameTime,m.m_Mtypes,m.m_des,m.m_ptype FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000627s ]
+NOTIC: [8] Undefined index: m_enterMode D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 163 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001011s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001205s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.023839s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023944s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000764s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000381s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000287s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001975s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000541s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2016-11-03T15:33:41+08:00 ] /Ajax/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000699s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.003090s ]
+SQL: SELECT m.id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000431s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.002224s ]
+SQL: 
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 143 AND g_isgoods = 1 AND g_type= 1 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+UNION ALL
+SELECT id,g_type,g_name,g_currprice,g_price,g_singleprice,g_stock,g_stockleft FROM zx_tb_goods WHERE g_mid = 143 AND g_isgoods = 1 AND g_type= 2 AND g_state = 0 AND g_releaseTime < NOW() AND g_offineTime >NOW() AND g_stockleft>0
+ORDER BY  g_currprice ASC [ RunTime:0.002496s ]
+
+[ 2016-11-03T15:33:47+08:00 ] /Matchinfo/collection?m_id=143
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000698s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001399s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001249s ]
+SQL: SELECT * FROM `zx_tb_collect` WHERE ( `uid`=44 and `match_id` = 143  ) LIMIT 1   [ RunTime:0.001353s ]
+SQL: DELETE FROM `zx_tb_collect` WHERE ( `uid`=44 and `match_id` = 143  ) [ RunTime:0.007184s ]
+
+[ 2016-11-03T15:33:52+08:00 ] /User/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000779s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000703s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.002465s ]
+SQL: SELECT m.id,m.m_name,m.m_state,m.m_releaseTime,m.m_untilTime,m.m_offineTime,m.m_placesleft,m.m_img,m.m_GameTime,m.m_Mtypes,m.m_des,m.m_ptype FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000662s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001329s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001433s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: abroad D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+NOTIC: [8] Undefined index: domestic D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.024190s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024285s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000847s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000930s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000691s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000889s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003611s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001043s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001130s ]
+
+[ 2016-11-03T15:33:53+08:00 ] /Ajax/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001051s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001149s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.004463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004576s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001222s ]
+SQL: SELECT m.id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000326s ]
+
+[ 2016-11-03T17:25:40+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001643s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001761s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001133s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001786s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.004648s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.000946s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.003918s ]
+INFO: [ view_template ] --END-- [ RunTime:0.004097s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.589366s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.589454s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000850s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000680s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000484s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000894s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003056s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000760s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000820s ]
+
+[ 2016-11-03T17:25:44+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000777s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000524s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.006238s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.000726s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000987s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001086s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.019168s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019239s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000578s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000293s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000188s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001562s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000537s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2016-11-03T17:26:28+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000874s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000957s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001010s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000400s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.003271s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.000686s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000707s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000804s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.420034s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.420110s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000662s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001688s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000315s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003322s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000489s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2016-11-03T17:26:46+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000559s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000399s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.003034s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.000715s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001682s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001888s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.411688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.411759s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000676s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000450s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000258s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001896s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000503s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000549s ]
+
+[ 2016-11-03T17:26:51+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.004026s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004115s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000653s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.006065s ]
+SQL: UPDATE `zx_tb_userinfo` SET `blood_type`='AB',`area`='北京-北京市-西城区',`addr`='北三环中路',`postcode`='100001',`e_mail`='375968317@qq.com',`cloth_size`='S',`pass_code`='',`surname`='SASA',`en_name`='QWQWQ',`issue_date`='2016-11-03',`expiry_date`='2016-11-03',`isattended`=1,`personbest`='00:22:22',`personbestmatch`='测试马拉松',`wishfinish`='22:22:22',`contact_name`='黄海',`contact_phone`='13522354177' WHERE ( uid=44 ) [ RunTime:0.017945s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.001307s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001256s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001401s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.024537s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024639s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000813s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000496s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000226s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002166s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000520s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000718s ]
+
+[ 2016-11-03T17:26:58+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000804s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 500 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000786s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.003524s ]
+SQL: UPDATE `zx_tb_userinfo` SET `blood_type`='A',`area`='北京-北京市-西城区',`addr`='北三环中路',`postcode`='100001',`e_mail`='375968317@qq.com',`cloth_size`='S',`pass_code`='',`surname`='SASA',`en_name`='QWQWQ',`issue_date`='2016-11-03',`expiry_date`='2016-11-03',`isattended`=1,`personbest`='00:22:22',`personbestmatch`='测试马拉松',`wishfinish`='22:22:22',`contact_name`='黄海',`contact_phone`='13522354177' WHERE ( uid=44 ) [ RunTime:0.008151s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.000766s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000717s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000814s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.018717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018825s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001122s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000565s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000225s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002499s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000476s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000531s ]
+
+[ 2016-11-03T17:28:05+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000514s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000357s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.003001s ]
+SQL: UPDATE `zx_tb_userinfo` SET `blood_type`='A',`area`='北京-北京市-西城区',`addr`='北三环中路',`postcode`='100001',`e_mail`='375968317@qq.com',`cloth_size`='S',`pass_code`='',`surname`='SASA',`en_name`='QWQWQ',`issue_date`='2016-11-03',`expiry_date`='2016-11-03',`isattended`=1,`personbest`='00:22:22',`personbestmatch`='测试马拉松',`wishfinish`='22:22:22',`contact_name`='黄海',`contact_phone`='13522354177' WHERE ( uid=44 ) [ RunTime:0.007042s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.000664s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000681s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000803s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.012621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012686s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000522s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000290s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000185s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000382s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001504s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000589s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001115s ]
+
+[ 2016-11-03T17:28:09+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001306s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001394s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000955s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000878s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.002296s ]
+SQL: UPDATE `zx_tb_userinfo` SET `blood_type`='B',`area`='北京-北京市-西城区',`addr`='北三环中路',`postcode`='100001',`e_mail`='375968317@qq.com',`cloth_size`='S',`pass_code`='',`surname`='SASA',`en_name`='QWQWQ',`issue_date`='2016-11-03',`expiry_date`='2016-11-03',`isattended`=1,`personbest`='00:22:22',`personbestmatch`='测试马拉松',`wishfinish`='22:22:22',`contact_name`='黄海',`contact_phone`='13522354177' WHERE ( uid=44 ) [ RunTime:0.009336s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.000637s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000446s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000507s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.011106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011172s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000750s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000520s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000293s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002237s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000635s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000699s ]
+
+[ 2016-11-03T17:31:19+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000627s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001179s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.002535s ]
+SQL: UPDATE `zx_tb_userinfo` SET `blood_type`='B',`area`='北京-北京市-西城区',`addr`='北三环中路',`postcode`='100001',`e_mail`='375968317@qq.com',`cloth_size`='S',`pass_code`='',`surname`='SASA',`en_name`='QWQWQ',`issue_date`='2016-11-03',`expiry_date`='2016-11-03',`isattended`=1,`personbest`='00:22:22',`personbestmatch`='测试马拉松',`wishfinish`='22:22:22',`contact_name`='黄海',`contact_phone`='13522354177' WHERE ( uid=44 ) [ RunTime:0.006210s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.000541s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000722s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000798s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.319042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.319106s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000527s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000312s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000223s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000363s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001548s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000454s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000498s ]
+
+[ 2016-11-03T17:31:24+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001202s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001333s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000445s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.002267s ]
+SQL: UPDATE `zx_tb_userinfo` SET `blood_type`='A',`area`='北京-北京市-西城区',`addr`='北三环中路',`postcode`='100001',`e_mail`='375968317@qq.com',`cloth_size`='S',`pass_code`='',`surname`='SASA',`en_name`='QWQWQ',`issue_date`='2016-11-03',`expiry_date`='2016-11-03',`isattended`=1,`personbest`='00:22:22',`personbestmatch`='测试马拉松',`wishfinish`='22:22:22',`contact_name`='黄海',`contact_phone`='13522354177' WHERE ( uid=44 ) [ RunTime:0.007590s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.000425s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000546s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000598s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.010785s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010842s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000465s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000304s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000196s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000393s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001492s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000450s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000497s ]
+
+[ 2016-11-03T17:31:29+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000531s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000351s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.002292s ]
+SQL: UPDATE `zx_tb_userinfo` SET `blood_type`='A',`area`='北京-北京市-西城区',`addr`='北三环中路',`postcode`='100001',`e_mail`='375968317@qq.com',`cloth_size`='XXL',`pass_code`='',`surname`='SASA',`en_name`='QWQWQ',`issue_date`='2016-11-03',`expiry_date`='2016-11-03',`isattended`=1,`personbest`='00:22:22',`personbestmatch`='测试马拉松',`wishfinish`='22:22:22',`contact_name`='黄海',`contact_phone`='13522354177' WHERE ( uid=44 ) [ RunTime:0.008640s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.000628s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000548s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000619s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.013529s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013607s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000736s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000438s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000276s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002131s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000634s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000700s ]
+
+[ 2016-11-03T17:31:39+08:00 ] /User/userinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000806s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000873s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000876s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.125221s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_userinfo` [ RunTime:0.002394s ]
+SQL: UPDATE `zx_tb_userinfo` SET `blood_type`='A',`area`='北京-北京市-西城区',`addr`='北三环中路',`postcode`='100001',`e_mail`='375968317@qq.com',`cloth_size`='XXL',`pass_code`='',`surname`='SASA',`en_name`='QWQWQ',`issue_date`='2016-11-03',`expiry_date`='2016-11-03',`isattended`=1,`personbest`='00:22:22',`personbestmatch`='测试马拉松',`wishfinish`='22:22:22',`contact_name`='黄海',`contact_phone`='13522354177' WHERE ( uid=44 ) [ RunTime:0.006856s ]
+SQL: SELECT * FROM `zx_tb_userinfo` WHERE ( uid = 44 ) LIMIT 1   [ RunTime:0.000359s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.050796s ]
+INFO: [ view_template ] --END-- [ RunTime:0.050853s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015329s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015387s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000712s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000584s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000497s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000564s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002702s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000782s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000835s ]
+
+[ 2016-11-03T17:32:58+08:00 ] /User/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000901s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000993s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001033s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001221s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.002606s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=44 ) LIMIT 1   [ RunTime:0.000391s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.002373s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 44 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-03 17:32:58' ) LIMIT 1   [ RunTime:0.000576s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000905s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000981s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.019914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020132s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000921s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000774s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000549s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000546s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002975s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000742s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2016-11-03T17:33:17+08:00 ] /User/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000613s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.000563s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.003805s ]
+SQL: SELECT m.id,m.m_name,m.m_state,m.m_releaseTime,m.m_untilTime,m.m_offineTime,m.m_placesleft,m.m_img,m.m_GameTime,m.m_Mtypes,m.m_des,m.m_ptype FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.001059s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000615s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000691s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: abroad D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+NOTIC: [8] Undefined index: domestic D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.065694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065759s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000373s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000295s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000184s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000311s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001282s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000459s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2016-11-03T17:33:18+08:00 ] /Ajax/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001357s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001456s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.003417s ]
+SQL: SELECT m.id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000329s ]
+
+[ 2016-11-03T17:40:22+08:00 ] /User/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001810s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002136s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000840s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Lib\Action\UserAction.class.php 第 501 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001013s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.002378s ]
+SQL: SELECT m.id,m.m_name,m.m_state,m.m_releaseTime,m.m_untilTime,m.m_offineTime,m.m_placesleft,m.m_img,m.m_GameTime,m.m_Mtypes,m.m_des,m.m_ptype FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000873s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002402s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002482s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: abroad D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+NOTIC: [8] Undefined index: domestic D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\DataSource\Runtime\Temp\911a5491a5f9e2657465be420974c6bf14adc566.file.collection.html.php 第 58 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.021482s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021560s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000689s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000546s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000455s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002382s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000782s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000856s ]
+
+[ 2016-11-03T17:40:23+08:00 ] /Ajax/collection
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000956s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001062s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp1\wwwroot\zx_nuomi\branches\branche01\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.001262s ]
+SQL: SELECT m.id,m_name,m_GameTime,m_untilTime,m_releaseTime,m_offineTime,m_city,m_Mtypes,m_ptype,m_sign,m_enterMode,m_placesleft,m_places,m_enterurl,m_state,m_img,m_order,m_country,m_area,m_signuptime,m_mtypes_class,m_des FROM `zx_tb_collect` c LEFT JOIN `zx_tb_matchs` m ON m.id= c.match_id WHERE c.uid= 44 [ RunTime:0.000375s ]
+

@@ -1,0 +1,845 @@
+[ 2016-10-28T17:07:12+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000959s ]
+NOTIC: [8] Undefined index: match C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\IndexAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\IndexAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+NOTIC: [2] mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2016-10-28T17:08:08+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000963s ]
+NOTIC: [8] Undefined index: match C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\IndexAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\IndexAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.008468s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.019655s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.004527s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\IndexAction.class.php on line 38 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.005582s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.001814s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001210s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001269s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ../DataSource/Runtime/Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(../DataSource/Runtime/Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ../DataSource/Runtime/Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(../DataSource/Runtime/Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ../DataSource/Runtime/Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(../DataSource/Runtime/Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: m_banner C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 62 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 62 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ../DataSource/Runtime/Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(../DataSource/Runtime/Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 172 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 172 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 172 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.258376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.258440s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001361s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000672s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000497s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000821s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003565s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001250s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001371s ]
+
+[ 2016-10-28T17:08:08+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8091%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001177s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001288s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:13:44+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8091%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001420s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001540s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001193s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:13:45+08:00 ] /ajax/hotlist?page=2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000963s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001068s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+NOTIC: [8] Undefined index: length C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\AjaxAction.class.php 第 37 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.008803s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 5,5  [ RunTime:0.005144s ]
+
+[ 2016-10-28T17:20:02+08:00 ] /Matchinfo?m_id=194&platform=zx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001272s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001344s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001301s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.007230s ]
+SQL: select * from zx_tb_matchs where id = 194 [ RunTime:0.003159s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.008308s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 194 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.009659s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 194 and g_pid =2117 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002313s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 194 and g_pid =2125 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000568s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 194 and g_pid =2126 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000384s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.004121s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=194 )  [ RunTime:0.017735s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\MatchinfoAction.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.006468s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.006821s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.008116s ]
+SQL: SELECT * FROM `zx_tb_collect` WHERE ( `uid`=44 and `match_id` = 194  ) LIMIT 1   [ RunTime:0.007958s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004898s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = '44' and matchid='194' and ( paystats=5 or paystats=1 ) ) ORDER BY paystats asc LIMIT 1   [ RunTime:0.169454s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001724s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001786s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ../DataSource/Runtime/Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(../DataSource/Runtime/Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: banner C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Undefined index: t C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.351119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.351166s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001621s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000913s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000799s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001331s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004855s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001640s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001701s ]
+
+[ 2016-10-28T17:20:03+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.118%3A8091%2FMatchinfo%3Fm_id%3D194%26platform%3Dzx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001565s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001664s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002321s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:20:03+08:00 ] /Matchinfo/getcourse?m_id=194
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001124s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001226s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.007979s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 194 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.001749s ]
+
+[ 2016-10-28T17:20:26+08:00 ] /Matchinfo?m_id=194&platform=zx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000581s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004933s ]
+SQL: select * from zx_tb_matchs where id = 194 [ RunTime:0.000560s ]
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.005044s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 194 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001109s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 194 and g_pid =2117 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000814s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 194 and g_pid =2125 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000473s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 194 and g_pid =2126 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000505s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.004369s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=194 )  [ RunTime:0.000741s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\MatchinfoAction.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005525s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.002192s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.004828s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004804s ]
+SQL: SELECT * FROM `zx_tb_orders` WHERE ( uid = '44' and matchid='194' and ( paystats=5 or paystats=1 ) ) ORDER BY paystats asc LIMIT 1   [ RunTime:0.013278s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000795s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000864s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Undefined index: t C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.324494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.324542s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001242s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000485s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000378s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000553s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002797s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000664s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000717s ]
+
+[ 2016-10-28T17:20:26+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.118%3A8091%2FMatchinfo%3Fm_id%3D194%26platform%3Dzx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001043s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001140s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000895s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:20:26+08:00 ] /Matchinfo/getcourse?m_id=194
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001045s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001148s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001180s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004984s ]
+SQL: SELECT `id`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_tips` FROM `zx_tb_goods` WHERE ( g_type = 1 and g_mid = 194 and g_pid <>0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc ,`g_order` desc  [ RunTime:0.000813s ]
+
+[ 2016-10-28T17:20:53+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+NOTIC: [8] Undefined index: match C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\IndexAction.class.php 第 21 行.
+NOTIC: [8] Undefined index: platform C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\IndexAction.class.php 第 22 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005206s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,5  [ RunTime:0.001745s ]
+SQL: SHOW COLUMNS FROM `zx_tb_classinfo` [ RunTime:0.005217s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\IndexAction.class.php on line 38 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_banner' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,10  [ RunTime:0.002237s ]
+NOTIC: [2] Missing argument 6 for ClassInfoModel::getContent(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\IndexAction.class.php on line 42 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\ClassInfoModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: order C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\ClassInfoModel.class.php 第 33 行.
+SQL: SELECT info.id,info.cid,cls.classname,info.n_title,info.n_img,info.n_url,info.sign,info.orderid  FROM `zx_tb_class` cls LEFT JOIN zx_tb_classinfo info ON  cls.id = info.cid WHERE cls.short_name='zx_hotwords' AND cls.isdel=0 AND info.isdel=0 and info.isdisplay=1 AND info.itime<=NOW() AND info.offtime>NOW()  order by  info.sign desc,info.orderid desc,info.utime desc,id DESC  limit 0,100  [ RunTime:0.000778s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001332s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001413s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: m_banner C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 62 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 62 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 172 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 172 行.
+NOTIC: [8] Undefined index: name C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\43ada865f8bc71aef17a87e0ed7c58499c1019cf.file.index.html.php 第 172 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013862s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000583s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000356s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000249s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001780s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000545s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2016-10-28T17:20:54+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.118%3A8091%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002246s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002354s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:21:42+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.118%3A8091%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000948s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:22:00+08:00 ] /Matchinfo?m_id=143&platform=zx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000642s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.008155s ]
+SQL: select * from zx_tb_matchs where id = 143 [ RunTime:0.000527s ]
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\MatchinfoAction.class.php 第 174 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004937s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001845s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =1583 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000577s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =1589 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001457s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2963 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000436s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2199 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000470s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2965 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000381s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2966 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000470s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2322 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.004077s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=143 )  [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005282s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.001526s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.004848s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000671s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000717s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Undefined index: collection C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 407 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 407 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Undefined index: t C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011202s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000969s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000570s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000340s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000693s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002769s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000615s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2016-10-28T17:22:00+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8091%2FMatchinfo%3Fm_id%3D143%26platform%3Dzx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001210s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001307s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:22:00+08:00 ] /Matchinfo/getTrip?m_id=2963
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001034s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001161s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.005595s ]
+SQL: SELECT * FROM `zx_tb_trip` WHERE ( `meal_id` = 2963  ) ORDER BY trip_date asc  [ RunTime:0.001239s ]
+
+[ 2016-10-28T17:22:23+08:00 ] /Matchinfo?m_id=143&platform=zx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000559s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.009434s ]
+SQL: select * from zx_tb_matchs where id = 143 [ RunTime:0.000486s ]
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\MatchinfoAction.class.php 第 174 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004564s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001364s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =1583 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000485s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =1589 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000607s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2963 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000424s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2199 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000395s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2965 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000402s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2966 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000451s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2322 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.004378s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=143 )  [ RunTime:0.000893s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004983s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.001453s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.005290s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000536s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000581s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Undefined index: collection C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 407 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 407 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Undefined index: t C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.321291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.321375s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001521s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000508s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000327s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000546s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003034s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000685s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000735s ]
+
+[ 2016-10-28T17:22:23+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8091%2FMatchinfo%3Fm_id%3D143%26platform%3Dzx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001278s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001404s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:22:23+08:00 ] /Matchinfo/getTrip?m_id=2963
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000951s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001044s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.005037s ]
+
+[ 2016-10-28T17:23:01+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8091%2FMatchinfo%3Fm_id%3D143%26platform%3Dzx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000960s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001130s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001159s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001344s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:23:01+08:00 ] /Matchinfo/getTrip?m_id=2963
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000884s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.007409s ]
+
+[ 2016-10-28T17:24:15+08:00 ] /Matchinfo?m_id=143&platform=zx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001204s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001328s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.008291s ]
+SQL: select * from zx_tb_matchs where id = 143 [ RunTime:0.000584s ]
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\MatchinfoAction.class.php 第 174 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004688s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001207s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =1583 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000456s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =1589 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001064s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2963 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000642s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2199 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000431s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2965 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000453s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2966 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000497s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2322 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.004130s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=143 )  [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.006235s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.002274s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.004723s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001088s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001167s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Undefined index: collection C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 407 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 407 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Undefined index: t C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.377848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.377925s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001250s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000510s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000329s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002780s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000791s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000854s ]
+
+[ 2016-10-28T17:24:16+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8091%2FMatchinfo%3Fm_id%3D143%26platform%3Dzx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001211s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001345s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:24:16+08:00 ] /Matchinfo/getTrip?m_id=2963
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000958s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001053s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.004651s ]
+
+[ 2016-10-28T17:24:23+08:00 ] /Matchinfo?m_id=143&platform=zx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000640s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.008910s ]
+SQL: select * from zx_tb_matchs where id = 143 [ RunTime:0.000555s ]
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\MatchinfoAction.class.php 第 174 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004817s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001139s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =1583 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000462s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =1589 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000615s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2963 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000450s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2199 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000424s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2965 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000391s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2966 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000435s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 143 and g_pid =2322 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.004817s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=143 )  [ RunTime:0.000609s ]
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005079s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.001481s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.004560s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001013s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001095s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Undefined index: collection C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 407 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 407 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Undefined index: t C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017505s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001300s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000550s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000417s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000598s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003044s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000807s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000883s ]
+
+[ 2016-10-28T17:24:23+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8091%2FMatchinfo%3Fm_id%3D143%26platform%3Dzx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001206s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:24:23+08:00 ] /Matchinfo/getTrip?m_id=2963
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000628s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.007558s ]
+
+[ 2016-10-28T17:24:34+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.118%3A8091%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001125s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001225s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:24:35+08:00 ] /ajax/hotlist?page=2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000658s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+NOTIC: [8] Undefined index: length C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\AjaxAction.class.php 第 37 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004939s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 5,5  [ RunTime:0.002457s ]
+
+[ 2016-10-28T17:24:39+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.118%3A8091%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001010s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001110s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:24:39+08:00 ] /ajax/hotlist?page=2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001062s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001169s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001093s ]
+NOTIC: [8] Undefined index: length C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\AjaxAction.class.php 第 37 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.008696s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 5,5  [ RunTime:0.002193s ]
+
+[ 2016-10-28T17:24:44+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.118%3A8091%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001017s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001119s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:24:44+08:00 ] /ajax/hotlist?page=2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000976s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001070s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+NOTIC: [8] Undefined index: length C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\AjaxAction.class.php 第 37 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.006978s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 5,5  [ RunTime:0.002107s ]
+
+[ 2016-10-28T17:24:47+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.118%3A8091%2F
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001068s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001169s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:24:47+08:00 ] /ajax/hotlist?page=2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000969s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001066s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+NOTIC: [8] Undefined index: length C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\AjaxAction.class.php 第 37 行.
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.007146s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 5,5  [ RunTime:0.001918s ]
+
+[ 2016-10-28T17:24:56+08:00 ] /Matchinfo?m_id=284&platform=zx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000570s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.006749s ]
+SQL: select * from zx_tb_matchs where id = 284 [ RunTime:0.000483s ]
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\MatchinfoAction.class.php 第 174 行.
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\MatchinfoAction.class.php 第 174 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.005059s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002685s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =3084 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000563s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =3088 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.002132s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =3357 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000575s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =3358 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000427s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =3359 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000401s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =3373 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.003892s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=284 )  [ RunTime:0.000862s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\MatchinfoAction.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.005442s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.001440s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.003871s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000447s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000493s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Undefined index: collection C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 407 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 407 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Undefined index: t C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.012728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012789s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000910s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000450s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000255s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000450s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002187s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000554s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000603s ]
+
+[ 2016-10-28T17:24:56+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8091%2FMatchinfo%3Fm_id%3D284%26platform%3Dzx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001032s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001135s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001128s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:24:57+08:00 ] /Matchinfo/getTrip?m_id=3357
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000959s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001053s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.005908s ]
+SQL: SELECT * FROM `zx_tb_trip` WHERE ( `meal_id` = 3357  ) ORDER BY trip_date asc  [ RunTime:0.003554s ]
+
+[ 2016-10-28T17:28:54+08:00 ] /Matchinfo?m_id=284&platform=zx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000761s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000824s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.008565s ]
+SQL: select * from zx_tb_matchs where id = 284 [ RunTime:0.000658s ]
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\MatchinfoAction.class.php 第 174 行.
+NOTIC: [8] Undefined offset: 1 C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\MatchinfoAction.class.php 第 174 行.
+SQL: SHOW COLUMNS FROM `zx_tb_goods` [ RunTime:0.004540s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =0 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.001573s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =3084 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000654s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =3088 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000914s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =3357 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000442s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =3358 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000497s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =3359 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000455s ]
+SQL: SELECT `id`,`g_mid`,`g_name`,`g_type`,`g_des`,`g_currprice`,`g_price`,`g_priceinfo`,`g_priceinfowithout`,`g_singleprice`,`g_tips`,`g_order` FROM `zx_tb_goods` WHERE ( g_type = 2 and g_mid = 284 and g_pid =3373 and g_state = 0 and g_stockleft > 0 and g_releaseTime <= NOW() and g_offineTime > NOW()  ) ORDER BY g_type asc,g_order desc  [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `zx_tb_scenicarea` [ RunTime:0.004134s ]
+SQL: SELECT * FROM `zx_tb_scenicarea` WHERE ( mid=284 )  [ RunTime:0.000658s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\MatchinfoAction.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `zx_tb_matchs` [ RunTime:0.004969s ]
+SQL:  select * from zx_tb_matchs where  m_sign = 1  and m_state = 0 and m_isshow=1 and m_releaseTime < NOW() and m_offineTime > NOW()  order by m_order desc,id desc limit 0,3  [ RunTime:0.002269s ]
+SQL: SHOW COLUMNS FROM `zx_tb_collect` [ RunTime:0.004313s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000806s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000869s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: banner C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\9f529053051950a069732b98964695a605c1670d.file.banner.html.php 第 37 行.
+NOTIC: [8] Undefined index: type C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\0b2dbb8ed51c6bda68f53595692a7c8463148ef3.file.hotList.html.php 第 58 行.
+NOTIC: [8] Undefined index: collection C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 407 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 407 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 421 行.
+NOTIC: [8] Undefined index: order C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 424 行.
+NOTIC: [8] Undefined index: t C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+NOTIC: [8] Trying to get property of non-object C:\wnmp\wwwroot\weixin\DataSource\Runtime\Temp\531e96a4ffd6b502f4ebab295e5b7fb88970efae.file.index.html.php 第 453 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.371005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.371074s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001192s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000439s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000401s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002676s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001116s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001200s ]
+
+[ 2016-10-28T17:28:55+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F127.0.0.1%3A8091%2FMatchinfo%3Fm_id%3D284%26platform%3Dzx-tour
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001129s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001228s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-10-28T17:28:55+08:00 ] /Matchinfo/getTrip?m_id=3357
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001171s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001271s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001615s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_trip` [ RunTime:0.007343s ]
+

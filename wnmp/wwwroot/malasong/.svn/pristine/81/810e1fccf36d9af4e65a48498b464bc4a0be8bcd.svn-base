@@ -1,0 +1,288 @@
+<{include file='Login/header.html'}>
+<body id="main_page">
+<!-- <script type="text/javascript" src="static/js/graph/highstock.js"></script> -->
+<script type="text/javascript" src="static/js/graph/highcharts.js"></script>
+<script type="text/javascript" src="static/js/graph/exporting.js"></script>
+<script type="text/javascript" src="static/js/graph/grid.js"></script>
+<style>
+.map_tab_left{
+	position: absolute;
+	top:5px;
+	left:10px;
+	z-index:9;
+	padding:5px;
+	background-color: #4572a7;
+	border-top:2px solid #4572a7;
+	border-left:2px solid #4572a7;
+	border-right:2px solid #4572a7;
+	border-bottom:2px solid #4572a7;
+	color:#ffffff;
+	cursor:pointer;
+	font-weight:bold;
+}
+.map_tab_right{
+	position: absolute;
+	top:5px;
+	left:87px;
+	z-index:9;
+	padding:5px;
+	background-color: #ffffff;
+	border-top:2px solid #4572a7;
+	border-left:2px solid #4572a7;
+	border-right:2px solid #4572a7;
+	border-bottom:2px solid #4572a7;
+	color:#000000;
+	cursor:pointer;
+	font-weight:bold;
+}
+.map_tab30{
+	position: absolute;
+	top:12px;
+	left:1044px;
+	z-index:9;
+	padding:3px 10px 3px 10px;
+	background-color: #ffffff;
+	border:1px solid #4572a7;
+	color:#000000;
+	cursor:pointer;
+	font-weight:bold;
+}
+.map_tab7{
+	position: absolute;
+	top:12px;
+	left:977px;
+	z-index:9;
+	padding:3px 10px 3px 10px;
+	background-color: #ffffff;
+	border:1px solid #4572a7;
+	color:#000000;
+	cursor:pointer;
+	font-weight:bold;
+}
+#list{
+	padding-top:8px;
+	margin-top:18px;
+	margin-left:10px;
+	width:1108px;
+}
+#userinfo{
+	padding:15px 0 10px 10px;display:none;
+}
+#ucontent{width:846px;border-top:1px solid #cccccc;border-bottom:1px solid #cccccc;border-right:1px solid #cccccc;display:none;}
+.utop{float:left;width:140px;text-align:center;border-left:1px solid #cccccc;height:25px;background-color:#eeeeee;padding-top:8px;font-weight:bold;}
+.uco{float:left;width:140px;text-align:center;border-left:1px solid #cccccc;height:25px;padding-top:8px;font-weight:bold;}
+.datatable1{width:100px;text-align:center;height:25px;border-bottom:1px solid #cccccc;border-right:1px solid #cccccc;padding-top:8px;}
+.datatable2{width:135px;text-align:center;height:25px;border-bottom:1px solid #cccccc;border-right:1px solid #cccccc;padding-top:8px;}
+</style>
+<div style = "width:100%;">
+<div style="padding-left:10px;padding-top:10px;">
+	<form action="" method="get" id="searchform">
+		<input type="hidden" name="s" value="<{$s}>" />
+		<input type="hidden" name="a" value="<{$a}>" />
+		<input type="text" name="search" class="input" value="输入广告id/名字" />&nbsp;<input class="submit" type="submit" value="搜索">
+	</form>
+</div>
+<div id="userinfo"><div id="ucontent"></div></div>
+<div style="position: relative;display:<{$show_filter|default:'none'}>;">
+	<!-- <div class="map_tab_left">有效</div>
+	<div class="map_tab_right">无效</div> -->
+	<div class="map_tab7">过去7天</div>
+	<div class="map_tab30">过去30天</div>
+</div>
+<div class="col-2 col-auto mr10" style="width:97%; margin-left:10px; margin-top:5px;">
+  <div class="content" style="color:#ff0000;height: 370px;width:96.9%;" id='stat'> </div>
+</div>
+<div id="list"></div>
+<script type="text/javascript">
+var getd	= <{$data|default:"{}"}>;
+var sn	= <{$sn|default:"null"}>;
+$('.content').highcharts({
+    chart: {
+    	zoomType: 'x',
+    	type: '<{$map_type|default:column}>',
+    	//type: 'column',
+        //type: 'area',
+    	width:"1108",
+    	borderWidth:1,
+    	borderColor:"#cccccc",
+    	plotBackgroundColor:"#ffffff",
+    	backgroundColor:"#ffffff",
+    	plotShadow:false,
+    	events: {
+             load: function() {
+            	 //for(i in this.series){
+            		// alert(this.series[i].visible);
+            	// }
+            	  /* var seriesPv = this.series[0]; 
+            	    if (seriesPv.visible) { 
+            	        seriesPv.hide(); 
+            	    } else { 
+            	        seriesPv.show(); 
+            	    }  */ 
+             },
+             click: function(){
+            	// alert('e');
+             }
+    	 }
+    },
+    exporting:false,
+    title: {
+        text: '<{$title}>'
+    },
+    xAxis: {
+    	gridLineWidth: 0,
+    	//tickmarkPlacement: 'on',
+        categories:<{$categories|default:"[]"}>,
+    	//title:{'text':"日期"}
+    },
+    yAxis: {
+    	gridLineWidth:1,
+    	minorGridLineWidth:0,
+		minorTickInterval: 'auto'
+    },
+    plotOptions:{
+    	column: {
+           // stacking: 'normal',
+           /*  dataLabels: {
+                enabled: true,
+                color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'black'
+            } */
+        }
+	},
+    tooltip: {
+    	//shared: true,
+    	valueSuffix: ''
+    	}, 
+    credits: {
+        enabled: false
+    },
+    series:getd
+});
+//var getsd	= getd.remove('none');
+var dates	= [];
+var advertInfo	= <{$advertInfo}>;
+if(advertInfo){
+	var uhtml="<div class='utop'>广告ID</div>";
+	uhtml	+="<div class='utop'>广告名称</div>";
+	uhtml	+="<div class='utop'>状态</div>";
+	uhtml	+="<div class='utop'>类型</div>";
+	uhtml	+="<div class='utop'>广告预算</div>";
+	uhtml	+="<div class='utop'>每日预算</div>";
+	
+	uhtml	+="<div class='uco'>"+advertInfo.id+"</div>";
+	uhtml	+="<div class='uco'>"+advertInfo.name+"</div>";
+	var status;//1投放,2暂停,3停止(停止后不能编辑,不能上线)
+	if(advertInfo.status == 1){
+		status='投放';
+	}else if(advertInfo.status == 2){
+		status='暂停';
+	}else if(advertInfo.status == 3){
+		status='停止';
+	}
+	uhtml	+="<div class='uco'>"+status+"</div>";
+	uhtml	+="<div class='uco'>"+advertInfo.method+"</div>";
+	uhtml	+="<div class='uco'>"+advertInfo.totle_budget+"</div>";
+	uhtml	+="<div class='uco'>"+advertInfo.perd_budget+"</div>";
+	uhtml	+="<div style='clear:both;'></div>";
+	$('#ucontent').html(uhtml).show();
+	$('#userinfo').slideDown('slow');
+}
+var html	= "<div style='float:left'>";
+html	+= "<div class='datatable1' style='border-top:1px solid #cccccc;background-color:#eeeeee;border-left:1px solid #cccccc;font-weight:bold;'><{$tbn}></div>";
+//获取所有日期
+if(getd[0]){
+	for(i in getd[0].data){
+		html	+= "<div class='datatable1' style='border-left:1px solid #cccccc;'>"+getd[0].data[i][0]+"</div>";
+		if(getd[0].data[i]){
+			dates[i]=getd[0].data[i][0];
+		}
+		
+	} 
+}
+
+html	+= "</div>";
+getdsn	= getd;
+if(sn){
+	getdsn.unshift(sn);
+}
+for(i in getdsn){
+	if(getd[i]){
+		html	+= "<div style='float:left'>";
+		html	+= "<div class='datatable2' style='border-top:1px solid #cccccc;background-color:#eeeeee;font-weight:bold;'>"+getd[i].name+"</div>";
+		var datatem=getd[i].data;
+		for(ii in datatem){
+			html	+= "<div class='datatable2'>"+datatem[ii][1]+"</div>";
+		}
+		html	+= "</div>";
+		if(getd && getd[0].data[i]){
+			dates[i]=getd[0].data[i][0];
+		}
+	}
+	
+} 
+html	+=	"<div style='clear:both;'></div>";
+$('#list').html(html);
+//alert(getname);
+$(function () {
+	var io_status	= '<{$io_status}>';
+	if(io_status=='2'){
+		$('.map_tab_right').css({'background-color':'#4572a7','color':'#ffffff'});
+		$('.map_tab_left').css({'background-color':'#ffffff','color':'#000000'});
+	}else{
+		$('.map_tab_left').css({'background-color':'#4572a7','color':'#ffffff'});
+		$('.map_tab_right').css({'background-color':'#ffffff','color':'#000000'});
+	}
+	$('.map_tab_right').click(function(){
+		var href=window.location.href;
+		href	= href.replace(/[&|?]+io=[\d]/,'');
+		window.location.href=href+"&io=2";
+	});
+	$('.map_tab_left').click(function(){
+		var href=window.location.href;
+		href	= href.replace(/[&|?]+io=[\d]/,'');
+		window.location.href=href+"&io=1";
+	});
+	$('.map_tab30').click(function(){
+		var href=window.location.href;
+		href	= href.replace(/[&|?]+dist=[\d]+/,'');
+		window.location.href=href+"&dist=30";
+	});
+	$('.map_tab7').click(function(){
+		var href=window.location.href;
+		href	= href.replace(/[&|?]+dist=[\d]+/,'');
+		window.location.href=href+"&dist=7";
+	});
+	$('#searchform').submit(function(){
+		var href	= window.location.href;
+		href	= href.replace(/[&|?]+search=[^&]+/,'');
+		//$(this).attr('action',href);
+		var $v	= $(this).find('input[name=search]').val();
+		if($v=='' || $v==0 || $v=='输入广告id/名字'){
+			alert('请输入正确搜索内容');
+			$(this).find('input[name=search]').focus();
+			return false;
+		}
+	});
+	$(":text").each(function(index,ele) {
+		var tip=$(ele).val();
+		$(this).focus(function(){
+			if($(this).val()==tip){
+				$(this).val('');
+			}
+			$(this).addClass('focus_text');
+			$(this).parent().addClass('y-row1-focus');
+		}).blur(function(){
+			if(!$(this).val()){
+				$(this).val(tip).removeClass('focus_text');
+			}
+			$(this).parent().removeClass('y-row1-focus');
+		})
+	});
+	
+    
+});
+</script>
+</div>
+<div>
+</div>
+<{include file='Login/footer.html'}>

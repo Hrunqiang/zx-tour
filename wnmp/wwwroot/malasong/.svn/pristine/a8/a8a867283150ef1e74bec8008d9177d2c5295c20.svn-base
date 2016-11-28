@@ -1,0 +1,60 @@
+<{include file='Login/header.html'}>
+<style type="text/css">
+.order{width: 90%!important;margin:0 auto;} 
+.order td,.order th{padding:5px 10px;}
+.order th{background:#D4DCE7;}
+.order td table{width: 100%;}
+.order td textarea{width: 100%;}
+img{width:50%;}
+button{margin-left:5%;}
+</style>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">
+                <a href="./?s=OnlineEnroll"><button>返回订单列表</button></a>
+                <table class="order" border="1" >
+                    <tr>
+                        <th>订单号：</th>
+                        <td><{$info.orderid}></td>
+                        <td rowspan="8"><img src="<{$info.picData}>"></td>
+                    </tr>
+                    <tr>
+                        <th>参赛者姓名：</th>
+                        <td><{$info.xingming}></td>
+                    </tr>
+                    <tr>
+                        <th>使用APP：</th>
+                        <td><{$info.appName}></td>
+                    </tr>
+                    <tr>
+                        <th>成绩：</th>
+                        <td><{if $info.chengji}><{$info.chengji}><{else}>无<{/if}></td>
+                    </tr>
+                    <tr>
+                        <th>支付价钱：</th>
+                        <td><{$info.orderprice}></td>
+                    </tr>
+                    <tr>
+                        <th>地址：</th>
+                        <td><{if $info.addr}><{$info.addr}><{else}>无<{/if}></td>
+                    </tr>
+                    <tr>
+                        <th>创建时间：</th>
+                        <td><{$info.ctime}></td>
+                    </tr>
+                    <tr>
+                        <th>最后修改时间：</th>
+                        <td><{$info.utime}></td>
+                    </tr>                    
+                </table>                
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script type="text/javascript">
+
+</script>
+<{include file='Login/footer.html'}>

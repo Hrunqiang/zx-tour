@@ -1,0 +1,169 @@
+<?php /* Smarty version Smarty-3.1.6, created on 2016-03-01 10:26:12
+         compiled from "../uducy_admin/Tpl\Upload\rest.html" */ ?>
+<?php /*%%SmartyHeaderCode:616356d4fdc4cd2d32-29873253%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'a2ea8c4369055a7623c0d40998b46a4176f986e6' => 
+    array (
+      0 => '../uducy_admin/Tpl\\Upload\\rest.html',
+      1 => 1456740759,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '616356d4fdc4cd2d32-29873253',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_56d4fdc4d7d3f',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_56d4fdc4d7d3f')) {function content_56d4fdc4d7d3f($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('Login/header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<style>
+	#upload_box{
+		text-align:center;
+		padding:10px;
+		position:relative;
+		height: 200px;
+		margin-top:150px;
+	}
+	#upload_box>h4{
+		font-size:20px;
+	}
+	progress {
+	  	width: 600px;
+	  	margin: 25px auto;
+	  	display: block;
+	  	/*-webkit-appearance: none;*/
+	   	border: 0;
+	    height: 20px;
+	    border-radius: 9px;
+	}
+	
+	progress::-webkit-progress-bar{
+	  background: #A8A8A8;
+	  border-radius: 50px;
+	  padding: 2px;
+	  box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+	}
+
+	progress::-moz-progress-bar{
+		background: #A8A8A8;
+	  border-radius: 50px;
+	  padding: 2px;
+	  box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+	  border-radius: 50px;
+	  	box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+	  background:
+	    -moz-linear-gradient(bottom left, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+	    -moz-linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+	    -moz-linear-gradient(left, #4E9AD6, #4E9AD6);
+	  background:
+	    linear-gradient(to top right, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+	    linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+	    linear-gradient(to right, #4E9AD6, #4E9AD6) ;	
+	  	background-size: 25px 14px, 100% 100%, 100% 100%;
+	  	-moz-animation: move 5s linear 0 infinite;
+	}
+
+	progress::-moz-progress-value{
+	  	border-radius: 50px;
+	  	box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+	  background:
+	    -moz-linear-gradient(bottom left, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+	    -moz-linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+	    -moz-linear-gradient(left, #4E9AD6, #4E9AD6);
+	  background:
+	    linear-gradient(to top right, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+	    linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+	    linear-gradient(to right, #4E9AD6, #4E9AD6) ;	
+	  	background-size: 25px 14px, 100% 100%, 100% 100%;
+	  	-moz-animation: move 5s linear 0 infinite;
+	}	
+	
+	progress::-webkit-progress-value{
+	  	border-radius: 50px;
+	  	box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+	  background:
+	    -webkit-linear-gradient(bottom left, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+	    -webkit-linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+	    -webkit-linear-gradient(left, #4E9AD6, #4E9AD6);
+	  background:
+	    -o-linear-gradient(bottom left, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+	    -o-linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+	    -o-linear-gradient(left, #4E9AD6, #4E9AD6);
+	  background:
+	    linear-gradient(to top right, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+	    linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+	    linear-gradient(to right, #4E9AD6, #4E9AD6) ;	
+	  	background-size: 25px 14px, 100% 100%, 100% 100%;
+	  	-webkit-animation: move 5s linear 0 infinite;
+	}	
+	@-webkit-keyframes move {
+	  0% {background-position: 0px 0px, 0 0, 0 0};
+	  100% {background-position: -100px 0px, 0 0, 0 0};
+	}
+	@-moz-keyframes move {
+	  0% {background-position: 0px 0px, 0 0, 0 0};
+	  100% {background-position: -100px 0px, 0 0, 0 0};
+	}
+</style>
+<div id="upload_box">
+<form enctype="multipart/form-data">
+	<input name="file" type="file" />
+	<input type="button" value="上传文件" />
+</form>
+
+<progress value="0"></progress>
+<h4 id="status">0%</h4>
+<h4 id="res"></h4>
+</div>
+
+<script type="text/javascript">
+	var Fields = "";
+	$(':button').click(function(){
+    var formData = new FormData($('form')[0]);
+    $.ajax({
+        url: '?s=Upload&a=uploadfile',
+        type: 'POST',
+        xhr: function() { 
+            myXhr = $.ajaxSettings.xhr();
+            if(myXhr.upload){
+                myXhr.upload.addEventListener('progress',progressHandlingFunction, false); 
+            }
+            return myXhr;
+        },
+        //Ajax事件
+        beforeSend:function(){$('#status').html("准备上传。。。")} ,
+        success: function(data){
+        	$('#res').html("上传结果："+data);			
+        },
+        error: function(){$('#status').html("上传失败！")},
+        // Form数据
+        data: formData,
+        //Options to tell JQuery not to process data or worry about content-type
+        cache: false,
+        contentType: false,
+        processData: false
+    });
+});
+
+	function progressHandlingFunction(e){
+	    if(e.lengthComputable){
+	    	//$('progress').css({display:"block"})
+	        //$('progress').attr({value:e.loaded,max:e.total});
+	        var percent = (e.loaded / e.total) * 100;
+  			//$('progress').value = Math.round(percent);
+  			$('progress').attr({value:e.loaded,max:e.total});
+  			$('#status').html(Math.round(percent)+"%");
+	    }
+	}
+</script>  
+  
+<!-- 引用jquery -->  
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>  
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>  
+  
+<?php }} ?>

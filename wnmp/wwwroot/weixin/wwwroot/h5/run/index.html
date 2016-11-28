@@ -1,0 +1,501 @@
+<script>
+	// var jsPath = "http://www.lbtui.com:80/static/js";
+	// var imgPath = "http://www.lbtui.com:80/static/images/uc_share_span.png";
+	var path = "";
+	//var basePath = "http://www.lbtui.com:80";
+	//var resUrl = "http://image.hudongtui.com:29099/";
+</script>
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>知行合逸约跑42195</title>
+		<link rel="stylesheet" href="./css/style-index.css?v=3.24">
+		<link rel="stylesheet" href="./css/custom.css">
+		<script type="text/javascript" src="/static/js/jquery.js"></script>
+		<style type="text/css">
+			.g-can-game {
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: url("./images/game_img_default.jpg") no-repeat center top;
+				background-size: 100% 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<article id="page-index">
+			<header id="i-header" class="i-header">
+
+				<img style="width:100%;margin-bottom:15px;" class="line_blue_1" src="./images/advertising_map_default.jpg">
+
+				<span id="i-rule" class="i-rule">活动规则</span>
+				<a class="i-rank" onclick="goRank()">排行榜</a>
+			</header>
+
+			<div style="text-align:center;margin-top:50px;font-size:14px;">
+				<p id="i-owner">
+					<strong></strong>的跑道：
+				</p>
+				(只显示最近助力的好友)</div>
+			<ul id="i-nodes" class="i-nodes">
+			</ul>
+			<div id="i-adverise">
+
+			</div>
+			<div class="i-race">
+
+				<!-- status remain owner start -->
+				<p id="i-stat-remain-owner" class="i-stat">
+					已跑<span class="i-total"></span>米，豪礼就在前方！
+				</p>
+				<!-- status remain owner end -->
+				<!-- status remain runed owner start -->
+				<p id="i-stat-remain-runed-owner" class="i-stat">
+					刚刚跑了<span class="i-cur"></span>米！最佳成绩<span class="i-best"></span>米！
+					<br>排名越靠前奖品越丰厚哦！
+				</p>
+				<!-- status remain runed owner end -->
+				<!-- status remain runed again owner start -->
+				<p id="i-stat-remain-runed-again-owner" class="i-stat">
+					最佳成绩<span class="i-best"></span>米！排名越靠前奖品越丰厚哦！
+				</p>
+				<!-- status remain runed again owner end -->
+				<!-- status reward owner start -->
+				<p id="i-stat-reward-owner" class="i-stat">
+					已跑<span class="i-total"></span>米，<span>！</span>
+				</p>
+				<!-- status reward owner end -->
+				<!-- status remain start -->
+				<p id="i-stat-remain" class="i-stat">
+					已跑<span class="i-total"></span>米，排名越靠前奖品越丰厚哦！
+				</p>
+				<!-- status remain end -->
+				<!-- status remain runed start -->
+				<p id="i-stat-remain-runed" class="i-stat">
+					你跑了<span class="i-cur"></span>米！排名越靠前奖品越丰厚哦！
+				</p>
+				<!-- status remain runed end -->
+				<!-- status reward start -->
+				<p id="i-stat-reward" class="i-stat">
+					已跑<span class="i-total"></span>米，Ta<span>的排名更靠前啦！</span>
+				</p>
+				<!-- status reward end -->
+				<!-- status reward runed start -->
+				<p id="i-stat-reward-runed" class="i-stat">
+					你帮跑了<span class="i-cur"></span>米，Ta<span>的排名更靠前啦！</span>
+				</p>
+				<!-- status reward runed end -->
+				<!-- status others start -->
+				<p id="i-stat-others" class="i-stat">
+					<br>接力跑进<span>发奖名次</span>，即可兑换<span>精美奖品！</span>
+				</p>
+				<!-- status others end -->
+				<!-- status others runed start -->
+				<p id="i-stat-others-runed" class="i-stat">
+					试跑了<span class="i-cur"></span>米！
+					<br>接力跑进<span>发奖名次</span>，简直轻而易举！
+				</p>
+				<!-- status others runed end -->
+				<!-- status error start -->
+				<p id="i-stat-error" class="i-stat">
+					哎呀~！出错了，稍后刷新再试Σ( ° △ °|||)︴错误原因:
+					<span id="i-error-code"></span>
+				</p>
+				<!-- status error end -->
+			</div>
+			<div id="i-notice-bind">&nbsp;</div>
+
+			
+			<div id="i-end" style="display: none;  margin: 0 14px 14px 14px;">温馨提示：活动已结束，不再更新排行榜。</div>
+			
+
+			<div class="i-start-panel">
+				<span>
+                <button id="i-start" class="i-button i-btn-animate">奔跑吧，骚年</button>
+            </span>
+				<span>
+                <button id="i-relay" class="i-button i-btn-animate">帮Ta接力</button>
+            </span>
+				<span>
+                <button id="i-invite" class="i-button i-btn-animate">邀请朋友接力跑</button>
+            </span>
+				<span>
+                <button id="i-invite-continue" class="i-button i-btn-animate">继续邀请朋友</button>
+            </span>
+				<span>
+                <button id="i-reward" class="i-button">立即兑奖</button>
+            </span>
+				<span>
+                <button id="i-self" class="i-button" data-attention_threshold="0" data-link="None">我也要发起跑道</button>
+            </span>
+				<span>
+                <button id="i-back" class="i-button">查看我自己的跑道</button>
+            </span>
+				<span>
+                <button id="i-download" class="i-button">开启接力</button>
+            </span>
+				<div id="i-again" class="i-button i-again" style="display: none">
+					再跑一次
+				</div>
+
+				<div id="i-try" class="i-button i-again" style="display: none">
+					试跑一次
+				</div>
+			</div>
+			<div id="i-notice-others" class="i-notice">记得分享给小伙伴哦</div>
+			<div id="i-notice-uc" class="i-notice">随时查看兑奖</div>
+			<div id="i-notice-download" style="max-height:50px;" class="i-notice">
+
+				
+
+			</div>
+			<div id="i-notice-download-close">&times;</div>
+			<section id="i-ranking">
+				<div class="i-title-rank">最新参与</div>
+				<ul id="i-records" class="i-friend-rank"></ul>
+			</section>
+			<section id="i-abstract" class="i-info">
+			</section>
+			<section id="i-sharemask-uc" class="i-sharemask-uc">
+				<div>
+					<span id="i-shareuc-friend" class="i-shareuc-friend">发送好友或分享朋友圈</span>
+					<label id="i-shareuc-line"></label>
+					<!-- <span id="i-shareuc-line" class="i-shareuc-line">分享到朋友圈</span> -->
+					<p style="color: #eb481c;">&nbsp;</p>
+				</div>
+			</section>
+			<div class="i-copy">
+				<a style="text-decoration:underline;" href="http://www.h5lbt.com"></a>
+			</div>
+		</article>
+		<article id="page-game">
+			<section id="g-main">
+				<canvas id="can-game" class="g-can-game"></canvas>
+				<div id="g-music"></div>
+				<div id="g-ready" class="g-ready">点击踏板开始游戏</div>
+				<dl class="g-pace">
+					<dt>
+                    <a id="pace-left" href="javascript:void(0);" class="sel"></a>
+                </dt>
+					<dd>
+						<a id="pace-right" href="javascript:void(0);"></a>
+					</dd>
+				</dl>
+				<dl class="g-finger">
+					<dt id="finger-left"></dt>
+					<dd id="finger-right" class="sel"></dd>
+				</dl>
+				<section id="g-countdown" class="g-countdown">
+					<span id="g-sec">20.0</span>s
+				</section>
+				<section class="g-points" id="g-points">
+					<p id="g-nick"></p>
+					<span id="g-points-s"></span>
+					<span id="g-dis">0</span>
+					<span class="s2">M</span>
+					<em class="em0"></em>
+					<em class="em1"></em>
+					<em class="em2"></em>
+				</section>
+				<section id="g-voiceover"></section>
+				<section id="g-up">UP</section>
+			</section>
+			<section id="g-loading">Loading...</section>
+		</article>
+		<div id="rule_box" class="alertBox" onclick="hideRule()">
+			<div class="cont">
+				<h4>活动规则</h4>
+				<pre style="white-space:pre-wrap;font-size:12px;">
+<h5>活动时间：</h5>2016.4.21 上午09：05至2016.4.28 上午09：05 
+<h5>活动规则：</h5>1、参与活动的跑友均可获得由URG跑者装备提供的随机优惠码一张（购物9折码\无门槛10元优惠码\满减优惠码），优惠码前往跑者装备企业店首页兑换使用！（优惠码解释权归URG跑者装备店所有，店铺名称：跑者装备企业店）
+2、前20名完成42.195公里的跑友，可获得随机赛事纪念T恤一件。请跑友们在活动截止后，5月3日前登录活动平台查看中奖情况；
+3、到活动截止时，排行榜第一名的跑友可获得2016年波马限量版跑鞋一双，请跑友们在活动截止后，5月3日前登录活动平台查看中奖情况；
+4、中奖名单将于4月29日知行合逸微信推送中公布；
+5、5月3日前未填写个人信息的跑友，将视为放弃奖品的领取；
+6、本活动最终解释权归知行合逸所有
+7、特别说明：本活动旨在号召更多的跑友一起为42.195公里而努力，若发现有刷机作弊的行为，知行合逸有权取消奖品的发放。
+<h5>领奖方式：</h5>1、活动截止后，登录活动平台，点击活动左上角“排行榜”即可查看中奖信息
+2、如果您中奖了，系统会提示您填写个人资料，请您及时填写
+</pre>
+			</div>
+			<div class="bg"></div>
+		</div>
+        <div id="create_box" class="alertBox" style="display:none;">
+            <div class="cont">
+                <h4>创建跑道</h4>
+                <div>
+                    <img src="/static/images/qrcode.png" alt="" style="width:100%">
+                    <p style="font-size:12px;">
+                    1、长按识别二维码，关注知行合逸公众号（已关注的用户长按识别二维码可直接进入公众号）</p>
+                    <p>2、输入“42195”，点击弹出链接，即可创建属于你的跑道哦！</p>
+                </div>
+            </div>
+            <div class="bg"></div>
+        </div>
+        <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="./js/weixin.js?v=v3.987"></script>
+	<script src="./js/app-index.js?v=4.69"></script>
+    <script type="text/javascript">
+    function $_get(key){
+        var Arg,arg,i;
+        Arg = document.location.search.split("?");
+        if(Arg[1]) {
+            Arg=Arg[1].split("&");
+        }
+        for(i=0; i < Arg.length; i++) {
+            var arg = Arg[i].split("=");
+            if(key == arg[0]) {
+                //return arg[1];
+                return  decodeURI(arg[1]);
+            }
+        }
+        return "";
+    }
+    window.token = 'f970500cd693f84b7ffcaab8df10416a';
+    window.actId = '60';
+    window.code = '';
+    
+    window.isappinstalled = '';
+    window.url_type = '2';
+    window.follow_url = '';
+    window.rank_url = '/WxRuner/rank/';
+    window.logo_img = "images/running/yue-ico.png";
+    window.default_avatar = "./images/weixin_avatar.jpg";
+    window.iscreated = false;
+    function showRule(){
+        $('#rule_box').show();
+    }
+    function hideRule(){
+        $('#rule_box').hide();
+    }
+    function goRank(){
+        if(window.url_type == '0'){
+            window.location.replace(window.follow_url);
+        }else{
+            window.location.replace(window.rank_url);
+        }
+    }
+    function joinGame(arg){
+        if(window.iscreated=="true"){
+            window.location.replace(window.actUrl);
+        }else{
+            $("#create_box").show();
+        }
+    }
+    define('appData', function(require, exports) {
+        'use strict';
+
+        //自己的页面
+         exports.RENDER = {
+            records: window.records,
+            ownerInfo: window.ownerInfo,
+            time: 1460108044,
+            userInfo:window.userInfo,
+            //sdkConfig:'{"timestamp":"1460108044","appId":"wx6deb83d7b300a78d","nonceStr":"KSHFKJHKIA","jsapi_ticket":"kgt8ON7yVITDhtdwci0qeQAehgwLr42Yl2jzq243xNhSpJZwe4an2XLYdKzmy-A68LnKT7SO9G9t6jrLQoyhmQ","signature":"beafcb8a796bcaa5c3d30a6d4ab48aaabda841f8","url":"/running/index/4?ownerId=oj4qIwNTsuCN4yxkzXq3KzjakRAU"}',
+            sdkConfig:window.jsapi,
+            seq: window.ownerId+window.userId
+        };
+        exports.RENDER.records = JSON.parse(exports.RENDER.records);
+        exports.RENDER.ownerInfo = JSON.parse(exports.RENDER.ownerInfo);
+        exports.RENDER.userInfo = JSON.parse(exports.RENDER.userInfo);
+        exports.RENDER.sdkConfig = JSON.parse(exports.RENDER.sdkConfig);
+        /*程序配置对象*/
+        exports.CONF = {
+            DEBUG: false,
+            GRADE_MAP: [0, 1, 3, 5, 7],
+            FPS: [10, 12, 12, 20, 24],
+            FRAMES_MAP: {
+                g1: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                g2: [0, 2, 4, 6, 7, 8, 10, 12, 13],
+                g3: [0, 3, 6, 7, 9, 12, 13],
+                g4: [0, 4, 7, 12, 13],
+                g5: [0, 4, 7, 13]
+            },
+            RESOURCE: [
+               "./images/tree.png",
+               "./images/1458809251.56persons.png",
+               "./images/1458809251.56per_other.png",
+               "./images/game.png"
+            ],
+            PRE_RESOURCE: [
+               "http://static.lbtui.com/images/running/game.png/load.png"
+            ],
+            DIS: [3, 4, 5, 6, 10],
+            DIS_RANDOM: 1,
+            MUSIC_BG: "/static/sound/running/game_bg_default.mp3",
+            MUSIC_CHEER: "/static/sound/running/gameover.mp3",
+            MUSIC_VOLUME: 0.1, // [0, 1]
+            VOICES: [
+                [
+                    '点击踏板即刻开始狂奔！'
+                ],
+                [
+                    '切换左右手指完成跑步动作'
+                ],
+                [
+                    'GO!GO!GO!前路坦荡荡！'
+                ],
+                [
+                    '随风奔跑自由是方向~'
+                ],
+                [
+                    '快！快！快！马上就到终点了!'
+                ],
+                [
+                    '据说狂奔的猪都能飞起来！'
+                ]
+            ],
+            VOICES_RANDOM_TIME: 1000,
+            GAMEOVER_WAIT_TIME: 4000,
+            TOTAL_DIS: 10000000000,
+            GAME_TIME: 20000,
+            MAX_NICK_NAME: 4,
+            UC_PARAMS: 'pfssnieisivecpmibifrdnlantnw',
+            MASK_SRC: {
+                //http://static.lbtui.com/images/running/mask-shareb.png
+                download: "/static/images/running/mask-dl.png",
+                share: "./images/mask-shareb.png",
+                rewardIos:"/static/images/running/mask-rw-ios.png",
+                rewardAndroid: "/static/images/running/mask-rw-android.png"
+            },
+            NODE_AVATAR: {
+                next: "/static/images/running/next.png",
+                reward: "/static/images/running/reward.png"
+            },
+            SHARELINECONF: {
+
+                title: '我跑了xxx米，快来助我',
+                url: "http://www.h5lbt.com/running/index/60?ownerId=oj4qIwNTsuCN4yxkzXq3KzjakRAU"
+            },
+            SHAREFRIENDCONF: {
+                title: '我跑了xxx米，快来助我',
+                desc: '创建跑道，约上好友助力，排名越靠前奖品越丰厚~~',
+                url: "http://www.h5lbt.com/running/index/60?ownerId=oj4qIwNTsuCN4yxkzXq3KzjakRAU"
+            },
+            UC_SHARE: {
+                FRIENDS: {
+                    title: '我跑了xxx米，快来助我',
+                    content: '创建跑道，约上好友助力，排名越靠前奖品越丰厚~~',
+                    domid: 'i-header'
+                },
+                TIMELINE: {
+                    title: '我跑了xxx米，快来助我',
+                    content: '创建跑道，约上好友助力，排名越靠前奖品越丰厚~~',
+                    domid: 'i-header'
+                }
+            },
+            // SHARE_PARAM: '&uc_biz_str=S:101',
+            SHARE_PARAM: '',
+            DEFAULT: {
+                nick: '你'
+            },
+            LOAD_GAME_MAX: 3000,
+            LOAD_GAME_MORE: 2000
+        };
+        exports.FILTER = {
+            nick: function(n) {
+                if (!n) {
+                    return exports.CONF.DEFAULT.nick;
+                }
+                if (n && n.length > exports.CONF.MAX_NICK_NAME) {
+                    var i = 0,
+                        num = 0,
+                        patrn = /^[a-zA-Z0-9]$/;
+                    while (i < n.length) {
+                        if (patrn.exec(n[i])) {
+                            num += 1;
+                        } else {
+                            num += 2;
+                        }
+                        if (num > exports.CONF.MAX_NICK_NAME * 2) {
+                            break;
+                        }
+                        i++;
+                    }
+                    if (i !== n.length) {
+                        return n.substr(0, i) + '...';
+                    } else {
+                        return n;
+                    }
+                } else {
+                    return n;
+                }
+                return n;
+            },
+            time: function(t) {
+
+                var d = new Date(t);
+
+                return twoDigit(d.getMonth() + 1) + '月' + twoDigit(d.getDate()) + '日' + ' ' + twoDigit(d.getHours()) + ':' + twoDigit(d.getMinutes());
+
+                function twoDigit(n) {
+
+                    return n < 10 ? '0' + n : '' + n;
+                }
+            },
+            dist1: function(r) {
+
+                return '自己跑了' + r.dist + '米';
+            },
+            dist2: function(person, r) {
+
+                return '帮' + person + '跑了' + r.dist + '米';
+            }
+        };
+        /*文案配置对象*/
+        exports.MSG = {
+            i: '我',
+            he: 'Ta'
+        };
+    });
+        var p_url = "/WxRuner/Login";
+    var post = {ownerId:$_get('owner')};
+    $.ajax({url:p_url,timeout : 3000, data:post,type : 'post', dataType:'json',async: false,
+        success:function(data,status){
+            if(data.error == 0){
+                openid = data.data.openid;
+                if(!$_get('owner')){
+                   window.location.href= "/h5/run/?owner="+openid;
+                }else{
+                    ownerID = $_get('owner');
+                    window.userId = openid;
+                    window.ownerId = ownerID;
+                    window.headimgurl=data.data.headimgurl;
+                    window.nickname=data.data.nickname;
+                    window.ownerInfo =data.ownerinfo;
+                    window.userInfo = '{"nick": "'+data.data.nickname+'", "userId": "'+openid+'", "avatar": "'+data.data.headimgurl+'", "created": '+data.created+'}';
+                    window.iscreated = data.created;
+                    window.records = data.records?data.records:"[]";
+                    window.jsapi = '{"timestamp":"'+data.js.timestamp+'","appId":"wxd32026a97b1282b3","nonceStr":"'+data.js.noncestr+'","jsapi_ticket":"'+data.js.jsapi_ticket+'","signature":"'+data.js.signature+'","url":"/h5/run/?owner='+ownerID+'"}';
+                    window.totalDist = data.totalDist;
+                    window.ownerNick = data.ownerNick;
+                    window.actUrl = "/h5/run/?owner="+window.userId;
+                    seajs.use('index/index', function(index) {
+                        //'use strict';
+                        index.init();
+                        if(window.userId!=window.ownerId){
+                            sharetitle = "我帮"+window.ownerNick+"跑了xxx米,快来一起帮"+window.ownerNick+"完成42.195公里！";
+                            seajs.use("index/store",function(s){
+                                window.totalDist = s.curDis
+                            });
+                            sharedes = "你也可以创建跑道，约上跑友助力！按排名领奖品哦！";
+                        }
+                        shareurl= "http://weixin.zx-tour.com/h5/run/?owner="+window.ownerId;
+                        wxbind();
+                    });
+                }
+            }else{
+                window.location.href = "/weixin/touserauth?login=1";
+            }
+        }
+    });
+    </script>
+
+</body>
+
+</html>

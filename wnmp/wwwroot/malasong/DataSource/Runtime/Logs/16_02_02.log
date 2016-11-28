@@ -1,0 +1,45 @@
+[ 2016-02-02T10:41:46+08:00 ] /Lottery/wuxi
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000933s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001076s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000823s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2016-02-02T10:41:51+08:00 ] /Lottery/wuxi
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000590s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2016-02-02T10:41:57+08:00 ] /Lottery/wuxi
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000835s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000932s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2016-02-02T10:42:08+08:00 ] /Lottery/wuxi
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001135s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001222s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2016-02-02T12:11:33+08:00 ] /wuxi/index2.html?from=groupmessage&isappinstalled=0
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001370s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001494s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+ERR: 无法加载模块:Wuxi
+

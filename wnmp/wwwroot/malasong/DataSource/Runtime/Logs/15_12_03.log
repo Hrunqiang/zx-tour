@@ -1,0 +1,459 @@
+[ 2015-12-03T00:06:10+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001310s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001438s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000968s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T00:07:59+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000643s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T00:08:44+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001153s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001256s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T00:09:28+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000693s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T00:09:31+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001142s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001256s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T00:09:33+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001093s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001204s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T00:09:35+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001129s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001244s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T00:09:37+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001017s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001125s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T00:09:39+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001002s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001099s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T00:09:40+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001098s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T00:09:42+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001013s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001116s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T00:09:47+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001169s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001288s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T00:31:51+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001367s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001490s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000999s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T01:01:51+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000768s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000843s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T01:01:58+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000458s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] Use of undefined constant MODE_NAME - assumed 'MODE_NAME' D:\wnmp\www\malasong\DataSource\Common\common.php 第 61 行.
+
+[ 2015-12-03T01:02:24+08:00 ] /Lottery/test
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000613s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+ERR: Redis server went away
+
+[ 2015-12-03T11:03:59+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.014000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.014087s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.005504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005554s ]
+ERR: Redis server went away
+
+[ 2015-12-03T11:04:01+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001049s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001149s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+ERR: Redis server went away
+
+[ 2015-12-03T11:04:03+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001029s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001129s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000773s ]
+ERR: Redis server went away
+
+[ 2015-12-03T11:30:01+08:00 ] /Lottery/luck
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000884s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000974s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000932s ]
+ERR: Redis server went away
+
+[ 2015-12-03T11:49:14+08:00 ] /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_news` [ RunTime:0.460804s ]
+SQL: SELECT `id`,`news_title`,`des`,`img`,`url`,`url_type` FROM `mls_news` ORDER BY orderid asc,id desc LIMIT 0,6   [ RunTime:0.016885s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.039423s ]
+INFO: [ view_template ] --END-- [ RunTime:0.039517s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: tilte D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 33 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 33 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.092710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.092865s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001129s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.006127s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.004143s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.004554s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016123s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000824s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000873s ]
+
+[ 2015-12-03T11:49:14+08:00 ] /Account/verify
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000783s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000855s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+
+[ 2015-12-03T11:49:18+08:00 ] /Account/verify?0.4546910512726754
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000509s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000428s ]
+
+[ 2015-12-03T11:49:25+08:00 ] /Account/dologin?account=13522354197&pwd=aaaaaa&code=8434
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000604s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_users` [ RunTime:0.019737s ]
+SQL: SELECT `id`,`phone`,`email`,`pwd`,`nicname` FROM `mls_users` WHERE ( pwd = '885e6da53c1f50d477cb728cea7ca087' and sign =1 and (phone = '13522354197' or email = '13522354197') ) LIMIT 1   [ RunTime:0.019664s ]
+
+[ 2015-12-03T11:49:31+08:00 ] /Account/dologin?account=13522354197&pwd=aaa11111&code=8434
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000619s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_users` [ RunTime:0.006429s ]
+SQL: SELECT `id`,`phone`,`email`,`pwd`,`nicname` FROM `mls_users` WHERE ( pwd = 'f35f1c49b927803589efa0d0bd330b8b' and sign =1 and (phone = '13522354197' or email = '13522354197') ) LIMIT 1   [ RunTime:0.006009s ]
+
+[ 2015-12-03T11:49:31+08:00 ] /Index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001236s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001358s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_news` [ RunTime:0.005754s ]
+SQL: SELECT `id`,`news_title`,`des`,`img`,`url`,`url_type` FROM `mls_news` ORDER BY orderid asc,id desc LIMIT 0,6   [ RunTime:0.009463s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000367s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000401s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: tilte D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 33 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 33 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009159s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000341s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000256s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000186s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001191s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000481s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000523s ]
+
+[ 2015-12-03T11:49:31+08:00 ] /Account/verify
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000718s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000786s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+
+[ 2015-12-03T11:49:35+08:00 ] /OnlineEnroll/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002574s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004202s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001293s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.042185s ]
+ERR: 非法操作:index.php
+
+[ 2015-12-03T11:50:12+08:00 ] /OnlineEnroll/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000513s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000360s ]
+ERR: 非法操作:index.php
+
+[ 2015-12-03T11:50:18+08:00 ] /OnlineEnroll/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001034s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001139s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000333s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_goods` [ RunTime:0.006150s ]
+SQL: SELECT * FROM `mls_goods` WHERE ( goodspid = 15 ) ORDER BY `order` desc  [ RunTime:0.005439s ]
+SQL: SHOW COLUMNS FROM `mls_countries` [ RunTime:0.005547s ]
+SQL: SELECT `title` FROM `mls_countries`  [ RunTime:0.013411s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001049s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001158s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: tilte D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 33 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 33 行.
+NOTIC: [8] Undefined index: index D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 37 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 37 行.
+NOTIC: [8] Undefined index: index D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 47 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 47 行.
+NOTIC: [8] Undefined index: index D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 62 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 62 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.210116s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.210215s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001307s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000620s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000430s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000736s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003296s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001104s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001179s ]
+
+[ 2015-12-03T11:50:18+08:00 ] /Account/verify
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000860s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000951s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
+
+[ 2015-12-03T11:50:19+08:00 ] /Ajax/apply_num
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000754s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000828s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.006693s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mls_userorders` WHERE ( isonline = 0 ) LIMIT 1   [ RunTime:0.006150s ]
+
+[ 2015-12-03T11:50:49+08:00 ] /OnlineEnroll/ziliao
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000477s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000298s ]
+NOTIC: [8] Undefined index: shengfen D:\wnmp\www\malasong\DataSource\Lib\Action\OnlineEnrollAction.class.php 第 62 行.
+NOTIC: [8] Undefined index: diqu D:\wnmp\www\malasong\DataSource\Lib\Action\OnlineEnrollAction.class.php 第 63 行.
+NOTIC: [8] Undefined index: zbpinpai D:\wnmp\www\malasong\DataSource\Lib\Action\OnlineEnrollAction.class.php 第 112 行.
+NOTIC: [8] Undefined index: ylpinpai D:\wnmp\www\malasong\DataSource\Lib\Action\OnlineEnrollAction.class.php 第 113 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_baomingdan` [ RunTime:0.007317s ]
+SQL: SELECT `id` FROM `mls_baomingdan` WHERE ( zjtype = '身份证' and zjcode='362427199109186213' and uid=99 ) LIMIT 1   [ RunTime:0.005633s ]
+SQL: INSERT INTO `mls_baomingdan` (`uid`,`xingming`,`guojia`,`zjtype`,`zjcode`,`xingbie`,`shengri`,`shouji`,`youxiang`,`shengfen`,`diqu`,`dizhi`,`xueli`,`xuexing`,`hangye`,`shouru`,`zhiye`,`shenti`,`nianxian`,`qmfirstdate`,`qmbest`,`bmfirstdate`,`bmbest`,`zbpinpai`,`ylpinpai`,`utime`,`ctime`) VALUES (99,'黄海燕','中国','身份证','362427199109186213',1,'1991-09-18','13522354197','375968317@qq.com','','','北京市朝阳区','','A型','','1-5万','',0,'1年及以内','','0:0:0','','0:0:0','null','null','2015-12-03 11:50:49','2015-12-03 11:50:49') [ RunTime:0.005616s ]
+ERR: 1062:Duplicate entry '身份证-362427199109186213' for key 'zjtype_2'
+ [ SQL语句 ] : INSERT INTO `mls_baomingdan` (`uid`,`xingming`,`guojia`,`zjtype`,`zjcode`,`xingbie`,`shengri`,`shouji`,`youxiang`,`shengfen`,`diqu`,`dizhi`,`xueli`,`xuexing`,`hangye`,`shouru`,`zhiye`,`shenti`,`nianxian`,`qmfirstdate`,`qmbest`,`bmfirstdate`,`bmbest`,`zbpinpai`,`ylpinpai`,`utime`,`ctime`) VALUES (99,'黄海燕','中国','身份证','362427199109186213',1,'1991-09-18','13522354197','375968317@qq.com','','','北京市朝阳区','','A型','','1-5万','',0,'1年及以内','','0:0:0','','0:0:0','null','null','2015-12-03 11:50:49','2015-12-03 11:50:49')
+
+[ 2015-12-03T11:51:47+08:00 ] /OnlineEnroll/ziliao
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000533s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000251s ]
+NOTIC: [8] Undefined index: shengfen D:\wnmp\www\malasong\DataSource\Lib\Action\OnlineEnrollAction.class.php 第 62 行.
+NOTIC: [8] Undefined index: diqu D:\wnmp\www\malasong\DataSource\Lib\Action\OnlineEnrollAction.class.php 第 63 行.
+NOTIC: [8] Undefined index: zbpinpai D:\wnmp\www\malasong\DataSource\Lib\Action\OnlineEnrollAction.class.php 第 112 行.
+NOTIC: [8] Undefined index: ylpinpai D:\wnmp\www\malasong\DataSource\Lib\Action\OnlineEnrollAction.class.php 第 113 行.
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_baomingdan` [ RunTime:0.024173s ]
+SQL: SELECT `id` FROM `mls_baomingdan` WHERE ( zjtype = '身份证' and zjcode='362427199109186213' and uid=99 ) LIMIT 1   [ RunTime:0.000640s ]
+SQL: UPDATE `mls_baomingdan` SET `uid`=99,`xingming`='黄海燕',`guojia`='中国',`zjtype`='身份证',`zjcode`='362427199109186213',`xingbie`=1,`shengri`='1991-09-18',`shouji`='13522354197',`youxiang`='375968317@qq.com',`shengfen`='',`diqu`='',`dizhi`='北京市朝阳区',`xueli`='',`xuexing`='A型',`hangye`='',`shouru`='1-5万',`zhiye`='',`shenti`=0,`nianxian`='1年及以内',`qmfirstdate`='',`qmbest`='0:0:0',`bmfirstdate`='',`bmbest`='0:0:0',`zbpinpai`='null',`ylpinpai`='null',`utime`='2015-12-03 11:51:45' WHERE ( id = 107 ) [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.018065s ]
+SQL: SELECT * FROM `mls_userorders` WHERE ( uid = 99 and paystats = 0 and isonline=1 ) LIMIT 1   [ RunTime:0.001284s ]
+SQL: INSERT INTO `mls_userorders` (`uid`,`orderid`,`isonline`,`ctime`,`utime`) VALUES (99,'991512031151472',1,'2015-12-03 11:51:47','2015-12-03 11:51:47') [ RunTime:0.000436s ]
+SQL: SHOW COLUMNS FROM `mls_orderinfo` [ RunTime:0.006117s ]
+SQL: SELECT od.paystats FROM    mls_orderinfo i   left join mls_userorders od on od.orderid=i.orderid where  i.baomingdanid=107   [ RunTime:0.001319s ]
+SQL: DELETE FROM `mls_orderinfo` WHERE ( uid=99 and orderid='991512031151472' and baomingdanid<>107 ) [ RunTime:0.000402s ]
+SQL: SELECT count(*) as c FROM `mls_orderinfo` WHERE ( uid=99 and orderid='991512031151472' and baomingdanid=107 ) LIMIT 1   [ RunTime:0.000438s ]
+SQL: INSERT INTO `mls_orderinfo` (`uid`,`orderid`,`baomingdanid`,`goodsid`,`utime`,`ctime`) VALUES (99,'991512031151472',107,16,'2015-12-03 11:51:47','2015-12-03 11:51:47') [ RunTime:0.018013s ]
+
+[ 2015-12-03T11:51:47+08:00 ] /OnlineEnroll/query
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000739s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000838s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001172s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001230s ]
+INFO: Run AuthCheck Behavior [ RunTime:0.000458s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000962s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001059s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: tilte D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 33 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 33 行.
+NOTIC: [8] Undefined index: index D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 37 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 37 行.
+NOTIC: [8] Undefined index: index D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 47 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 47 行.
+NOTIC: [8] Undefined index: index D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 62 行.
+NOTIC: [8] Trying to get property of non-object D:\wnmp\www\malasong\DataSource\Runtime\Temp\b98fc940e393e12c0163e8b483a2b21226c917df.file.header.html.php 第 62 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.097122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.097177s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000449s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000247s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000190s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000331s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001301s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000562s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000606s ]
+
+[ 2015-12-03T11:51:47+08:00 ] /Account/verify
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000557s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+
+[ 2015-12-03T11:51:48+08:00 ] /Ajax/apply_num
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000650s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+NOTIC: [8] Undefined index: db_dsn D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wnmp\www\malasong\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `mls_userorders` [ RunTime:0.002073s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mls_userorders` WHERE ( isonline = 0 ) LIMIT 1   [ RunTime:0.000746s ]
+

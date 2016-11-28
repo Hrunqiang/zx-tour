@@ -1,0 +1,81 @@
+<{include file='Login/header.html'}>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <div class="box-header">
+                    <h4>1、确认老用户信息</h4>
+                </div>
+                <div class="box-content">
+                    <table class="table-font" style="width:80%;">
+                        <tr class="coupon_name">
+                            <th class="w120">姓名：</th>
+                            <td>
+	                            <{$info.name}> 　　<a href="?s=Customer&ac=edit&id=<{$info.id}>">修改资料</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">性别：</th>
+                            <td>
+                                <{if $info.sexy=="1"}>男<{else}>女<{/if}>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">手机：</th>
+                            <td>
+                                <{$info.phone}>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">国家：</th>
+                            <td>
+                                <{$info.country}>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">国家：</th>
+                            <td>
+                                <{$info.sfz_code}>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">护照：</th>
+                            <td>
+                                <{$info.pass_code}>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">之前报名赛事：</th>
+                            <td>
+                                <{$info.match}>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <h4>2、选择要参加的比赛并生成地址</h4><br>
+                <select name="match" id="">
+                    <{foreach from = $matchlist  item = i }>
+                    <option value="<{$i.id}>"><{$i.m_name}></option>
+                    <{/foreach}>
+                </select> <br><br> 
+                <input type="button" value="生成报名地址" id="create_url" > <br><br>
+
+                <h4>3、将生成的地址复制给用户完成报名</h4>
+                <div class="url_content">
+
+                </div>
+
+            </div><!--/ con-->           
+        </div>    
+    </div><!--/ container-->
+<script>
+$("#create_url").click(function(){
+    var id = '<{$info.id}>';
+    var matchid = $('select[name=match]').val();
+    var url =  "http://127.0.0.1:8090/AgentEnroll/customer?uid="+id+"&matchid="+matchid;
+    $(".url_content").html(url);
+});   
+</script>
+</div>
+<{include file='Login/footer.html'}>

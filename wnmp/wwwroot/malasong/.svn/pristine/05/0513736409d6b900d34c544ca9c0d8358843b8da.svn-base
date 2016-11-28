@@ -1,0 +1,50 @@
+<{include file='Login/header.html'}>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">
+                
+                  <div class="table">
+                    <div class="th">
+                   <div class="form">
+                        <div class="fl">
+                           
+                        </div>  
+                        </div>
+                    </div>
+                    <table class="admin-tb" id="datatable">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center;">赛事名</th>
+                            <th style="text-align:center;">链接</th>
+                             <th style="text-align:center;">创建时间</th>
+                             <th style="text-align:center;">最后更新时间</th>
+                             <th style="text-align:center;">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="class_item">
+                    <{if $list}>
+                    <{foreach from=$list name=n item=i}>
+                        <td style="text-align:center;"><{$i.goodscls}></td>
+                        <td style="text-align:center;"><a href="http://weixin.zx-tour.com/?match=<{$i.id}>" target="_blank">http://weixin.zx-tour.com/?match=<{$i.id}></a></td>   
+                        <td style="text-align:center;" ><{$i.ctime}></td>
+                        <td style="text-align:center;" ><{$i.utime}></td>
+                        <td style="text-align:center;"></td>
+                        </tr>
+                    <{/foreach}>
+                    <{/if}>
+                    </tbody>
+                    </table>
+                    <div class="th">
+                    </div>
+                </div>
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script type="text/javascript">
+
+</script>
+<{include file='Login/footer.html'}>

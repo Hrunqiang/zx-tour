@@ -1,0 +1,189 @@
+<?php
+/**
+ * 活动转盘抽奖
+ * @author hhy
+ *
+ */
+class OrderNoticeAction extends Action {
+	
+	public function notice($data){
+		if(empty($data)) return true;
+		$orderid = $data['orderid'];
+		$status = $data['status'];
+		$title = $status==1?"知行合逸付款完成确认":"知行合逸活动报名确认";
+		$enrollM = new UserOrdersModel();
+		$info = $enrollM->getorderinfo_notice($orderid);
+		$mail = $info[0]['e_mail'];
+		$orderinfoM = new OrdersInfoModel;
+		$list = $orderinfoM->getOrderInfolist($orderid);
+		$content = OrderNoticeAction::getHTML($orderid,$status,$info[0],$list);	
+		$mailM = new MailModel;
+		$mailres = $mailM->send($mail,$title,$content);
+		if($status==1){
+			$M = new SendSmsModel();
+			$phone = $info[0]['phone'];
+			if($info[0]['m_ptype']=="海外"){
+				$smsContent = "【知行合逸】您报名的".$info[0]['m_name']."（订单号".$info[0]['orderid']."）已支付成功，请添加客服微信号zxhylv方便沟通，我们将建微信群通报最新消息。如有其它问题也可致电4000842195。祝您跑出好成绩！";
+			}elseif($info[0]['m_ptype']=="运动诊疗"){
+				$smsContent = "【知行合逸】您报名的".$info[0]['m_name']."（订单号".$info[0]['orderid']."）已支付成功，如果要预约跑步运动风险评估，请致电：海康斯运动康复中心刘女士，电话：18500357971 ，订单有效期为支付成功后三个月内有效。其它订单问题也可致电4000842195。祝您越跑越健康！";
+			}else{
+				$smsContent = "【知行合逸】您报名的".$info[0]['m_name']."（订单号".$info[0]['orderid']."）已支付成功，请添加客服微信号zxhy02方便沟通，我们将建微信群通报最新消息。如有其它问题也可致电4000842195。祝您跑出好成绩！";
+			}	
+			$smsres = $M->send($smsContent,$phone);
+			echo date("Y-m-d H:i:s")."\t sms(".$info[0]['orderid'].") \trs:".json_encode($smsres)."\r\n";
+		}else{
+			$smsres = false;
+		}
+		
+		return $smsres||!$mailres['error'];
+	}
+	
+	public function notice_v2(){
+		header("Content-type:text/html;charset=utf-8;");
+		$orderid = $_GET['orderid'];
+		echo "订单号：".$orderid."<br>";
+		$status = $_GET['status'];
+		if(empty($orderid)||empty($status)){
+			die("订单号和订单状态不能为空");
+		}
+		$title = $status==1?"知行合逸付款完成确认":"知行合逸活动报名确认";
+		echo "发送主题：".$title."<br>";
+		$enrollM = new UserOrdersModel();
+		$info = $enrollM->getorderinfo_notice($orderid);
+		if(!$info){
+			die("没有找到相关订单");
+		}
+		$mail =$_GET['mail']?$_GET['mail']:$info[0]['e_mail'];
+		$orderinfoM = new OrdersInfoModel;
+		$list = $orderinfoM->getOrderInfolist($orderid);
+		$content = OrderNoticeAction::getHTML($orderid,$status,$info[0],$list);	
+		$mailM = new MailModel;
+		$mailres = $mailM->send($mail,$title,$content);
+		if($mailres){
+			echo "邮件已发送至".$mail."<br>";
+		}else{
+			echo "邮件发送失败！失败邮箱".$mail."<br>";
+		}
+		if($status==1){
+			$M = new SendSmsModel();
+			$phone = $_GET['phone']?$_GET['phone']:$info[0]['phone'];
+			if($info[0]['m_ptype']=="海外"){
+				$smsContent = "【知行合逸】您报名的".$info[0]['m_name']."（订单号".$info[0]['orderid']."）已支付成功，请添加客服微信号zxhylv方便沟通，我们将建微信群通报最新消息。如有其它问题也可致电4000842195。祝您跑出好成绩！";
+			}elseif($info[0]['m_ptype']=="运动诊疗"){
+				$smsContent = "【知行合逸】您报名的".$info[0]['m_name']."（订单号".$info[0]['orderid']."）已支付成功，如果要预约跑步运动风险评估，请致电：海康斯运动康复中心刘女士，电话：18500357971 ，订单有效期为支付成功后三个月内有效。其它订单问题也可致电4000842195，或添加客服微信号zxhy02。祝您越跑越健康！";
+			}else{
+				$smsContent = "【知行合逸】您报名的".$info[0]['m_name']."（订单号".$info[0]['orderid']."）已支付成功，请添加客服微信号zxhy02(注明您所参加的比赛名称)方便沟通，我们将建微信群通报最新消息。如有其它问题也可致电4000842195。祝您跑出好成绩！";
+			}	
+			$smsres = $M->send($smsContent,$phone);
+			if($smsres['error']==0){
+				echo "短信已发送至".$phone."<br>";
+			}else{
+				echo "短信发送失败，手机号：".$phone." 失败原因：".$smsres['msg']."<br>";
+			}			
+		}else{
+			$smsres = false;
+		}
+	}
+	
+	public function getHTML($orderid,$status,$info,$list){
+		$name = $info['name'];
+		$shouji = $info['phone'];
+		$price = $info['payprice'];
+		$date = $info['ctime'];
+		$count = 1;
+		$match = $info['m_name'];
+		$userstate = $info['state'];
+		$matchinfo = "(";
+		foreach ($list as $key =>$val){
+			$matchinfo.=$val['g_name']."+";
+		}
+		$matchinfo = rtrim($matchinfo,"+");
+		$matchinfo .= ")";
+		if($info['m_ptype']=="国内"){
+			$mailhunt = "比赛相关信息将会直接发送至您的邮箱，";
+			$kefu = "";
+		}else{
+			$mailhunt = "马拉松确认函等相关信息将会直接发送至您的邮箱。知行合逸也将在比赛前10天向您的邮箱中发送相应的队员手册。";
+			$kefu = '<p style="color:#FFA900;">请添加客服微信：13810388264，注明“姓名+参赛名称”。我们一般会在比赛开始前建立微信群，便于跑者们互相交流，以及通报最新消息。</p>';
+		}
+		if($status==1){
+			$hunt = '已支付成功。';	
+			if($userstate<4){
+				$userinfo = '<p>系统检测到您的参赛资料尚未填写完整，请单击此链接<a style="color:#FFA900;font-weight: bold;" href="http://weixin.zx-tour.com/User/userinfo">http://weixin.zx-tour.com/User/userinfo</a>完善资料，如您在赛前没有完善资料可能会影响您正常参加比赛。如有疑问，请及时跟我们联系。</p>';
+			}		
+		}else{
+			if($info['m_ptype']=="国内"){
+				$hunt = '已完成报名信息填写。我们的报名以支付为准，请尽快完成支付流程，锁定最终的名额。支付时，只需点击报名链接，点击参加过知行合逸马拉松产品，输入姓名+生日+手机，即可回到支付页面。</p>
+		<p><span style="color:#FFA900;font-weight: bold;">提示</span>：如果您单人报名套餐，即默认同意与他人共享房间，我们将会努力为您安排一位同性的旅行者。我们会根据报名的先后顺序安排。如果比赛开始前，无法安排同住者，我们会通知您补交单房差。</p>';
+			}else{
+				$hunt = '已完成报名信息填写。我们的报名以支付为准，请尽快完成支付流程，锁定最终的名额。支付时，只需点击报名链接，点击参加过知行合逸马拉松产品，输入姓名+生日+手机，即可回到支付页面。</p>
+		<p><span style="color:#FFA900;font-weight: bold;">提示</span>：如果在预定的时候，你是单人，并且选择与他人共享房间，我们将会努力为您安排一位同性的旅行者。我们会根据报名的先后顺序安排。如果报名截止前，无法安排单房，我们会通知您补交单房差，如果您不愿意补交单房差，我们全额退还您支付的费用。</p>';
+			}
+			$userinfo = '';
+		}
+		if($info['m_ptype']=="运动诊疗"){
+			$fuwuStr = '<p>请如果要预约跑步运动风险评估，请致电：海康斯运动康复中心刘女士，电话：18500357971 ，订单有效期为支付成功后三个月内有效。其它订单问题也可致电4000842195。祝您越跑越健康！</p>';
+		}else{
+			$fuwuStr = '<p><span style="color:#FFA900;font-weight: bold;">请务必确认您提供的电子邮箱地址的正确性，</span>请千万不要使用他人的电子邮箱。最终报名结束后，'.$mailhunt.'如果您提供的邮箱有误，请及时跟我们联系修改。</p>'.$kefu;
+		}	
+		$html = '<div style="width: 100%;max-width: 640px;margin:0 auto;background:#FFF;font-family: 黑体;font-size: 16px;">
+		<p style="background: #04407E;height: 50px;padding:5px 20px;"><img style="height: 40px;" src="http://download.zx-tour.com/public/56a9e86578004.png" alt=""></p>
+		<div style="padding:5px 20px;">
+		<p>'.$name.'，您好!</p> 
+		<p>您通过知行合逸旅行购买的：<span style="color:#FFA900;font-weight: bold;">'.$match.$matchinfo.'，总价：￥'.$price.' (订单号：'.$orderid.')</span>'.$hunt.$userinfo.'
+		'.$fuwuStr.'
+			<div style="border:1px solid #434343;padding:0 40px;">
+				<div style="border-bottom:1px solid #434343;padding:20px 0">
+					<table>
+						<tr>
+							<td style="color:#797979;">订单号：</td>
+							<td>'.$orderid.'</td>
+						</tr>
+						<tr>
+							<td style="color:#797979;">产品名称：</td>
+							<td>'.$match.'</td>
+						</tr>
+						<tr>
+							<td style="color:#797979;">产品价格：</td>
+							<td>'.$price.'</td>
+						</tr>
+						<tr>
+							<td style="color:#797979;">产品数量：</td>
+							<td>'.$count.'</td>
+						</tr>
+						<tr>
+							<td style="color:#797979;">订单创建日期：</td>
+							<td>'.$date.'</td>
+						</tr>
+					</table>
+				</div>
+				<div style="border-bottom:1px solid #434343;padding:20px 0">
+					<p>联系人信息：'.$name.' '.$info['shouji'].' '.$info['youxiang'].' '.$info['hz_code'].'</p>
+					<p style=" word-wrap: break-word;">另外，我们现在招募的比赛。如果感兴趣，可以直接点击<a href="http://mp.weixin.qq.com/s?__biz=MzA5NTU1ODkxNw==&mid=208829162&idx=1&sn=a8b02f1993ead8a20898c4bf269a9a1d#rd" style="color:#FFA900;font-weight: bold;" target="_blank">知行合逸官方网站（www.zx42195.com）</a></p>
+				</div style="border-bottom:1px solid #434343;">
+				<div style="padding:20px 0">
+					<p>咨询产品请联系客服 ：<span style="color:#FFA900;font-weight: bold;">4000-842-195</span></p>
+					<p>邮箱：<span style="color:#FFA900;font-weight: bold;">service@zx-tour.com</span></p> 
+					<p>微信号(海外赛事)：<span style="color:#FFA900;font-weight: bold;">zxhylv</span></p>
+					<p>微信号(国内赛事)：<span style="color:#FFA900;font-weight: bold;">zxhy02</span></p>
+					<ul style="overflow: hidden;width:100%;padding:0;">
+						<li style="float:left;width: 50%;list-style: none;">
+							<img src="http://download.zx-tour.com/public/56a9e8a4aa503.png" style="width: 90%;margin-left:5%;display: inline-block" alt="">
+						</li>
+						<li style="float:left;width: 50%;list-style: none;">
+							<div>
+							<p>关注知行合逸旅行</p>
+							<p>第一时间查看国外马拉松赛事信息</p>
+							<p>关注客服微信，咨询、投诉都可以 来骚扰我哟~ </p>
+							</div>
+						</li>
+					</ul>
+					<p style="text-align: center;color:#FD2F44;font-weight:bold;">此邮件由系统自动发出，请勿回复。</p>
+				</div>
+			</div>
+		</div>	
+	</div>';
+			return $html;
+	}
+	
+}

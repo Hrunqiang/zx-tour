@@ -1,0 +1,2 @@
+[ 2016-11-22T12:02:42+08:00 ] delJdOrders_error: 2016-11-22 12:02:42 192.168.1.114	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='072161122120241044166' )
+

@@ -1,0 +1,328 @@
+<{include file='Login/header.html'}>
+<{if $ac=='add' || $ac=='edit'}>
+<style>
+#plat_num_list{padding:10px 0;}
+#plat_num_list span{background: #eee;margin-right: 10px;padding:5px 10px;}
+</style>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <form action="./?s=MatchV2&a=goodscontent&ac=<{$ac}>&match=<{$data.g_mid}>&id=<{$id}>" method='post'>
+                <input type="hidden" name="id" value="<{$data.id}>"/>
+                <input type="hidden" name="g_pid" value="<{$data.id}>"/>
+                <input type="hidden" name="g_mid" value="<{$data.g_mid}>"/>
+                <input type="hidden" name="g_isgoods" value="<{$data.g_isgoods}>"/>
+                <input type="hidden" name="g_type" value="<{$data.g_type}>"/>
+                <div class="box-header">
+                    <h4>添加分类</h4>
+                </div>
+                <div class="box-content">
+                    <table class="table-font" >
+                        <tr>
+                            <th class="w120">
+                            <{if $data.g_type ==2 && (($data.g_pid ==0 &&$ac=="add")|| ($data.g_isgoods ==0 && $ac=="edit"))}>
+                            出发城市：
+                            <{else}>
+                            名称：
+                            <{/if}></th>
+                            <td>
+	                            <input type="text"  name="g_name" class="textinput w270" value="<{$data.g_name|escape:html}>" />
+                            </td>
+                        </tr>
+                        <{if $data.g_isgoods}>
+                        <tr>
+                            <th>当前价：</th>
+                            <td style="width:370px;">
+                            	<input name="g_currprice" type="text" id="g_currprice" class="textinput" value="<{$data.g_currprice|escape:html}> " onkeyup="value=value.replace(/[^\d|.|-]/g,'') "/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>原价：</th>
+                            <td style="width:370px;">
+                                <input name="g_price" type="text" id="g_price" class="textinput" value="<{$data.g_price|escape:html}> " onkeyup="value=value.replace(/[^\d|.|-]/g,'') "/>
+                            </td>
+                        </tr>
+                        <{if $data.g_type==2||$data.g_type==1}>
+                        <tr>
+                            <th>价格标签:</th>
+                            <td style="width:370px;">
+                                <input name="g_tips" type="text" id="g_tips" class="textinput" value="<{$data.g_tips|escape:html}> " />
+                            </td>
+                        </tr>
+                        <{/if}>
+                        <{if $data.g_type ==2}>
+                        <tr>
+                            <th>单房差：</th>
+                            <td style="width:370px;">
+                                <input name="g_singleprice" type="text" id="g_singleprice" class="textinput" value="<{$data.g_singleprice|escape:html}> " onkeyup="value=value.replace(/[^\d|.|-]/g,'') "/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">套餐描述：</th>
+                            <td>
+                                <textarea type="text"  name="g_des" class="textinput w270"><{$data.g_des|escape:html}></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">套餐费用包含：</th>
+                            <td>
+                                <textarea type="text"  name="g_priceinfo" style="width:90%; height:50px;"><{$data.g_priceinfo|escape:html}></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w120">套餐费用不包含</th>
+                            <td>
+                                <textarea type="text"  name="g_priceinfowithout" style="width:90%; height:50px;"><{$data.g_priceinfowithout|escape:html}></textarea>
+                            </td>
+                        </tr>
+                        <{/if}>
+                        <{/if}>
+                        <tr>
+                        	<th>数量:</th>
+                        	<td>
+                            <input name="g_stock" type="text" id="g_stock" class="textinput" value="<{$data.g_stock|escape:html}> " onkeyup="value=value.replace(/[^\d]/g,'') "/>
+                            <input type="hidden" name="g_plat_num" value='<{$g_plat_num|escape:html}>'>
+                            <div><input type="button" value="分配渠道名额" id="plat_num_add"><p id="plat_num_list"></p></div>
+							</td>
+                        </tr>
+                        <tr>
+                        	<th>剩余数量:</th>
+                        	<td>
+                             <input name="g_stockleft" type="text" id="g_stockleft" class="textinput" value="<{$data.g_stockleft|escape:html}>" onkeyup="value=value.replace(/[^\d]/g,'') "/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>排序：</th>
+                            <td><input name="g_order" type="text" id="g_order" class="textinput" value="<{$data.g_order|escape:html}>"  onkeyup="value=value.replace(/[^\d]/g,'') "/></td>
+                        </tr>
+                        <tr class="g_releaseTime">
+                            <th>上线时间：</th>
+                            <td><input name="g_releaseTime" type="text" id="g_releaseTime" class="textinput datepicker" value="<{$data.g_releaseTime|escape:html}>" onkeyup=""/></td>
+                        </tr>
+                        <tr class="g_offineTime">
+                            <th>下线时间：</th>
+                            <td><input name="g_offineTime" type="text" id="g_offineTime" class="textinput datepicker" value="<{$data.g_offineTime|escape:html}>" onkeyup=""/></td>
+                        </tr>
+                        <{if $ac =="add"}>
+                        <tr class="g_offineTime">
+                            <th>将此信息复制多份：</th>
+                            <td><input name="copy" type="text" id="copy" class="textinput" value="0" onkeyup=""/></td>
+                        </tr> 
+                        <{/if}>
+                    </table>
+                </div>
+                
+                <div class="box-footer">
+                    <div class="box-footer-inner">
+                    	<input type="submit" value="确定" /> 或 <a href="?s=MatchV2">取消</a>
+                    </div>
+                </div>
+                </form>
+            </div><!--/ con-->
+            
+        </div>    
+    </div><!--/ container-->
+
+</div>
+<script charset="utf-8" src="./static/editer/kindeditor-min.js"></script>
+<script charset="utf-8" src="./static/editer/lang/zh_CN.js"></script>
+<link type="text/css" href="/static/datapicker/timepicker/css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+     <link type="text/css" href="/static/datapicker/timepicker/css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+    <script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="/static/datapicker/timepicker/js/jquery-ui-timepicker-zh-CN.js"></script>
+<script>
+$('.datepicker').datetimepicker({
+    //showOn: "button",
+    //buttonImage: "./css/images/icon_calendar.gif",
+    //buttonImageOnly: true,
+    showSecond: true,
+    timeFormat: 'hh:mm:ss',
+    stepHour: 1,
+    stepMinute: 1,
+    stepSecond: 1
+});
+var KK=null;
+
+KindEditor.ready(function(K) {
+    KK=K;
+    var option  = {
+            designMode : <{$table_cfg.designMode|default:true}>,
+            uploadJson : '/?s=editor&a=upload',
+            fileManagerJson : '/?s=editor&a=manager',
+            allowFileManager : false
+            };
+
+    window.editor = KK.create('.HTML_EDIT',option);
+    //上传按钮
+    var editor = K.editor(option);
+    K('.kUpload').click(function() {
+         var that    = this;
+        editor.loadPlugin('image', function() {
+            editor.plugin.imageDialog({
+                imageUrl : $(that).prev("input").val(),
+                clickFn : function(url, title, width, height, border, align) {
+                    $(that).prev("input").val(url);
+                    //得到图片高宽
+                    //K('#img_size').val(width+"*"+height);
+                    editor.hideDialog();
+                }
+            });
+        });
+    });
+    var colorpicker;
+    K('#colorpicker').bind('click', function(e) {
+        e.stopPropagation();
+        if (colorpicker) {
+            colorpicker.remove();
+            colorpicker = null;
+            return;
+        }
+        var colorpickerPos = K('#colorpicker').pos();
+        colorpicker = K.colorpicker({
+            x : colorpickerPos.x,
+            y : colorpickerPos.y + K('#colorpicker').height(),
+            z : 19811214,
+            selectedColor : 'default',
+            noColor : '无颜色',
+            click : function(color) {
+                K('#n_color').val(color);
+                K('#n_title').css({"color":color});
+                colorpicker.remove();
+                colorpicker = null;
+            }
+        });
+    });
+    K(document).click(function() {
+        if (colorpicker) {
+            colorpicker.remove();
+            colorpicker = null;
+        }
+    });
+
+});
+
+var m_plat_str = '<{$g_plat_num}>';
+if(m_plat_str){
+    var m_plat_num = JSON.parse(m_plat_str);
+}else{
+    var m_plat_num = {};
+}
+
+$("#plat_num_add").click(function(){
+    var name = prompt("请输入渠道名");
+    if(!name) return false;
+    var num = prompt("请输入渠道分配的数量");
+    if(!num) return false;
+    $("<span>"+name+":"+num+"</span>").appendTo($("#plat_num_list"));
+    m_plat_num[name] = num ;
+    $("input[name=g_plat_num]").val(JSON.stringify(m_plat_num));
+});
+$("#plat_num_list").find("span").live("click",function(){
+    if(!confirm("确认删除？"))  return false;
+    var html = $(this).html();
+    var name = html.split(":");
+    if(m_plat_num[name[0]]){
+        delete m_plat_num[name[0]]
+        $(this).remove();
+        $("input[name=g_plat_num]").val(JSON.stringify(m_plat_num));
+    }else{
+        alert("删除失败");
+    }
+    
+});
+if(m_plat_num){
+    var listhtml = "";
+    for(var key in m_plat_num){
+        listhtml += "<span>"+key+":"+m_plat_num[key]+"</span>";
+    }
+    $("#plat_num_list").html(listhtml);
+}
+</script>
+<{elseif $ac =='list'}>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">	
+                  <div class="table">
+                  	<div class="th">
+                    	<div class="form">
+                        <div class="fl">
+                        	 <input type="button" onclick="window.location='./?s=MatchV2'" value="&nbsp;&nbsp;返回列表&nbsp;&nbsp;" />
+                             <br>
+                           <input type="button"  onclick="window.location='./?s=MatchV2&a=add&match=<{$match.id}>&pid=<{$match.id}>'" value="&nbsp;&nbsp;添加项目&nbsp;&nbsp;" style="display:none"/>
+                        </div>        
+                        </div>
+                    </div>
+                    <form action='#' method='post'>
+                    <table class="admin-tb" id="datatable">
+                    <thead>
+                        <tr>
+                            <th>赛事（<span id="matchName"><{$match.m_name}></span>）</th>
+                            <th>排序</th>
+                            <th>现价/原价</th>
+                            <th>库存 / 总量</th>
+                            <th>上线时间</th>
+                            <th>下线时间</th>
+                            <th width="161">操作</th>
+                        </tr>
+					</thead>
+					<{$html}>
+
+					<!-- <tbody id="class_item">
+						<tr  childindex="1">
+	                    <td>分类名称</td>   
+	                    <td>分类简称</td>
+	                    <td rel="classname">分类排序</td>
+	                    <td>
+	                        [<a href="">修改</a>] &nbsp; [<a href="">添加下级分类</a>] &nbsp; [<a href="">删除</a>]
+	                    </td>
+	                    </tr>
+					</tbody> -->
+                    
+                    
+                    </table>
+                    <div class="th">
+                    	
+                    </div>
+                    </form>
+                </div>
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script>
+function edit_beizhu(id){
+    var beizhu = $("#beizhu").val();
+    $.getJSON("./?s=MatchV2&a=edit_beizhu&id="+id+"&info="+beizhu,function(data){
+            if(data.error===0){
+                alert("修改成功！");
+            }else{
+                alert(data.msg);
+            }
+    });
+}
+// function changeMatchname(id){
+//     if(!id) {
+//         alert("没有换到赛事！");
+//         return false;
+//     }
+//     var newName  = prompt("请输入新名称！","<{$match.goodscls}>");
+//     if(newName){
+//         $.getJSON("./?s=Match&a=edit_matchname&match_id=<{$match.id}>&name="+newName,function(data){
+//             if(data.error===0){
+//                 alert("修改成功！");
+//                 $("#matchName").html(newName);
+//             }else{
+//                 alert(data.msg);
+//             }
+//         });
+//     }
+//}
+</script>
+<{/if}>
+<{include file='Login/footer.html'}>

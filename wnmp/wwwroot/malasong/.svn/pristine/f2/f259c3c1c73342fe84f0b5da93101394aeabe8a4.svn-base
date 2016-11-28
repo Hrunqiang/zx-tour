@@ -1,0 +1,62 @@
+<div class="general_page_right">
+	<div class="general_page_right_box" id="right_countdown_box">
+		<div class="countdow_title"><p>报名截至倒计时</p></div>
+		<div id="countdown_box_left" class="fl">
+			<p class="countdow_num" id="countdow_day">0</p>
+			<p class="countdow_company">天</p>
+		</div>
+		<div id="countdown_box_right" class="fl">
+			<p class="countdow_num" id="countdow_hour">0</p>
+			<p class="countdow_company">小时</p>
+		</div>
+	</div>
+
+	<div class="general_page_right_box" id="right_match_time" >
+		<p class="right_mini_title">已报名人数</p>
+		<div class="enroll_num">
+			<ul>
+				<li class="enroll_num_li">0</li>
+				<li class="enroll_num_li">0</li>
+				<li class="enroll_num_li">0</li>
+				<li class="enroll_num_li">0</li>
+				<li class="enroll_num_li">0</li>
+				<li class="enroll_num_conpany">人</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="general_page_right_box" id="right_match_time" >
+		<p>比赛时间地点</p>
+		<p>时间：2016年1月1日（星期五）</p>
+		<p>发令时间：5：58</p>
+		<p>地点：抚远人民广场</p>
+	</div>
+	
+	<div class="general_page_right_box" id="right_athlete" >
+		<p id="right_athlete_title">线上马拉松支持参赛app</p>
+		<div id="right_athlete_list">
+			<ul>
+				<li><img class="right_app_icon" src="/static/images/test.png" alt=""><p>XXX</p></li>
+				<li><img class="right_app_icon" src="/static/images/test.png" alt=""><p>XXX</p></li>
+				<li><img class="right_app_icon" src="/static/images/test.png" alt=""><p>XXX</p></li>
+				<li><img class="right_app_icon" src="/static/images/test.png" alt=""><p>XXX</p></li>
+				<li><img class="right_app_icon" src="/static/images/test.png" alt=""><p>XXX</p></li>
+				<li><img class="right_app_icon" src="/static/images/test.png" alt=""><p>XXX</p></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="general_page_right_box" id="right_athlete" >
+		<p id="right_athlete_title">明星跑者</p>
+		<div id="right_athlete_list">
+			<ul>
+				<li><img class="right_athlete_photo" src="/static/images/photo.png" alt=""><p>XXX</p></li>
+				<li><img class="right_athlete_photo" src="/static/images/photo.png" alt=""><p>XXX</p></li>
+				<li><img class="right_athlete_photo" src="/static/images/photo.png" alt=""><p>XXX</p></li>
+				<li><img class="right_athlete_photo" src="/static/images/photo.png" alt=""><p>XXX</p></li>
+				<li><img class="right_athlete_photo" src="/static/images/photo.png" alt=""><p>XXX</p></li>
+				<li><img class="right_athlete_photo" src="/static/images/photo.png" alt=""><p>XXX</p></li>
+			</ul>
+		</div>
+	</div>
+</div>

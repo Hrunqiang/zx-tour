@@ -1,0 +1,228 @@
+[ 2016-11-06T18:05:11+08:00 ] /User/order
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001630s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001712s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\UserAction.class.php 第 503 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001839s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004448s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.id as mid,m.m_img,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 44 and o.paystats>=0 order by o.ctime desc [ RunTime:0.006639s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.004190s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161104112615044480' [ RunTime:0.000757s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '085161102185129044372' [ RunTime:0.000556s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '143161102170524044358' [ RunTime:0.000453s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '225161102155246044222' [ RunTime:0.000879s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '343161102111121044824' [ RunTime:0.000528s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021120916044448' [ RunTime:0.000794s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021113106044452' [ RunTime:0.000433s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161020105220044961' [ RunTime:0.000354s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161019152912044537' [ RunTime:0.000285s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235161019144819044990' [ RunTime:0.000269s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161019105438044225' [ RunTime:0.000276s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '071161011171025044633' [ RunTime:0.000262s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235161010065450044592' [ RunTime:0.000209s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010065312044177' [ RunTime:0.000235s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010065001044573' [ RunTime:0.000201s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010064544044721' [ RunTime:0.000194s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010063840044594' [ RunTime:0.000204s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '287160928191658044679' [ RunTime:0.000656s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '237160915001953044605' [ RunTime:0.000548s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235160913153328044529' [ RunTime:0.000357s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '071160907094416044864' [ RunTime:0.000379s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '069160824152958044866' [ RunTime:0.000495s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '143160824140914044182' [ RunTime:0.000266s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '156160819164514044989' [ RunTime:0.000435s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '161160802131247044194' [ RunTime:0.000422s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '117160725203917044543' [ RunTime:0.000578s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '013160628191802044284' [ RunTime:0.000985s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '012160628183820044439' [ RunTime:0.000685s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.013382s ]
+INFO: [ view_template ] --END-- [ RunTime:0.013454s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.025260s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025324s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001517s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001003s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001007s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001091s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004778s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001076s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001127s ]
+
+[ 2016-11-06T18:05:11+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.111%3A8091%2FUser%2Forder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001202s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001302s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002010s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-11-06T18:05:11+08:00 ] /Ajax/userorderlist
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001085s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001153s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.004369s ]
+SQL: SELECT o.orderid,o.pay_deadline,m.m_untilTime,m.m_offineTime,m.m_state,m.m_placesleft,m.m_icon,m.m_name,m.id as mid,m.m_img,o.payprice,o.discount,o.paystats,m.m_GameTime FROM `zx_tb_orders` o LEFT JOIN `zx_tb_matchs` m ON o.matchid= m.id WHERE o.uid = 44 and o.paystats>=0 order by o.ctime desc [ RunTime:0.001052s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orderinfo` [ RunTime:0.005040s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '275161104112615044480' [ RunTime:0.000340s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '085161102185129044372' [ RunTime:0.000243s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '143161102170524044358' [ RunTime:0.000237s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '225161102155246044222' [ RunTime:0.000276s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '343161102111121044824' [ RunTime:0.000221s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021120916044448' [ RunTime:0.000237s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161021113106044452' [ RunTime:0.000192s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161020105220044961' [ RunTime:0.000192s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161019152912044537' [ RunTime:0.000188s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235161019144819044990' [ RunTime:0.000242s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '315161019105438044225' [ RunTime:0.000199s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '071161011171025044633' [ RunTime:0.000179s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235161010065450044592' [ RunTime:0.000183s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010065312044177' [ RunTime:0.000199s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010065001044573' [ RunTime:0.000184s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010064544044721' [ RunTime:0.000183s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '301161010063840044594' [ RunTime:0.000175s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '287160928191658044679' [ RunTime:0.000230s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '237160915001953044605' [ RunTime:0.000220s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '235160913153328044529' [ RunTime:0.000210s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '071160907094416044864' [ RunTime:0.000219s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '069160824152958044866' [ RunTime:0.000335s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '143160824140914044182' [ RunTime:0.000500s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '156160819164514044989' [ RunTime:0.000356s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '161160802131247044194' [ RunTime:0.000372s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '117160725203917044543' [ RunTime:0.000277s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '013160628191802044284' [ RunTime:0.000411s ]
+SQL: SELECT a.id,a.orderid,a.type,g.g_name,a.goodsid FROM zx_tb_orderinfo a  LEFT JOIN zx_tb_goods g ON a.goodsid = g.id WHERE a.orderid = '012160628183820044439' [ RunTime:0.000338s ]
+
+[ 2016-11-06T18:05:20+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001469s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001601s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002490s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\UserAction.class.php 第 503 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001300s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.003931s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=44 ) LIMIT 1   [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003325s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 44 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-06 18:05:20' ) LIMIT 1   [ RunTime:0.001782s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000992s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001053s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015971s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016046s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000684s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000584s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000439s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000754s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002618s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000902s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000969s ]
+
+[ 2016-11-06T18:05:20+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.111%3A8091%2FUser
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001679s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001794s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001726s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-11-06T18:05:28+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001598s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001705s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001691s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\UserAction.class.php 第 503 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001157s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.007003s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=44 ) LIMIT 1   [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.003885s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 44 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-06 18:05:28' ) LIMIT 1   [ RunTime:0.000481s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000898s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000965s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.016793s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016886s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001183s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000791s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000503s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000610s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003301s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000710s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000759s ]
+
+[ 2016-11-06T18:05:28+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.111%3A8091%2FUser
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003655s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003758s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001368s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+
+[ 2016-11-06T18:05:49+08:00 ] /User
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000875s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000952s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+NOTIC: [2048] Declaration of UserAction::success() should be compatible with that of Action::success() C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\UserAction.class.php 第 503 行.
+INFO: Run AuthCheck Behavior [ RunTime:0.001010s ]
+NOTIC: [8] Undefined index: db_dsn C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params C:\wnmp\wwwroot\weixin\lib\ThinkPHP\Lib\Core\Db.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `zx_tb_user` [ RunTime:0.006701s ]
+SQL: SELECT * FROM `zx_tb_user` WHERE ( id=44 ) LIMIT 1   [ RunTime:0.000413s ]
+SQL: SHOW COLUMNS FROM `zx_tb_orders` [ RunTime:0.005173s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zx_tb_orders` WHERE ( `uid` = 44 ) AND ( `paystats` = 5 ) AND ( `pay_deadline` > '2016-11-06 18:05:49' ) LIMIT 1   [ RunTime:0.000526s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000869s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000921s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015355s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015413s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000657s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000570s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000561s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000629s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002586s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000736s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2016-11-06T18:05:50+08:00 ] /weixin/getJsTk?url=http%3A%2F%2F192.168.1.111%3A8091%2FUser
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003909s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004007s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003043s ]
+NOTIC: [2] Missing argument 2 for WeixinAcessTokenModel::Jstoken(), called in C:\wnmp\wwwroot\weixin\DataSource\Lib\Action\WeixinAction.class.php on line 113 and defined C:\wnmp\wwwroot\weixin\DataSource\Lib\Model\WeixinAcessTokenModel.class.php 第 24 行.
+

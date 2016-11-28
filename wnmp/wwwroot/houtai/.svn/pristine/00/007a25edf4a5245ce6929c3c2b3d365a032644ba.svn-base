@@ -1,0 +1,159 @@
+<style>
+#bannercontent{padding-bottom: 10px;}
+#bannerheader{border-bottom: 2px solid #000;height: 30px;line-height: 30px;}
+.bannerlist{overflow: hidden;padding-top:10px;height:108.5px ;}
+.bannerlist li{float: left;height:108.5px ;}
+.bannerlist li a{color: #4e9ad4;}
+.bannerlist .banner_img{width: 200px;position: relative;}
+.bannerlist .banner_img .upload_btn{position: absolute;top:40px;background: rgba(0,0,0,.6);width: 187.5px;color:#fff;text-align: center;font-size: 20px;cursor: pointer;}
+.bannerlist .banner_img div{width: 187.5px;margin: 0 auto;}
+.bannerlist .banner_img div img{width: 187.5px;height: 108.5px;}
+.bannerlist .banner_title{width:500px;padding-top: 30px;}
+.bannerlist .banner_order{width: 100px;padding-top: 40px;}
+.bannerlist .banner_order input{width: 50px;}
+.bannerlist .banner_action{padding-top: 40px;}
+.bannerlist .show{display: block;}
+.bannerlist .edit{display: none;}
+.bannerlist.editing .show{display: none;}
+.bannerlist.editing .edit{display: block;}
+</style>
+<div id="bannerBox">
+	<p id="bannerheader">
+		<select name="" id="banner_sname">
+			<option value="zx_banner">焦点图-官网</option>
+			<option value="zx_banner_nuomi" <{if $sname=="zx_banner_nuomi"}>selected<{/if}>>焦点图-糯米</option>
+		</select>
+		<span id="host"><{if $sname=="zx_banner_nuomi"}>nuomi.zx-tour.com<{else}>weixin.zx-tour.com<{/if}></span>建议不要超过5张
+	</p>
+	<div id="bannercontent">
+		<{foreach from =$list item=i}>
+		<form action="?s=Recommend&a=banner&ac=edit&sname=<{$sname}>&id=<{$i.aid}>" method="post" id="banner_edit_form<{$i.aid}>" >
+		<div class="bannerlist" id="banner<{$i.aid}>">
+			<ul>
+				<li class="banner_img">
+					<div>
+						<img src="<{$i.n_img}>" alt="">
+						<input type="hidden" name="n_img" value="<{$i.n_img}>">
+						<p class="kUpload upload_btn edit">上传</p>
+					</div>
+				</li>
+				<li class="banner_title">
+					<div class="show">
+						<{$i.n_title}><br>
+						<{$i.n_url}>
+					</div>
+					<div class="edit">
+						<input type="text" value="<{$i.n_title}>" placeholder="输入名称" id="n_title<{$i.aid}>" name="n_title"><br>
+						<input type="text" placeholder="直接输入我们的赛事id" id="n_url_id<{$i.aid}>" name="match_id">　或　<input width="100" type="text" value="<{$i.n_url}>" placeholder="输入跳转链接" id="n_url<{$i.aid}>" name="n_url">
+					</div>
+				</li>
+				<li class="banner_order">
+					<p class="show"><{$i.orderid}></p>
+					<p class="edit"><input type="text" id="order<{$i.aid}>" name="orderid" value="<{$i.orderid}>"></p>					
+				</li>
+				<li class="banner_action">
+					<div class="show">
+						<a href="javascript:edit_banner(<{$i.aid}>)">编辑</a>　<a href="javascript:del_banner(<{$i.aid}>)">删除</a>
+					</div>
+					<div class="edit">
+						<a href="javascript:save_banner(<{$i.aid}>)">保存</a>　<a href="javascript:edit_cancel_banner(<{$i.aid}>)">取消</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		</form>
+		<{/foreach}>
+		<form action="?s=Recommend&a=banner&ac=add&sname=<{$sname}>" method="post" id="banner_add_form" >
+		<div class="bannerlist editing" id="banner_add">
+			<ul>
+				<li class="banner_img">
+					<div>
+						<img src="" alt="">
+						<input type="hidden" name="n_img" value="">
+						<p class="kUpload upload_btn edit">添加</p>
+					</div>
+				</li>
+				<li class="banner_title">
+					<div class="edit">
+						<input type="text" value="" placeholder="输入名称" id="n_title_add" name="n_title"><br>
+						<input type="text" placeholder="直接输入我们的赛事id" id="n_url_id_add" name="match_id">　或　<input width="100" type="text" value="" placeholder="输入跳转链接" id="n_url_add" name="n_url">
+					</div>
+				</li>
+				<li class="banner_order">
+					<p class="edit"><input type="text" name="orderid" id="order_add" value="" placeholder="排序id"></p>					
+				</li>
+				<li class="banner_action">
+					<div class="edit">
+						<a href="javascript:add_banner()">添加</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		</form>
+	</div>
+</div>
+<script>
+function edit_banner(id){
+	$("#banner"+id).addClass("editing");
+}
+function edit_cancel_banner(id){
+	$("#banner"+id).removeClass("editing");
+}
+function save_banner(id){
+	$("#banner_edit_form"+id).submit();
+	$("#banner"+id).removeClass("editing");
+}
+function del_banner(id){
+	if(confirm("确认删除？")){
+		window.location.href = "?s=Recommend&a=banner&ac=del&sname=<{$sname}>&id="+id;
+	}
+	
+}
+function add_banner(){
+	$("#banner_add_form").submit();
+}
+$("#banner_sname").change(function(){
+	var sname = $(this).val();
+	window.location.href = "?s=Recommend&ac=banner&sname="+sname;
+});
+</script>
+<script charset="utf-8" src="./static/editer/kindeditor-min.js"></script>
+<script charset="utf-8" src="./static/editer/lang/zh_CN.js"></script>
+<script>
+var KK=null;
+KindEditor.ready(function(K) {
+    KK=K;
+    var option  = {
+            designMode : <{$table_cfg.designMode|default:true}>,
+            uploadJson : '/?s=editor&a=upload',
+            fileManagerJson : '/?s=editor&a=manager',
+            allowFileManager : false
+            };
+
+    window.editor = KK.create('.HTML_EDIT',option);
+    //上传按钮
+    var editor = K.editor(option);
+    $('.kUpload').live("click",function() {
+        var that    = this;
+        editor.loadPlugin('image', function() {
+            editor.plugin.imageDialog({
+                imageUrl : $(that).prev("input").val(),
+                clickFn : function(url, title, width, height, border, align) {
+                    $(that).prev("input").val(url).prev("img").attr("src",url);
+                    //得到图片高宽
+                    //K('#img_size').val(width+"*"+height);
+                    editor.hideDialog();
+                }
+            });
+        });
+    });
+});
+function addbanner(){
+    html = '<div class="imgbox2">\
+                <span class="del_banner">—</span>\
+                <img src="" alt="">\
+                <input type="hidden" name="m_banner[]" class="textinput w270" value="" /><a class="kUpload upload_btn" >+</a>\
+            </div>';
+    $(html).appendTo($("#banner_box"));
+}
+</script>

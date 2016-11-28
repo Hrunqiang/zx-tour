@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Push test</title>
+</head>
+<body>
+<form action="" method="POST">
+<input type="text" name="key" value="<{$key|default:'15201276483'}>"/><br/>
+<textarea name="content" rows="" cols="" style="width:100%">
+{ "id" : 739,"title" : "您有新的未接来电","num":0}
+</textarea>
+<br/>
+<input type="submit" value="push" />
+</form>
+<br/>
+<font color=red><{$rs}></font>
+
+</body>
+</html>

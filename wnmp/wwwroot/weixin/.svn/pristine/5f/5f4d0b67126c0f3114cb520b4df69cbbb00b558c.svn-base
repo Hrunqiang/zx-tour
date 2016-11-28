@@ -1,0 +1,101 @@
+<?php
+/**
+ * 首页
+ * @author hhy
+ * createTime 2016-03-20
+ */
+class IndexAction extends Action {
+	
+	Public function _initialize(){
+		//B('AuthCheck');
+	}
+	
+	protected $redirectConfig = array(
+			'879'=>'16','981'=>'13','990'=>'13','943'=>'45','609'=>'33','807'=>'36','726'=>'22','737'=>'31','664'=>'25','146'=>'12','867'=>'27','966'=>'44','778'=>'42','500'=>'43','751'=>'35','859'=>'39','931'=>'28','799'=>'40','943'=>'45','711'=>'21','528'=>'32','911'=>'37','954'=>'46','482'=>'26','162'=>'13','788'=>'29','897'=>'38','897'=>'38','703'=>'41','851'=>'24','469'=>'17','596'=>'19','917'=>'15','836'=>'18','892'=>'30','799'=>'40',
+			);
+	
+	/**
+	 * 主页
+	 */
+    public function index(){;
+    	$match = trim($_GET['match']);
+    	$platform = addslashes(trim($_GET['platform']));
+    	//http://weixin.zx-tour.com/?match=528&platform=runninguide 	 
+    	if($platform){
+    		session("SESSION_ZX_PLATFORM",$platform);
+    	}
+    	if($match){
+    		$redirectid = $this->redirectConfig[$match];
+    		if($redirectid){
+    			redirect("/Matchinfo?m_id=".$redirectid."&platform=".$platform);
+    		}
+    	}
+    	
+    	session("SESSION_ZX_INDEX","http://weixin.zx-tour.com");
+    	$this->assign("hotlist",hotlist());
+    	$this->assign("now",Date("Y-m-d H:i:s"));
+    	$infoM = new ClassInfoModel;
+    	//banner 图
+    	$banner = $infoM->getContent("zx_banner");
+    	$banner = $banner?$banner:"";
+    	$this->assign("banner",$banner);    	
+    	//搜索热点词
+    	$hotwords = $infoM->getContent("zx_hotwords",100);
+    	$this->assign("hotwords",$hotwords);
+    	$sexy = session("SESSION_ZX_SEXY")?session("SESSION_ZX_SEXY"):1;
+    	$this->assign("sexy",session("SESSION_ZX_SEXY"));
+    	$this->display();    	
+    }
+    
+    public function citys(){
+    	$code = trim($_GET['code']);
+    	$data = "";
+    	if($code){
+    		$CTM = new CountriesModel();
+    		$data = $CTM->citys($code);
+    	}
+    	if($data){
+    		$rs['error'] = 0;
+    		$rs['msg'] = "ok";
+    		$rs['data'] = $data;
+    	}else{
+    		$rs['error'] = 1;
+    		$rs['msg'] = "empty";
+    		$rs['data'] = $data;
+    	}
+    	echo json_encode($rs);
+    }
+    
+    public function areas(){
+    	$code = trim($_GET['code']);
+    	$data = "";
+    	if($code){
+    		$CTM = new CountriesModel();
+    		$data = $CTM->areas($code);
+    	}
+    	if($data){
+    		$rs['error'] = 0;
+    		$rs['msg'] = "ok";
+    		$rs['data'] = $data;
+    	}else{
+    		$rs['error'] = 1;
+    		$rs['msg'] = "empty";
+    		$rs['data'] = "";
+    	}
+    	echo json_encode($rs);
+    }
+    
+    
+   	public function news(){
+   		$id = $_GET['id'];
+   		$npa = array(
+   				"tab"=>"赛事新闻",
+   				"mtab"=>"常见问题FAQ",
+   		);
+   		$newsdb = new NewsModel();
+   		$res = $newsdb->getnewsInfoById($id);
+   		$this->assign("news",$res);
+   		$this->assign ( "npa", $npa );
+   		$this->display();
+   	}
+}

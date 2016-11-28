@@ -1,0 +1,70 @@
+<div class="footer">
+	<div id="footer_info_box" class="section_center">
+		<div id="footer_briefintroduction" class="dashed">
+			<p class="footer_mini_title">Marathon</p>
+			<div id="footer_briefintroduction_box">
+				<p>黑瞎子岛全国户外运动嘉年华暨全国户外运动休闲系列赛是国家体育总局登山运动管理中心携手黑龙江省政府黑瞎子岛建设和管理委员会、抚远县人民政府共同打造的旅游与户外相结合的大型群众性体育盛会。</p>
+				<ul class="fl">
+					<li><p>电　　话   021-65535231</p></li>
+					<li><p>报名查询   965365</p></li>
+					<li><p>地　　址   上海市中山北二路1800号海鸥商务大厦西楼3楼</p></li>
+					<li><p>邮　　箱   general@shmarathon.com</p></li>
+				</ul>
+			</div>
+		</div>
+		<div id="footer_sponsor" class="dashed" >
+			<p class="footer_mini_title">联合赞助商</p>
+			<div id="footer_sponsor_list_box">
+				<ul>
+					<li><img class="vertical_center" src="/static/images/sponsor00.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor01.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor02.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor03.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor04.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor05.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor06.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor07.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor08.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor09.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor10.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor11.jpg" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor12.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor13.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor14.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor15.png" alt=""></li>
+					<li><img class="vertical_center" src="/static/images/sponsor16.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<div id="footer_media">
+			<p class="footer_mini_title">合作媒体</p>
+			<div id="footer_media_list_box">
+				<ul>
+					<li>新浪体育</li>
+					<li>乐视体育</li>
+					<li>腾讯体育</li>
+					<li>搜狐体育</li>
+					<li>虎扑跑步</li>
+					<li>跑者世界</li>
+					<li>光明乐跑</li>
+					<li>体育画报</li>
+					<li>HB体育</li>
+					<li>人民网体育</li>
+					<li>胡来体育</li>
+					<li>各种体育</li>
+					<li>火星体育</li>
+					<li>越跑越有</li>
+					<li>知行合一</li>
+					<li>回来体育</li>
+					<li>欢乐跑者</li>
+					<li>17跑步</li>
+					<li>跑来体育</li>
+					<li>马拉松官网</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<p id="footer_strip" class="strip">© 2015 Marathon.cn 京ICP备11015476号 京公网安备110105013401号 京ICP证110318号 新出网证(京)字242号</p>
+</div>
+</body>
+</html>

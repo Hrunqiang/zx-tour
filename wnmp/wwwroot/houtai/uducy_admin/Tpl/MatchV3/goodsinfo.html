@@ -1,0 +1,104 @@
+<{include file='Login/header.html'}>
+<style>
+h1{border-bottom: 1px solid #000;padding:10px 5px;}
+.goods_table{border-bottom: 5px solid #4e9ad4;margin-top: 10px;padding:5px 10px;}
+.goods_table a{color:#4e9ad4; }
+.goods_table p{border-left:5px solid #4e9ad4;height: 30px;line-height: 30px;font-size: 20px;padding-left: 10px;}
+.goods_table p a{float: right;font-size: 16px;}
+.goods_table table{width: 100%;}
+.goods_table tr{border-bottom: 1px dashed #000;}
+.goods_table tr:last-child{/*border-bottom: none;*/}
+.goods_table td{padding:10px 5px;max-width: 200px!important;}
+</style>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con">	
+                <h1>赛事列表-套餐设置-<{$match.m_name}></h1>
+                <div class="goods_table">
+                    <p>赛程报价<a href="">添加赛程</a></p>
+                    <table>
+                        <tr>
+                            <td>赛程名称</td>
+                            <td>名额</td>
+                            <td>现价/原价</td>
+                            <td>数量</td>
+                            <td>操作</td>
+                        </tr>
+                        <tr>
+                            <td>全马</td>
+                            <td>100</td>
+                            <td>￥100/￥150</td>
+                            <td>100</td>
+                            <td><a href="">删除</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="goods_table">
+                    <p>套餐报价<a href="">添加套餐</a></p>
+                    <table>
+                        <tr>
+                            <td>套餐名称</td>
+                            <td>数量</td>
+                            <td>现价/原价/单房差</td>
+                            <td>行程</td>
+                            <td>操作</td>
+                        </tr>
+                        <tr>
+                            <td>套餐套餐套餐套餐套餐</td>
+                            <td>100</td>
+                            <td>￥100/￥150/￥100</td>
+                            <td><a href="">添加</a></td>
+                            <td><a href="">删除</a>&nbsp;&nbsp;<a href="">修改</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="goods_table">
+                    <p>附加优质服务<a href="">添加服务</a></p>
+                    <table>
+                        <tr>
+                            <td>赛程名称</td>
+                            <td>名额</td>
+                            <td>现价/原价</td>
+                            <td>数量</td>
+                            <td>操作</td>
+                        </tr>
+                        <tr>
+                            <td>全马</td>
+                            <td>100</td>
+                            <td>￥100/￥150</td>
+                            <td>100</td>
+                            <td><a href="">删除</a></td>
+                        </tr>
+                    </table>
+                </div>
+<!--                 <div class="goods_table">
+                    <p>备注</p>
+                    <table>
+                        <tr>
+                            <td>备注</td>
+                            <td>操作</td>
+                        </tr>
+                        <tr>
+                            <td>全马</td>
+                            <td><a href="">删除</a>&nbsp;&nbsp;<a href="">修改</a></td>
+                        </tr>
+                    </table>
+                </div> -->
+            </div><!--/ con-->            
+        </div>    
+    </div><!--/ container-->
+</div>
+<script>
+function edit_beizhu(id){
+    var beizhu = $("#beizhu").val();
+    $.getJSON("./?s=MatchV2&a=edit_beizhu&id="+id+"&info="+beizhu,function(data){
+            if(data.error===0){
+                alert("修改成功！");
+            }else{
+                alert(data.msg);
+            }
+    });
+}
+</script>
+<{include file='Login/footer.html'}>

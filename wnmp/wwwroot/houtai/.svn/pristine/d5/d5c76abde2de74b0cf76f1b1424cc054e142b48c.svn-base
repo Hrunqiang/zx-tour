@@ -1,0 +1,75 @@
+<{include file='Comon/header.html'}>
+<link rel="stylesheet" type="text/css" href="/static/css/Enroll.css">
+<script src="/static/js/function.js"></script>
+<script src="/static/js/enroll.js"></script>
+<div id="register_box" class="general_page section">
+	<div class="section_center">
+		<div class="general_page_left enroll_info">
+			<div class="title">报名查询</div>
+			<br/>
+			<div class="line"></div>
+            <{if !$ordersInfo}>
+                <div style="width: 100%;text-align:center;font-size:20px;font-weight: bold;padding-top: 30px;">您还没有报名</div>
+            <{/if}>
+			<{foreach from=$ordersInfo name=n item=i key=k}>
+			<ul class="items">
+				<li class="t">
+					报名信息
+				</li>
+				<li class="c">
+					<ul class="item">
+					<{foreach from=$i.NameInfo name=nn item=ii}>
+                        <{if $ii.pidName}>
+                            <li>
+                            <font>姓名:</font> <{$ii.xingming}>
+                            <{if $i.isonline == 1 && $i.sign == -1}>
+                                <font style="color:red;font-weight: normal;font-size:12px;">[您已成功报名黑瞎子岛马拉松赛，因此该线上马拉松报名自动取消，请知晓。]</font>
+                            <{/if}>
+                            </li>
+                            <li><font>报名赛事:</font> <{$ii.pidName}></li>
+                            <li><font>报名项目:</font> <{$ii.goodscls}></li>
+                            <{if $i.isonline == 0}>
+                                <li><font>比赛号码:</font> <{$ii.number}></li>
+                             <{elseif $i.isonline == 1}>
+                             	<li><font>注:</font>官网将于1月1日当天开放上传成绩</li>
+						    <{/if}>
+                        <{/if}>
+					<{/foreach}>
+					<{if $i.isonline == 0}>
+						<li style="padding-left:0;"><div class="line"></div></li>
+					<{/if}>
+					<{foreach from=$i.JdInfo name=nn item=ii}>
+						<li><font>预订酒店:</font> <{$ii.goodscls}></li>
+						<li><font>入住日期:</font> <{$ii.stime}>&nbsp;&nbsp;&nbsp;&nbsp;<font>离店日期</font>:<{$ii.etime}></li>
+					<{/foreach}>
+					<{if $i.isonline == 0}>
+						<li><font>金额:</font> <span class="OrangeColor"><{$i.price}></span></li>
+					<{/if}>
+					</ul>
+				</li>
+				<{if $i.isonline == 0}>
+				<li class="btn_cls">
+				<{if $i.paystats==1 || $i.paystats==3}>
+				    <input class="btn payed" type="button" style="cursor: default;" value="已支付"/>
+                <{elseif $i.paystats==2}>
+                    <input class="btn payed" type="button" style="cursor: default;" value="支付金额有误"/>
+				<{else}>
+				<form name="alipayment" id="pay_form" action="/PayResult/gotoPay" method="post" target="_blank">
+				<input size="30" name="WIDout_trade_no" value="<{$k}>"  type="hidden"/>
+				 <input size="30" name="WIDsubject"  type="hidden" value="2016年黑瞎子岛新年日出马拉松" />
+				 <input size="30" name="WIDtotal_fee"  type="hidden" value="<{$i.price}>" id="pay_all_price" />
+				 <input size="30" name="WIDbody" type="hidden" value="黑瞎子岛马拉松在抚远人民广场2016年1月1日（星期五）上午5：58,请牢记!" />
+				 <input size="30" name="WIDshow_url" type="hidden" value="http://pay.zx-tour.com/enroll/"/>
+				<input  class="btn" type="submit"  value="未支付" />
+				</form>
+				<{/if}>
+			
+				</li>
+				<{/if}>
+			</ul>
+			<{/foreach}>
+		</div>
+		<{include file='Comon/right.html'}>
+	</div>
+</div>
+<{include file='Comon/footer.html'}>

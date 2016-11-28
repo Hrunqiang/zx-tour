@@ -1,0 +1,4 @@
+[ 2016-10-10T06:14:50+08:00 ] delJdOrders_error: 2016-10-10 06:14:50 127.0.0.1	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='071161010061449044704' )
+
+[ 2016-10-10T06:19:30+08:00 ] delJdOrders_error: 2016-10-10 06:19:30 127.0.0.1	rs:0	sql:DELETE FROM `zx_tb_orderinfo` WHERE ( orderid='071161010061928044676' )
+

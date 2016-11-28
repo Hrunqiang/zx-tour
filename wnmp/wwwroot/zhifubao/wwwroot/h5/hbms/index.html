@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta name="Author" content="" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>知行合逸有奖互动</title>
+<style>
+*{margin:0;padding:0;}
+html{width: 100%;font-size:62.5%;}
+body{width:100%;font:normal 1.4em/1.6em "Microsoft YaHei",Verdana,Tahoma;background:#237ACA url(./images/bg.jpg) no-repeat;background-size: 100%;}
+@media screen and (max-width:480px){
+	#wrap{width:100%;height: 100%;overflow:hidden;}
+}
+@media screen and (min-width:480px){
+	#wrap{width: 480px;height: 881px;overflow:hidden;}
+}
+img{width: 100%;}
+#wrap{margin:0 auto;}
+#content{width: 70%;margin:70px auto 70px;position: relative;}
+#content .shake{position: absolute;}
+#content .shake.up{top:100px;z-index: 2;left:15%;width: 70%;}
+#content .shake.down{top:57%;z-index: 1;left:20%;width: 60%;}
+#content .shake_w{width:46%;position: absolute;bottom:10px;left:27%;}
+#content .shake_w2{width: 70%;position: absolute;bottom:10px;left:15%;}
+#content .res{width: 70%;position: absolute;top:50%;left:50%;-webkit-transform: translate3d(-50%,-50%,0);-moz-transform: translate3d(-50%,-50%,0);-ms-transform: translate3d(-50%,-50%,0);-o-transform: translate3d(-50%,-50%,0);transform: translate3d(-50%,-50%,0);}
+.shake_w2 a{width: 100%;height: 30px;display: block;background: #FFF;text-align: center;text-decoration: none;}
+.shake_w2 a p{height: 30px;line-height: 30px;}
+.shaking .up{
+	-webkit-animation:shake 600ms forwards infinite 300ms;
+	   -moz-animation:shake 600ms forwards infinite 300ms;
+	    -ms-animation:shake 600ms forwards infinite 300ms;
+	     -o-animation:shake 600ms forwards infinite 300ms;
+	        animation:shake 600ms forwards infinite 300ms;
+}
+.shaking .down{
+	-webkit-animation:shake2 600ms forwards infinite 300ms;
+	   -moz-animation:shake2 600ms forwards infinite 300ms;
+	    -ms-animation:shake2 600ms forwards infinite 300ms;
+	     -o-animation:shake2 600ms forwards infinite 300ms;
+	        animation:shake2 600ms forwards infinite 300ms;
+}
+@-webkit-keyframes shake{
+    0%,to{-webkit-transform:translate3d(0,0,0);opacity:1}
+    50%{-webkit-transform:translate3d(25px,0,0);opacity:.5}
+    to{-webkit-transform:translate3d(0,0,0);opacity:1}
+}
+@-webkit-keyframes shake2{
+    0%,to{-webkit-transform:translate3d(0,0,0);opacity:1}
+    50%{-webkit-transform:translate3d(-25px,0,0);opacity:.5}
+    to{-webkit-transform:translate3d(0,0,0);opacity:1}
+}
+iframe{width: 100%;min-height: 100%;overflow-y: scroll;}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<div class="content" id="content">
+		<img src="./images/in_bg.png" alt="">
+		<div class="shake up"><img src="./images/shake_u.png" alt=""></div>
+		<div class="shake down"><img src="./images/shake_d.png" alt=""></div>
+		<div class="shake_w"><img src="./images/shake.png" alt=""></div>
+	</div>
+</div>
+<script type="text/javascript" src="/static/js/zepto.js"></script> 
+<script type="text/javascript">
+var time = new Date().getTime();
+	ZXMBMSSHAKESTATE = "ZXMBMSSHAKESTATE-aaaabbccc",
+	ZXMBMSSHAKESHOWSTATE = "ZXMBMSSHAKESHOWSTATE-aaaabbccc",
+	ZXMBMSSHAKESTATEMSG = "ZXMBMSSHAKESTATEMSG", 
+	save = function(k,v){;localStorage.setItem(k,v)},
+	select = function(k){return localStorage.getItem(k)};
+(function(){
+var SHAKE_THRESHOLD = 1500, 
+	max_speed=0,
+	last_update = 0,  
+	timeout,
+	shake = 1,
+	shake_times = 0,
+	contentDiv = $("#content"),
+	x = y = z = last_x = last_y = last_z = 0,
+	prefix = function(){
+	    var style=document.body.style,vendor=["t","webkitT","mozT","oT","msT"],i=vendor.length;
+	    while(i--){
+	        if(typeof style[vendor[i]+"ransition"]!="undefined")
+	            return vendor[i];
+	    }
+	    return vendor[0];
+	}(),
+	changeShareWord = function(c){
+		//sharetitle = "转发有奖，我抽到了日本黑部名水马拉松"+Prize.info[c];
+		sharetitle = "日本黑部名水马拉松纪念品值得拥有！";
+		//sharedes = "转发有奖，赢日本黑部名水马拉松"+Prize.info[c];
+		typeof(wxbind)=="function" && wxbind();
+	},
+	Prize = {
+		info: ["很遗憾没中奖！","记念TEE一件","记念毛巾一条","记念辩论夹一个"],
+		result: function(c,m) {
+			save(ZXMBMSSHAKESTATE,c);
+			save(ZXMBMSSHAKESTATEMSG,m);
+			var sh = "";
+			if(c>=1){
+				changeShareWord(c);
+				var sh = '<div class="shake_w2"><a href="'+m+'" id="ahref"><p>现在去领奖！</p></a></div>';
+			} else {
+				var sh = '<div class="shake_w2"><img src="./images/w.png" alt=""></div>';
+			}
+			
+			$('#content').html('<div class="content"><img src="./images/re_bg.png" alt=""><div class="res"><img src="./images/res'+c+'.png" alt=""></div>'+sh+'</div>');
+			$("#ahref").tap(function(){
+				var href = $(this).attr("href");
+				$('body').css({"background":""}).html('<iframe src="'+href+'" frameborder="0"></iframe>');
+				$("iframe").css({"height":$(window).height()+"px"});
+				return false;
+			});
+			
+		},
+	},
+	bind =function(){
+		alert("活动已结束喔！");
+		// if(window.DeviceMotionEvent){ 
+		// 	window.addEventListener('devicemotion',deviceMotionHandler, false); 
+		// }else{  
+		// 	alert('你的手机不支持！');  
+		// }
+	},
+	deviceMotionHandler=function(eventData){
+		var acceleration = eventData.accelerationIncludingGravity;  
+		var curTime = new Date().getTime();
+		if((curTime - last_update) > 100){ 
+			if(shake==0) return;
+		    var diffTime = curTime - last_update;  
+		    last_update = curTime;
+		    x = acceleration.x;     
+		    y = acceleration.y; 
+		    z = acceleration.z; 
+		    var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000; 
+			if(speed > SHAKE_THRESHOLD){ 
+				shake = 0;
+				contentDiv.addClass("shaking");
+				setTimeout(function(){
+					contentDiv.removeClass("shaking");
+					$.ajax({
+						url: "/Lottery/hbms",
+						dataType: "json",
+						timeout:3000,
+						success: function(d) {
+							if (d.error==0) {
+								Prize.result(d.code,d.msg);
+							} else {
+								alert("出错，请重新抽奖。");
+								shake = 1;
+							}
+						},
+						error:function(){
+							alert("出错，请重新抽奖。");
+							shake = 1;
+						}
+					});
+				},3000);
+			}
+		    last_x = x; last_y = y; last_z = z; 
+		}  
+	},
+	Auth = function(){
+		var code = select(ZXMBMSSHAKESTATE);
+		if(code==null||code==""){
+			bind();
+		}else{
+			Prize.result(code,select(ZXMBMSSHAKESTATEMSG));
+		}
+	}();
+})();
+</script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="./js/weixin.js?v=v1.7222225"></script>
+</body>
+</html>

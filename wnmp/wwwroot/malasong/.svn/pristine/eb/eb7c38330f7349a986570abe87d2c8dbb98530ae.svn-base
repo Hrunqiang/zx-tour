@@ -1,0 +1,178 @@
+<{include file='Comon/header.html'}>
+<link rel="stylesheet" type="text/css" href="/static/css/Enroll.css">
+<script src="/static/js/enroll.js"></script>
+<div id="register_box" class="general_page section">
+	<div class="section_center">
+		<div class="general_page_left enroll">
+			<div class="title">填写个人资料</div>
+			<div class="title_des">
+				*注：以下信息为报名必须条件,信息提交后不能修改,请确保信息务必真实。
+				<{if $error}><br/><br/><font style="color:red;font-size:16px;font-weight: bold;">****<{$error}>****</font><{/if}>
+			</div>
+			<form id="ziliao_table" action="/enroll/ziliao" method="post" >
+			<ul>
+				<li class="txt">姓名</li>
+				<li class="line"><input class="normal_input" type="text" name="xingming" value="请输入真实姓名"></li>
+				<li class="txt">国家 / 地区</li>
+				<li class="line">
+					<select class="normal_select" name="guojia">
+						<option value="">国家/地区</option>
+						<option value="中国">中国</option>
+						<option value="美国">美国</option>
+						<option value="日本">日本</option>
+						<option value="俄罗斯">俄罗斯</option>
+					</select>
+				</li>
+				<li class="txt">证件</li>
+				<li class="line slipe">
+					<select class="left_select fl" name="zjtype">
+						<option value="身份证">身份证</option>
+						<option value="护照">护照</option>
+					</select>
+					<input class="normal_input fl space" name="zjcode" type="text" value="请输入证件号码">
+					<div class="clearfix"></div>
+				</li>
+				<li class="txt">性别</li>
+				<li class="line">
+					<label><input type="radio" value="1" name="xingbie" checked="checked">&nbsp;男</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="2" name="xingbie">&nbsp;女</label>
+				</li>
+				<li class="txt">生日</li>
+				<li class="line"><input class="normal_input" name="shengri" type="text" value="请输入生日"><span>格式:1990-06-19</span></li>
+				<li class="txt">手机号</li>
+				<li class="line"><input class="normal_input" name="shouji" type="text" value="请输手机号"></li>
+				<li class="txt">电子邮箱</li>
+				<li class="line"><input class="normal_input" name="youxiang"  type="text" value="请输电子邮箱"></li>
+				<li class="txt">现居地址</li>
+				<li class="line">
+					<select class="left_select fl" name="shengfen">
+						<option value="">省份</option>
+						<option value="河北省">河北省</option>
+					</select>
+					<select class="left_select fl space" name="diqu">
+						<option>城市</option>
+						<option>石家庄市</option>
+					</select>
+					<input class="normal_input fl space" name="dizhi" type="text" value="请输入详细地址">
+					<div class="clearfix"></div>
+				</li>
+			</ul>
+			<div class="line"></div>
+			<div class="title_des">*注：以下信息为选填,请根据自身情况填写。</div>
+			<ul>
+				<li class="txt">学历</li>
+				<li class="line">
+					<select class="normal_select" name="xueli">
+						<option value="研究生">研究生</option>
+						<option value="本科">本科</option>
+						<option value="专科">专科</option>
+						<option value="其他">其他</option>
+					</select>
+				</li>
+				
+				<li class="txt">血型</li>
+				<li class="line">
+					<label><input type="radio" value="A型" name="xuexing" checked="checked">&nbsp;A型</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="B型" name="xuexing">&nbsp;B型</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="AB型" name="xuexing">&nbsp;AB型</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="O型" name="xuexing">&nbsp;O型</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="其他" name="xuexing">&nbsp;其他</label>&nbsp;&nbsp;&nbsp;&nbsp;
+				</li>
+				
+				<li class="txt">行业</li>
+				<li class="line">
+					<select class="normal_select" name="hangye">
+						<option value="IT">IT</option>
+						<option value="制造业">制造业</option>
+						<option value="金融">金融</option>
+						<option value="其他">其他</option>
+					</select>
+				</li>
+				
+				<li class="txt">收入</li>
+				<li class="line">
+					<label><input type="radio" value="1-5万" name="shouru" checked="checked">&nbsp;1-5万</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="6-10万" name="shouru">&nbsp;6-10万</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="11-20万" name="shouru">&nbsp;11-20万</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="20-50万" name="shouru">&nbsp;20-50万</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="50-100万" name="shouru">&nbsp;50-100万</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="100万以上" name="shouru">&nbsp;100万以上</label>&nbsp;&nbsp;&nbsp;&nbsp;
+				</li>
+				
+				<li class="txt">职业</li>
+				<li class="line">
+					<select class="normal_select" name="zhiye">
+						<option value="员工">员工</option>
+						<option value="经理">经理</option>
+					</select>
+				</li>
+				
+				<li class="txt">身体状况</li>
+				<li class="line">
+					<label><input type="radio" value="健康" name="shenti" checked="checked">&nbsp;健康</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="良好" name="shenti">&nbsp;良好</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="一般" name="shenti">&nbsp;一般</label>&nbsp;&nbsp;&nbsp;&nbsp;
+				</li>
+				
+				<li class="txt">参与跑步年限</li>
+				<li class="line">
+					<label><input type="radio" value="1年及以内" name="nianxian" checked="checked">&nbsp;1年及以内</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="2-3年" name="nianxian">&nbsp;2-3年</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="4-6年" name="nianxian">&nbsp;4-6年</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="7-10年" name="nianxian">&nbsp;7-10年</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" value="10年以上" name="nianxian">&nbsp;10年以上</label>&nbsp;&nbsp;&nbsp;&nbsp;
+				</li>
+				
+				<li class="txt">首次完成全马日期</li>
+				<li class="line"><input class="normal_input" name="qmfirstdate" type="text" value="请输入日期"><span>格式:1990-06-19</span></li>
+				
+				<li class="txt">完成全马最好成绩</li>
+				<li class="line">
+				<input class="left_input fl" name="qmbest_h" type="text" onkeyup="value=value.replace(/[^\d]/g,'')" value="请输入小时"><div class="des fl">小时</div>
+				<input class="left_input fl" name="qmbest_i" type="text" onkeyup="value=value.replace(/[^\d]/g,'')" value="请输入分钟"><div class="des fl">分</div>
+				<input class="left_input fl" name="qmbest_s" type="text" onkeyup="value=value.replace(/[^\d]/g,'')" value="请输入秒"><div class="des fl">秒</div>
+				<div class="clearfix"></div>
+				</li>
+				
+				<li class="txt">首次完成半马日期</li>
+				<li class="line"><input class="normal_input" name="bmfirstdate" type="text" value="请输入日期"><span>格式:1990-06-19</span></li>
+				
+				<li class="txt">完成半马最好成绩</li>
+				<li class="line">
+				<input class="left_input fl" type="text" name="bmbest_h" onkeyup="value=value.replace(/[^\d]/g,'')"  value="请输入小时"><div class="des fl">小时</div>
+				<input class="left_input fl" type="text" name="bmbest_i" onkeyup="value=value.replace(/[^\d]/g,'')" value="请输入分钟"><div class="des fl">分</div>
+				<input class="left_input fl" type="text" name="bmbest_s" onkeyup="value=value.replace(/[^\d]/g,'')" value="请输入秒"><div class="des fl">秒</div>
+				<div class="clearfix"></div>
+				</li>
+				
+				<li class="txt">使用的装备品牌</li>
+				<li class="line">
+					<div class="label fl"><label><input type="checkbox" value="NIKE" name="zbpinpai[]" >&nbsp;NIKE</label></div>
+					<div class="label fl"><label><input type="checkbox" value="Adidas" name="zbpinpai[]" >&nbsp;Adidas</label></div>
+					<div class="label fl"><label><input type="checkbox" value="New Banlance" name="zbpinpai[]" >&nbsp;New Banlance</label></div>
+					<div class="label fl"><label><input type="checkbox" value="PUMA" name="zbpinpai[]" >&nbsp;PUMA</label></div>
+					<div class="label fl"><label><input type="checkbox" value="LI-NING" name="zbpinpai[]" >&nbsp;LI-NING</label></div>
+					<div class="label fl"><label><input type="checkbox" value="Saucony" name="zbpinpai[]" >&nbsp;Saucony</label></div>
+					<div class="label fl"><label><input type="checkbox" value="Brooks" name="zbpinpai[]" >&nbsp;Brooks</label></div>
+					<div class="label fl"><label><input type="checkbox" value="其他" name="zbpinpai[]" >&nbsp;其他</label></div>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li class="txt">最爱运动饮料品牌</li>
+				<li class="line">
+					<div class="label fl"><label><input type="checkbox" value="佳得乐" name="ylpinpai[]" >&nbsp;佳得乐/Gatorade</label></div>
+					<div class="label fl"><label><input type="checkbox" value="健力宝" name="ylpinpai[]" >&nbsp;健力宝/Jianlibao</label></div>
+					<div class="label fl"><label><input type="checkbox" value="脉动" name="ylpinpai[]" >&nbsp;脉动/Pulsation</label></div>
+					<div class="label fl"><label><input type="checkbox" value="红牛" name="ylpinpai[]" >&nbsp;红牛/Red Bull</label></div>
+					<div class="label fl"><label><input type="checkbox" value="日加满" name="ylpinpai[]" >&nbsp;日加满/Ichi More</label></div>
+					<div class="label fl"><label><input type="checkbox" value="其他" name="ylpinpai[]" >&nbsp;其他</label></div>
+					<div class="clearfix"></div>
+				</li>
+			</ul>
+			<div class="submit"><input  type="submit" value="提交资料" /></div>
+			</form>
+		</div>
+		<{include file='Comon/right.html'}>
+	</div>
+</div>
+<{include file='Comon/footer.html'}>

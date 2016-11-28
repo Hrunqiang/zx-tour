@@ -1,0 +1,12 @@
+[ 2016-10-31T09:53:25+08:00 ] nuomi_userinfo_log: 2016-10-31 09:53:25 192.168.1.115	ad79dada5537f0791ae7903e2172817a\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"18311410712","siteId":2017795998},"timestamp":1477878799,"cached":0,"serverlogid":"3199943293"}
+
+
+[ 2016-10-31T15:43:58+08:00 ] nuomi_userinfo_log: 2016-10-31 15:43:58 192.168.1.109	303d1739fc70de8c588a02d3f562dc5f\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"13522354197","siteId":4164828528},"timestamp":1477899833,"cached":0,"serverlogid":"2633141448"}
+
+
+[ 2016-10-31T15:49:03+08:00 ] nuomi_userinfo_log: 2016-10-31 15:49:03 192.168.1.114	25047cdd5a4ff0cc109e25beb3280ac4\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"13522354197","siteId":4164828528},"timestamp":1477900138,"cached":0,"serverlogid":"2938289215"}
+
+
+[ 2016-10-31T15:51:46+08:00 ] nuomi_userinfo_log: 2016-10-31 15:51:46 192.168.1.131	a4d9ea14b6dd36175729138be39ea01a\t{"errno":0,"errmsg":"\u6210\u529f","msg":"\u6210\u529f","data":{"mobile":"13522354197","siteId":4164828528},"timestamp":1477900301,"cached":0,"serverlogid":"3101355256"}
+
+

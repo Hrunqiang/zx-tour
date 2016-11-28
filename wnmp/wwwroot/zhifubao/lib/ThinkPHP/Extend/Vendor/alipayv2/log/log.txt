@@ -1,0 +1,88 @@
+2016-06-17 10:16:55  POST: array (
+)
+2016-06-17 10:16:55  GET: array (
+)
+2016-06-17 10:17:57  POST: array (
+)
+2016-06-17 10:17:57  GET: array (
+)
+2016-06-17 10:23:35  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40001',
+     'msg' => 'Missing Required Arguments',
+     'sub_code' => 'isv.missing-signature',
+     'sub_msg' => '缺少签名参数',
+  )),
+   'sign' => 'voYcF572mliFXgM/MFLEN1+2xVEuAFhzschcBoUEnfOWHqxcFY8DhecCKwMhHja/LzB2cUE+x09bfH4JYnMNs0A/fGAe401Llc+EBhD+Fh8kFKN1LSql/ZCGCVs0gmm/gjkBSxiSwtSC+wjmpqolU+O9UvOuFfTlaYim7EqNYmo=',
+))
+2016-06-17 10:24:28  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40001',
+     'msg' => 'Missing Required Arguments',
+     'sub_code' => 'isv.missing-signature',
+     'sub_msg' => '缺少签名参数',
+  )),
+   'sign' => 'voYcF572mliFXgM/MFLEN1+2xVEuAFhzschcBoUEnfOWHqxcFY8DhecCKwMhHja/LzB2cUE+x09bfH4JYnMNs0A/fGAe401Llc+EBhD+Fh8kFKN1LSql/ZCGCVs0gmm/gjkBSxiSwtSC+wjmpqolU+O9UvOuFfTlaYim7EqNYmo=',
+))
+2016-06-17 10:24:49  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40001',
+     'msg' => 'Missing Required Arguments',
+     'sub_code' => 'isv.missing-signature',
+     'sub_msg' => '缺少签名参数',
+  )),
+   'sign' => 'voYcF572mliFXgM/MFLEN1+2xVEuAFhzschcBoUEnfOWHqxcFY8DhecCKwMhHja/LzB2cUE+x09bfH4JYnMNs0A/fGAe401Llc+EBhD+Fh8kFKN1LSql/ZCGCVs0gmm/gjkBSxiSwtSC+wjmpqolU+O9UvOuFfTlaYim7EqNYmo=',
+))
+2016-06-17 10:25:46  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40001',
+     'msg' => 'Missing Required Arguments',
+     'sub_code' => 'isv.missing-signature',
+     'sub_msg' => '缺少签名参数',
+  )),
+   'sign' => 'voYcF572mliFXgM/MFLEN1+2xVEuAFhzschcBoUEnfOWHqxcFY8DhecCKwMhHja/LzB2cUE+x09bfH4JYnMNs0A/fGAe401Llc+EBhD+Fh8kFKN1LSql/ZCGCVs0gmm/gjkBSxiSwtSC+wjmpqolU+O9UvOuFfTlaYim7EqNYmo=',
+))
+2016-06-17 10:38:40  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40001',
+     'msg' => 'Missing Required Arguments',
+     'sub_code' => 'isv.missing-signature',
+     'sub_msg' => '缺少签名参数',
+  )),
+   'sign' => 'voYcF572mliFXgM/MFLEN1+2xVEuAFhzschcBoUEnfOWHqxcFY8DhecCKwMhHja/LzB2cUE+x09bfH4JYnMNs0A/fGAe401Llc+EBhD+Fh8kFKN1LSql/ZCGCVs0gmm/gjkBSxiSwtSC+wjmpqolU+O9UvOuFfTlaYim7EqNYmo=',
+))
+2016-06-17 10:41:34  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40001',
+     'msg' => 'Missing Required Arguments',
+     'sub_code' => 'isv.missing-signature',
+     'sub_msg' => '缺少签名参数',
+  )),
+   'sign' => 'voYcF572mliFXgM/MFLEN1+2xVEuAFhzschcBoUEnfOWHqxcFY8DhecCKwMhHja/LzB2cUE+x09bfH4JYnMNs0A/fGAe401Llc+EBhD+Fh8kFKN1LSql/ZCGCVs0gmm/gjkBSxiSwtSC+wjmpqolU+O9UvOuFfTlaYim7EqNYmo=',
+))
+2016-06-17 10:44:23  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40001',
+     'msg' => 'Missing Required Arguments',
+     'sub_code' => 'isv.missing-signature',
+     'sub_msg' => '缺少签名参数',
+  )),
+   'sign' => 'voYcF572mliFXgM/MFLEN1+2xVEuAFhzschcBoUEnfOWHqxcFY8DhecCKwMhHja/LzB2cUE+x09bfH4JYnMNs0A/fGAe401Llc+EBhD+Fh8kFKN1LSql/ZCGCVs0gmm/gjkBSxiSwtSC+wjmpqolU+O9UvOuFfTlaYim7EqNYmo=',
+))
+2016-06-17 11:43:00  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40003',
+     'msg' => 'Insufficient Conditions',
+     'sub_code' => 'isv.missing-signature-config',
+     'sub_msg' => '验签出错, 未配置对应签名算法的公钥或者证书',
+  )),
+   'sign' => 'iYLCtEUVTN8fnVnFGkK/0a3CafFqqOsFhHchI+ahhTml3soQPvz/O8GsKN5g4nYkgpPZk2KaFe5YtK137r0+cIPD7zF1M6qpQZZJp5/ySK5bLJCAufECJvhWa85r/8wXXYDoFTQGpImnjAk5JdqPcp3+5uzOaEG+cNt9pLx6ASc=',
+))

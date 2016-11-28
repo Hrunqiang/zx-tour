@@ -1,0 +1,96 @@
+<{include file='Login/header.html'}>
+<div id="add_game">
+	<form action="./?s=IosGame&a=addgame"  method="post" >
+	<table border="0">
+		<tr>
+			<td align="right">游戏名称：</td>
+			<td align="left"><input type="text" class="text" name="title" id="title"></td>
+		</tr>
+		<tr>
+			<td align="right">游戏URL：</td>
+			<td align="left"><input type="text" class="text" name="game_url" id="game_url"></td>
+		</tr>
+		<tr>
+			<td align="right">图标URL：</td>
+			<td align="left"><input type="text" class="text" name="img_url" id="imgurl">　<input  type="button" value="浏览" upload="upload_imgurl" class="but"></td>
+		</tr>
+		<tr>
+			<td align="right">排序ID：</td>
+			<td align="left"><input type="text" class="text" name="orderid" id="orderid"> </td>
+		</tr>
+		<tr>
+			<td align="right">游戏简介：</td>
+			<td align="left"><textarea name="description" id="description" cols="33" rows="33" class="text"></textarea></td>
+		</tr>
+		<tr>
+			<td align="right">游戏标识：</td>
+			<td align="left">
+			<select name="sign" id="">
+				<option value="0">普通</option>
+				<option value="1">最新</option>
+				<option value="2">精选</option>
+				<option value="3">屌丝男</option>
+				<option value="4">白富美</option>	
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">is_at321：</td>
+			<td align="left">
+			<select name="is_at321" id="">
+				<option value="0">否</option>
+				<option value="1">是</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">游戏类别：</td>
+			<td align="left">
+			<select name="game_type" id="">
+				<option value="1">游戏</option>
+				<option value="0">APP Store</option>		
+			</select>
+			</td>
+		</tr>
+		</table>
+			<input type="submit" class="but" id="sub" value="添加">
+	
+			<input type="reset" class="but"  value="重置"></td>
+	
+	
+	</form>
+</div>
+
+	<div class="error" id="error_info" style="display:none;"></div>
+	<{if $data.status==error}><div class="error">添加失败！<{$data.message}></div><{elseif $data.status==success}><div class="success"> 添加成功！</div><{/if}>
+<style>
+	#add_game{text-align: center;width: 100%; padding-top:20px;margin-bottom: 10px;font-size: 16px;color: #999999;}
+	#add_game table{margin:0 auto;}
+	.text,select{width: 300px;margin: 5px 0px;height: 30px;padding-left:5px; font-size: 16px;color: #999999;}
+	option{height: 30px;}
+	#description{min-width: 300px;min-height: 60px;max-width: 300px;}
+	.but{width: 100px;height: 30px;cursor: pointer;color: #837371;}
+	.error_input{border:1px solid red;}
+</style>
+
+<{include file='Login/footer.html'}>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#sub').click(function(){
+			key = Array("title","game_url","imgurl");
+			for(i=0;i<key.length;i++){
+				var val = $.trim($("#"+key[i]).val());
+				if(val==""){
+					$("#"+key[i]).addClass("error_input");
+					$("#"+key[i]).attr("placeholder","请填写！")
+					return false;
+				};
+			}
+			
+		});
+		$(".text").focus(function(){
+			$(this).removeClass("error_input");
+		});
+	})
+
+</script>

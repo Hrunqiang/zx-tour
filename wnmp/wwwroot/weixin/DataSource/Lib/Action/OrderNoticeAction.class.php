@@ -1,0 +1,285 @@
+<?php
+/**
+ * 提醒Action
+ * @author hhy
+ * @createTime 2016-11-3 下午12:11:46
+ */
+class OrderNoticeAction extends Action {
+	
+	public function notice($data){
+		if(empty($data)) return true;
+		$orderid = $data['orderid'];
+		$status = $data['status'];
+		$mail = $data['mail'] ; 
+		$phone = $data['phone'] ;
+		if($status==1){
+			$title = "支付完成";
+		}elseif($status==10){
+			$title = "报名成功";
+		}elseif($status==5){
+			$title = "名额锁定";
+		}
+		$enrollM = new UserOrdersModel();
+		$info = $enrollM->getorderinfo_notice($orderid);
+		$mail = $mail?$mail:$info[0]['e_mail'];
+		$orderinfoM = new OrdersInfoModel;
+		$list = $orderinfoM->getOrderInfolist($orderid);
+		$content = OrderNoticeAction::getHTML($orderid,$status,$info[0],$list);	
+		$mailM = new MailModel;
+		$mailres = $mailM->send($mail,"[知行合逸]-".$title,$content);
+		$phone = $phone?$phone:$info[0]['phone'];
+		if($status==1){
+			$M = new SendSmsModel();		
+			if($info[0]['m_ptype']=="运动诊疗"){
+				$smsContent = "【知行合逸】您报名的".$info[0]['m_name']."（订单号".$info[0]['orderid']."）已支付成功，如果要预约跑步运动风险评估，请致电：海康斯运动康复中心刘女士，电话：18500357971 ，订单有效期为支付成功后三个月内有效。其它订单问题也可致电4000842195。祝您越跑越健康！";
+			}else{
+				$smsContent = "【知行合逸】您报名的".$info[0]['m_name']."（订单号".$info[0]['orderid']."）已支付成功，依赛会方要求，还请您尽快填写完成详细报名资料，以确保顺利参赛，完善资料请点击：http://weixin.zx-tour.com/User/perfect?orderid=".$info[0]['orderid']."。（如果已经填写过请忽略）";
+			}
+			if($info[0]['m_notice_mail']){
+				$this->sendMatchNotice($info[0],$list);	
+			}
+			$smsres = $M->send($smsContent,$phone);
+			echo date("Y-m-d H:i:s")."\t sms(".$info[0]['orderid'].") \trs:".json_encode($smsres)."\r\n";
+		}elseif($status==10){
+			$M = new SendSmsModel();
+			$smsContent = "【知行合逸】您报名的赛事".$info[0]['m_name']." （订单号".$info[0]['orderid']."）已经报名成功了，请添加客服微信号zxhylv（国际赛事）或zxhy02（国内赛事）方便沟通，我们将建微信群通报最新消息。如有其他问题也可致电4000842195.祝您跑出好成绩。";		
+			$smsres = $M->send($smsContent,$phone);
+			echo date("Y-m-d H:i:s")."\t sms(".$info[0]['orderid'].") \trs:".json_encode($smsres)."\r\n";
+		}else{
+			$smsres = false;
+		}
+		
+		return $mailres||!$smsres['error'];
+	}
+	
+	public function queue(){
+		$d['orderid'] = htmlspecialchars(addslashes(trim($_REQUEST['orderid'])));
+		if(empty($d['orderid'])){
+			die("订单号不存在");
+		}
+		$d['status'] = htmlspecialchars(addslashes(trim($_REQUEST['status'])));
+		$phone = htmlspecialchars(addslashes(trim($_REQUEST['phone'])));
+		$mail = htmlspecialchars(addslashes(trim($_REQUEST['mail'])));
+		if($phone){
+			$d['phone'] = $phone;
+		}
+		if($mail){
+			$d['mail'] = $mail;
+		}
+		$redis = new RedisModel();
+		$arr = array(
+				"a"=>"OrderNotice",
+				"m"=>"notice",
+				"d"=>$d
+		);
+		$Res = $redis->lpush("order_notice_list_v2",json_encode($arr));
+		var_dump($Res);
+	}
+	
+	public function getHTML($orderid,$status,$info,$list){
+		$name = $info['name'];
+		$shouji = $info['phone'];
+		$price = $info['payprice'];
+		$date = $info['ctime'];
+		$match = $info['m_name'];
+		$userstate = $info['state'];
+		$meals = $course = $attach = array();
+		foreach($list as $k =>$v){
+			switch($v['type']){
+				case "赛程":
+					array_push($course,$v['g_name']);
+					break;
+				case "套餐":
+					array_push($meals,$v['g_name']);
+					break;
+				case "单房差":
+					array_push($meals,"单房差");
+					break;
+				case "附加优质服务":
+					array_push($attach,$v['g_name']);
+					break;
+			};;
+		}
+		$meals = implode(" + ",$meals);
+		$course = implode(" + ",$course);
+		$attach = implode(" + ",$attach);
+		if($status==1){
+			$t= "支付成功";
+			$hunt = "您对“".$match."”赛事的报名费用已经支付成功！";
+			$status = "支付完成";
+			$href = "http://weixin.zx-tour.com/User/perfect?orderid=".$orderid;
+			$btnhunt = "<p>跑步赛事报名需要提交个人信息，如果您还未完善个人资料，请继续完善资料以完成报名流程（如已完善请忽略）。</p>";
+			$btn = '<a href="'.$href.'" style="background:#FF2245;text-align:center;color:#FFF;border-radius:5px;;margin:10px auto;width:340px;padding:12px 5px;display:block;text-decoration:none;">完善个人资料</a>';
+		}elseif($status==10){
+			$t= "报名成功";
+			if($info['m_ptype']=="国内"){
+				$hunt = "您已成功报名“".$match."”赛事。我们将在开赛前一周发送“知行赛前指南”至您的邮箱和您的用户后台，请届时查收。请添加客服微信：zxhy02，注明“姓名+参赛名称”，方便赛事交流。";
+			}else{
+				$hunt = "您已成功报名“".$match."”赛事。我们将在开赛前一周发送“知行赛前指南”至您的邮箱和您的用户后台，请届时查收。 请添加客服微信：zxhylv，注明“姓名+参赛名称”，我们将在比赛前1个月，建立赛事微信群，比赛前10天向您的邮箱发送队员手册。便于跑者互相交流，通报最新消息。";
+			}
+			$status = "支付完成";
+			$btnhunt = $btn = "";
+		}else{
+			$t= "名额锁定";
+			if($info['m_ptype']=="国内"){
+				$time = '30';
+			}else{
+				$time = '90';
+			}
+			$hunt = '我们已收到您的对“'.$match.'”赛事的报名申请，报名成功以付款并完善资料为准。在您付款前，我们将锁定该名额'.$time.'分钟，'.$time.'分钟内未支付的，名额将不予保留。';			
+			$status = "未支付";
+			$href = "http://weixin.zx-tour.com/PayResult/payorder?orderid=".$orderid;
+			$btnhunt = "";
+			$btn = '<a href="'.$href.'" style="background:#FF2245;text-align:center;color:#FFF;border-radius:5px;;margin:10px auto;width:340px;padding:12px 5px;display:block;text-decoration:none;">立即支付</a>';
+		}
+		$html = '<div style="width: 500px;margin:0 auto;background:#FFF;font-family:"微软雅黑";font-size: 16px;">
+		<div style="background:url(http://download.zx-tour.com/public/58198881d275a.png);background-size:cover;height: 234px;position:relative;"><p style="width:500px;height:40px;line-height:40px;color:#00b1ab;font-size:35px;font-weight:bold;position: absolute;bottom:10px;text-align:center;">'.$t.'</p></div>
+		<div style="padding:5px 20px;">
+		<p>'.$name.'，您好!</p> 
+		<p style="text-indent:2em;">'.$hunt.'</p>
+			<div style="">
+				<div style="background:url(http://download.zx-tour.com/public/581700113d54d.png) no-repeat;background-size:cover;width:393px;height:445px;margin:0 auto;padding:10px 30px 20px;">
+						<p style="text-align:center;font-weight:bold;font-size:25px;">收银条</p>
+						<p style="padding:10px 0px;border-bottom:1px solid #CECECE;margin:0 auto;width:350px;">订单编号：'.$orderid.'</p>
+						<p style="padding:10px 0px;border-bottom:1px solid #CECECE;margin:0 auto;width:350px;">报名赛事：'.$match.'</p>
+						<p style="padding:10px 0px;border-bottom:1px solid #CECECE;margin:0 auto;width:350px;">套餐选择：'.$meals.'</p>
+						<p style="padding:10px 0px;border-bottom:1px solid #CECECE;margin:0 auto;width:350px;">赛事组别：'.$course.'</p>
+						<p style="padding:10px 0px;border-bottom:1px solid #CECECE;margin:0 auto;width:350px;">配套服务：'.($attach?$attach:'无').'</p>
+						<p style="padding:10px 0px;border-bottom:1px solid #CECECE;margin:0 auto;width:350px;">订单日期：'.$date.'</p>
+						<p style="padding:10px 0px;border-bottom:1px solid #CECECE;margin:0 auto;width:350px;">订单状态：<span style="color:#FF2245;font-weight:bold;">'.$status.'</span></p>
+						<p style="background:rgba(219,219,219,.5);text-align:right;margin:10px auto;width:340px;padding:10px 5px;">支付金额：<span style="color:#FF2245;font-weight:bold;font-size:20px;">￥'.$price.'</span></p>
+				</div>
+				'.$btnhunt.'
+				'.$btn.'
+				<div style="padding:20px 0">
+					<p style="font-weight: bold;">产品咨询</p>
+					<p style="font-weight: bold;">电话：<span>4000-842-195</span></p>
+					<p style="font-weight: bold;">邮箱：<span>service@zx-tour.com</span></p> 
+					<p style="font-weight: bold;">微信号(海外赛事)：<span>zxhylv</span></p>
+					<p style="font-weight: bold;">微信号(国内赛事)：<span>zxhy02</span></p>
+					<ul style="overflow: hidden;width:100%;padding:0;">
+						<li style="float:left;width: 50%;list-style: none;">
+							<img src="http://download.zx-tour.com/public/56a9e8a4aa503.png" style="width: 90%;margin-left:5%;display: inline-block" alt="">
+						</li>
+						<li style="float:left;width: 50%;list-style: none;">
+							<div>
+							<p>关注知行合逸旅行</p>
+							<p>第一时间查看国外马拉松赛事信息</p>
+							<p>关注客服微信，咨询、投诉都可以 来骚扰我哟~ </p>
+							</div>
+						</li>
+					</ul>
+					<p style="text-align: center;color:#FD2F44;font-weight:bold;">此邮件由系统自动发出，请勿回复。</p>
+				</div>
+			</div>
+		</div>	
+	</div>';
+			return $html;
+	}
+	
+	/**
+	 * 未完善资料订单提醒
+	 * @param unknown_type $data
+	 * @return boolean|Ambigous <boolean, multitype:number string multitype: >
+	 */
+	public function perfect($data){
+		if(empty($data)) return true;
+		$orderid = $data['orderid'];
+		$status = $data['status'];
+		$matchname = $data['matchname'];
+		$phone = $data['phone'];
+		$M = new SendSmsModel();
+		if($status==3){
+			$smsContent = "【知行合逸】您报名的赛事“".$matchname."”（订单号".$orderid."）还未完善报名资料，请尽快完善（可在公众号进入“我的资料”完善或点击以下链接完善资料http://weixin.zx-tour.com/User），以完成报名确保顺利参赛。如有其他问题也可致电4000842195。";
+			$smsres = $M->send($smsContent,$phone);
+		}elseif($status==4){
+			$smsContent = "【知行合逸】我们检测到您报名的赛事“".$matchname."”（订单号".$orderid."）还未填写护照号码，请尽快填写（可在公众号进入“我的资料”填写或点击以下链接完善资料http://weixin.zx-tour.com/User），以完成报名确保顺利参赛。如有其他问题也可致电4000842195。";
+			$smsres = $M->send($smsContent,$phone);
+		}else{
+			$smsres = true;
+		}
+		if($smsres['error']==0){
+			return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * 开赛提醒
+	 * @param unknown_type $data
+	 * @return boolean
+	 */
+	public function startNotice($data){
+		if(empty($data)) return true;
+		$status = $data['status'];
+		$matchname = $data['matchname'];
+		$phone = $data['phone'];
+		$M = new SendSmsModel();
+		if($status==1){
+			//国内
+			$smsContent = "【知行合逸】您报名的赛事“".$matchname."”即将在2周后举行，在此特提醒您安排行程，平安出发。您可以登陆知行合逸官网查看我的订单-知行赛前指南或者查看您报名时预留的电子邮箱，“赛事指南”已发至该邮箱。";
+			$smsres = $M->send($smsContent,$phone);
+		}else{
+			//海外
+			$smsContent = "【知行合逸】您报名的赛事“".$matchname."”即将在一周后举行，在此特提醒您安排行程，平安出发。";
+			$smsres = $M->send($smsContent,$phone);
+		}
+		if($smsres['error']==0){
+			return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * 赛事报名预警
+	 * @param unknown_type $info
+	 * @param unknown_type $list
+	 */
+	public function sendMatchNotice($info,$list){
+		$title = $info['m_name']."报名通知邮件";
+		$orders = "";
+		foreach ($list as $k =>$v){
+			$orders.= $v['g_name']."+";
+		}
+		$orders = rtrim($orders,"+");
+		$content = '
+				<div>
+					<p>'.$title.'</p>
+					<table border="1" cellspacing="0">
+						<tr>
+							<td>订单号</td>
+							<td>报名时间</td>
+							<td>最后修改时间：</td>
+							<td>来源</td>
+							<td>姓名</td>
+							<td>赛事名称</td>
+							<td>赛事分类</td>
+							<td>产品</td>
+							<td>价格</td>
+							<td>优惠券</td>
+							<td>订单状态</td>
+						</tr>
+						<tr>
+							<td>'.$info['orderid'].'</td>
+							<td>'.$info['ctime'].'</td>
+							<td>'.$info['utime'].'</td>
+							<td>'.$info['platform'].'</td>
+							<td>'.$info['name'].'</td>
+							<td>'.$info['m_name'].'</td>
+							<td>'.$info['m_ptype'].'</td>
+							<td>'.$orders.'</td>
+							<td>'.$info['payprice'].'</td>
+							<td>'.$info['discount'].'</td>
+							<td>支付完成</td>
+						</tr>
+					</table>
+				</div>';
+		$mails = str_replace("，",",",$info['m_notice_mail']);
+		$mails = explode(",", $mails);
+		$mailM = new MailModel;
+		foreach ($mails as $key=>$mail){
+			$smsres = $mailM->send($mail,"[知行合逸]-".$title,$content);
+			echo date("Y-m-d H:i:s")."\t sendMatchNotice(".$info['orderid'].") \trs:".json_encode($smsres)."\r\n";
+		}
+	}
+}

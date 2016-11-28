@@ -1,0 +1,250 @@
+<{include file='Login/header.html'}>
+<{if $ac=='list'}>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">
+                  <div class="table">
+                     <div class="th" style="text-align:center;">
+                        <h1>微信自动回复平台 &nbsp;<a href="/?s=weixin&a=add" style="color:red;">添加</a>&nbsp;&nbsp;(注意:如果第一个有图片,以下都要有图片,如果没有图片,就只能是一个,不能是多个)</h1>
+                    </div>
+                                   
+                  </div>
+
+            	<form action="?s=weixin&a=delete" method="post">
+                    <input type="hidden" name="cid" value="<{$cid}>"/>
+                  <div class="table">
+                    <table class="admin-tb" id="js_data_source">
+                    <tr>
+                        <th width="170">名称</th>            	
+                        <th width="120">key</th>
+                        <th width="80">操作</th>                      
+                    </tr>
+                    <{foreach from=$list item=parent}>
+                    <tr>
+                        <{if $parent.d.pid!=0}>
+                        <td><a href="?c=list&a=edit&id=<{$parent.d.id}>">&nbsp;&nbsp;&nbsp;&nbsp;¦---<{$parent.d.title}></a></td> 
+                        <{else}>
+                        <td><a href="?c=list&a=edit&id=<{$parent.d.id}>"><{$parent.d.title}></a></td> 
+                        <{/if}>
+                        <td><{$parent.d.key}></td>
+                        <td> <{if $parent.d.pid==0}><a href="?s=weixin&a=edit&id=<{$parent.d.id}>" >[修改]</a>&nbsp;<{/if}><a href="?s=weixin&a=del&id=<{$parent.d.id}>&pid=<{$parent.d.pid}>"  class="del_ctl">[删除]</a></td>
+                    </tr>
+                    <{if $parent.c}>
+                    	<{foreach from=$parent.c item=child}>
+                    	<tr>
+                        <td><a href="?c=list&a=edit&id=<{$child.id}>">&nbsp;&nbsp;&nbsp;&nbsp;¦---<{$child.title}></a></td> 
+                        <td><{$child.key}></td>
+                        <td> <a href="?s=weixin&a=del&id=<{$child.id}>&pid=<{$child.pid}>"  class="del_ctl">[删除]</a></td>
+                   	 </tr>
+                    	<{/foreach}>
+                    <{/if}>
+                   <{/foreach}>
+                    </table>
+
+                    <div class="th">
+                        <{if $page}>
+                        <div class="pages">
+							<{$page}>
+                        </div>                
+                        <{/if}>
+                        
+                    	<div class="form">
+                        &nbsp;
+                        </div>
+                    </div>
+                </div>
+				</form>
+            </div><!--/ con-->
+        </div>    
+    </div><!--/ container-->
+    </div><!--/ wrap-->
+  <{elseif $ac=='edit'}>
+  <style>
+<!--
+.table-font tbody{
+	border:1px solid #9c9c9c;
+	padding:15px;
+}
+-->
+</style>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <form action="?s=weixin&a=<{$ac}>" method="post" >
+
+                <input type="hidden" name="id" value="<{$list.id}>"/>
+                <div class="box-header">
+                    <h4>修改</h4>
+                </div>
+                <div class="box-content">
+                    <table class="table-font" id="main_table">
+<thead>
+                        <tr>
+                            <th class="w120">名称：</th>
+                            <td><input type="text"  name="title"  value="<{$list[0].title}>" class="textinput w270" /></td>
+                        </tr>
+                        <tr>
+                            <th class="w120">key：</th>
+                            <td><input type="text"  name="key"  value="<{$list[0].key}>"  class="textinput w270" /></td>
+                        </tr>
+</thead>
+<{foreach from=$list item=i name=n key=k}>
+<tbody <{if $smarty.foreach.n.first}>id="stad"<{/if}>>
+<input type="hidden" name='id[]' value="<{$i.id}>"/>
+<input type="hidden" name='method[]' value="update"/>
+						<tr>
+                            <th>连接地址：</th>
+                            <td><input type="text" name="to_url[]" value="<{$i.to_url}>" class="textinput w270" /></td>
+                        </tr>
+                        <{if !$smarty.foreach.n.first}>
+						<tr>
+                            <th>排序：</th>
+                            <td><input type="text" name="orderid[]" value="<{$i.orderid}>" class="textinput w270" /></td>
+                        </tr>
+						<{/if}>
+                         <tr>
+                            <th class="w120">详细介绍：</th>
+                            <td> <textarea class="w270" name="content[]" ><{$i.content}></textarea></td>
+                        </tr>  
+                         
+                        <tr>
+                            <th>图片地址：</th>
+                            <td><input type="text" name="pic_url[]" value="<{$i.pic_url}>" id="pic_url" class="textinput" style="width:380px;"/> </td>
+                        </tr>
+                        
+                        <tr>
+                            <th>页面内容：</th>
+                            <td><textarea class="HTML_EDIT" name="html[]" style="width:700px;height:300px;"><{$i.html|escape:"stripslashes"}></textarea>
+                             <font color=red>*如果有连接地址,则此内容无效</font>
+							</td>
+                        </tr>
+</tbody>
+<{/foreach}>
+<tfoot>
+</tfoot>
+                    </table>
+                </div>
+                <div class="box-footer">
+                    <div class="box-footer-inner">
+                    	<input type="submit" value="提交" />或 <a href="?c=weixin_auto">取消</a>&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="add_wx" value="  加 +  "/> 
+                    </div>
+                </div>
+                </form>
+            </div><!--/ con-->
+            <script>
+            //$('#add_wx').click(function(){
+            	//var copy	= $('#main_table tbody:first').clone(true);
+            	//copy.insertAfter($('#main_table tbody:last')).css('border-color','red').find('input,textarea').val('');
+            	//copy.find('input[name*=method]').val('add');
+//            	$('#stad').clone().insertAfter($('#stad'));
+            //});
+            </script>
+        </div>    
+    </div><!--/ container-->
+
+</div><!--/ wrap-->
+  <{elseif $ac=='add'}>
+   <style>
+<!--
+.table-font tbody{
+	border:1px solid #9c9c9c;
+	padding:15px;
+}
+-->
+</style>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <form action="?s=weixin&a=<{$ac}>" method="post" enctype="multipart/form-data">
+
+                <div class="box-header">
+                    <h4>修改</h4>
+                </div>
+                <div class="box-content">
+                    <table class="table-font" id="main_table">
+<thead>
+                        <tr>
+                            <th class="w120">名称：</th>
+                            <td><input type="text"  name="title"  value="" class="textinput w270" /></td>
+                        </tr>
+                        <tr>
+                            <th class="w120">key：</th>
+                            <td><input type="text"  name="key"  value=""  class="textinput w270" /></td>
+                        </tr>
+</thead>
+<tbody id="stad">
+<input type="hidden" name='method[]' value="add"/>
+						<tr>
+                            <th>连接地址：</th>
+                            <td><input type="text" name="to_url[]" value="" class="textinput w270" /></td>
+                        </tr>
+						<tr>
+                            <th>排序：</th>
+                            <td><input type="text" name="orderid[]" value="" class="textinput w270" /><font color=red class="hid_txt">(第一个为主,排序不起作用)</font></td>
+                        </tr>
+                         <tr>
+                            <th class="w120">详细介绍：</th>
+                            <td> <textarea class="w270" name="content[]" ></textarea></td>
+                        </tr>  
+                         
+                        <tr>
+                            <th>图片地址：</th>
+                            <td><input type="text" name="pic_url[]" value=""id="pic_url" class="textinput" style="width:380px;"/> </td>
+                        </tr>
+                        <tr>
+                            <th>页面内容：</th>
+                            <td><textarea class="HTML_EDIT" name="html[]" style="width:700px;height:300px;">&lt;strong&gt;HTML内容&lt;/strong&gt;</textarea>
+                             <font color=red>*如果有连接地址,则此内容无效</font>
+							</td>
+                        </tr>
+</tbody>
+<tfoot>
+</tfoot>
+                    </table>
+                </div>
+                <div class="box-footer">
+                    <div class="box-footer-inner">
+                    	<input type="submit" value="提交" />或 <a href="?c=list&cid=<{$cid}>">取消</a>&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="add_wx" value="  加 +  "/> 
+                    </div>
+                </div>
+                </form>
+            </div><!--/ con-->
+            <script>
+           
+            </script>
+        </div>    
+    </div><!--/ container-->
+
+</div><!--/ wrap-->
+  <{/if}>
+  <script>
+  $('.del_ctl').click(function(){
+	  return confirm('删除无法恢复,确定删除?');
+  });
+  </script>
+<script charset="utf-8" src="./static/editer/kindeditor-min.js"></script>
+<script charset="utf-8" src="./static/editer/lang/zh_CN.js"></script>
+<script>
+var KK=null;
+	KindEditor.ready(function(K) {
+		KK=K;
+        window.editor = KK.create('.HTML_EDIT');
+        
+        $('#add_wx').click(function(){
+        	//hid_txt
+        	var copy=$('#main_table tbody:first').clone();
+        	copy.find('.ke-container').remove();
+        	copy.find('.hid_txt').hide();
+        	copy.insertAfter($('#main_table tbody:last')).css('border-color','red').find('input,textarea').val('');
+        	 copy.find('input[name*=method]').val('add');
+        	 KK.create('.HTML_EDIT');
+//        	$('#stad').clone().insertAfter($('#stad'));
+        });
+	});
+</script>
+<{include file='Login/footer.html'}>

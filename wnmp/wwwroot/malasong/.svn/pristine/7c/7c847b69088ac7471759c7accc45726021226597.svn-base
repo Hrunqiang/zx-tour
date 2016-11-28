@@ -1,0 +1,71 @@
+<?php
+/**
+ * 活动转盘抽奖
+ * @author hhy
+ *
+ */
+class LotteryAction extends Action {
+	
+    public function luck(){
+    	$probability = array(
+    			//一等奖 
+    			array("code"=>array(0),"odds"=>1),
+    			//二等奖
+    			array("code"=>array(6),"odds"=>1),
+    			//三等奖
+    			array("code"=>array(2),"odds"=>8),
+    			//四等奖
+    			array("code"=>array(1,4),"odds"=>30),
+    			//不中
+    			array("code"=>array(3,5,7),"odds"=>60),
+    			);
+    	
+    	$hour = (int)Date('H');
+    	$hour = 10;
+    	if($hour>=9&&$hour<=19){
+    		//抽奖时间段
+    		//随机号码
+	    	$lucknum = mt_rand(1, 100);
+	    	$count = 0;
+	    	$codenum = 4;
+	    	for($i=0,$len=count($probability);$i<$len;$i++){
+	    		$count += $probability[$i]['odds'];
+	    		if($lucknum<=$count){
+	    			$codenum = $i;
+	    			break;
+	    		}
+	    	}
+
+	    	$res['error'] = 0;
+    		$res['data'] = $probability[$codenum]['code'][mt_rand(0, count($probability[$codenum]['code'])-1)];
+    		$res['num'] = $codenum;
+    		$res['code'] = $this->getcode();
+    	}else{
+    		//过了抽奖时间段
+    		$codenum = 4;
+    		$res['error'] = 0;
+    		$res['data'] = $probability[$codenum]['code'][mt_rand(0, count($probability[$codenum]['code'])-1)];
+    		$res['num'] =$codenum;
+    		$res['code'] = mt_rand(1000, 9999);
+    	}
+		echo json_encode($res);
+	}
+	
+	public function getcode(){
+		$redis = new Redis();
+		$redis->pconnect("101.200.230.173",6379);
+		return $redis->rpop("Lottery_code_list");
+	}
+	
+// 	public function test(){
+// 		ini_set ( "max_execution_time", "0" );
+// 		ini_set ( 'memory_limit', '256M' );
+// 		echo uniqid(mt_rand(), true);
+// 		$redis = new Redis();
+// 		$redis->pconnect("101.200.230.173",6379);
+// 		for($i=21808;$i<=99999;$i++){
+// 			$redis->lpush("Lottery_code_list",$i);
+// 		}
+// 	}
+	
+}

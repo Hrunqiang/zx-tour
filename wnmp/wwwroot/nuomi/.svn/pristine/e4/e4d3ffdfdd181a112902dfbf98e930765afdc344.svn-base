@@ -1,0 +1,129 @@
+
+<{include file='Login/header.html'}>
+<link href="static/css/style.css" rel="stylesheet" type="text/css" />
+<div id="dh" >
+	<UL>
+		<a  href="./?s=IosGame"><li id="tab">游戏列表</li></a>
+		<a  href="./?s=IosGame&type=1"><li id="tab1">最新游戏</li></a>
+		<a  href="./?s=IosGame&type=2"><li id="tab2">精品游戏</li></a>
+		<a  href="./?s=IosGame&type=3"><li id="tab3">屌丝男</li></a>
+		<a  href="./?s=IosGame&type=4"><li id="tab4">白富美</li></a> 
+		<input type="text" id="search_info" placeholder="输入你要搜索的游戏名字或ID">	
+	</UL>
+</div>
+<table id="game_list" class="list">		
+	<tr>
+		<td>游戏ID</td>
+		<td>排序id</td>
+		<td>游戏ICO</td>
+		<td>游戏名字</td>
+		<td>游戏URL</td>
+		<td>链接状态及操作</td>
+	</tr>
+<{if $list==null}>
+	<tr>
+		<td colspan="6">
+			当前游戏列表为空！<a href="./?s=IosGame&a=addgame">点击添加游戏</a>
+		</td>
+	</tr>
+<{else}>
+	<{foreach from=$list item=v }>
+	<tr>
+		<td><{$v.game_id}></td>
+		<td><{$v.orderid}></td>
+		<td><a href="<{$v.game_url}>"><img src="<{$v.img_url}>" alt=""></a></td>
+		<td><{$v.title}></td>
+		<td class="url"><{$v.game_url}></td>
+		<td><{if $v.sign==1}>最新<{else if $v.sign==2}>精品<{else if $v.sign==3}>屌丝男<{else if $v.sign==4}>白富美<{else}>普通<{/if}><br>
+		<a href="./?s=IosGame&a=del_game&id=<{$v.game_id}><{if $type!=""}>&type=<{$type}><{/if}>" class="del">删除</a>　|　<a href="./?s=IosGame&a=edit_game&id=<{$v.game_id}>">编辑</a>　｜　<a href="<{$v.game_url}>">试玩</a></td>
+	</tr>
+	<{/foreach}>
+<{/if}>
+</table>
+<table id="search_list" class="list" style="display:none;"></table>
+<div id="page"><{$page}></div>
+<{include file='Login/footer.html'}>
+<style>
+	.list{
+		text-align: center;
+		border:3px solid #EFEFEF; 
+		width: 100%;
+	}
+	.list td{padding:10px;/* border:3px solid #EFEFEF; */}
+	.list img{
+		height: 70px;
+		width: 70px;
+	}
+	.list .url{width: 300px;}
+	li{float: left;width: 100px;height: 40px;line-height: 40px;text-align: center;background: #EFEFEF;border:3px solid #EFEFEF;margin-bottom: -3px;}
+	#dh ul,#dh{height: 40px;width: 100%;}
+	#search_info{height:30px;width: 200px;margin: 5px 10px 0;border:3px solid #EFEFEF;border-radius: 20px 20px;padding-left: 10px;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+	#page{height: 40px;line-height: 40px;font-size: 16px;margin-left: 40px;}
+	#page a ,#page span{margin-left: 5px;}
+</style>
+<script type="text/javascript">
+var type = $_get("type");
+if(type){
+	$("#tab"+type).css({
+		"background":"#FFF",
+		"border-bottom":"3px solid #FFF"
+		
+	});
+}else{
+	$("#tab").css({
+		"background":"#FFF",
+		"border-bottom":"3px solid #FFF"
+	});
+
+}
+$('#search_info').keyup(function(){
+	var val = $('#search_info').val();
+	if(val!=""){
+		$('#game_list').hide();
+		$('#page').hide();
+		$.getJSON("./?s=IosGame&a=search&w="+val,function(data){
+			var str = "<tr><td>游戏ID</td><td>排序id</td><td>游戏ICO</td><td>游戏名字</td><td>游戏URL</td><td>链接状态及操作</td></tr>"	;
+			if(data.status == "success"){
+				for(i=0;i<data.data.length;i++){
+					var sign = Array("普通","最新","精品","屌丝男","白富美");
+					var online = Array("回收站","线上");
+					var add_str = "<tr><td>"+data.data[i].game_id+"</td><td>"+data.data[i].orderid+"</td><td><a href='"+data.data[i].game_url+"'><img src='"+data.data[i].img_url+"'></a></td><td>"+data.data[i].title+"</td><td>"+data.data[i].game_url+"</td><td>"+sign[data.data[i].sign]+"("+online[data.data[i].online]+")"+"<br/><a href='./?s=IosGame&a=del_game&id="+data.data[i].game_id+"' class='del'>删除</a>　|　<a href='./?s=IosGame&a=edit_game&id="+data.data[i].game_id+"'>编辑</a>　｜　<a href='"+data.data[i].game_url+"'>试玩</a></td></tr>";
+					str = str+add_str;
+				}
+			}else{
+				var add_str = "<tr><td colspan='6'>没有搜索到匹配内容！</tr>";
+				str =str+add_str;
+			}
+			$('#search_list').html(str);
+			$('#search_list').show();
+		});
+	}else{
+		$('#search_list').hide();
+		$('#game_list').show();
+		$('#page').show();
+	}
+	
+})
+function $_get(key) {
+	var Arg,arg,i;
+	Arg = document.location.search.split("?");
+	if(Arg[1]) {
+		Arg=Arg[1].split("&");
+	}
+	for(i=0; i < Arg.length; i++) {
+		var arg = Arg[i].split("=");
+		if(key == arg[0]) {
+			//return arg[1];
+			return  decodeURI(arg[1]);
+		}
+	}
+	return "";
+}
+$(document).ready(function(){
+	$(".del").click(function(){
+		if(!confirm("确认删除？")){
+			return false;
+		};
+	});
+})
+</script>

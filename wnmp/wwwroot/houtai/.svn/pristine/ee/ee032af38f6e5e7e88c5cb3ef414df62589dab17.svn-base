@@ -1,0 +1,55 @@
+<{include file='Login/header.html'}>
+<style>
+.fl{float: left;}
+#headerbox{overflow: hidden;width: 600px;margin: 0 auto;}
+#headerbox li{height: 30px;font-size: 20px;width: 200px;text-align: center;}
+#headerbox li a:hover{color:#000;text-decoration: none;}
+#headerbox li.curr{border-bottom:5px solid #4e9ad4; }
+#contentbox{width: 900px;border: 1px solid #000;margin: 0 auto;}
+</style>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+				<div id="headerbox">
+					<ul>
+						<li class="fl <{if $ac=='banner'}>curr<{/if}>"><a href="?s=Recommend&ac=banner">焦点图</a></li>
+					</ul>
+					<ul>
+						<li class="fl <{if $ac=='recommend'}>curr<{/if}>"><a href="?s=Recommend&ac=recommend">推荐池</a></li>
+					</ul>
+					<ul>
+						<li class="fl <{if $ac=='hotwd'}>curr<{/if}>"><a href="?s=Recommend&ac=hotwd">搜索关键词</a></li>
+					</ul>
+				</div>
+				<div id="contentbox">
+				<{if $ac=="banner"}>
+				<{include file='Recommend/banner.html'}>
+				<{elseif $ac=="recommend"}>
+				<{include file='Recommend/recommend.html'}>
+				<{elseif $ac=="hotwd"}>
+				<{include file='Recommend/hotwd.html'}>
+				<{/if}>
+				</div>
+            </div><!--/ con-->   
+        </div>    
+    </div><!--/ container-->
+</div>
+<script>
+$(".del_banner").live("click",function(){
+    $(this).parent().remove();
+});
+$("#add_mtypes").live("click",function(){
+    var html = '<p><input type="text" name="m_Mtypes[]" /><span class="del_banner">—</span></p>';
+    $(this).before(html);
+});
+$("#release_btn").click(function(){
+    $("input[name=m_state]").val(0);
+    $("#matchinfo_form").submit();
+});
+$("#save_btn").click(function(){
+    $("input[name=m_state]").val(1);
+    $("#matchinfo_form").submit();
+});
+</script>
+<{include file='Login/footer.html'}>

@@ -1,0 +1,268 @@
+<{include file='Login/header.html'}>
+<style>
+<!--
+.searchtxt {
+width: 50px;
+}
+.searchbtn {
+width: 35px;
+}
+-->
+</style>
+<{if $ac=='list'}>
+<div class="wrap">
+    <div class="container">
+
+        <div id="main">
+            
+            <div class="con">
+                  <div class="table">
+                     <div class="th">
+                        <h1><a href="<{$Reques_uri}>&ac=add" style="color:red;">添加</a></h1>
+                    </div>
+                                   
+                  </div>
+
+            	<form action="<{$Reques_uri}>&ac=del" method="post">
+                    <input type="hidden" name="cid" value="<{$cid}>"/>
+                  <div class="table">
+                    <table class="admin-tb" id="js_data_source">
+                    <tr>
+                    <{foreach from=$table_cfg.field item=i key=k}>
+                    	<{if $i.islist==true}>
+                    	<th style="text-align:center;">
+                    		<{if $i.type=="select"}>
+                    			<{$i.title}>
+                    			<select name="<{$k}>" class="tselect">
+                    				<option value="">请选择</option>
+                    				<{foreach from=$i.selectdata item=si key=sk}>
+                    				<option value="<{$sk}>" <{if ($get.$k==$sk && $get.$k!="")}> selected <{/if}>><{$si}></option>
+                    				<{/foreach}>
+                    			</select>
+                    		<{elseif $i.type=="text"}>
+                    			<{$i.title}>
+                    			<input type="text" name="<{$k}>" class="searchtxt" value="<{$get.$k}>"/><input type="button" class="searchbtn" value="搜索"/>
+                    		<{else}>
+                    			<{if $i.ismain===true}><input type="checkbox" id="select_all"/> &nbsp;<{/if}><{$i.title}>
+                    		<{/if}>
+                    	</th>
+                    	<{/if}>
+                    <{/foreach}>
+                    <th width="80">操作</th>
+                        <!-- <th width="170">名称</th>            	
+                        <th width="120">key</th>
+                        <th width="80">操作</th>  -->                     
+                    </tr>
+                    <{foreach from=$list item=li key=lk}>
+                    <tr>
+                    	<{foreach from=$li item=fi key=fk}>
+                    		<td style="text-align:center;">
+                    		<{if $table_cfg.field.$fk.ismain===true}>
+                    			<input type="checkbox" name="id[]" value="<{$li.$fk}>"/>
+                    		<{/if}>
+                    		<{if $table_cfg.field.$fk.type=='textarea'}>
+                    		<textarea readonly rows="30" cols="50" style="text-align:left;"><{$li.$fk}></textarea>
+                    		<{elseif $table_cfg.field.$fk.type=='img'}>
+                    		<img src="<{$li.$fk}>" width="50"/>
+                    		<{elseif $table_cfg.field.$fk.type=='flag'}>
+                    			<{$table_cfg.field.$fk.flagdata[$li.$fk]}>
+                    		<{elseif $table_cfg.field.$fk.type=='time'}>
+                    			<{$li.$fk|date_format:"%Y-%m-%d %H:%M:%S"}>
+                    		<{elseif $table_cfg.field.$fk.type=='select'}>
+                    			<{$table_cfg.field.$fk.selectdata[$li.$fk]}>
+                    		<{else}>
+                    		<{$li.$fk}>
+                    		<{/if}>
+                    		</td>
+                       <{/foreach}>
+                       <td>[<a href="<{$Reques_uri}>&ac=edit&id=<{$li.id}>">修改</a>]&nbsp;&nbsp;[<a href="<{$Reques_uri}>&ac=del&id=<{$li.id}>" class="del_ctl">删除</a>]</td>
+                    </tr>
+                   <{/foreach}>
+                    </table>
+
+                    <div class="th">
+                        <{if $page}>
+                        <div class="pages">
+							<{$page}>
+                        </div>                
+                        <{/if}>
+                        
+                    	<div class="form">
+                    	<input type="button" onclick="$(this).parents('form').submit();" value=" 删 除 "/>
+                    	<{if $table_cfg.submitBtns}>
+                    		<{foreach from=$table_cfg.submitBtns item=i key=k name=n}>
+                    			&nbsp;&nbsp;<input type="button" onclick="$(this).parents('form').attr('action','<{$i}>').submit();" value=" <{$k}> "/>
+                    		<{/foreach}>
+                    	<{/if}>
+                        <!-- <input type="submit" value=" 删 除 "/>&nbsp; -->
+                        </div>
+                    </div>
+                </div>
+				</form>
+            </div><!--/ con-->
+        </div>    
+    </div><!--/ container-->
+    </div><!--/ wrap-->
+  <{elseif $ac=='edit'}>
+  <style>
+<!--
+.table-font tbody{
+	border:1px solid #9c9c9c;
+	padding:15px;
+}
+-->
+</style>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <form action="<{$Reques_uri}>&ac=<{$ac}>&id=<{$id}>" method="post" >
+                <div class="box-header">
+                    <h4>修改</h4>
+                </div>
+                <div class="box-content">
+                    <table class="table-font" id="main_table">
+                    <{foreach from=$info item=i key=k name=n}>
+                    <{if $table_cfg.field.$k.title}>
+                    	 <tr>
+                            <th class="w120"><{$table_cfg.field.$k.title}>：</th>
+                            <td>
+                            <{if $table_cfg.field.$k.type=='textarea'}>
+	                            <{if $table_cfg.field.$k.isabm}>
+	                            	<textarea class="HTML_EDIT" name="<{$k}>" style="width:700px;height:300px;"><{$i|escape:"stripslashes"}></textarea>
+	                            <{else}>
+	                            	<textarea name="<{$k}>"  disabled  style="width:700px;height:300px;"><{$i|escape:"stripslashes"}></textarea>
+	                            <{/if}>
+	                        <{else if $table_cfg.field.$k.type=='select'}>
+                            	<select name="<{$k}>" <{if !$table_cfg.field.$k.isabm}> disabled <{/if}>>
+                            		<{foreach from=$table_cfg.field.$k.selectdata item=si key=sk name=sn}>
+                            		<option value="<{$sk}>" <{if $i==$sk}>selected <{/if}>><{$si}></option>
+                            		<{/foreach}>
+                            	</select>
+                            <{else}>
+	                            <input type="text"  name="<{$k}>"  value="<{$i}>" <{if !$table_cfg.field.$k.isabm}> disabled <{/if}> class="textinput w270" />
+                            <{/if}>
+                            <{if $table_cfg.field.$k.type=='flag'}>
+                            	<{foreach from=$table_cfg.field.$k.flagdata item=flagi key=flagk}>
+                            		|<{$flagk}>:<{$flagi}>
+                            	<{/foreach}>
+                            <{/if}>
+                            </td>
+                        </tr>
+                    <{/if}>
+                    <{/foreach}>
+                    </table>
+                </div>
+                <div class="box-footer">
+                    <div class="box-footer-inner">
+                    	<input type="submit" value="提交" />或 <a href="javascript:void(0);" onclick="window.history.go(-1);">取消</a>
+                    </div>
+                </div>
+                </form>
+            </div><!--/ con-->
+        </div>    
+    </div><!--/ container-->
+
+</div><!--/ wrap-->
+  <{elseif $ac=='add'}>
+   <style>
+<!--
+.table-font tbody{
+	border:1px solid #9c9c9c;
+	padding:15px;
+}
+-->
+</style>
+<div class="wrap">
+    <div class="container">
+        <div id="main">
+            <div class="con box-green">
+                <form action="<{$Reques_uri}>&ac=<{$ac}>" method="post" enctype="multipart/form-data">
+
+                <div class="box-header">
+                    <h4>添加</h4>
+                </div>
+                <div class="box-content">
+                    <table class="table-font" id="main_table">
+                    <{foreach from=$table_cfg.field item=i key=k name=n}>
+                    	<{if $i.ismain!==true}>
+                    	 <tr>
+                            <th class="w120"><{$i.title}>：</th>
+                            <td>
+                            <{if $i.type=='textarea'}>
+	                            	<textarea class="HTML_EDIT" name="<{$k}>" style="width:700px;height:300px;"></textarea>
+                            <{else if $i.type=='select'}>
+                            	<select name="<{$k}>">
+                            		<option value="">选择</option>
+                            		<{foreach from=$i.selectdata item=si key=sk name=sn}>
+                            		<option value="<{$sk}>"><{$si}></option>
+                            		<{/foreach}>
+                            	</select>
+                            <{else}>
+	                            <input type="text"  name="<{$k}>"  value="" class="textinput w270" />
+                            <{/if}>
+                            <{if $i.type=='flag'}>
+                            	<{foreach from=$i.flagdata item=flagi key=flagk}>
+                            		|<{$flagk}>:<{$flagi}>
+                            	<{/foreach}>
+                            <{/if}>
+                            </td>
+                        </tr>
+                        <{/if}>
+                    <{/foreach}>
+                    </table>
+                </div>
+                <div class="box-footer">
+                    <div class="box-footer-inner">
+                    	<input type="submit" value="提交" />或 <a href="javascript:void(0);" onclick="window.history.go(-1);">取消</a> 
+                    </div>
+                </div>
+                </form>
+            </div><!--/ con-->
+            <script>
+           
+            </script>
+        </div>    
+    </div><!--/ container-->
+
+</div><!--/ wrap-->
+  <{/if}>
+  <script>
+  function change_url(obj){
+	  var v	= $(obj).val();
+	  var n	= $(obj).attr('name');
+	  var requestUrl	= '<{$Reques_uri}>';
+	  var reg	= new RegExp("(\\?|&)?"+n+"=[^&]{0,}");
+	  requestUrl	= requestUrl.replace(reg,'');
+	  requestUrl	= requestUrl+'&'+n+"="+v+"&ac=list";
+	  window.location=requestUrl;
+  }
+  $('#select_all').click(function(){
+	  var able	= $(this).attr('checked');
+	  if(able){
+		  $(this).parents('form').find('input[type=checkbox]').attr('checked',true);
+	  }else{
+		  $(this).parents('form').find('input[type=checkbox]').attr('checked',false);
+	  }
+  });
+  $('.tselect').change(function(){
+	  change_url(this);
+  });
+  $('.searchbtn').click(function(){
+	  var that	= $(this).prev('input');
+	  change_url(that);
+  });
+  $('.del_ctl').click(function(){
+	  return confirm('删除无法恢复,确定删除?');
+  });
+  </script>
+<script charset="utf-8" src="./static/editer/kindeditor-min.js"></script>
+<script charset="utf-8" src="./static/editer/lang/zh_CN.js"></script>
+<script>
+var KK=null;
+	KindEditor.ready(function(K) {
+		KK=K;
+        window.editor = KK.create('.HTML_EDIT');
+	});
+</script>
+<{include file='Login/footer.html'}>

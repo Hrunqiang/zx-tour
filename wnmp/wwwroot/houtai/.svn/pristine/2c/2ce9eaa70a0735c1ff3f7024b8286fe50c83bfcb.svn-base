@@ -1,0 +1,147 @@
+<?php
+/**
+ * 优惠券
+ * @author hhy
+ * @createTime 2016-7-15 下午4:00:18
+ */
+class CouponAction extends Action {
+	
+	public function _initialize(){
+		B('AuthCheck');
+	}
+	
+	public function index(){
+		$table_cfg	= array(
+				'field'=>array(
+						'id'	=>array('ismain'=>true,'title'=>'序列','isabm'=>false,'islist'=>true),
+						'coupon_name'	=>array('title'=>'优惠券','isabm'=>true,'islist'=>true),
+						'discount'	=>array('title'=>'优惠价钱','isabm'=>true,'islist'=>true),
+						'effective_date'	=>array('title'=>'生效日期','isabm'=>true,'islist'=>true),
+						'expiry_date'	=>array('title'=>'失效日期','isabm'=>true,'islist'=>true),
+						'min_able_price'	=>array('title'=>'起优价格','isabm'=>true,'islist'=>true),
+						'num'	=>array('title'=>'数量','isabm'=>true,'islist'=>true),
+				),
+				'where'=>'',
+				'utimeField'=>"utime",
+				'table'	=>'zx_tb_coupon',
+				's'		=>'Feedback',
+				'a'		=>'list_fb',
+				'perpage'=>'30',
+				'tpl' =>"index"
+		);
+		$CommonAction	= new CommonAction();
+		$CommonAction->list_fb($table_cfg);
+	}
+	
+	public function info(){		
+		$table_cfg	= array(
+			"tables"=>array(
+				'zx_tb_couponlist' =>array(
+						"iszb" =>true,
+						'field'=>array(
+							'id'	=>array('ismain'=>true,'title'=>'序列','isabm'=>false,'islist'=>true),
+							'cid'	=>array('ismain'=>true,'title'=>'序列','isabm'=>true,'islist'=>true),
+							'codestr'	=>array('title'=>'优惠券','isabm'=>true,'islist'=>true),
+							'stats'	=>array('title'=>'状态','isabm'=>true,'islist'=>true,'type'=>"select",'selectdata'=>array('0'=>'未绑定','1'=>'已绑定','2'=>'已使用')),
+							'owner'	=>array('title'=>'所属用户','isabm'=>true,'islist'=>true),
+							'orderid'	=>array('title'=>'使用订单号','isabm'=>true,'islist'=>true),
+							'utime'	=>array('title'=>'使用时间','isabm'=>true,'islist'=>true),
+						),
+				),
+				'zx_tb_coupon'=>array(
+						"join"=>"zx_tb_couponlist.cid = zx_tb_coupon.id",
+						"field"=>array(
+								'coupon_name'	=>array('title'=>'优惠券','isabm'=>true,'islist'=>true,'type'=>'text'),
+						)
+				),
+				'zx_tb_userinfo'=>array(
+						"join"=>"zx_tb_couponlist.owner = zx_tb_userinfo.uid",
+						"field"=>array(
+								'name'	=>array('title'=>'用户姓名','isabm'=>true,'islist'=>true,'type'=>'text'),
+								'phone'	=>array('title'=>'用户手机','isabm'=>true,'islist'=>true,'type'=>'text'),
+						)
+				)
+		),
+		's'		=>'SdkNumData',
+		'a'		=>'index',
+		'perpage'=>'9999',
+		'order' =>"zx_tb_couponlist.stats desc",
+		'designMode'=>'false',
+		'tpl'=>'info',
+		// 				'submitBtns'=>array("发送push"=>"./?s=Push&a=Pushusers"),
+		);
+		$CommonAction	= new CommonV3Action();
+		$CommonAction->list_fb($table_cfg);
+	}
+	
+	public function add(){
+		if($this->isPost()){
+			try {
+				$num = htmlspecialchars(addslashes(trim($_POST['num'])));
+				if(!$num||$num<=0){
+					throw new Exception("请请设置生成的个数！");
+				}
+				$data['coupon_name'] = htmlspecialchars(addslashes(trim($_POST['coupon_name'])));
+				$data['coupon_name'] = $data['coupon_name']?$data['coupon_name']:"优惠券".time();
+				$data['discount'] = htmlspecialchars(addslashes(trim($_POST['discount'])));
+				$data['discount'] = $data['discount']?$data['discount']:0;
+				$data['able_ptype'] = htmlspecialchars(addslashes(trim($_POST['able_ptype'])));
+				$data['able_meal'] = htmlspecialchars(addslashes(trim($_POST['able_meal'])));
+				$data['min_able_price'] = htmlspecialchars(addslashes(trim($_POST['min_able_price'])));
+				$data['effective_date'] = htmlspecialchars(addslashes(trim($_POST['effective_date'])));
+				$data['effective_date'] = $data['effective_date']?$data['effective_date']:Date("Y-m-d H:i:s");
+				$data['expiry_date'] = htmlspecialchars(addslashes(trim($_POST['expiry_date'])));
+				$data['expiry_date'] = $data['expiry_date']?$data['expiry_date']:"2116-12-31 00:00:00";
+				$data['able_match'] = htmlspecialchars(addslashes(trim($_POST['able_match'])));
+				$data['able_match'] = explode(",", $data['able_match']);
+				$data['able_match'] = join("|",$data['able_match']);
+				$data['coupon_type'] = htmlspecialchars(addslashes(trim($_POST['coupon_type'])));
+				$data['num'] = $num;
+				$data['ctime'] = Date("Y-m-d H:i:s");
+				$data['creater'] =session("user");
+				
+				$couponM = new CouponModel();
+				$couponListM = new  CouponListModel();
+				$id = $couponM->add($data);
+				if($id!==false){
+					$codes = $this->codeMaker($id,$num,16);
+					$res = $couponListM->createCouponlist($id,$codes);
+					throw new Exception("生成成功！！");
+				}else{
+					throw new Exception("生成失败！！");
+				}			
+			} catch (Exception $e) {
+				message($e->getMessage(),'./?s=Coupon&a=add');
+			}
+		}
+		$this->display();
+	}
+	
+	public  function codeMaker($id,$num,$len){
+		if(!$id||$num<=0) return "";
+		$idlen = strlen($id);
+		$len -= $idlen;
+		$cards = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		$list = array();
+		while(true){
+			$tmpStr = $id;
+			for($i=0;$i<$len;$i++){
+				$rand = mt_rand(0,25);
+				if($rand%2){
+					$tmpStr .= $cards[$rand];
+				}else{
+					$tmpStr = $cards[$rand].$tmpStr;
+				}
+					
+			}
+			if(!in_array($tmpStr, $list)){
+				$num--;
+				array_push($list,$tmpStr );
+			}
+			if(!$num) break;
+		}
+		return $list;
+		
+	}
+	
+}

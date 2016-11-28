@@ -1,0 +1,607 @@
+<{include file='Comon/header.html'}>
+<link rel="stylesheet" type="text/css" href="/static/css/time.css">
+<title>我的资料</title>
+<style>
+	/*.weui_cells{margin-top: 0;}
+	.weui_cell{padding:0 1.07142rem}
+	.weui_cell>div{padding:0.7142857rem 0;}
+	.weui_input{padding:0 1.071428rem;box-sizing:border-box;}
+	.weui_label{width: 5em;}
+	.weui_select{height: auto;font-size: 1.1rem;}
+	.weui_cell_select .weui_cell_bd:after{display: none;}*/
+	/*//////////////////新加样式/////////////////*/
+	/*.msg_desc{font-size: 1rem;}
+	.weui_cell_bd_color{color: #888888;}
+	.weui_cell_bd_color_1{color: #C9C9C9;}
+	.userinfo_head{height: 5.1428rem;padding-bottom: 0;margin-bottom: 0;}
+	input::-webkit-input-placeholder{font-size: 1.1rem;color: #C9C9C9;} 
+	.weui_label{width: 6rem;}
+	.weui_cell_bd_1  {width: 17.37385714285714rem;}
+	.btn{padding-bottom: 1.214285714285714rem;}*/
+
+	/* 改版 */
+	.userinfo_head{margin-top:0.71428571428571rem;padding-left: 1.07142857142857rem;padding-right: 1.07142857142857rem;}
+	.msg_desc{font-size: 0.92857142857143rem;color: rgb(173,173,173);margin-left:1.64285714285714rem;line-height: 1.78571428571429rem}
+	.userinfo_headIcon{display:block;width:1.07142857142857rem;height:1.07142857142857rem;float: left;margin-top: 2.14285714285714rem;background: url(/static/images/icon_shield.png)no-repeat left center;background-size: 1.07142857142857rem 1.07142857142857rem}
+	.twoChoice{width: 100%;height:3.14285714285714rem;margin-top:0.71428571428571rem;margin-bottom:0.71428571428571rem }
+	.choice_msg{width:8.57142857142857rem;height: 2.42857142857143rem;float: left;background: 1px solid black;text-align: center;margin-left: 2.5rem;font-size: 1.14285714285714rem;line-height: 2.42857142857143rem;margin-top: 0.53571428571429rem}
+	.msgChecked{color: #fb6165;border-bottom:0.17857142857143rem solid #fb6165;}
+	.baseMsg,.passportMsg{width: 100%;height:3.14285714285714rem;margin-top: 0;margin-bottom: 0;}
+	.baseMsg>div,.passportMsg>div{width: 92%;height: 100%;line-height:3.14285714285714rem;position: relative;margin-left: 1.07142857142857rem}
+	.importantMsg{color: #fb6165}
+	.titleMsg{display: inline-block;font-size: 1.14285714285714rem}
+	.userMsg{display: inline-block;position: absolute;text-align: right;width: 70%;right: 0;font-size: 1.14285714285714rem!important}
+	.userMsg_change{color:rgb(146,146,146)!important;font-size: 1.14285714285714rem!important;height: 1.14285714285714rem!important;line-height:1.14285714285714rem!important; margin-top: 0.92857142857143rem}
+	.userMsg_change::-webkit-input-placeholder{color:rgb(146,146,146)!important;font-size: 1.14285714285714rem!important;}
+
+	.inputStyle{line-height: 3.14285714285714rem;height: 3.14285714285714rem;}
+	.weui_btn_warn{background-color: #fb6165}
+</style>
+<div class="infowrap">
+	<div class="weui_cells userinfo_head">
+		<span class='userinfo_headIcon'></span><p class="msg_desc">您的信息将仅用于跑步赛事的报名使用，知行平台采用智能加密处理，保障您的信息安全</p>
+	</div>
+
+	<!-- <div class="weui_cells twoChoice">
+		<div class="choice_msg msgChecked" personal-data='1'>基本信息</div>
+		<div class="choice_msg" personal-data='2' style="float: right;margin-right:2.5rem ">报名必填信息</div>
+	</div> -->
+	<div class="weui_cells msg_title" style="margin-top: 0.71428571428571rem;height: 3.14285714285714rem;line-height: 3.14285714285714rem">
+		<div style="margin-left: 1.07142857142857rem;height: 2.42857142857143rem;display: inline-block;text-align: left;font-size: 1.21428571428571rem;line-height: 2.42857142857143rem;margin-top: 0.53571428571429rem color: #fb6165;border: none;border-bottom:0.17857142857143rem solid #fb6165;color: #fb6165;">基本信息
+		</div>
+	</div>
+	<{if $userstate < 3}>
+	<form action="/User/userinfo" method="post" id="userFormbase">
+	<div id="allBaseMsg" style="">
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>真实姓名</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="name" placeholder="确认后无法修改，将加密处理" value="<{$info.name}>">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>手机号</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="phone" placeholder="确认后无法修改，将加密处理" value="<{$phone}>">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>国籍</p>
+				<select class="weui_select userMsg userMsg_change inputStyle" name="country" dir="rtl" style="width:7.50000000000000rem" >
+                    <option value="中国" <{if $info.country=="中国"}>selected<{/if}> >中国大陆</option>
+                    <option value="港澳台" <{if $info.country =="港澳台"}>selected<{/if}>>中国-港澳台</option>
+                    <option value="外国籍" <{if $info.country =="国外"}>selected<{/if}>>外国籍</option>
+              </select>
+              <span class="broad_icon" style="position: absolute;background: url(/static/images/broad_input.png) no-repeat;background-size: 100%; width: 1.071428571428571rem;height: 1rem;right:7.5rem;top: 0.9285714285714286rem;display: none;"></span>
+                <input class="weui_input userMsg userMsg_change inputStyle" type="text" name="broad_country" placeholder="请输入国籍" style="border: 1px solid #fb6165;height: 95%;width: 8.92857142857143rem;display: none;border-radius: 5px;box-sizing: border-box;padding-left: 1.642857142857143rem;" value="<{$info.broad_country}>">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>身份证</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="sfz_code" placeholder="确认后无法修改，将加密处理" value="<{$info.sfz_code}>">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg">生日</p> <input class="weui_input datepick userMsg userMsg_change inputStyle" type="text" name="birth"  placeholder="请选择生日日期" date-s="1900-1-1" placeholder="2015-08-08" readonly value="<{$info.birth}>">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg">性别</p>
+				<select id="sexy" class="weui_select userMsg userMsg_change inputStyle" name="sexy" dir="rtl" style="width:7.14285714285714rem ">
+                	<option value="">请选择性别</option>
+                    <option value="1" <{if $info.sexy==1}>selected<{/if}>>男</option>
+                    <option value="2" <{if $info.sexy==2}>selected<{/if}>>女</option>
+                </select>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>血型</p>
+				<select id="sexy" class="weui_select userMsg userMsg_change inputStyle" name="blood_type" dir="rtl" style="width:7.14285714285714rem">
+                	<option value="">请选择血型</option>
+                    <option value="A" <{if $info.blood_type=="A"}>selected<{/if}> >A</option>
+                    <option value="B" <{if $info.blood_type=="B"}>selected<{/if}> >B</option>
+                    <option value="AB" <{if $info.blood_type=="AB"}>selected<{/if}> >AB</option>
+                    <option value="O" <{if $info.blood_type=="O"}>selected<{/if}> >O</option>
+                </select>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg">地区</p><input class="weui_input areaSelectipt userMsg userMsg_change inputStyle" name="area" type="text"  placeholder="请选择地区"  readonly value="<{$info.area}>">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg">详细地址</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="addr" placeholder="请输入街道门牌信息" value="<{$info.addr}>">
+	        </div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg">邮编</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="postcode" placeholder="请输入邮政编码" value="<{$info.postcode}>">
+	        </div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>邮箱</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="e_mail" placeholder="请输入E-mail地址" value="<{$info.e_mail}>">
+	        </div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>服装尺码</p>
+	            <select id="cloth_size" class="weui_select userMsg userMsg_change inputStyle" name="cloth_size" dir="rtl" style="width: 3.57142857142857rem;color:rgb(146,146,146); ">
+	                <option value="XS" <{if $info.cloth_size=="XS"}>selected<{/if}>>XS</option>
+	                <option value="S" <{if $info.cloth_size=="S"}>selected<{/if}>>S</option>
+	                <option value="M" <{if $info.cloth_size=="M"}>selected<{/if}>>M</option>
+	                <option value="L" <{if $info.cloth_size=="L"}>selected<{/if}>>L</option>
+	                <option value="XL" <{if $info.cloth_size=="XL"}>selected<{/if}>>XL</option>
+	                <option value="XXL" <{if $info.cloth_size=="XXL"}>selected<{/if}>>XXL</option>
+	            </select>
+	        </div>
+		</div>
+	</div>
+	<div class="weui_cells msg_title" style="margin-top: 0.71428571428571rem;height: 3.14285714285714rem;line-height: 3.14285714285714rem">
+		<div style="margin-left: 1.07142857142857rem;height: 2.42857142857143rem;display: inline-block;text-align: left;font-size: 1.21428571428571rem;line-height: 2.42857142857143rem;margin-top: 0.53571428571429rem color: #fb6165;border: none;border-bottom:0.17857142857143rem solid #fb6165;color: #fb6165;">报名必填信息
+		</div>
+	</div>
+	<div id="allPassportMsg" style="display: block">
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg">护照号码</p><input class="weui_input userMsg userMsg_change inputStyle" type="text"  placeholder="很重要，若护照不在手边请之后补填" name="pass_code" value="<{$info.pass_code}>">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>中文姓拼音</p><input class="weui_input userMsg userMsg_change inputStyle" type="text"  placeholder="请以护照姓拼音为准" name="surname" value="<{$info.surname}>">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>中文名拼音</p><input class="weui_input userMsg userMsg_change inputStyle" type="text"  placeholder="请以护照名拼音为准" name="en_name" value="<{$info.en_name}>">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg">签发日期</p><input class="weui_input datepick userMsg userMsg_change inputStyle" type="text"  placeholder="请选择签发日期Date of issues" date-s="1949-10-1" name="issue_date"  readonly value="<{$info.issue_date}>">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg">有效期至</p><input class="weui_input datepick userMsg userMsg_change inputStyle" type="text"  placeholder="请选择有效期Date of expiry" name="expiry_date" date-e="2116-1-1" readonly value="<{$info.expiry_date}>">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg" style="margin-top:0.71428571428571rem ">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>是否参加过马拉松</p>
+	            <select id="userRecords" class="weui_select userMsg userMsg_change inputStyle" name="isattended" dir="rtl" style="width: 4.28571428571429rem;color:rgb(146,146,146); ">
+	            	<option value="">请选择</option>
+	                <option value="1" <{if $info.isattended==1}>selected<{/if}>>是 </option>
+	                <option value="0" <{if $info.isattended==0}>selected<{/if}>>否</option>
+                </select>
+	        </div>
+		</div>
+		<div id="attendedHistory" style="display: none">
+			<div class="weui_cells passportMsg">
+				<div>
+		            <p class="titleMsg">马拉松最好成绩</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入个人最好成绩" name="personbest" value="<{$info.personbest}>">
+		        </div>
+			</div>
+			<div class="weui_cells passportMsg">
+				<div>
+		            <p class="titleMsg">最好成绩赛事名称</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入最好成绩赛事" name="personbestmatch" value="<{$info.personbestmatch}>">
+		        </div>
+			</div>
+			<div class="weui_cells passportMsg">
+				<div>
+		            <p class="titleMsg"><span class="importantMsg">*</span>预期完赛时间</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请注明此次赛事预期完赛成绩" date-s="1949-10-1" name="wishfinish"  value="<{$info.wishfinish}>">
+		        </div>
+			</div>
+		</div>
+		<div class="weui_cells passportMsg" style="margin-top: 0.71428571428571rem">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>紧急联系人</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入紧急联系人姓名" name="contact_name" value="<{$info.contact_name}>" >
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>联系人电话</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入紧急联系人手机号码" name="contact_phone" value="<{$info.contact_phone}>">
+	        </div>
+		</div>
+	</div>
+	<div class="btn">
+		<input type="submit" value="保存" class="weui_btn weui_btn_warn" >
+	</div>
+	</form>
+	<{else}>
+	<form action="/User/userinfo" method="post" id="userFormbase1">
+	<div id="allBaseMsg">
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>真实姓名</p>
+				<p class="userMsg"><{$info.name}></p>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>手机号</p>
+				<p class="userMsg"><{if $info.phone}><{$info.phone}><{else}><{$phone}><{/if}></p>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>国籍</p>
+				<p class="userMsg"><{$info.country}></p>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>身份证</p>
+				<p class="userMsg"><{$info.sfz_code}></p>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg">生日</p>
+				<p class="userMsg"><{$info.birth}></p>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg">性别</p>
+				<p class="userMsg"><{if $info.sexy==1}>男<{else}>女<{/if}></p>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg"><span class="importantMsg">*</span>血型</p>
+				<select class="weui_select userMsg userMsg_change inputStyle" name="blood_type" dir="rtl" style="width:7.14285714285714rem">
+                	<option value="">请选择血型</option>
+                    <option value="A" <{if $info.blood_type=="A"}>selected<{/if}> >A</option>
+                    <option value="B" <{if $info.blood_type=="B"}>selected<{/if}> >B</option>
+                    <option value="AB" <{if $info.blood_type=="AB"}>selected<{/if}> >AB</option>
+                    <option value="O" <{if $info.blood_type=="O"}>selected<{/if}> >O</option>
+                </select>
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+				<p class="titleMsg">地区</p><input class="weui_input areaSelectipt userMsg userMsg_change inputStyle" name="area" type="text"  placeholder="请选择地区"  readonly value="<{$info.area}>">
+			</div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg">详细地址</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="addr" placeholder="请输入街道门牌信息" value="<{$info.addr}>">
+	        </div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg">邮编</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" name="postcode" placeholder="请输入邮政编码" value="<{$info.postcode}>">
+	        </div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>邮箱</p>
+	            <input class="weui_input userMsg userMsg_change inputStyle" type="text" name="e_mail" placeholder="请输入E-mail地址" value="<{$info.e_mail}>">
+	        </div>
+		</div>
+		<div class="weui_cells baseMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>服装尺码</p>
+	            <select id="cloth_size" class="weui_select userMsg userMsg_change inputStyle" name="cloth_size" dir="rtl" style="width: 3.57142857142857rem;color:rgb(146,146,146); ">
+	                <option value="XS" <{if $info.cloth_size=="XS"}>selected<{/if}>>XS</option>
+	                <option value="S" <{if $info.cloth_size=="S"}>selected<{/if}>>S</option>
+	                <option value="M" <{if $info.cloth_size=="M"}>selected<{/if}>>M</option>
+	                <option value="L" <{if $info.cloth_size=="L"}>selected<{/if}>>L</option>
+	                <option value="XL" <{if $info.cloth_size=="XL"}>selected<{/if}>>XL</option>
+	                <option value="XXL" <{if $info.cloth_size=="XXL"}>selected<{/if}>>XXL</option>
+	            </select>
+	        </div>
+		</div>
+	</div>
+
+	<div class="weui_cells msg_title" style="margin-top: 0.71428571428571rem;height: 3.14285714285714rem;line-height: 3.14285714285714rem">
+		<div style="margin-left: 1.07142857142857rem;height: 2.42857142857143rem;display: inline-block;text-align: left;font-size: 1.21428571428571rem;line-height: 2.42857142857143rem;margin-top: 0.53571428571429rem color: #fb6165;border: none;border-bottom:0.17857142857143rem solid #fb6165;color: #fb6165;">报名必填信息
+		</div>
+	</div>
+	<div id="allPassportMsg" style="display: block">
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg">护照号码</p><input class="weui_input userMsg userMsg_change inputStyle" type="text"  placeholder="很重要，若护照不在手边请之后补填" name="pass_code" value="<{$info.pass_code}>">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>中文姓拼音</p><input class="weui_input userMsg userMsg_change inputStyle" type="text"  placeholder="请以护照姓拼音为准" name="surname" value="<{$info.surname}>">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>中文名拼音</p><input class="weui_input userMsg userMsg_change inputStyle" type="text"  placeholder="请以护照名拼音为准" name="en_name" value="<{$info.en_name}>">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg">签发日期</p><input class="weui_input datepick userMsg userMsg_change inputStyle" type="text"  placeholder="请选择签发日期Date of issues" date-s="1949-10-1" name="issue_date" <{if substr($info.issue_date,0,10)!='0000-00-00'}>value="<{substr($info.issue_date,0,10)}>"<{/if}> readonly>
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg">有效期至</p><input class="weui_input datepick userMsg userMsg_change inputStyle" type="text"  placeholder="请选择有效期Date of expiry" name="expiry_date" date-e="2116-1-1" <{if substr($info.expiry_date,0,10)!='0000-00-00'}>value="<{substr($info.expiry_date,0,10)}>"<{/if}> readonly>
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg" style="margin-top:0.71428571428571rem ">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>是否参加过马拉松</p>
+	            <select id="userRecords" class="weui_select userMsg userMsg_change inputStyle" name="isattended" dir="rtl" style="width: 4.28571428571429rem;color:rgb(146,146,146); ">
+	            	<option value="">请选择</option>
+	                <option value="1" <{if $info.isattended==="1"}>selected<{/if}>>是 </option>
+	                <option value="0" <{if $info.isattended==="0"}>selected<{/if}>>否</option>
+                </select>
+	        </div>
+		</div>
+		<div id="attendedHistory" style="display: none">
+			<div class="weui_cells passportMsg">
+				<div>
+		            <p class="titleMsg">马拉松最好成绩</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入个人最好成绩" name="personbest" value="<{$info.personbest}>" >
+		        </div>
+			</div>
+			<div class="weui_cells passportMsg">
+				<div>
+		            <p class="titleMsg">最好成绩赛事名称</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入最好成绩赛事" name="personbestmatch" value="<{$info.personbestmatch}>">
+		        </div>
+			</div>
+			<div class="weui_cells passportMsg">
+				<div>
+		            <p class="titleMsg"><span class="importantMsg">*</span>预期完赛时间</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请注明此次赛事预期完赛成绩" date-s="1949-10-1" name="wishfinish" value="<{$info.wishfinish}>">
+		        </div>
+			</div>
+		</div>
+		<div class="weui_cells passportMsg" style="margin-top: 0.71428571428571rem">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>紧急联系人</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入紧急联系人姓名" name="contact_name" value="<{$info.contact_name}>">
+	        </div>
+		</div>
+		<div class="weui_cells passportMsg">
+			<div>
+	            <p class="titleMsg"><span class="importantMsg">*</span>联系人电话</p><input class="weui_input userMsg userMsg_change inputStyle" type="text" placeholder="请输入紧急联系人手机号码" name="contact_phone" value="<{$info.contact_phone}>">
+	        </div>
+		</div>
+	</div>
+
+	<div class="btn">
+		<input type="submit" value="保存" class="weui_btn weui_btn_warn">
+	</div>
+	</form>
+	<{/if}>
+</div>
+<div id="datePlugin"></div>
+<script src="/static/weui/js/weui.js"></script>
+<script type="text/javascript" src="/static/js/iscroll.js?v=1.2"></script>
+<script type="text/javascript" src="/static/js/date.js?v=1.2"></script>
+<script type="text/javascript" src="/static/js/function.js?v=1.2"></script>
+<script type="text/javascript">
+<{$updateres}>
+$('input[name=sfz_code]').blur(function(){
+	if($('input[name=country]').val()=="国外"){
+		return false;
+	}else{
+		if($(this).val().length < 12){
+			return false;
+		}else{
+			var _birthY = $(this).val().substr(6,4);
+			var _birthM = $(this).val().substr(10,2);
+			var _birthD = $(this).val().substr(12,2);
+			$('input[name=birth]').val(_birthY+'-'+_birthM+'-'+_birthD);
+		}
+	}
+
+})
+
+$('input[name=surname]').blur(function () {
+	var val =$(this).val().toLocaleUpperCase();
+	$(this).val(val);
+	
+})
+$('input[name=en_name]').blur(function () {
+	var val =$(this).val().toLocaleUpperCase();
+	$(this).val(val);
+})
+
+var YJBM = function(){this.init()},
+	shouji_reg = /^1[\d]{10}$/,
+	email_reg =/^([a-zA-Z0-9_-|.])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+YJBM.prototype ={
+	init:function(){
+		var me = this;
+		$('.datepick').each(function(){
+			var begin = $(this).attr("date-s")?$(this).attr("date-s"):me.getyearstr();
+			var end = $(this).attr("date-e")?$(this).attr("date-e"):me.getyearstr();
+			begin = begin.split("-");
+			end = end.split("-");
+			$(this).date({beginyear:begin[0],endyear:end[0]});
+		});
+		$(".areaSelectipt").areaSelect({});
+		$("#userFormbase").submit(function(){
+			if(me.check()){
+				$.ajax({
+	                cache: false,
+	                url:"/User/saveuserinfo",
+	                type: "POST",
+	                dataType: "json",
+	                timeout:'3000',
+	                data: $("#userFormbase").serialize(),
+	                success: function(data){
+	                    if(data.msg == "ok"){
+	                       	weui.Loading.success(2000,"保存成功");
+		                    setTimeout(function(){
+		                        window.location.href = "/User/index";
+		                    },2000);
+	                    }else{
+	                        weui.alert(data.msg);
+	                    }
+	                },
+            	});
+			}
+			return false;
+		});
+		$("#userFormbase1").submit(function(){
+			if(me.check()){
+               	return true;
+            }else{
+                return false;
+            }
+            
+		})
+	},
+	getyearstr:function(){
+		var nowDate = new Date(),
+			year = parseInt(nowDate.getFullYear()),
+			month = parseInt(nowDate.getMonth()+1),
+			day = parseInt(nowDate.getDate());
+		return year+"-"+month+"-"+day;
+	},
+	check:function(){
+
+		var xingming = $("input[name=name]").val()?$("input[name=name]").val():'<{$info.name}>';
+		if(xingming == ""){
+			weui.alert("请输入您的姓名");
+			$("input[name=name]").focus();	
+			return false;
+		}
+		
+		var country = $("select[name=country]").val()?$("select[name=country]").val():'<{$info.country}>';
+		console.log(country);
+		if(country == ""){
+			weui.alert("请选择国家");
+			$("select[name=country]").focus();
+			return false;
+		}
+		if(country=="外国籍"){
+			country=$("input[name=broad_country]").val();
+			if(country==''){
+				weui.alert("请填写国籍");
+				$("select[name=country]").focus();
+				return false;
+			}
+			var sfz_code = $("input[name=sfz_code]").val()?$("input[name=sfz_code]").val():'<{$info.sfz_code}>';
+			if(sfz_code == ""){
+				weui.alert("证件号码号不能为空！");
+				$("input[name=zjcode]").focus();
+				return false;
+			}
+		}else if(country=="港澳台"){
+			var sfz_code = $("input[name=sfz_code]").val()?$("input[name=sfz_code]").val():'<{$info.sfz_code}>';
+			if(sfz_code == ""){
+				weui.alert("证件号码号不能为空！");
+				$("input[name=zjcode]").focus();
+				return false;
+			}
+		}else{
+			var sfz_code = $("input[name=sfz_code]").val()?$("input[name=sfz_code]").val():'<{$info.sfz_code}>';
+			if(sfz_code == ""){
+				weui.alert("证件号码号不能为空！");
+				$("input[name=zjcode]").focus();
+				return false;
+			}
+			
+			var checkrs = sfz_code&&checkIdcard(sfz_code);
+			if(checkrs != "验证通过!"){
+				console.log(1111);
+				weui.alert(checkrs);
+				$("input[name=zjcode]").focus();
+				return false;
+			}
+		}
+
+		var blood = $('select[name=blood_type]').val()?$('select[name=blood_type]').val():'<{$info.blood_type}>';
+		if(blood == ""){
+			weui.alert('请选择血型');
+			$("select[name=blood_type]").focus();
+			return false;
+		}
+		var youxiang = $("input[name=e_mail]").val();
+		if(youxiang == ""){
+			weui.alert("请输入电子邮箱");
+			$("input[name=e_mail]").focus();
+			return false;
+		}
+
+		var machrs = email_reg.test(youxiang);
+		if(!machrs){
+			weui.alert("您的邮箱格式不正确！");
+			$("input[name=e_mail]").focus();
+			return false;
+		}
+
+		var cloth_size = $("select[name=cloth_size]").val();
+		if(cloth_size == ""){
+			weui.alert("请选择服装尺码");
+			$("select[name=cloth_size]").focus();
+			return false;
+		}
+
+		return true;
+	}
+};
+Zepto(function($){new YJBM()});
+//////////////////////////////////////////////////////////////////////
+$('#sexy').change(function () {
+	console.log(this.value)
+	if (this.value!='') {
+		$('#sexy').css({'color':'#000000',})
+	} else{
+		$('#sexy').css({'color':'#c9c9c9',})
+	}
+})
+$('#cloth_size').change(function () {
+	console.log(this.value)
+	if (this.value!='') {
+		$('#cloth_size').css({'color':'#000000',})
+	} else{
+		$('#cloth_size').css({'color':'#c9c9c9',})
+	}
+})
+$("#un_re_code").click(function(){
+	Passport.alert();
+});
+
+$(".choice_msg").click(function(){
+	if($(this).attr('personal-data') == '1'){
+		$('#allBaseMsg').show();
+		$('#allPassportMsg').hide();
+	}else{
+		$('#allBaseMsg').hide();
+		$('#allPassportMsg').show();
+	}
+	$(this).addClass('msgChecked');
+	$(this).siblings().removeClass('msgChecked');
+})
+
+
+$("select[name=country]").change(function(){
+	if($(this).val()=='外国籍'){
+		$(this).css('right','10.00000000000000rem');
+		$('input[name=broad_country]').show();
+		$('.broad_icon').show();
+	}else{
+		$(this).css('right','0');
+		$('input[name=broad_country]').hide();
+		$('.broad_icon').hide();
+	}
+})
+if($('#userRecords').val()==1){
+	$('#attendedHistory').show();
+}else{
+	$('#attendedHistory').hide();
+};
+$('#userRecords').change(function(){
+	if($(this).val()==1){
+		$('#attendedHistory').show();
+	}else{
+		$('#attendedHistory').hide();
+	}
+})
+</script>
+</body>
+</html>

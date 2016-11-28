@@ -1,0 +1,64 @@
+<?php
+/**
+ * 双11活动
+ * @author hhy
+ * @createTime 2016-11-7 下午6:16:09
+ */
+class Discount11Action extends Action {
+	
+	public function auth(){
+		$res = array("error"=>65535,"msg"=>"未知错误！！");
+		$test = htmlspecialchars(addslashes(trim($_GET['test'])));
+		$time = Date("H:i:s");
+		$date = Date("Y-m-d");
+		$openid	= session("SESSION_ZX_OPENID");
+		if($test=="hhy"){
+			$openid = htmlspecialchars(addslashes(trim($_GET['openid'])));
+			session("SESSION_ZX_OPENID",$openid);
+			$time = htmlspecialchars(addslashes(trim($_GET['time'])))?htmlspecialchars(addslashes(trim($_GET['time']))):$time;
+			$date = htmlspecialchars(addslashes(trim($_GET['date'])))?htmlspecialchars(addslashes(trim($_GET['date']))):$date;
+		}
+		if($date<"2016-11-11"){
+			$res = array("error"=>3,"msg"=>"datelimit");
+		}elseif($date>"2016-11-13"){
+			$res = array("error"=>4,"msg"=>"timeend");
+		}else{
+			if($time>="11:11:00" && $time<="23:11:00"){
+				if($openid){
+					$res = array("error"=>0,"msg"=>"ok");
+				}else{
+					$res = array("error"=>1,"msg"=>"unlogin");
+				}
+			}else{
+				$res = array("error"=>2,"msg"=>"timelimit");
+			}
+		}
+		echo json_encode($res);
+	}
+	
+	public function coupon(){
+		$res = array("error"=>65535,"msg"=>"未知错误！！");
+		$openid	= session("SESSION_ZX_OPENID");
+		$phone = htmlspecialchars(addslashes(trim($_POST['phone'])));
+		$test = htmlspecialchars(addslashes(trim($_POST['test'])));
+		if(empty($openid)){
+			$res['error'] = 304;
+			$res['msg'] = "unlogin";
+		}else{
+			if($phone){
+				if($test){
+					$res['error'] = 1;
+					$res['msg'] = "已领取！";
+				}else{
+					$res['error'] = 0;
+					$res['msg'] = "ok";
+				}
+			}else{
+				$res['error'] = 1;
+				$res['msg'] = "手机格式不合法！";
+			}
+			
+		}
+		echo json_encode($res);
+	}
+}

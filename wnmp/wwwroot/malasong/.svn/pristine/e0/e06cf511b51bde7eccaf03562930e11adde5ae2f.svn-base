@@ -1,0 +1,123 @@
+*{margin:0;padding:0;}
+html{width: 100%;height: 100%;font-size:62.5%}
+body{
+	width:100%;
+	height:100%;
+	font:normal 1.4em/1.6em "Microsoft YaHei",Verdana,Tahoma;
+}
+@media screen and (max-width:480px){
+	#wrap{
+		width:100%;
+		height:100%;
+		overflow:hidden;
+	}
+}
+@media screen and (min-width:480px){
+	#wrap{
+		width: 480px;
+		height: 881px;
+		overflow:hidden;
+	}
+}
+#wrap{
+	margin:0 auto;
+	position:relative;
+	background:#FFC57C url(../images/bg.jpg) no-repeat;
+	background-size: cover;
+}
+#success{text-align:center;height:30px;margin-top:100px;}
+#lottery{position:absolute;width:68%;padding-bottom:68%;bottom:0rem;left:15%;}
+#lottery>div{position:absolute;left:0;top:0;right:0;bottom:0;border-radius:50%;margin:auto;background-image: url(../images/zhuanpan.png); background-size: cover;}
+#lottery>div>span{
+	position:absolute;left:50%;top:0;width:18px;height:50%;margin-left:-9px;text-align:center;-webkit-transform-origin:50% 100%;}
+#lottery>span{position:absolute;left:30%;bottom:30%;width:40%;height:56%;background-image: url(../images/zhizhen.png); background-size: cover;}
+
+#qrcode{
+	width: 70%;
+	position: absolute;
+	right:0;
+	top:31%;
+}
+#qrcode>p{
+	color: #FFF;
+	width: 90%;
+	padding:0 .5rem;
+	background: #F66062;
+	border-radius: .5rem;
+	font-size: 1.2rem;
+}
+#qrcode>div{
+	overflow: hidden;
+}
+#qrcode>div>div{
+	float: left;
+	width: 32%;
+	margin-left:15%; 
+}
+#qrcode img{
+	border-radius: .5rem;
+	width: 100%;
+	display: block;
+}
+#qrcode>div>div>p{
+	color:#614523;
+	font-size: 1.1rem;
+	text-align: center;
+}
+#qrcode>div>div>div{
+	position: relative;
+}
+#qrcode>div>div>div>p{
+	border-radius: .5rem;
+	width: 100%;
+	font-size: 1.2rem;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	background: #F66062;
+	color:#FFF;
+	display: none;
+}
+
+#result{
+	position:absolute;
+	display:none;
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+.result_get{
+	width:100%;padding-bottom:80%;bottom:3rem;left:0%;
+	background-image: url(../images/price_bg.png);
+}
+.result_lost{
+	width:40%;padding-bottom:50%;bottom:3rem;left:30%;
+	background-image: url(../images/xx.png);
+}
+#result>p{
+	position: absolute;
+	text-align: center;
+	color: #FFF;
+}
+#res_num{
+	width: 50%;
+	left:25%;
+	bottom:10%;
+}
+#res_word{
+	width: 50%;
+	left:25%;
+	top:45%;
+}
+#result>img{
+	position: absolute;
+	width: 25%;
+	left:40%;
+	top:60%;
+}
+#hunt{
+	position: fixed;
+	bottom:0;
+	left:0;
+	color: #6E0600;
+	font-size: 1rem;
+}

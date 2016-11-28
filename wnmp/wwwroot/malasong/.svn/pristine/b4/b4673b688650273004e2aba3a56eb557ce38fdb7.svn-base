@@ -1,0 +1,30 @@
+<?php
+/*
+ * 报名
+ * */
+class MatchAction extends Action {
+	
+	public function _initialize(){
+		B('AuthCheck');
+	}
+	public function index(){
+	
+		$goodsM = new GoodsModel();
+		$matchs = $goodsM->getmatchlist();
+		$this->assign("list",$matchs);
+		$this->display();
+	}
+	
+	public function matchinfo(){
+		$orderid = htmlspecialchars(addslashes(trim($_GET['orderid'])));
+		$enrollM = new UserOrdersModel();
+		$info = $enrollM->getorderinfo($orderid);
+		$orderinfoM = new UserOrdersInfoModel;
+		$list = $orderinfoM->getorderinfo($orderid);
+// 		var_dump($list);
+ 		$this->assign("info",$info[0]);
+		$this->assign("list",$list);
+		$this->display();
+	}
+	
+}

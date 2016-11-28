@@ -1,0 +1,75 @@
+<{include file='Comon/header.html'}>
+<style>
+/* img.selecked{border:3px double #01BFF1;} */
+#app_name li{position: relative;cursor: pointer;}
+#app_name li.selecked em{
+	position: absolute;
+	width:20px;
+	height:20px;
+	background-image: url(/static/images/app-right.png);
+	bottom:15px;
+	right:0px;
+}
+</style>
+<script src="/static/js/function.js"></script>
+<script src="/static/js/OnlineEnroll.js"></script>
+<div id="register_box" class="general_page section">
+	<div class="section_center">
+		<div class="general_page_left">
+			<div class="left_body">
+				<p class="general_page_left_title">提交比赛成绩</p>
+				<{if $isbegin}>
+				<div class="general_page_left_center">
+					<p class="general_page_left_title_min">使用参赛app</p>
+					<div class="enroll_applist enroll_list">
+						<ul id="app_name">
+							<li><img class="right_app_icon" src="/static/images/Nike＋Running.png" alt=""><em></em><p title="Nike＋Running">Nike＋Running</p></li>
+							<li><img class="right_app_icon" src="/static/images/agpb.png" alt=""><em></em><p title="阿甘跑步">阿甘跑步</p></li>
+							<li><img class="right_app_icon" src="/static/images/dongdong.png" alt=""><em></em><p title="动动">动动</p></li>
+							<li><img class="right_app_icon" src="/static/images/gulu.png" alt=""><em></em><p title="咕噜">咕噜</p></li>
+							<li><img class="right_app_icon" src="/static/images/hupu.png" alt=""><em></em><p title="虎扑跑步">虎扑跑步</p></li>
+							<li><img class="right_app_icon" src="/static/images/ldl.png" alt=""><em></em><p title="乐动力">乐动力</p></li>
+							<li><img class="right_app_icon" src="/static/images/ydq.png" alt=""><em></em><p title="悦动圈">悦动圈</p></li>
+							<li><img class="right_app_icon" src="/static/images/ypq.png" alt=""><em></em><p title="悦跑圈">悦跑圈</p></li>
+						</ul>
+					</div>
+					<p class="general_page_left_title_min">比赛成绩</p>
+					<div class="enroll_results enroll_list">
+						<ul>
+							<li><input type="text" name="h" onkeyup="value=value.replace(/[^\d]/g,'')"></li>
+							<li>小时</li>
+							<li><input type="text" name="m" onkeyup="value=value.replace(/[^\d]/g,'')"></li>
+							<li>分钟</li>
+							<li><input type="text" name="i" onkeyup="value=value.replace(/[^\d]/g,'')"></li>
+							<li>秒</li>
+						</ul>
+					</div>
+					<p class="general_page_left_title_min">奖牌邮寄地址</p>
+					<div class="enroll_results enroll_list">
+						<input type="text" name="addr" class="enroll_addr">
+					</div>
+					<p class="general_page_left_title_min">上传成绩截图</p>
+					<div class="enroll_upload enroll_list">
+						<div class="qr_code">
+							<!-- <img src="http://chart.apis.google.com/chart?chs=242x242&cht=qr&chld=H|1&chl=http://baidu.com" alt=""> -->
+							<img src="http://qr.liantu.com/api.php?w=240&h=240&text=<{$uploadurl}>" alt="">
+						</div>
+						<p class="qr_code_word">扫描二维码上传跑步成绩</p>
+					</div>
+					<div class="enroll_submit enroll_list">
+						<input class="btn" type="submit" id="online_submit" value="提交比赛成绩">
+					</div>
+				</div>
+				<{else}>
+				<div class="general_page_left_center">
+					<div class="enroll_applist enroll_list">
+						<p>　　亲！你已经报名，请耐心等待比赛开始，并在比赛开始结束后的24小时内来提交你的成绩吧！</p>
+					</div>
+				</div>
+				<{/if}>
+			</div>
+		</div>
+		<{include file='Comon/right.html'}>
+	</div>
+</div>
+<{include file='Comon/footer.html'}>

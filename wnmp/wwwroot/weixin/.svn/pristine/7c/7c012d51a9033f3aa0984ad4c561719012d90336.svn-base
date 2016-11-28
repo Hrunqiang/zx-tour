@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="Author" content="" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="./css/style.css?v=1.24">
+<title>传靓照赢名额</title>
+<style type="text/css">
+#uploadBox{
+	width: 80%;position: absolute;top:59%;left:50%;-webkit-transform: translate3d(-50%,-50%,0);-moz-transform: translate3d(-50%,-50%,0);-ms-transform: translate3d(-50%,-50%,0);-o-transform: translate3d(-50%,-50%,0);transform: translate3d(-50%,-50%,0);
+}
+#showimg{width: 60%;margin: 0 auto 1rem;background: #FFF;position: relative;height: 14rem;overflow: hidden;}
+#showimg p{background: rgba(0,241,160,.8);position: absolute;bottom:0;left:0;width: 100%;text-align: center;height: 3rem;line-height: 3rem;}
+#showmessage>textarea{width: 100%;max-width: 100%;background: rgba(250,250,250,1);height: 6rem;max-height: 6rem;box-sizing: border-box;border: 9px solid rgba(0,241,160,.8);}
+#submit_btn{width: 60%;margin: 0.5rem auto;text-align: center;}
+#submit_btn img{width: 40%;}
+#photo{display: none;}
+#img{overflow: hidden;}
+#img img{width: 100%;max-height: 100%;}
+#showmessage{position: relative;}
+.zf{position: absolute;position: absolute;bottom: 15px;right: 11px;font-size: 10px;}
+.rotate{width: 3rem;position: absolute;right: 0;bottom: 3rem;z-index: 1000000;background: rgba(0,0,0,0.5);overflow: hidden;box-sizing: border-box;padding: 0.4285714285714286rem;}
+</style>
+</head>
+<body>
+<div id="body">
+	<div style="width: 6.5rem;margin: 0.5571428571428571rem auto 0;"><img src="./images/bg_3_1.png"/></div>
+	<div id="uploadBox" style="z-index: 10;">
+		<form action="/HdChongMa/upload" method="post" id="upload_form">
+		<div id="showimg">
+			<div class="rotate"><img style="float: left;" src="./images/rotate_04.png"/></div>
+			<div id="img"></div>
+			<label for="photo"><p id="upload_btn">点击选择上传文件 <input type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple="" id="photo"></p></label>
+		</div>
+		<div id="showmessage">
+			<textarea maxlength="100" placeholder="输入分享感言" name="msg"></textarea>
+			<div class="zf"><span>0</span>/100</div>
+		</div>
+		<p id="submit_btn"><a href=""><img src="./images/done_1.png"></a></p>
+		</form>
+	</div>
+</div>
+<script type="text/javascript" src="/static/js/jquery.js"></script> 
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="./js/weixin.js?v=v1.76"></script>
+<script type="text/javascript">
+$("#submit_btn").click(function(){
+	var img = $('input[name=imgdata]').val();	
+	var msg = $('textarea[name=msg]').val()
+	if(img&&msg){
+		$("#upload_form").submit();
+	}else{
+		alert("请上传图片和感言！");
+	}
+	return false;
+});
+var photo = $('#photo');
+function isCanvasSupported(){
+    var elem = document.createElement('canvas');
+    return !!(elem.getContext && elem.getContext('2d'));
+}
+photo.change(function(event){
+    if(!isCanvasSupported){
+        alert("你的设备不支持图片上传！");
+        return false;
+    }
+    compress(event, function(base64Img){
+        $("#img").html($('<img src="'+base64Img+'"><input type="hidden" name="imgdata" value="'+base64Img+'" />'));
+    }); 
+});     
+function compress(event,callback){
+    var file = event.currentTarget.files[0];
+    var type = file.type;
+    var reader = new FileReader();
+ 
+    reader.onload = function (e) {
+        var image = $('<img/>');
+
+        image.load(function(){
+            var square = 750;
+            var canvas = document.createElement('canvas');
+            var imageWidth;
+            var imageHeight;
+            if (this.width > this.height) {
+                imageWidth = Math.round(square * this.width / this.height);
+                imageHeight = square;
+                offsetX =0;
+            } else {
+                imageHeight = Math.round(square * this.height / this.width);
+                imageWidth =square;
+                offsetY = 0; 
+            }  /**/
+            canvas.width = imageWidth;
+            canvas.height = imageHeight;
+ 
+             var context = canvas.getContext('2d');
+             context.clearRect(0, 0, square, square);
+           
+             var offsetX = 0;
+             var offsetY = 0;
+ 			var step=0;
+			var _this=this;
+   			$('.rotate').bind('click',function () {
+   				step++;
+   				var ctx=canvas.getContext('2d');
+   				step=step%4;
+   				switch (step){
+   					case 0:
+						context.clearRect(offsetX, offsetY,imageWidth, imageHeight);
+   						context.rotate(Math.PI/2); 
+   						offsetX=0;
+   						offsetY=0;
+						context.drawImage(_this, offsetX, offsetY,imageWidth,imageHeight);
+						var data = canvas.toDataURL(type);
+						callback(data);
+   						break;
+   					case 1:
+						context.clearRect(offsetX, offsetY,imageWidth, imageHeight);
+   						context.rotate(Math.PI/2); 
+   						offsetX=0;
+   						offsetY=-imageHeight;
+						context.drawImage(_this, offsetX, offsetY,imageWidth,imageHeight);
+						var data = canvas.toDataURL(type);
+						callback(data);
+   						break;
+   					case 2:
+						context.clearRect(offsetX, offsetY,imageWidth, imageHeight);
+   						context.rotate(Math.PI/2); 
+   						offsetX=-imageWidth;
+						offsetY=-imageHeight;
+						context.drawImage(_this, offsetX, offsetY, imageWidth, imageHeight);
+						var data = canvas.toDataURL(type);
+						callback(data);
+   						break;
+   					case 3:
+   						context.rotate(Math.PI/2); 
+						offsetX=-imageWidth;
+						offsetY=0;
+						context.drawImage(_this, offsetX, offsetY, imageWidth, imageHeight);
+						var data = canvas.toDataURL(type);
+						callback(data);
+   						break;
+   					default:
+   						break;
+   				}
+   			})
+            context.drawImage(this, offsetX, offsetY, imageWidth, imageHeight);
+            var data = canvas.toDataURL(type);
+            
+            callback(data);
+        });
+        image.attr('src', e.target.result);
+        
+         // image.prependTo($("#photo_img"));
+    };
+  
+    reader.readAsDataURL(file);
+}
+
+$('#showmessage textarea').bind('input',function () {
+	var str=$('#showmessage textarea').val();
+	$('.zf span').html(str.length);
+})
+</script>
+</body>
+</html>

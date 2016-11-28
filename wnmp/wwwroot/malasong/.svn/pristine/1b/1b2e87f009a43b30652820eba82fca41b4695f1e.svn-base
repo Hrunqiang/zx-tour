@@ -1,0 +1,19 @@
+<?php
+/*
+ * 报名
+ * */
+class EnrollAction extends Action {
+	
+	public function _initialize(){
+		B('AuthCheck');
+	}
+	public function index(){
+		
+		$enrollM = new UserOrdersModel();
+		$list = $enrollM->getorderlist();
+		$this->assign("list",$list);
+		$this->display();
+	}
+
+
+}

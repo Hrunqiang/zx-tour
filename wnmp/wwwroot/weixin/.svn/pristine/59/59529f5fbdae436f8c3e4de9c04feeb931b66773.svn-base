@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Author" content="" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui" />
+		<link rel="stylesheet" href="./css/style.css?v=1.24">
+		<title>长距离比赛前后对比分享</title>
+	</head>
+	<style type="text/css">
+	.share_out{text-align: center; position: absolute;left: 50%;top: 50%;-webkit-transform: translate3d(-50%,-50%,0);-moz-transform: translate3d(-50%,-50%,0);-ms-transform: translate3d(-50%,-50%,0);-o-transform: translate3d(-50%,-50%,0);transform: translate3d(-50%,-50%,0);}
+	.share{width: 150px;height: 150px;margin: 0 auto;}
+	</style>
+	<body>
+		<div class="share_out">
+			<div class="share"><img src="./images/share.jpg"/></div>
+			<p style="font-size: 1rem;font-weight: bold;">长按识别二维码关注知行合逸<br />回复“照片”参与互动<br />赢取2016UTMB纪念T恤！</p>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="/static/js/jquery.js"></script> 
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="./js/weixin.js?v=v1.76"></script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+.main_box{}
+.top{text-align: center;}
+.fl{float:left;}
+.title .box{width:150px;border-right: 1px solid #000000;text-align: center;font-weight: bold;}
+.content .box{width:150px;height:25px;padding-top:5px;margin-top:5px;border-right: 1px solid #000000;text-align: center;}
+.title{background: #cccccc;height:25px;padding-top:5px;}
+.cls{clear: both;}
+</style>
+</head>
+<body>
+<div class="main_box">
+	<div class="top"><h2>崩溃比例[(崩溃人数/活跃人数)%【活跃人数】]</h2></div>
+	<div class="title">
+		<div class="fl box">日期/版本</div>
+		<{foreach from=$title item=i key=k name=n}>
+			<div class="fl box"><{$i}></div>
+		<{/foreach}>	
+		<div class="cls"></div>
+	</div>
+	
+	<{foreach from=$per item=i key=k name=n}>
+	<div class="content" style="background:<{cycle values="#FFFFFF,#eecccc"}>">
+		<div class="fl box" ><{$k}></div>
+		<{foreach from=$title item=ii key=kk name=nn}>
+			<div class="fl box" >
+				<{if $i.$ii}>
+				<{$i.$ii}><!-- 添加ip与imei差距平均系数 -->
+				<{else}>
+				无
+				<{/if}>
+			</div>
+		<{/foreach}>
+		<!-- <div class="fl box"><{$i}></div>
+		<div class="fl box">8%</div>
+		<div class="fl box">8%</div>
+		<div class="fl box">8%</div>
+		<div class="fl box">8%</div>
+		<div class="fl box">8%</div> -->
+		<div class="cls"></div>
+	</div>
+	<{/foreach}>
+		
+</div>
+</body>
+</html>

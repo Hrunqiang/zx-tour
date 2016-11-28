@@ -1,0 +1,16 @@
+[ 2015-12-02T22:44:18+08:00 ] Lottery_luck_data: 2015-12-02 22:44:18 127.0.0.1	msg:notworktime data:{"error":0,"data":5,"num":4,"code":8062}
+
+[ 2015-12-02T22:44:54+08:00 ] Lottery_luck_data: 2015-12-02 22:44:54 127.0.0.1	msg:notworktime data:{"error":0,"data":3,"num":4,"code":6560}
+
+[ 2015-12-02T22:47:18+08:00 ] Lottery_luck_data: 2015-12-02 22:47:18 127.0.0.1	msg:notworktime data:{"error":0,"data":5,"num":4,"code":1596}
+
+[ 2015-12-02T22:47:27+08:00 ] Lottery_luck_data: 2015-12-02 22:47:27 127.0.0.1	msg:notworktime data:{"error":0,"data":7,"num":4,"code":6445}
+
+[ 2015-12-02T22:57:24+08:00 ] Lottery_luck_data: 2015-12-02 22:57:24 127.0.0.1	msg:notworktime data:{"error":0,"data":3,"num":4,"code":3096}
+
+[ 2015-12-02T23:39:44+08:00 ] Lottery_luck_data: 2015-12-02 23:39:44 127.0.0.1	msg:notworktime data:{"error":0,"data":3,"num":4,"code":3970}
+
+[ 2015-12-02T23:50:36+08:00 ] Lottery_luck_data: 2015-12-02 23:50:36 192.168.1.106	msg:notworktime data:{"error":0,"data":3,"num":4,"code":5131}
+
+[ 2015-12-02T23:55:05+08:00 ] Lottery_luck_data: 2015-12-02 23:55:05 127.0.0.1	msg:notworktime data:{"error":0,"data":3,"num":4,"code":4268}
+

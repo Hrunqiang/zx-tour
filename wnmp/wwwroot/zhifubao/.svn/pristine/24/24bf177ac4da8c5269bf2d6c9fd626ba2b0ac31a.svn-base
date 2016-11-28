@@ -1,0 +1,20 @@
+<{include file='Comon/header.html'}>
+<div id="register_box" class="general_page section">
+	<div class="section_center">
+		<div class="general_page_left">
+			<div class="left_body newsbox">
+				<div class="general_page_left_title">
+					<p><{$news.news_title}></p>
+					<p class="newsfrom">来源：<{$news.from}></p>
+				</div>
+				<div class="general_page_left_center">
+					<div class="news_min_info">
+						<{$news.content}>
+					</div>
+				</div> 
+			</div>
+		</div>
+		<{include file='Comon/right.html'}>
+	</div>
+</div>  
+<{include file='Comon/footer.html'}>

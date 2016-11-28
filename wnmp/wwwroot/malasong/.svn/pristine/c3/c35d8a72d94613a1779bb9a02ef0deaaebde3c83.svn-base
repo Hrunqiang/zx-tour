@@ -1,0 +1,32 @@
+<{include file='Comon/header.html'}>
+<div id="register_box" class="general_page section">
+	<div class="section_center" >
+		<div id="register_center">
+			<div id="register_tab_box">
+				<a id="phone_reg_tab" class='reg_pattern_step curr_reg_tab'>手机找回</a> | <a id="mail_reg_tab" class='reg_pattern_step'>邮箱找回</a>
+			</div>
+			<div id="register_form_box">
+				<form action="/Account/forget" method="post" id="forget_form" class='account_form'>
+				    <input type="hidden" id="pattern_hidden_ipt" name="pattern" value="phone">
+				    <p id="pattern_p_ipt">手机号码</p>
+			        <p class='input_p' >
+			        	<input name="account" type="text" id="account_input" />
+			        	<button class="send_phone_btn" id="send_phone_code_forget">发送手机验证码</button>
+			        	<label id="send_phone_error" class="error_p"></label>
+			        </p>
+			        <p>验证码</p>
+			        <p class='input_c'>
+			        	<input type="text" name="code" id="code_input"/>
+			        	<span class='code_img_span'>
+				        	<img class="code_img" src="/Account/verify" id="register_code_img" onclick="this.src=this.src+'?'+Math.random()" alt="">
+				        	<label class="changeCode" >换一张</label>
+			        	</span>
+			        </p>
+			        <p class="error_p" id="forget_error"><{$error}></p>
+					<p class="input_sl"><input id="forget_submit" class="btn" type="button" value="立即找回" /></p>
+			    </form>
+		    </div>
+	    </div>
+	</div>
+</div>
+<{include file='Comon/footer.html'}>
